@@ -1,16 +1,32 @@
-const path = require('path')
+const paths = require('./webpack-config/paths')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 
 module.exports = {
-	entry: {
-		main: path.resolve(__dirname, './src/index.js'),
-	},
+	entry: `${paths.src}/index.js`,
 	output: {
-		path: path.resolve(__dirname, './build'),
+		path: `${paths.build}`,
 		filename: '[name].js',
 		clean: true,
+	},
+	stats: {
+		children: true,
+	},
+	devtool: 'inline-source-map',
+	devServer: {
+		client: {
+			progress: true,
+			overlay: {
+				errors: true,
+				warnings: false,
+			},
+		},
+		historyApiFallback: true,
+		open: true,
+		compress: true,
+		hot: true,
+		port: 8080,
 	},
 	module: {
 		rules: [
@@ -57,8 +73,8 @@ module.exports = {
 	plugins: [
 		new HtmlWebpackPlugin({
 			title: 'webpack Boilerplate',
-			template: path.resolve(__dirname, './src/template.html'), // шаблон
-			filename: 'index.html', // название выходного файла
+			template: `${paths.src}/template.html`,
+			filename: 'index.html',
 		}),
 		new MiniCssExtractPlugin({
 			filename: "css/[name].css"
