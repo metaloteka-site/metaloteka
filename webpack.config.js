@@ -1,5 +1,6 @@
 const paths = require('./webpack-config/paths')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const BeautifyHtmlWebpackPlugin = require('beautify-html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 
@@ -23,13 +24,35 @@ module.exports = {
 			},
 		},
 		historyApiFallback: true,
-		open: true,
+		open: 'list.html',
 		compress: true,
 		hot: true,
 		port: 8080,
 	},
 	module: {
 		rules: [
+			{
+				test: /\.html$/i,
+				loader: "html-loader",
+				options: {
+					minimize: false,
+				},
+				// use: [
+				// 	{
+				//
+				// 	},
+					// {
+					// 	loader: "pug-html-loader",
+					// 	options: {
+					// 		data: {
+					// 			linkslist: links
+					// 		},
+					// 		interpolate: true,
+					// 		// pretty: true
+					// 	}
+					// }
+				// ]
+			},
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
@@ -75,6 +98,18 @@ module.exports = {
 			title: 'webpack Boilerplate',
 			template: `${paths.src}/template.html`,
 			filename: 'index.html',
+			inject: 'body',
+		}),
+		new HtmlWebpackPlugin({
+			template: `${paths.src}/list.html`,
+			filename: 'list.html',
+			inject: 'body',
+		}),
+		new BeautifyHtmlWebpackPlugin({
+			"indent_size": 2,
+			"indent_char": " ",
+			"indent_with_tabs": true,
+			"editorconfig": true,
 		}),
 		new MiniCssExtractPlugin({
 			filename: "css/[name].css"
