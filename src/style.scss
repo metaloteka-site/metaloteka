@@ -1,12 +1,12 @@
 $font-size: 1rem;
-$font-color: blue;
+$font-color: red;
 
 html {
 	font-size: $font-size;
 	color: $font-color;
 }
 .fff {
-	background: blue;
+	background: red;
 	display: flex;
 	justify-content: center;
 }

@@ -1,6 +1,7 @@
 const paths = require('./webpack-config/paths')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const BeautifyHtmlWebpackPlugin = require('beautify-html-webpack-plugin');
+const magicImporter = require('node-sass-magic-importer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 
@@ -28,6 +29,7 @@ module.exports = {
 		compress: true,
 		hot: true,
 		port: 8080,
+		watchFiles: 'src/**/*.pug',
 	},
 	module: {
 		rules: [
@@ -42,29 +44,6 @@ module.exports = {
 					}
 				]
 			},
-			// {
-			// 	test: /\.html$/i,
-			// 	loader: "html-loader",
-			// 	options: {
-			// 		minimize: false,
-			// 	},
-			//
-				// use: [
-				// 	{
-				//
-				// 	},
-					// {
-					// 	loader: "pug-html-loader",
-					// 	options: {
-					// 		data: {
-					// 			linkslist: links
-					// 		},
-					// 		interpolate: true,
-					// 		// pretty: true
-					// 	}
-					// }
-				// ]
-			// },
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
@@ -97,6 +76,9 @@ module.exports = {
 					{
 						loader: 'sass-loader',
 						options: {
+							sassOptions: {
+								importer: magicImporter(),
+							},
 							sourceMap: true,
 						},
 					},

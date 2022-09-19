@@ -7,4 +7,4 @@ class Game {
 }
 const myGame = new Game()
 
-console.log('sdswwd')
+console.log('2222')
