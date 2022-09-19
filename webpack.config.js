@@ -42,6 +42,9 @@ module.exports = {
 						loader: "pug-loader",
 						options: {
 							pretty: false,
+							query: {
+									linkslist: 'sdsdsd'
+							}
 						},
 					}
 				]
