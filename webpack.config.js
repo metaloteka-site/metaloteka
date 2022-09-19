@@ -32,11 +32,23 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.html$/i,
-				loader: "html-loader",
-				options: {
-					minimize: false,
-				},
+				test: /\.pug$/,
+				use: [
+					{
+						loader: "pug-loader",
+						options: {
+							pretty: false,
+						},
+					}
+				]
+			},
+			// {
+			// 	test: /\.html$/i,
+			// 	loader: "html-loader",
+			// 	options: {
+			// 		minimize: false,
+			// 	},
+			//
 				// use: [
 				// 	{
 				//
@@ -52,7 +64,7 @@ module.exports = {
 					// 	}
 					// }
 				// ]
-			},
+			// },
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
@@ -96,12 +108,12 @@ module.exports = {
 	plugins: [
 		new HtmlWebpackPlugin({
 			title: 'webpack Boilerplate',
-			template: `${paths.src}/template.html`,
+			template: `${paths.src}/index.pug`,
 			filename: 'index.html',
 			inject: 'body',
 		}),
 		new HtmlWebpackPlugin({
-			template: `${paths.src}/list.html`,
+			template: `${paths.src}/list.pug`,
 			filename: 'list.html',
 			inject: 'body',
 		}),
