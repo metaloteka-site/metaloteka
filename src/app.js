@@ -1,4 +1,4 @@
-import './style.scss'
+import './app.scss'
 console.log("Как интересно!")
 
 
