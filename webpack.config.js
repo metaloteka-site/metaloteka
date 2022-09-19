@@ -39,13 +39,17 @@ module.exports = {
 				test: /\.pug$/,
 				use: [
 					{
-						loader: "pug-loader",
+						loader: "html-loader"
+					},
+					{
+						loader: "pug-html-loader",
 						options: {
-							pretty: false,
-							query: {
-									linkslist: 'sdsdsd'
-							}
-						},
+							data: {
+								linkslist: 'links'
+							},
+							interpolate: true,
+							// pretty: true
+						}
 					}
 				]
 			},
