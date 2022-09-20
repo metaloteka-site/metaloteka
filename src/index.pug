@@ -1,3 +1,10 @@
+include ../node_modules/bempug/index
+-
+	BEMPUG.modifier = '_';
+	BEMPUG.afterParse[ '' ] = function( block ) {
+		block.classes = [];
+	}
+
 doctype html
 html
 	head
@@ -5,3 +12,5 @@ html
 	body
 		.profile
 			h1 Hellosds Hyruzzled sdsdsdsd
+		+b('ddd')
+			+e('ddeee')
