@@ -1,0 +1,33 @@
+{
+	"disallowBlockExpansion": true,
+	"disallowClassAttributeWithStaticValue": true,
+	"disallowClassLiteralsBeforeIdLiterals": true,
+	"disallowClassLiterals": true,
+	"disallowDuplicateAttributes": true,
+	"disallowHtmlText": true,
+	"disallowIdLiterals": true,
+	"disallowLegacyMixinCall": true,
+	"disallowMultipleLineBreaks": true,
+	"disallowSpacesInsideAttributeBrackets": true,
+	"disallowSpecificAttributes": "class",
+	"disallowTrailingSpaces": true,
+	"requireClassLiteralsBeforeAttributes": true,
+	"requireIdLiteralsBeforeAttributes": true,
+	"requireLineFeedAtFileEnd": true,
+	"requireLowerCaseAttributes": true,
+	"requireLowerCaseTags": true,
+	"requireSpaceAfterCodeOperator": true,
+	"requireSpecificAttributes": [
+		{
+			"img": ["alt", "src"]
+		}
+	],
+	"requireStrictEqualityOperators": true,
+	"validateAttributeQuoteMarks": "'",
+	"validateAttributeSeparator": {
+		"separator": " ",
+		"multiLineSeparator": "\n\t"
+	},
+	"validateIndentation": "\t",
+	"validateSelfClosingTags": true
+}

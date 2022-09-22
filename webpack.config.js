@@ -2,6 +2,7 @@ const paths = require('./webpack-config/paths')
 const namePages = require('./src/app/list-pages/namePages').names
 const fs = require('fs')
 const path = require('path')
+const PugLintPlugin = require('puglint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const BeautifyHtmlWebpackPlugin = require('beautify-html-webpack-plugin')
 const magicImporter = require('node-sass-magic-importer')
@@ -39,6 +40,11 @@ fs.readdirSync('./src/pages/').forEach(dirPage => {
 })
 
 plugins.push(
+	new PugLintPlugin({
+		context: 'src',
+		files: '**/*.pug',
+		config: Object.assign({ emitError: true }, require('./.pug-lintrc')),
+	}),
 	new HtmlWebpackPlugin({
 		template: './src/app/list-pages/list-pages.pug',
 		filename: './list-pages.html',

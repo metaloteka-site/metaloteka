@@ -5,12 +5,16 @@ include ../../../node_modules/bempug/index
 		block.classes = [];
 	}
 
+let a = 'fff'
+
 doctype html
 html
 	head
 		title qqqqqqqqq
 	body
-		.profile
+		+b('profile')
+
 			h1 Hellosds Hyruzzled sdsdsdsd
-		+b('ddd')
+
+		+b('ddd')(title='#{a}')
 			+e('ddeee')
