@@ -1,24 +1,21 @@
-const paths = require('./webpack-config/paths')
-const namePages = require('./src/app/list-pages/namePages').names
-const fs = require('fs')
-const path = require('path')
+const paths = require('./webpack-config/paths');
+const namePages = require('./src/app/list-pages/namePages').names;
+const fs = require('fs');
+const path = require('path');
 const PugLintPlugin = require('puglint-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const BeautifyHtmlWebpackPlugin = require('beautify-html-webpack-plugin')
-const magicImporter = require('node-sass-magic-importer')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const BeautifyHtmlWebpackPlugin = require('beautify-html-webpack-plugin');
+const magicImporter = require('node-sass-magic-importer');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-//
 let plugins = [];
 let links = [];
 
-fs.readdirSync('./src/pages/').forEach(dirPage => {
+fs.readdirSync('./src/pages/').forEach((dirPage) => {
+	const arrPage = fs.readdirSync(`./src/pages/${dirPage}/`);
 
-	const arrPage = fs.readdirSync(`./src/pages/${dirPage}/`)
-
-	arrPage.forEach(page=> {
-		if (path.extname(page) === ".pug") {
-
+	arrPage.forEach((page) => {
+		if (path.extname(page) === '.pug') {
 			// Преобразование страниц pug в html
 			plugins.push(
 				new HtmlWebpackPlugin({
@@ -26,18 +23,17 @@ fs.readdirSync('./src/pages/').forEach(dirPage => {
 					filename: `./${path.basename(page, '.pug')}.html`,
 					inject: 'body',
 				})
-			)
+			);
 
 			// Создание объекта с данными страниц
 			links.push({
 				link: `./${dirPage}.html`,
 				title: dirPage,
-				name: `${namePages(page)}`
-			})
+				name: `${namePages(page)}`,
+			});
 		}
-	})
-
-})
+	});
+});
 
 plugins.push(
 	new PugLintPlugin({
@@ -51,15 +47,15 @@ plugins.push(
 		inject: 'body',
 	}),
 	new BeautifyHtmlWebpackPlugin({
-		'indent_size': 2,
-		'indent_char': ' ',
-		'indent_with_tabs': true,
-		'editorconfig': true,
+		indent_size: 2,
+		indent_char: ' ',
+		indent_with_tabs: true,
+		editorconfig: true,
 	}),
 	new MiniCssExtractPlugin({
-		filename: 'css/[name].css'
-	}),
-)
+		filename: 'css/[name].css',
+	})
+);
 
 module.exports = {
 	entry: {
@@ -96,19 +92,19 @@ module.exports = {
 				test: /\.pug$/,
 				use: [
 					{
-						loader: 'html-loader'
+						loader: 'html-loader',
 					},
 					{
 						loader: 'pug-html-loader',
 						options: {
 							data: {
-								listLinks: links
+								listLinks: links,
 							},
 							interpolate: true,
-							pretty: false
-						}
-					}
-				]
+							pretty: false,
+						},
+					},
+				],
 			},
 			{
 				test: /\.js$/,
@@ -130,7 +126,7 @@ module.exports = {
 					{
 						loader: 'css-loader',
 						options: {
-							sourceMap: true
+							sourceMap: true,
 						},
 					},
 					{
@@ -150,8 +146,7 @@ module.exports = {
 					},
 				],
 			},
-
-		]
+		],
 	},
 	plugins: plugins,
-}
+};
