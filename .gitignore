@@ -1,5 +1,9 @@
-.idea
-.vscode
+# project
 node_modules
 build
+
+# IDE and OS
+.idea
+.vscode
+Thumbs.db
 .DS_Store
