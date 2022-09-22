@@ -1,10 +1,6 @@
-import './app.scss'
-console.log("Как интересно!")
-
+import './app.scss';
 
 class Game {
-    name = 'Violin Charades'
+	name = 'Violin Charades';
 }
-const myGame = new Game()
-
-console.log('2222')
+new Game();

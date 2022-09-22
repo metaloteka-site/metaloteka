@@ -1,0 +1,33 @@
+{
+	"root": true,
+	"parser": "babel-eslint",
+	"extends": [
+		"eslint:recommended",
+		"prettier"
+	],
+	"rules": {
+		"semi": [
+			"error",
+			"always"
+		],
+		"no-console": "error",
+		"no-debugger": "error",
+		"no-var": 0,
+		"indent": [
+			"error",
+			"tab"
+		],
+		"quotes": [
+			"error",
+			"single"
+		]
+	},
+	"plugins": [
+		"prettier"
+	],
+	"env": {
+		"es6": true,
+		"browser": true,
+		"node": true
+	}
+}
