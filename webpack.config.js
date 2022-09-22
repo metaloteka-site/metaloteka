@@ -96,7 +96,7 @@ module.exports = {
 						loader: 'pug-html-loader',
 						options: {
 							data: {
-								linksList: links
+								listLinks: links
 							},
 							interpolate: true,
 							pretty: false
