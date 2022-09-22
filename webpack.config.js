@@ -1,5 +1,5 @@
 const paths = require('./webpack-config/paths')
-const namePages = require('./src/app/list/namePages').names
+const namePages = require('./src/app/list-pages/namePages').names
 const fs = require('fs')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -7,7 +7,7 @@ const BeautifyHtmlWebpackPlugin = require('beautify-html-webpack-plugin')
 const magicImporter = require('node-sass-magic-importer')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
-
+//
 let plugins = [];
 let links = [];
 
@@ -40,8 +40,8 @@ fs.readdirSync('./src/pages/').forEach(dirPage => {
 
 plugins.push(
 	new HtmlWebpackPlugin({
-		template: `./src/app/list/list.pug`,
-		filename: `./list.html`,
+		template: './src/app/list-pages/list-pages.pug',
+		filename: './list-pages.html',
 		inject: 'body',
 	}),
 	new BeautifyHtmlWebpackPlugin({
@@ -78,7 +78,7 @@ module.exports = {
 			},
 		},
 		historyApiFallback: true,
-		open: 'list.html',
+		open: 'list-pages.html',
 		compress: true,
 		hot: true,
 		port: 8080,
