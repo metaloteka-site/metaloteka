@@ -1,16 +1,19 @@
-const path = require('path')
+const path = require('path');
 
 module.exports = {
 	names: (page) => {
 		let name;
 		switch (path.basename(page, '.pug')) {
 			case 'index':
-				name = 'Главная'
+				name = 'Главная';
+				break;
+			case 'ui-kit':
+				name = 'UI KIT';
 				break;
 			default:
-				name = 'name page'
+				name = 'name page';
 				break;
 		}
 		return name;
-	}
-}
+	},
+};

@@ -17,6 +17,6 @@ html
 			}
 	body
 		for link, idx in listLinks
-			+b('link', {}, 'a')(href=link.link target='_blank' title=link.title accesskey=`${ idx + 1 }`)
-				| #{`${idx + 1}. ${link.name} (${link.title})`}
+			+b('link', {}, 'a')(href=link.link target='_blank' title=link.title accesskey=`${idx + 1}`)
+				| #{`${idx + 1}. ${link.name} (${link.title}.html)`}
 				br
