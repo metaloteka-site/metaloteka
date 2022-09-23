@@ -1,0 +1,89 @@
+// *** CSS ПЕРЕМЕННЫЕ ***
+:root {
+	// color standard
+	--black: #10142f;
+	--white: #ffffff;
+	--gray: #b5c2d2;
+	--light-gray: #f6f8fa;
+	--dark-gray: #58697c;
+	--light-blue: #dee5ef;
+	--light-blue-50: #dee5ef80;
+	--dark-blue: #2a3064;
+	--bright-blue: #3487f3;
+	--bright-blue-50: #3487f380;
+	--red: #ff4132;
+	--green: #00ab44;
+	--orange: #ff6711;
+	--transparent: transparent;
+
+	// color hover
+	--bright-blue-hover: #005cd6;
+	--red-hover: #db1000;
+	--green-hover: #00963c;
+
+	// color gradient
+	--gray-gradient: linear-gradient(90deg, #f6f8fa 0%, #dee5ef 100%);
+	--blue-gradient: linear-gradient(90deg, #2a3064 0%, #3487f3 100%);
+
+	// fonts
+	--font-formular: "Formular", sans-serif;
+	--font-beausans: "PFBeauSansPro", sans-serif;
+	--font-beausansxthin: "PFBeauSansProXThin", sans-serif;
+
+	// shadows
+	--bx-shadow: 0 10px 20px rgba(69, 73, 106, 0.2);
+	--column-gap: 0;
+}
+
+// *** SCSS ПЕРЕМЕННЫЕ ***
+$column-gap: var(--column-gap, 0);
+// ==> переменные цветов
+// color standard
+$black: var(--black);
+$white: var(--white);
+$gray: var(--gray);
+$light-gray: var(--light-gray);
+$dark-gray: var(--dark-gray);
+$light-blue: var(--light-blue);
+$bright-blue-50: var(--bright-blue-50);
+$dark-blue: var(--dark-blue);
+$bright-blue: var(--bright-blue);
+$bright-blue-50: var(--bright-blue-50);
+$red: var(--red);
+$green: var(--green);
+$orange: var(--orange);
+$transparent: var(--transparent);
+
+// color hover
+$bright-blue-hover: var(--bright-blue-hover);
+$red-hover: var(--red-hover);
+$green-hover: var(--green-hover);
+
+// color gradient
+$gray-gradient: var(--gray-gradient);
+$blue-gradient: var(--blue-gradient);
+
+// fonts
+$font-formular: var(--font-formular);
+$font-beausans: var(--font-beausans);
+$font-beausansxthin: var(--font-beausansxthin);
+
+// shadows
+$bx-shadow: var(--bx-shadow);
+
+
+// ==> переменные экранов отображения
+// mobile (xs)
+$screen-min-xs: 320px;
+$screen-max-xs: 767px;
+
+// tablet
+$screen-min-sm: 768px;
+$screen-max-sm: 1023px;
+
+// horizontal tablet and notebook (lg)
+$screen-min-lg: 1024px;
+$screen-max-lg: 1439px;
+
+// desktop (xl)
+$screen-min-xl: 1440px;

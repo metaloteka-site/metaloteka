@@ -1,0 +1,2958 @@
+// *** СТИЛИ ОТСТУПОВ MARGIN ***
+// ==> margin
+.m {
+	&-auto {
+		margin: auto;
+	}
+
+	&-0 {
+		margin: 0;
+	}
+
+	&-10 {
+		margin: 10px;
+	}
+
+	&-20 {
+		margin: 20px;
+	}
+
+	&-30 {
+		margin: 30px;
+	}
+
+	&-40 {
+		margin: 40px;
+	}
+
+	&-50 {
+		margin: 50px;
+	}
+
+	&-80 {
+		margin: 80px;
+	}
+
+	&-100 {
+		margin: 100px;
+	}
+
+	// для медиазапроса LG
+	@include to-lg {
+		&-lg-auto {
+			margin: auto;
+		}
+
+		&-lg-0 {
+			margin: 0;
+		}
+
+		&-lg-10 {
+			margin: 10px;
+		}
+
+		&-lg-20 {
+			margin: 20px;
+		}
+
+		&-lg-30 {
+			margin: 30px;
+		}
+
+		&-lg-40 {
+			margin: 40px;
+		}
+
+		&-lg-50 {
+			margin: 50px;
+		}
+
+		&-lg-80 {
+			margin: 80px;
+		}
+
+		&-lg-100 {
+			margin: 100px;
+		}
+	}
+
+	// для медиазапроса XS
+	@include to-xs {
+		&-xs-auto {
+			margin: auto;
+		}
+
+		&-xs-0 {
+			margin: 0;
+		}
+
+		&-xs-10 {
+			margin: 10px;
+		}
+
+		&-xs-20 {
+			margin: 20px;
+		}
+
+		&-xs-30 {
+			margin: 30px;
+		}
+
+		&-xs-40 {
+			margin: 40px;
+		}
+
+		&-xs-50 {
+			margin: 50px;
+		}
+
+		&-xs-80 {
+			margin: 80px;
+		}
+
+		&-xs-100 {
+			margin: 100px;
+		}
+	}
+}
+
+// ==> margin-top
+.mt {
+	&-auto {
+		margin-top: auto;
+	}
+
+	&-0 {
+		margin-top: 0;
+	}
+
+	&-10 {
+		margin-top: 10px;
+	}
+
+	&-20 {
+		margin-top: 20px;
+	}
+
+	&-30 {
+		margin-top: 30px;
+	}
+
+	&-40 {
+		margin-top: 40px;
+	}
+
+	&-50 {
+		margin-top: 50px;
+	}
+
+	&-60 {
+		margin-top: 60px;
+	}
+
+	&-80 {
+		margin-top: 80px;
+	}
+
+	&-90 {
+		margin-top: 90px;
+	}
+
+	&-100 {
+		margin-top: 100px;
+	}
+
+	// для медиазапроса LG
+	@include to-lg {
+		&-lg-auto {
+			margin-top: auto;
+		}
+
+		&-lg-0 {
+			margin-top: 0;
+		}
+
+		&-lg-10 {
+			margin-top: 10px;
+		}
+
+		&-lg-20 {
+			margin-top: 20px;
+		}
+
+		&-lg-30 {
+			margin-top: 30px;
+		}
+
+		&-lg-40 {
+			margin-top: 40px;
+		}
+
+		&-lg-50 {
+			margin-top: 50px;
+		}
+
+		&-lg-60 {
+			margin-top: 60px;
+		}
+
+		&-lg-80 {
+			margin-top: 80px;
+		}
+
+		&-lg-100 {
+			margin-top: 100px;
+		}
+	}
+
+	// для медиазапроса SM
+	@include to-sm {
+		&-sm-auto {
+			margin-top: auto;
+		}
+
+		&-sm-0 {
+			margin-top: 0;
+		}
+
+		&-sm-10 {
+			margin-top: 10px;
+		}
+
+		&-sm-20 {
+			margin-top: 20px;
+		}
+
+		&-sm-30 {
+			margin-top: 30px;
+		}
+
+		&-sm-40 {
+			margin-top: 40px;
+		}
+
+		&-sm-50 {
+			margin-top: 50px;
+		}
+
+		&-sm-60 {
+			margin-top: 60px;
+		}
+
+		&-sm-80 {
+			margin-top: 80px;
+		}
+
+		&-sm-100 {
+			margin-top: 100px;
+		}
+	}
+
+	// для медиазапроса XS
+	@include to-xs {
+		&-xs-auto {
+			margin-top: auto;
+		}
+
+		&-xs-0 {
+			margin-top: 0;
+		}
+
+		&-xs-10 {
+			margin-top: 10px;
+		}
+
+		&-xs-20 {
+			margin-top: 20px;
+		}
+
+		&-xs-30 {
+			margin-top: 30px;
+		}
+
+		&-xs-40 {
+			margin-top: 40px;
+		}
+
+		&-xs-50 {
+			margin-top: 50px;
+		}
+
+		&-xs-60 {
+			margin-top: 60px;
+		}
+
+		&-xs-80 {
+			margin-top: 80px;
+		}
+
+		&-xs-100 {
+			margin-top: 100px;
+		}
+	}
+}
+
+// ==> margin-right
+.mr {
+	&-auto {
+		margin-right: auto;
+	}
+
+	&-0 {
+		margin-right: 0;
+	}
+
+	&-10 {
+		margin-right: 10px;
+	}
+
+	&-20 {
+		margin-right: 20px;
+	}
+
+	&-30 {
+		margin-right: 30px;
+	}
+
+	&-40 {
+		margin-right: 40px;
+	}
+
+	&-50 {
+		margin-right: 50px;
+	}
+
+	&-60 {
+		margin-right: 60px;
+	}
+
+	&-80 {
+		margin-right: 80px;
+	}
+
+	&-100 {
+		margin-right: 100px;
+	}
+
+	// для медиазапроса LG
+	@include to-lg {
+		&-lg-auto {
+			margin-right: auto;
+		}
+
+		&-lg-0 {
+			margin-right: 0;
+		}
+
+		&-lg-10 {
+			margin-right: 10px;
+		}
+
+		&-lg-20 {
+			margin-right: 20px;
+		}
+
+		&-lg-30 {
+			margin-right: 30px;
+		}
+
+		&-lg-40 {
+			margin-right: 40px;
+		}
+
+		&-lg-50 {
+			margin-right: 50px;
+		}
+
+		&-lg-60 {
+			margin-right: 60px;
+		}
+
+		&-lg-80 {
+			margin-right: 80px;
+		}
+
+		&-lg-100 {
+			margin-right: 100px;
+		}
+	}
+
+	// для медиазапроса XS
+	@include to-xs {
+		&-xs-auto {
+			margin-right: auto;
+		}
+
+		&-xs-0 {
+			margin-right: 0;
+		}
+
+		&-xs-10 {
+			margin-right: 10px;
+		}
+
+		&-xs-20 {
+			margin-right: 20px;
+		}
+
+		&-xs-30 {
+			margin-right: 30px;
+		}
+
+		&-xs-40 {
+			margin-right: 40px;
+		}
+
+		&-xs-50 {
+			margin-right: 50px;
+		}
+
+		&-xs-60 {
+			margin-right: 60px;
+		}
+
+		&-xs-80 {
+			margin-right: 80px;
+		}
+
+		&-xs-100 {
+			margin-right: 100px;
+		}
+	}
+}
+
+// ==> margin-bottom
+.mb {
+	&-auto {
+		margin-bottom: auto;
+	}
+
+	&-0 {
+		margin-bottom: 0;
+	}
+
+	&-10 {
+		margin-bottom: 10px;
+	}
+
+	&-20 {
+		margin-bottom: 20px;
+	}
+
+	&-30 {
+		margin-bottom: 30px;
+	}
+
+	&-40 {
+		margin-bottom: 40px;
+	}
+
+	&-50 {
+		margin-bottom: 50px;
+	}
+
+	&-60 {
+		margin-bottom: 60px;
+	}
+
+	&-80 {
+		margin-bottom: 80px;
+	}
+
+	&-100 {
+		margin-bottom: 100px;
+	}
+
+	// для медиазапроса LG
+	@include to-lg {
+		&-lg-auto {
+			margin-bottom: auto;
+		}
+
+		&-lg-0 {
+			margin-bottom: 0;
+		}
+
+		&-lg-10 {
+			margin-bottom: 10px;
+		}
+
+		&-lg-20 {
+			margin-bottom: 20px;
+		}
+
+		&-lg-30 {
+			margin-bottom: 30px;
+		}
+
+		&-lg-40 {
+			margin-bottom: 40px;
+		}
+
+		&-lg-50 {
+			margin-bottom: 50px;
+		}
+
+		&-lg-60 {
+			margin-bottom: 60px;
+		}
+
+		&-lg-80 {
+			margin-bottom: 80px;
+		}
+
+		&-lg-100 {
+			margin-bottom: 100px;
+		}
+	}
+
+	@include to-sm {
+		&-sm-auto {
+			margin-bottom: auto;
+		}
+
+		&-sm-0 {
+			margin-bottom: 0;
+		}
+
+		&-sm-10 {
+			margin-bottom: 10px;
+		}
+
+		&-sm-20 {
+			margin-bottom: 20px;
+		}
+
+		&-sm-30 {
+			margin-bottom: 30px;
+		}
+
+		&-sm-40 {
+			margin-bottom: 40px;
+		}
+
+		&-sm-50 {
+			margin-bottom: 50px;
+		}
+
+		&-sm-60 {
+			margin-bottom: 60px;
+		}
+
+		&-sm-80 {
+			margin-bottom: 80px;
+		}
+
+		&-sm-100 {
+			margin-bottom: 100px;
+		}
+	}
+
+	// для медиазапроса XS
+	@include to-xs {
+		&-xs-auto {
+			margin-bottom: auto;
+		}
+
+		&-xs-0 {
+			margin-bottom: 0;
+		}
+
+		&-xs-10 {
+			margin-bottom: 10px;
+		}
+
+		&-xs-20 {
+			margin-bottom: 20px;
+		}
+
+		&-xs-30 {
+			margin-bottom: 30px;
+		}
+
+		&-xs-40 {
+			margin-bottom: 40px;
+		}
+
+		&-xs-50 {
+			margin-bottom: 50px;
+		}
+
+		&-xs-60 {
+			margin-bottom: 60px;
+		}
+
+		&-xs-80 {
+			margin-bottom: 80px;
+		}
+
+		&-xs-100 {
+			margin-bottom: 100px;
+		}
+	}
+}
+
+// ==> margin-left
+.ml {
+	&-auto {
+		margin-left: auto;
+	}
+
+	&-0 {
+		margin-left: 0;
+	}
+
+	&-10 {
+		margin-left: 10px;
+	}
+
+	&-20 {
+		margin-left: 20px;
+	}
+
+	&-30 {
+		margin-left: 30px;
+	}
+
+	&-40 {
+		margin-left: 40px;
+	}
+
+	&-50 {
+		margin-left: 50px;
+	}
+
+	&-60 {
+		margin-left: 60px;
+	}
+
+	&-80 {
+		margin-left: 80px;
+	}
+
+	&-100 {
+		margin-left: 100px;
+	}
+
+	// для медиазапроса LG
+	@include to-lg {
+		&-lg-auto {
+			margin-left: auto;
+		}
+
+		&-lg-0 {
+			margin-left: 0;
+		}
+
+		&-lg-10 {
+			margin-left: 10px;
+		}
+
+		&-lg-20 {
+			margin-left: 20px;
+		}
+
+		&-lg-30 {
+			margin-left: 30px;
+		}
+
+		&-lg-40 {
+			margin-left: 40px;
+		}
+
+		&-lg-50 {
+			margin-left: 50px;
+		}
+
+		&-lg-60 {
+			margin-left: 60px;
+		}
+
+		&-lg-80 {
+			margin-left: 80px;
+		}
+
+		&-lg-100 {
+			margin-left: 100px;
+		}
+	}
+
+	// для медиазапроса XS
+	@include to-xs {
+		&-xs-auto {
+			margin-left: auto;
+		}
+
+		&-xs-0 {
+			margin-left: 0;
+		}
+
+		&-xs-10 {
+			margin-left: 10px;
+		}
+
+		&-xs-20 {
+			margin-left: 20px;
+		}
+
+		&-xs-30 {
+			margin-left: 30px;
+		}
+
+		&-xs-40 {
+			margin-left: 40px;
+		}
+
+		&-xs-50 {
+			margin-left: 50px;
+		}
+
+		&-xs-60 {
+			margin-left: 60px;
+		}
+
+		&-xs-80 {
+			margin-left: 80px;
+		}
+
+		&-xs-100 {
+			margin-left: 100px;
+		}
+	}
+}
+
+// ==> margin-right && margin-left
+.mx {
+	&-auto {
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	&-0 {
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	&-10 {
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+
+	&-20 {
+		margin-right: 20px;
+		margin-left: 20px;
+	}
+
+	&-30 {
+		margin-right: 30px;
+		margin-left: 30px;
+	}
+
+	&-40 {
+		margin-right: 40px;
+		margin-left: 40px;
+	}
+
+	&-50 {
+		margin-right: 50px;
+		margin-left: 50px;
+	}
+
+	&-60 {
+		margin-right: 60px;
+		margin-left: 60px;
+	}
+
+	&-80 {
+		margin-right: 80px;
+		margin-left: 80px;
+	}
+
+	&-100 {
+		margin-right: 100px;
+		margin-left: 100px;
+	}
+
+	// для медиазапроса LG
+	@include to-lg {
+		&-lg-auto {
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		&-lg-0 {
+			margin-right: 0;
+			margin-left: 0;
+		}
+
+		&-lg-10 {
+			margin-right: 10px;
+			margin-left: 10px;
+		}
+
+		&-lg-20 {
+			margin-right: 20px;
+			margin-left: 20px;
+		}
+
+		&-lg-30 {
+			margin-right: 30px;
+			margin-left: 30px;
+		}
+
+		&-lg-40 {
+			margin-right: 40px;
+			margin-left: 40px;
+		}
+
+		&-lg-50 {
+			margin-right: 50px;
+			margin-left: 50px;
+		}
+
+		&-lg-60 {
+			margin-right: 60px;
+			margin-left: 60px;
+		}
+
+		&-lg-80 {
+			margin-right: 80px;
+			margin-left: 80px;
+		}
+
+		&-lg-100 {
+			margin-right: 100px;
+			margin-left: 100px;
+		}
+	}
+
+	// для медиазапроса XS
+	@include to-xs {
+		&-xs-auto {
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		&-xs-0 {
+			margin-right: 0;
+			margin-left: 0;
+		}
+
+		&-xs-10 {
+			margin-right: 10px;
+			margin-left: 10px;
+		}
+
+		&-xs-20 {
+			margin-right: 20px;
+			margin-left: 20px;
+		}
+
+		&-xs-30 {
+			margin-right: 30px;
+			margin-left: 30px;
+		}
+
+		&-xs-40 {
+			margin-right: 40px;
+			margin-left: 40px;
+		}
+
+		&-xs-50 {
+			margin-right: 50px;
+			margin-left: 50px;
+		}
+
+		&-xs-60 {
+			margin-right: 60px;
+			margin-left: 60px;
+		}
+
+		&-xs-80 {
+			margin-right: 80px;
+			margin-left: 80px;
+		}
+
+		&-xs-100 {
+			margin-right: 100px;
+			margin-left: 100px;
+		}
+	}
+}
+
+// ==> margin-top && margin-bottom
+.my {
+	&-auto {
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+
+	&-0 {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	&-10 {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	&-20 {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	&-30 {
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+
+	&-40 {
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+
+	&-50 {
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+	&-60 {
+		margin-top: 60px;
+		margin-bottom: 60px;
+	}
+
+	&-80 {
+		margin-top: 80px;
+		margin-bottom: 80px;
+	}
+
+	&-100 {
+		margin-top: 100px;
+		margin-bottom: 100px;
+	}
+
+	// для медиазапроса LG
+	@include to-lg {
+		&-lg-auto {
+			margin-top: auto;
+			margin-bottom: auto;
+		}
+
+		&-lg-0 {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		&-lg-10 {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+
+		&-lg-20 {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
+		&-lg-30 {
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+
+		&-lg-40 {
+			margin-top: 40px;
+			margin-bottom: 40px;
+		}
+
+		&-lg-50 {
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+
+		&-lg-60 {
+			margin-top: 60px;
+			margin-bottom: 60px;
+		}
+
+		&-lg-80 {
+			margin-top: 80px;
+			margin-bottom: 80px;
+		}
+
+		&-lg-100 {
+			margin-top: 100px;
+			margin-bottom: 100px;
+		}
+	}
+
+	// для медиазапроса XS
+	@include to-xs {
+		&-xs-auto {
+			margin-top: auto;
+			margin-bottom: auto;
+		}
+
+		&-xs-0 {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		&-xs-10 {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+
+		&-xs-20 {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
+		&-xs-30 {
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+
+		&-xs-40 {
+			margin-top: 40px;
+			margin-bottom: 40px;
+		}
+
+		&-xs-50 {
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+
+		&-xs-60 {
+			margin-top: 60px;
+			margin-bottom: 60px;
+		}
+
+		&-xs-80 {
+			margin-top: 80px;
+			margin-bottom: 80px;
+		}
+
+		&-xs-100 {
+			margin-top: 100px;
+			margin-bottom: 100px;
+		}
+	}
+}
+
+// *** СТИЛИ ОТСТУПОВ PADDING ***
+// ==> padding
+.p {
+	&-0 {
+		padding: 0;
+	}
+
+	&-10 {
+		padding: 10px;
+	}
+
+	&-20 {
+		padding: 20px;
+	}
+
+	&-30 {
+		padding: 30px;
+	}
+
+	&-40 {
+		padding: 40px;
+	}
+
+	&-50 {
+		padding: 50px;
+	}
+
+	&-60 {
+		padding: 60px;
+	}
+
+	&-80 {
+		padding: 80px;
+	}
+
+	&-100 {
+		padding: 100px;
+	}
+
+	// для медиазапроса LG
+	@include to-lg {
+		&-lg-0 {
+			padding: 0;
+		}
+
+		&-lg-10 {
+			padding: 10px;
+		}
+
+		&-lg-20 {
+			padding: 20px;
+		}
+
+		&-lg-30 {
+			padding: 30px;
+		}
+
+		&-lg-40 {
+			padding: 40px;
+		}
+
+		&-lg-50 {
+			padding: 50px;
+		}
+
+		&-lg-60 {
+			padding: 60px;
+		}
+
+		&-lg-80 {
+			padding: 80px;
+		}
+
+		&-lg-100 {
+			padding: 100px;
+		}
+	}
+
+	// для медиазапроса XS
+	@include to-xs {
+		&-xs-0 {
+			padding: 0;
+		}
+
+		&-xs-10 {
+			padding: 10px;
+		}
+
+		&-xs-20 {
+			padding: 20px;
+		}
+
+		&-xs-30 {
+			padding: 30px;
+		}
+
+		&-xs-40 {
+			padding: 40px;
+		}
+
+		&-xs-50 {
+			padding: 50px;
+		}
+
+		&-xs-60 {
+			padding: 60px;
+		}
+
+		&-xs-80 {
+			padding: 80px;
+		}
+
+		&-xs-100 {
+			padding: 100px;
+		}
+	}
+}
+
+// ==> padding-top
+.pt {
+	&-0 {
+		padding-top: 0;
+	}
+
+	&-10 {
+		padding-top: 10px;
+	}
+
+	&-20 {
+		padding-top: 20px;
+	}
+
+	&-30 {
+		padding-top: 30px;
+	}
+
+	&-40 {
+		padding-top: 40px;
+	}
+
+	&-50 {
+		padding-top: 50px;
+	}
+
+	&-60 {
+		padding-top: 60px;
+	}
+
+	&-80 {
+		padding-top: 80px;
+	}
+
+	&-100 {
+		padding-top: 100px;
+	}
+
+	// для медиазапроса LG
+	@include to-lg {
+		&-lg-0 {
+			padding-top: 0;
+		}
+
+		&-lg-10 {
+			padding-top: 10px;
+		}
+
+		&-lg-20 {
+			padding-top: 20px;
+		}
+
+		&-lg-30 {
+			padding-top: 30px;
+		}
+
+		&-lg-40 {
+			padding-top: 40px;
+		}
+
+		&-lg-50 {
+			padding-top: 50px;
+		}
+
+		&-lg-80 {
+			padding-top: 80px;
+		}
+
+		&-lg-100 {
+			padding-top: 100px;
+		}
+	}
+
+	// для медиазапроса SM
+	@include to-sm {
+		&-sm-0 {
+			padding-top: 0;
+		}
+
+		&-sm-10 {
+			padding-top: 10px;
+		}
+
+		&-sm-20 {
+			padding-top: 20px;
+		}
+
+		&-sm-30 {
+			padding-top: 30px;
+		}
+
+		&-sm-40 {
+			padding-top: 40px;
+		}
+
+		&-sm-50 {
+			padding-top: 50px;
+		}
+
+		&-sm-80 {
+			padding-top: 80px;
+		}
+
+		&-sm-100 {
+			padding-top: 100px;
+		}
+	}
+
+	// для медиазапроса XS
+	@include to-xs {
+		&-xs-0 {
+			padding-top: 0;
+		}
+
+		&-xs-10 {
+			padding-top: 10px;
+		}
+
+		&-xs-20 {
+			padding-top: 20px;
+		}
+
+		&-xs-30 {
+			padding-top: 30px;
+		}
+
+		&-xs-40 {
+			padding-top: 40px;
+		}
+
+		&-xs-50 {
+			padding-top: 50px;
+		}
+
+		&-xs-80 {
+			padding-top: 80px;
+		}
+
+		&-xs-100 {
+			padding-top: 100px;
+		}
+	}
+}
+
+// ==> padding-right
+.pr {
+	&-0 {
+		padding-right: 0;
+	}
+
+	&-10 {
+		padding-right: 10px;
+	}
+
+	&-20 {
+		padding-right: 20px;
+	}
+
+	&-30 {
+		padding-right: 30px;
+	}
+
+	&-40 {
+		padding-right: 40px;
+	}
+
+	&-50 {
+		padding-right: 50px;
+	}
+
+	&-80 {
+		padding-right: 80px;
+	}
+
+	&-100 {
+		padding-right: 100px;
+	}
+
+	// для медиазапроса LG
+	@include to-lg {
+		&-lg-0 {
+			padding-right: 0;
+		}
+
+		&-lg-10 {
+			padding-right: 10px;
+		}
+
+		&-lg-20 {
+			padding-right: 20px;
+		}
+
+		&-lg-30 {
+			padding-right: 30px;
+		}
+
+		&-lg-40 {
+			padding-right: 40px;
+		}
+
+		&-lg-50 {
+			padding-right: 50px;
+		}
+
+		&-lg-80 {
+			padding-right: 80px;
+		}
+
+		&-lg-100 {
+			padding-right: 100px;
+		}
+	}
+
+	// для медиазапроса XS
+	@include to-xs {
+		&-xs-0 {
+			padding-right: 0;
+		}
+
+		&-xs-10 {
+			padding-right: 10px;
+		}
+
+		&-xs-20 {
+			padding-right: 20px;
+		}
+
+		&-xs-30 {
+			padding-right: 30px;
+		}
+
+		&-xs-40 {
+			padding-right: 40px;
+		}
+
+		&-xs-50 {
+			padding-right: 50px;
+		}
+
+		&-xs-80 {
+			padding-right: 80px;
+		}
+
+		&-xs-100 {
+			padding-right: 100px;
+		}
+	}
+}
+
+// ==> padding-bottom
+.pb {
+	&-0 {
+		padding-bottom: 0;
+	}
+
+	&-10 {
+		padding-bottom: 10px;
+	}
+
+	&-20 {
+		padding-bottom: 20px;
+	}
+
+	&-30 {
+		padding-bottom: 30px;
+	}
+
+	&-40 {
+		padding-bottom: 40px;
+	}
+
+	&-50 {
+		padding-bottom: 50px;
+	}
+
+	&-60 {
+		padding-bottom: 60px;
+	}
+
+	&-80 {
+		padding-bottom: 80px;
+	}
+
+	&-100 {
+		padding-bottom: 100px;
+	}
+
+	// для медиазапроса LG
+	@include to-lg {
+		&-lg-0 {
+			padding-bottom: 0;
+		}
+
+		&-lg-10 {
+			padding-bottom: 10px;
+		}
+
+		&-lg-20 {
+			padding-bottom: 20px;
+		}
+
+		&-lg-30 {
+			padding-bottom: 30px;
+		}
+
+		&-lg-40 {
+			padding-bottom: 40px;
+		}
+
+		&-lg-50 {
+			padding-bottom: 50px;
+		}
+
+		&-lg-80 {
+			padding-bottom: 80px;
+		}
+
+		&-lg-100 {
+			padding-bottom: 100px;
+		}
+	}
+
+	// для медиазапроса XS
+	@include to-xs {
+		&-xs-0 {
+			padding-bottom: 0;
+		}
+
+		&-xs-10 {
+			padding-bottom: 10px;
+		}
+
+		&-xs-20 {
+			padding-bottom: 20px;
+		}
+
+		&-xs-30 {
+			padding-bottom: 30px;
+		}
+
+		&-xs-40 {
+			padding-bottom: 40px;
+		}
+
+		&-xs-50 {
+			padding-bottom: 50px;
+		}
+
+		&-xs-80 {
+			padding-bottom: 80px;
+		}
+
+		&-xs-100 {
+			padding-bottom: 100px;
+		}
+	}
+}
+
+// ==> padding-left
+.pl {
+	&-0 {
+		padding-left: 0;
+	}
+
+	&-10 {
+		padding-left: 10px;
+	}
+
+	&-20 {
+		padding-left: 20px;
+	}
+
+	&-30 {
+		padding-left: 30px;
+	}
+
+	&-40 {
+		padding-left: 40px;
+	}
+
+	&-50 {
+		padding-left: 50px;
+	}
+
+	&-80 {
+		padding-left: 80px;
+	}
+
+	&-100 {
+		padding-left: 100px;
+	}
+
+	// для медиазапроса LG
+	@include to-lg {
+		&-lg-0 {
+			padding-left: 0;
+		}
+
+		&-lg-10 {
+			padding-left: 10px;
+		}
+
+		&-lg-20 {
+			padding-left: 20px;
+		}
+
+		&-lg-30 {
+			padding-left: 30px;
+		}
+
+		&-lg-40 {
+			padding-left: 40px;
+		}
+
+		&-lg-50 {
+			padding-left: 50px;
+		}
+
+		&-lg-80 {
+			padding-left: 80px;
+		}
+
+		&-lg-100 {
+			padding-left: 100px;
+		}
+	}
+
+	// для медиазапроса XS
+	@include to-xs {
+		&-xs-0 {
+			padding-left: 0;
+		}
+
+		&-xs-10 {
+			padding-left: 10px;
+		}
+
+		&-xs-20 {
+			padding-left: 20px;
+		}
+
+		&-xs-30 {
+			padding-left: 30px;
+		}
+
+		&-xs-40 {
+			padding-left: 40px;
+		}
+
+		&-xs-50 {
+			padding-left: 50px;
+		}
+
+		&-xs-80 {
+			padding-left: 80px;
+		}
+
+		&-xs-100 {
+			padding-left: 100px;
+		}
+	}
+}
+
+// ==> padding-right && padding-left
+.px {
+	&-0 {
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	&-10 {
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+
+	&-20 {
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+
+	&-30 {
+		padding-right: 30px;
+		padding-left: 30px;
+	}
+
+	&-40 {
+		padding-right: 40px;
+		padding-left: 40px;
+	}
+
+	&-50 {
+		padding-right: 50px;
+		padding-left: 50px;
+	}
+
+	&-60 {
+		padding-right: 50px;
+		padding-left: 50px;
+	}
+
+	&-80 {
+		padding-right: 80px;
+		padding-left: 80px;
+	}
+
+	&-100 {
+		padding-right: 100px;
+		padding-left: 100px;
+	}
+
+	// для медиазапроса LG
+	@include to-lg {
+		&-lg-0 {
+			padding-right: 0;
+			padding-left: 0;
+		}
+
+		&-lg-10 {
+			padding-right: 10px;
+			padding-left: 10px;
+		}
+
+		&-lg-20 {
+			padding-right: 20px;
+			padding-left: 20px;
+		}
+
+		&-lg-30 {
+			padding-right: 30px;
+			padding-left: 30px;
+		}
+
+		&-lg-40 {
+			padding-right: 40px;
+			padding-left: 40px;
+		}
+
+		&-lg-50 {
+			padding-right: 50px;
+			padding-left: 50px;
+		}
+
+		&-lg-80 {
+			padding-right: 80px;
+			padding-left: 80px;
+		}
+
+		&-lg-100 {
+			padding-right: 100px;
+			padding-left: 100px;
+		}
+	}
+
+	@include to-sm {
+		&-sm-0 {
+			padding-right: 0;
+			padding-left: 0;
+		}
+
+		&-sm-10 {
+			padding-right: 10px;
+			padding-left: 10px;
+		}
+
+		&-sm-20 {
+			padding-right: 20px;
+			padding-left: 20px;
+		}
+
+		&-sm-30 {
+			padding-right: 30px;
+			padding-left: 30px;
+		}
+
+		&-sm-40 {
+			padding-right: 40px;
+			padding-left: 40px;
+		}
+
+		&-sm-50 {
+			padding-right: 50px;
+			padding-left: 50px;
+		}
+
+		&-sm-80 {
+			padding-right: 80px;
+			padding-left: 80px;
+		}
+
+		&-sm-100 {
+			padding-right: 100px;
+			padding-left: 100px;
+		}
+	}
+
+	// для медиазапроса XS
+	@include to-xs {
+		&-xs-0 {
+			padding-right: 0;
+			padding-left: 0;
+		}
+
+		&-xs-10 {
+			padding-right: 10px;
+			padding-left: 10px;
+		}
+
+		&-xs-20 {
+			padding-right: 20px;
+			padding-left: 20px;
+		}
+
+		&-xs-30 {
+			padding-right: 30px;
+			padding-left: 30px;
+		}
+
+		&-xs-40 {
+			padding-right: 40px;
+			padding-left: 40px;
+		}
+
+		&-xs-50 {
+			padding-right: 50px;
+			padding-left: 50px;
+		}
+
+		&-xs-80 {
+			padding-right: 80px;
+			padding-left: 80px;
+		}
+
+		&-xs-100 {
+			padding-right: 100px;
+			padding-left: 100px;
+		}
+	}
+}
+
+// ==> padding-top && padding-bottom
+.py {
+	&-0 {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	&-10 {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	&-20 {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	&-30 {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	&-40 {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
+	&-50 {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	&-60 {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	&-80 {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+
+	&-100 {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+
+	// для медиазапроса LG
+	@include to-lg {
+		&-lg-0 {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+
+		&-lg-10 {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+
+		&-lg-20 {
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+
+		&-lg-30 {
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+
+		&-lg-40 {
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+
+		&-lg-50 {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+
+		&-lg-80 {
+			padding-top: 80px;
+			padding-bottom: 80px;
+		}
+
+		&-lg-100 {
+			padding-top: 100px;
+			padding-bottom: 100px;
+		}
+	}
+
+	// для медиазапроса SM
+	@include to-sm {
+		&-sm-0 {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+
+		&-sm-10 {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+
+		&-sm-20 {
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+
+		&-sm-30 {
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+
+		&-sm-40 {
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+
+		&-sm-50 {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+
+		&-sm-80 {
+			padding-top: 80px;
+			padding-bottom: 80px;
+		}
+
+		&-sm-100 {
+			padding-top: 100px;
+			padding-bottom: 100px;
+		}
+	}
+
+	// для медиазапроса XS
+	@include to-xs {
+		&-xs-0 {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+
+		&-xs-10 {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+
+		&-xs-20 {
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+
+		&-xs-30 {
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+
+		&-xs-40 {
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+
+		&-xs-50 {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+
+		&-xs-80 {
+			padding-top: 80px;
+			padding-bottom: 80px;
+		}
+
+		&-xs-100 {
+			padding-top: 100px;
+			padding-bottom: 100px;
+		}
+	}
+}
+
+// *** СТИЛИ ОТСТУПОВ GAP ***
+// ==> gap
+.g {
+	&-0 {
+		--column-gap: 0;
+		gap: 0;
+	}
+
+	&-5 {
+		--column-gap: 5px;
+		gap: 5px;
+	}
+
+	&-10 {
+		--column-gap: 10px;
+		gap: 10px;
+	}
+
+	&-20 {
+		--column-gap: 20px;
+		gap: 20px;
+	}
+
+	&-30 {
+		--column-gap: 30px;
+		gap: 30px;
+	}
+
+	&-40 {
+		--column-gap: 40px;
+		gap: 40px;
+	}
+
+	&-50 {
+		--column-gap: 50px;
+		gap: 50px;
+	}
+
+	&-80 {
+		--column-gap: 80px;
+		gap: 80px;
+	}
+
+	&-100 {
+		--column-gap: 100px;
+		gap: 100px;
+	}
+
+	// для медиазапроса LG
+	@include to-lg {
+		&-lg-0 {
+			--column-gap: 0;
+			gap: 0;
+		}
+
+		&-lg-10 {
+			--column-gap: 10px;
+			gap: 10px;
+		}
+
+		&-lg-20 {
+			--column-gap: 20px;
+			gap: 20px;
+		}
+
+		&-lg-30 {
+			--column-gap: 30px;
+			gap: 30px;
+		}
+
+		&-lg-40 {
+			--column-gap: 40px;
+			gap: 40px;
+		}
+
+		&-lg-50 {
+			--column-gap: 50px;
+			gap: 50px;
+		}
+
+		&-lg-80 {
+			--column-gap: 80px;
+			gap: 80px;
+		}
+
+		&-lg-100 {
+			--column-gap: 100px;
+			gap: 100px;
+		}
+	}
+
+	// для медиазапроса XS
+	@include to-xs {
+		&-xs-0 {
+			--column-gap: 0;
+			gap: 0;
+		}
+
+		&-xs-10 {
+			--column-gap: 10px;
+			gap: 10px;
+		}
+
+		&-xs-20 {
+			--column-gap: 20px;
+			gap: 20px;
+		}
+
+		&-xs-30 {
+			--column-gap: 30px;
+			gap: 30px;
+		}
+
+		&-xs-40 {
+			--column-gap: 40px;
+			gap: 40px;
+		}
+
+		&-xs-50 {
+			--column-gap: 50px;
+			gap: 50px;
+		}
+
+		&-xs-80 {
+			--column-gap: 80px;
+			gap: 80px;
+		}
+
+		&-xs-100 {
+			--column-gap: 100px;
+			gap: 100px;
+		}
+	}
+}
+
+// ==> column-gap
+.cg {
+	&-0 {
+		--column-gap: 0;
+		column-gap: 0;
+	}
+
+	&-10 {
+		--column-gap: 10px;
+		column-gap: 10px;
+	}
+
+	&-20 {
+		--column-gap: 20px;
+		column-gap: 20px;
+	}
+
+	&-30 {
+		--column-gap: 30px;
+		column-gap: 30px;
+	}
+
+	&-40 {
+		--column-gap: 40px;
+		column-gap: 40px;
+	}
+
+	&-50 {
+		--column-gap: 50px;
+		column-gap: 50px;
+	}
+
+	&-80 {
+		--column-gap: 80px;
+		column-gap: 80px;
+	}
+
+	&-100 {
+		--column-gap: 100px;
+		column-gap: 100px;
+	}
+
+	// для медиазапроса LG
+	@include to-lg {
+		&-lg-0 {
+			--column-gap: 0;
+			column-gap: 0;
+		}
+
+		&-lg-10 {
+			--column-gap: 10px;
+			column-gap: 10px;
+		}
+
+		&-lg-20 {
+			--column-gap: 20px;
+			column-gap: 20px;
+		}
+
+		&-lg-30 {
+			--column-gap: 30px;
+			column-gap: 30px;
+		}
+
+		&-lg-40 {
+			--column-gap: 40px;
+			column-gap: 40px;
+		}
+
+		&-lg-50 {
+			--column-gap: 50px;
+			column-gap: 50px;
+		}
+
+		&-lg-80 {
+			--column-gap: 80px;
+			column-gap: 80px;
+		}
+
+		&-lg-100 {
+			--column-gap: 100px;
+			column-gap: 100px;
+		}
+	}
+
+	// для медиазапроса XS
+	@include to-xs {
+		&-xs-0 {
+			--column-gap: 0;
+			column-gap: 0;
+		}
+
+		&-xs-10 {
+			--column-gap: 10px;
+			column-gap: 10px;
+		}
+
+		&-xs-20 {
+			--column-gap: 20px;
+			column-gap: 20px;
+		}
+
+		&-xs-30 {
+			--column-gap: 30px;
+			column-gap: 30px;
+		}
+
+		&-xs-40 {
+			--column-gap: 40px;
+			column-gap: 40px;
+		}
+
+		&-xs-50 {
+			--column-gap: 50px;
+			column-gap: 50px;
+		}
+
+		&-xs-80 {
+			--column-gap: 80px;
+			column-gap: 80px;
+		}
+
+		&-xs-100 {
+			--column-gap: 100px;
+			column-gap: 100px;
+		}
+	}
+}
+
+// ==> row-gap
+.rg {
+	&-0 {
+		row-gap: 0;
+	}
+
+	&-10 {
+		row-gap: 10px;
+	}
+
+	&-20 {
+		row-gap: 20px;
+	}
+
+	&-30 {
+		row-gap: 30px;
+	}
+
+	&-40 {
+		row-gap: 40px;
+	}
+
+	&-50 {
+		row-gap: 50px;
+	}
+
+	&-80 {
+		row-gap: 80px;
+	}
+
+	&-100 {
+		row-gap: 100px;
+	}
+
+	// для медиазапроса LG
+	@include to-lg {
+		&-lg-0 {
+			row-gap: 0;
+		}
+
+		&-lg-10 {
+			row-gap: 10px;
+		}
+
+		&-lg-20 {
+			row-gap: 20px;
+		}
+
+		&-lg-30 {
+			row-gap: 30px;
+		}
+
+		&-lg-40 {
+			row-gap: 40px;
+		}
+
+		&-lg-50 {
+			row-gap: 50px;
+		}
+
+		&-lg-80 {
+			row-gap: 80px;
+		}
+
+		&-lg-100 {
+			row-gap: 100px;
+		}
+	}
+
+	// для медиазапроса XS
+	@include to-xs {
+		&-xs-0 {
+			row-gap: 0;
+		}
+
+		&-xs-10 {
+			row-gap: 10px;
+		}
+
+		&-xs-20 {
+			row-gap: 20px;
+		}
+
+		&-xs-30 {
+			row-gap: 30px;
+		}
+
+		&-xs-40 {
+			row-gap: 40px;
+		}
+
+		&-xs-50 {
+			row-gap: 50px;
+		}
+
+		&-xs-80 {
+			row-gap: 80px;
+		}
+
+		&-xs-100 {
+			row-gap: 100px;
+		}
+	}
+}
+
+
+// *** СТИЛИ ТИПА ОТОБРАЖЕНИЯ ЭЛЕМЕНТОВ ***
+.d {
+	// ==> display-block
+	&-block {
+		display: block;
+	}
+
+	&-lg-block {
+		@include to-lg {
+			display: block;
+		}
+	}
+
+	&-xs-block {
+		@include to-xs {
+			display: block;
+		}
+	}
+
+	// ==> display-flex
+	&-flex {
+		display: flex;
+	}
+
+	&-lg-flex {
+		@include to-lg {
+			display: flex;
+		}
+	}
+
+	&-xs-flex {
+		@include to-xs {
+			display: flex;
+		}
+	}
+
+	// ==> display-grid
+	&-grid {
+		display: grid;
+	}
+
+	&-lg-grid {
+		@include to-lg {
+			display: grid;
+		}
+	}
+
+	&-xs-grid {
+		@include to-xs {
+			display: grid;
+		}
+	}
+
+	// ==> display-none
+	&-none {
+		display: none;
+	}
+
+	&-lg-none {
+		@include to-lg {
+			display: none;
+		}
+	}
+
+	&-xs-none {
+		@include to-xs {
+			display: none;
+		}
+	}
+}
+
+// *** СТИЛИ УПРАВЛЕНИЯ FLEX КОНТЕЙНЕРАМИ ***
+.flex {
+	// ==> flex-direction-row
+	&-row {
+		flex-direction: row;
+	}
+
+	&-lg-row {
+		@include to-lg {
+			flex-direction: row;
+		}
+	}
+
+	&-xs-row {
+		@include to-xs {
+			flex-direction: row;
+		}
+	}
+
+	// ==> flex-direction-column
+	&-column {
+		flex-direction: column;
+	}
+
+	&-lg-column {
+		@include to-lg {
+			flex-direction: column;
+		}
+	}
+
+	&-xs-column {
+		@include to-xs {
+			flex-direction: column;
+		}
+	}
+
+	// ==> flex-direction-row-reverse
+	&-row-reverse {
+		flex-direction: row-reverse;
+	}
+
+	&-lg-row-reverse {
+		@include to-lg {
+			flex-direction: row-reverse;
+		}
+	}
+
+	&-xs-row-reverse {
+		@include to-xs {
+			flex-direction: row-reverse;
+		}
+	}
+
+	// ==> flex-direction-column-reverse
+	&-column-reverse {
+		flex-direction: column-reverse;
+	}
+
+	&-lg-column-reverse {
+		@include to-lg {
+			flex-direction: column-reverse;
+		}
+	}
+
+	&-xs-column-reverse {
+		@include to-xs {
+			flex-direction: column-reverse;
+		}
+	}
+
+	// ==> flex-direction-wrap
+	&-wrap {
+		flex-wrap: wrap;
+	}
+
+	&-lg-wrap {
+		@include to-lg {
+			flex-wrap: wrap;
+		}
+	}
+
+	&-xs-wrap {
+		@include to-xs {
+			flex-wrap: wrap;
+		}
+	}
+
+	// ==> flex-direction-nowrap
+	&-nowrap {
+		flex-wrap: nowrap;
+	}
+
+	&-lg-nowrap {
+		@include to-lg {
+			flex-wrap: nowrap;
+		}
+	}
+
+	&-xs-nowrap {
+		@include to-xs {
+			flex-wrap: nowrap;
+		}
+	}
+
+	// ==> flex-direction-wrap-reverse
+	&-wrap-reverse {
+		flex-wrap: wrap-reverse;
+	}
+
+	&-lg-wrap-reverse {
+		@include to-lg {
+			flex-wrap: wrap-reverse;
+		}
+	}
+
+	&-xs-wrap-reverse {
+		@include to-xs {
+			flex-wrap: wrap-reverse;
+		}
+	}
+}
+
+// *** СТИЛИ ВЫРАВНИВАНИЯ СЕТКИ ***
+// ==> justify-content
+.justify-content {
+	&-start {
+		justify-content: flex-start;
+	}
+
+	&-end {
+		justify-content: flex-end;
+	}
+
+	&-center {
+		justify-content: center;
+	}
+
+	&-between {
+		justify-content: space-between;
+	}
+
+	&-around {
+		justify-content: space-around;
+	}
+
+	// для медиазапроса LG
+	@include to-lg {
+		&-lg-start {
+			justify-content: flex-start;
+		}
+
+		&-lg-end {
+			justify-content: flex-end;
+		}
+
+		&-lg-center {
+			justify-content: center;
+		}
+
+		&-lg-between {
+			justify-content: space-between;
+		}
+
+		&-lg-around {
+			justify-content: space-around;
+		}
+	}
+
+	// для медиазапроса SM
+	@include to-sm {
+		&-sm-start {
+			justify-content: flex-start;
+		}
+
+		&-sm-end {
+			justify-content: flex-end;
+		}
+
+		&-sm-center {
+			justify-content: center;
+		}
+
+		&-sm-between {
+			justify-content: space-between;
+		}
+
+		&-sm-around {
+			justify-content: space-around;
+		}
+	}
+
+	// для медиазапроса XS
+	@include to-xs {
+		&-xs-start {
+			justify-content: flex-start;
+		}
+
+		&-xs-end {
+			justify-content: flex-end;
+		}
+
+		&-xs-center {
+			justify-content: center;
+		}
+
+		&-xs-between {
+			justify-content: space-between;
+		}
+
+		&-xs-around {
+			justify-content: space-around;
+		}
+	}
+}
+
+// ==> align-items
+.align-items {
+	&-start {
+		align-items: flex-start;
+	}
+
+	&-end {
+		align-items: flex-end;
+	}
+
+	&-center {
+		align-items: center;
+	}
+
+	&-baseline {
+		align-items: baseline;
+	}
+
+	&-stretch {
+		align-items: stretch;
+	}
+
+	// для медиазапроса LG
+	@include lg {
+		&-lg-start {
+			align-items: flex-start;
+		}
+
+		&-lg-end {
+			align-items: flex-end;
+		}
+
+		&-lg-center {
+			align-items: center;
+		}
+
+		&-lg-baseline {
+			align-items: baseline;
+		}
+
+		&-lg-stretch {
+			align-items: stretch;
+		}
+	}
+
+	// для медиазапроса XS
+	@include xs {
+		&-xs-start {
+			align-items: flex-start;
+		}
+
+		&-xs-end {
+			align-items: flex-end;
+		}
+
+		&-xs-center {
+			align-items: center;
+		}
+
+		&-xs-baseline {
+			align-items: baseline;
+		}
+
+		&-xs-stretch {
+			align-items: stretch;
+		}
+	}
+}
+
+// ==> align-content
+.align-content {
+	&-content-start {
+		align-content: flex-start;
+	}
+
+	&-end {
+		align-content: flex-end;
+	}
+
+	&-center {
+		align-content: center;
+	}
+
+	&-between {
+		align-content: space-between;
+	}
+
+	&-around {
+		align-content: space-around;
+	}
+
+	&-stretch {
+		align-content: stretch;
+	}
+
+	// для медиазапроса LG
+	@include to-lg {
+		&-lg-content-start {
+			align-content: flex-start;
+		}
+
+		&-lg-end {
+			align-content: flex-end;
+		}
+
+		&-lg-center {
+			align-content: center;
+		}
+
+		&-lg-between {
+			align-content: space-between;
+		}
+
+		&-lg-around {
+			align-content: space-around;
+		}
+
+		&-lg-stretch {
+			align-content: stretch;
+		}
+	}
+
+	// для медиазапроса XS
+	@include to-xs {
+		&-xs-content-start {
+			align-content: flex-start;
+		}
+
+		&-xs-end {
+			align-content: flex-end;
+		}
+
+		&-xs-center {
+			align-content: center;
+		}
+
+		&-xs-between {
+			align-content: space-between;
+		}
+
+		&-xs-around {
+			align-content: space-around;
+		}
+
+		&-xs-stretch {
+			align-content: stretch;
+		}
+	}
+}
+
+// ==> align-self
+.align-self {
+	&-auto {
+		align-self: auto;
+	}
+
+	&-start {
+		align-self: flex-start;
+	}
+
+	&-end {
+		align-self: flex-end;
+	}
+
+	&-center {
+		align-self: center;
+	}
+
+	&-baseline {
+		align-self: baseline;
+	}
+
+	&-stretch {
+		align-self: stretch;
+	}
+
+	// для медиазапроса LG
+	@include to-lg {
+		&-lg-auto {
+			align-self: auto;
+		}
+
+		&-lg-start {
+			align-self: flex-start;
+		}
+
+		&-lg-end {
+			align-self: flex-end;
+		}
+
+		&-lg-center {
+			align-self: center;
+		}
+
+		&-lg-baseline {
+			align-self: baseline;
+		}
+
+		&-lg-stretch {
+			align-self: stretch;
+		}
+	}
+
+	// для медиазапроса XS
+	@include to-xs {
+		&-xs-auto {
+			align-self: auto;
+		}
+
+		&-xs-start {
+			align-self: flex-start;
+		}
+
+		&-xs-end {
+			align-self: flex-end;
+		}
+
+		&-xs-center {
+			align-self: center;
+		}
+
+		&-xs-baseline {
+			align-self: baseline;
+		}
+
+		&-xs-stretch {
+			align-self: stretch;
+		}
+	}
+}
+
+// ==> order (изменение порядка колонок)
+.order {
+	&-first {
+		order: -1;
+	}
+
+	&-last {
+		order: 13;
+	}
+
+	&-0 {
+		order: 0;
+	}
+
+	&-1 {
+		order: 1;
+	}
+
+	&-2 {
+		order: 2;
+	}
+
+	&-3 {
+		order: 3;
+	}
+
+	&-4 {
+		order: 4;
+	}
+
+	&-5 {
+		order: 5;
+	}
+
+	&-6 {
+		order: 6;
+	}
+
+	&-7 {
+		order: 7;
+	}
+
+	&-8 {
+		order: 8;
+	}
+
+	&-9 {
+		order: 9;
+	}
+
+	&-10 {
+		order: 10;
+	}
+
+	&-11 {
+		order: 11;
+	}
+
+	&-12 {
+		order: 12;
+	}
+}
+
+// отмена отступов у колонок (вешается на row)
+.no-gutters {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.no-gutters > .col,
+.no-gutters > [class*="col-"] {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.z-index-1 {
+	z-index: 1;
+}
+
+.centered {
+	display: block;
+
+	text-align: center;
+}
+
+.pointer-hover {
+	&:hover {
+		cursor: url("/lk/images/icons/cursor-hover.png"), pointer;
+	}
+}
+
+*{
+	&::selection {
+		background-color: $light-blue;
+	}
+}

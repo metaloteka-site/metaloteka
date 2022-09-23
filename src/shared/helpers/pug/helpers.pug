@@ -1,0 +1,30 @@
+-
+	//- Проверка данных из сторов
+	function shortcutCheckStore(dataStore) {
+		return {
+			ELEM: function ELEM(storeElem, value = {}) {
+				return dataStore && dataStore.elem && dataStore.elem[storeElem] ? dataStore.elem[storeElem] : value;
+			},
+			DATA: function DATA(storeData, value = '') {
+				return dataStore && dataStore.data && dataStore.data[storeData] ? dataStore.data[storeData] : value;
+			},
+			BEM: function BEM(storeBem, value = '') {
+				return dataStore && dataStore.bem && dataStore.bem[storeBem] ? dataStore.bem[storeBem] : value;
+			},
+			OPT: function OPT(storeOpt) {
+				return dataStore && dataStore.opt && dataStore.opt[storeOpt] ? !!dataStore.opt[storeOpt] : false;
+			},
+			ARR: function ARR(storeArrData, value = []) {
+				return dataStore && dataStore[storeArrData] ? dataStore[storeArrData] : value;
+			}
+		}
+	};
+
+	//- Для подключение секций
+	function addSections() {
+		return {
+			set section(s) {
+				this[s] = eval(s);
+			}
+		}
+	};

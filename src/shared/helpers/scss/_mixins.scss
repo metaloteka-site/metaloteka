@@ -1,0 +1,51 @@
+// ==> медиазапросы экранов отображения
+// от меньшего разрешения к большему (включительно)
+@mixin to-lg {
+	@media screen and (max-width: $screen-max-lg) {
+		@content
+	}
+}
+
+@mixin to-sm {
+	@media screen and (max-width: $screen-max-sm) {
+		@content
+	}
+}
+
+@mixin to-xs {
+	@media screen and (max-width: $screen-max-xs) {
+		@content
+	}
+}
+
+// от большего разрешения к меньшему (включительно)
+@mixin from-xs {
+	@media screen and (min-width: $screen-min-sm) {
+		@content
+	}
+}
+
+@mixin from-sm {
+	@media screen and (min-width: $screen-min-lg) {
+		@content
+	}
+}
+
+// для конкретного разрешения
+@mixin xl {
+	@media screen and (min-width: $screen-min-xl) {
+		@content
+	}
+}
+
+@mixin lg {
+	@media screen and (min-width: $screen-min-lg) and (max-width: $screen-max-lg) {
+		@content
+	}
+}
+
+@mixin xs {
+	@media screen and (min-width: $screen-min-xs) and (max-width: $screen-max-xs) {
+		@content
+	}
+}

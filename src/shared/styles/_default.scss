@@ -1,0 +1,22 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+	scroll-behavior: smooth;
+}
+
+body {
+	//font-family: $font-formular;
+	//font-size: 1.6rem;
+	//font-weight: 300;
+	//font-scss: normal;
+}
+
+img {
+	vertical-align: middle;
+}
+
