@@ -2938,21 +2938,3 @@
 .z-index-1 {
 	z-index: 1;
 }
-
-.centered {
-	display: block;
-
-	text-align: center;
-}
-
-.pointer-hover {
-	&:hover {
-		cursor: url("/lk/images/icons/cursor-hover.png"), pointer;
-	}
-}
-
-*{
-	&::selection {
-		background-color: $light-blue;
-	}
-}

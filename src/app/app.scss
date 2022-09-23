@@ -1,12 +1,3 @@
-$font-size: 1rem;
-$font-color: red;
-
-html {
-	font-size: $font-size;
-	color: $font-color;
-}
-.fff {
-	background: red;
-	display: flex;
-	justify-content: center;
-}
+@import "../shared/shared";
+// ------------ layer Utilities ------------ //
+@import "../shared/utilities/utilities";

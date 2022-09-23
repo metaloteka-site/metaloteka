@@ -1,0 +1,29 @@
+include ../shared/helpers/pug/helpers
+include ../../node_modules/bempug/index
+-
+	BEMPUG.modifier = '_';
+	BEMPUG.afterParse[''] = function (block) {
+		block.classes = [];
+	}
+
+block store
+
+doctype html
+html(lang='ru')
+
+	head
+		block head
+			meta(charset='UTF-8')/
+			meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')/
+			meta(http-equiv='X-UA-Compatible' content='ie=edge')/
+
+	body
+
+		block header
+			h1 Хеадер
+
+		block main
+			p append
+
+		block footer
+			h1 Футер

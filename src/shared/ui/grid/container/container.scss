@@ -1,0 +1,23 @@
+.container {
+	width: 100%;
+	max-width: $screen-min-xl;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 140px;
+	padding-left: 140px;
+
+	@include to-lg {
+		max-width: $screen-min-lg;
+		padding: 0 42px;
+	}
+
+	@include to-sm {
+		max-width: $screen-min-sm;
+		padding: 0 20px;
+	}
+
+	@include to-xs {
+		max-width: 100%;
+		padding: 0 20px;
+	}
+}
