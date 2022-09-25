@@ -6,6 +6,8 @@ include ../../node_modules/bempug/index
 		block.classes = [];
 	}
 
+include ../shared/ui/grid/Container/Container
+
 block store
 
 doctype html
@@ -20,7 +22,8 @@ html(lang='ru')
 	body
 
 		block header
-			h1 Хеадер
+			+Container
+				h1 Хеадер
 
 		block main
 			p append

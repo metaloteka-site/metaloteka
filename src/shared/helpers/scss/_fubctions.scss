@@ -1,0 +1,16 @@
+// Функция для медиазапроса
+@function getPreviousSize($currentSize) {
+	$keys: map-keys($breakpoints);
+	$index: index($keys, $currentSize) - 1;
+	$value: map-values($breakpoints);
+	@return nth($value, $index);
+}
+
+// Функция для Container
+@function container($media) {
+	@each $breakpoint, $value in $container {
+		@if $media == $breakpoint {
+			@return $value + px;
+		}
+	}
+}

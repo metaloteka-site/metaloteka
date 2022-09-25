@@ -49,3 +49,33 @@
 		@content
 	}
 }
+
+// Миксин media принимает два параметра $media и $orientation.
+// - Первый параметр $media принимает ключи медиазапроса которые указны в $breakpoints.
+// - Второй параметр $orientation принимает три значения min, max и within.
+// - Параметру $orientation по изначально назначен min (по mobile first).
+@mixin media($media,  $orientation: $media-direction) {
+	@each $breakpoint, $value in $breakpoints {
+		@if $media == $breakpoint {
+			@if $orientation == "min" {
+				@media screen and (#{$orientation}-width: ($value + 1) + 'px') {
+					@content;
+				}
+			} @else if $orientation == "max" {
+				@media screen and (#{$orientation}-width: $value + 'px') {
+					@content;
+				}
+			} @else if $orientation == "within" {
+				@if (index(map-keys($breakpoints), $media) > 1) {
+					@media screen and (min-width: (getPreviousSize($media) + 1) + "px") and (max-width: $value + "px") {
+						@content;
+					}
+				} @else {
+					@media screen and (max-width: $value + "px") {
+						@content;
+					}
+				}
+			}
+		}
+	}
+}

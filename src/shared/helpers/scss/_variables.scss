@@ -87,3 +87,17 @@ $screen-max-lg: 1439px;
 
 // desktop (xl)
 $screen-min-xl: 1440px;
+
+// ==> переменные экранов отображения
+$breakpoints: (
+	xs: 414,
+	xl: 1406
+) !default;
+
+$media-direction: "min" !default;
+
+// ==> переменные для контайнера
+$container: (
+	xs: 368,
+	xl: 1360
+) !default;
