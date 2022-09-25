@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npx webpack serve --mode=development",
     "build": "npx webpack --mode=production",
-    "server": "npx http-server -o build",
+    "dev": "npx http-server -o build",
     "install": "npx husky install"
   },
   "author": "",
