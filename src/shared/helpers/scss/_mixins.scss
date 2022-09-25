@@ -1,55 +1,4 @@
 // ==> медиазапросы экранов отображения
-// от меньшего разрешения к большему (включительно)
-@mixin to-lg {
-	@media screen and (max-width: $screen-max-lg) {
-		@content
-	}
-}
-
-@mixin to-sm {
-	@media screen and (max-width: $screen-max-sm) {
-		@content
-	}
-}
-
-@mixin to-xs {
-	@media screen and (max-width: $screen-max-xs) {
-		@content
-	}
-}
-
-// от большего разрешения к меньшему (включительно)
-@mixin from-xs {
-	@media screen and (min-width: $screen-min-sm) {
-		@content
-	}
-}
-
-@mixin from-sm {
-	@media screen and (min-width: $screen-min-lg) {
-		@content
-	}
-}
-
-// для конкретного разрешения
-@mixin xl {
-	@media screen and (min-width: $screen-min-xl) {
-		@content
-	}
-}
-
-@mixin lg {
-	@media screen and (min-width: $screen-min-lg) and (max-width: $screen-max-lg) {
-		@content
-	}
-}
-
-@mixin xs {
-	@media screen and (min-width: $screen-min-xs) and (max-width: $screen-max-xs) {
-		@content
-	}
-}
-
 // Миксин media принимает два параметра $media и $orientation.
 // - Первый параметр $media принимает ключи медиазапроса которые указны в $breakpoints.
 // - Второй параметр $orientation принимает три значения min, max и within.
@@ -57,15 +6,15 @@
 @mixin media($media,  $orientation: $media-direction) {
 	@each $breakpoint, $value in $breakpoints {
 		@if $media == $breakpoint {
-			@if $orientation == "min" {
+			@if $orientation == "min" { // от большего разрешения к меньшему (включительно)
 				@media screen and (#{$orientation}-width: ($value + 1) + 'px') {
 					@content;
 				}
-			} @else if $orientation == "max" {
+			} @else if $orientation == "max" { // от меньшего разрешения к большему (включительно)
 				@media screen and (#{$orientation}-width: $value + 'px') {
 					@content;
 				}
-			} @else if $orientation == "within" {
+			} @else if $orientation == "within" { // для конкретного разрешения
 				@if (index(map-keys($breakpoints), $media) > 1) {
 					@media screen and (min-width: (getPreviousSize($media) + 1) + "px") and (max-width: $value + "px") {
 						@content;

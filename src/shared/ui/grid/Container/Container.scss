@@ -1,10 +1,10 @@
 .container {
 	width: 100%;
-	max-width: container(xs);
+	max-width: container-width(xs);
 	margin-inline: auto;
 	padding-inline: 23px;
 
 	@include media(xs) {
-		max-width: container(xl);
+		max-width: container-width(xl);
 	}
 }

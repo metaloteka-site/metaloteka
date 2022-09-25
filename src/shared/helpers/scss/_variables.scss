@@ -1,5 +1,7 @@
 // *** CSS ПЕРЕМЕННЫЕ ***
 :root {
+	--fz-text-default: 1.4rem;
+
 	// color standard
 	--black: #10142f;
 	--white: #ffffff;
@@ -36,6 +38,11 @@
 }
 
 // *** SCSS ПЕРЕМЕННЫЕ ***
+
+$fz-text-default: var(--fz-text-default);
+
+
+
 $column-gap: var(--column-gap, 0);
 // ==> переменные цветов
 // color standard

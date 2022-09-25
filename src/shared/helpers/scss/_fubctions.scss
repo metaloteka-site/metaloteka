@@ -7,7 +7,7 @@
 }
 
 // Функция для Container
-@function container($media) {
+@function container-width($media) {
 	@each $breakpoint, $value in $container {
 		@if $media == $breakpoint {
 			@return $value + px;

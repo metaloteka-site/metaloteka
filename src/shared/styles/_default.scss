@@ -11,9 +11,10 @@ html {
 
 body {
 	//font-family: $font-formular;
-	//font-size: 1.6rem;
-	//font-weight: 300;
-	//font-scss: normal;
+	font-size: $fz-text-default;
+	font-weight: 300;
+	font-style: normal;
+	line-height: 1.14;
 }
 
 img {
