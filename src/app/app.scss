@@ -1,3 +1,15 @@
+// *** ПОДКЛЮЧЕНИЕ ХЕЛПЕРОВ И СТИЛЕЙ НАЧАЛЬНОГО УРОВНЯ *** //
 @import "../shared/shared";
+
+// ------------ layer Components ------------ //
+// *** СТИЛИ UI-КОМПОНЕНТОВ ***
+@import "../shared/ui/**/*.scss";
+// *** СТИЛИ СЛОЖНЫХ КОМПОНЕНТОВ ***
+@import "../components/**/*.scss";
+// *** СТИЛИ СЕКЦИЙ ***
+@import "../sections/**/*.scss";
+// *** СТИЛИ СТРАНИЦ ***
+@import "../pages/**/*.scss";
+
 // ------------ layer Utilities ------------ //
 @import "../shared/utilities/utilities";

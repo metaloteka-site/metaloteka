@@ -5,19 +5,16 @@
 @import "helpers/scss/fubctions";
 @import "helpers/scss/mixins";
 
-
 // ------------ layer Generic ------------ //
 // *** СБРОС СТИЛЕЙ *** //
 @import "styles/reset";
 
 // ------------ layer Elements ------------ //
+// *** ПОДКЛЮЧЕНИЕ ШРИФТОВ *** //
 @import "styles/fonts";
 // *** ОПРЕДЕЛЕНИЕ НАЧАЛЬНЫХ СТИЛЕЙ *** //
 @import "styles/default";
 
-
 // ------------ layer Components ------------ //
 // *** СТИЛИ БИБЛИОТЕК *** //
 @import "styles/vendors";
-// *** СТИЛИ КОМПОНЕНТОВ ***
-@import "ui/ui";
