@@ -69,6 +69,7 @@ module.exports = {
 	},
 	stats: {
 		children: true,
+		loggingDebug: ['sass-loader'],
 	},
 	devtool: 'inline-source-map',
 	devServer: {

@@ -34,7 +34,8 @@
 
 	// shadows
 	--bx-shadow: 0 10px 20px rgba(69, 73, 106, 0.2);
-	--column-gap: 0;
+	// TODO: в будущем понять актуальность в stylelint после 0 пикселей
+	--column-gap: 0px; /* stylelint-disable-line length-zero-no-unit */
 }
 
 // *** SCSS ПЕРЕМЕННЫЕ ***

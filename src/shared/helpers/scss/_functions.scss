@@ -1,4 +1,4 @@
-// Функция для медиазапроса
+// Функция для медиазапроса - "within"
 @function getPreviousSize($currentSize) {
 	$keys: map-keys($breakpoints);
 	$index: index($keys, $currentSize) - 1;
@@ -12,5 +12,15 @@
 		@if $media == $breakpoint {
 			@return $value + px;
 		}
+	}
+}
+
+// Для хелперов. Подставляет название медиазапроса.
+@function classMedia($nameKey) {
+	$keys: map-keys($breakpoints);
+	$index: index($keys, $nameKey) + 1;
+
+	@if $index <= length($keys) {
+		@return "#{nth($keys, $index)}";
 	}
 }
