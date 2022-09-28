@@ -6,3 +6,18 @@
 	let OPT = callShortcutCheckStore.OPT;
 	let ELEM = callShortcutCheckStore.ELEM;
 	let ARR = callShortcutCheckStore.ARR;
+
+	//- проверка данных получаемых из STORE секции
+	let callShortcutCheckStoreSection = shortcutCheckStore(section);
+	let S_DATA = callShortcutCheckStoreSection.DATA;
+	let S_BEM = callShortcutCheckStoreSection.BEM;
+	let S_ELEM = callShortcutCheckStoreSection.ELEM;
+	let S_ARR = callShortcutCheckStoreSection.ARR;
+
+	//- проверка данных получаемых из STORE перебираемых циклом arrData
+	let callShortcutCheckStoreItem = shortcutCheckStore(item);
+	let I_DATA = callShortcutCheckStoreItem.DATA;
+	let I_BEM = callShortcutCheckStoreItem.BEM;
+	let I_OPT = callShortcutCheckStoreItem.OPT;
+	let I_ELEM = callShortcutCheckStoreItem.ELEM;
+	let I_ARR = callShortcutCheckStoreItem.ARR;

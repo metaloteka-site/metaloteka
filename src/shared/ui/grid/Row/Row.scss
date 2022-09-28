@@ -2,23 +2,7 @@
 .row {
 	display: flex;
 	flex-wrap: wrap;
-
-	//margin-inline: -10px;
-	//
-	//@include media("xs") {
-	//	margin-inline: -20px;
-	//}
 }
-
-//.row-cols-auto, .row-cols-1, .row-cols-2, .row-cols-3, .row-cols-4, .row-cols-5, .row-cols-6, .row-cols-lg-auto, .row-cols-lg-1, .row-cols-lg-2, .row-cols-lg-3, .row-cols-lg-4, .row-cols-lg-5, .row-cols-lg-6, .row-cols-sm-auto, .row-cols-sm-1, .row-cols-sm-2, .row-cols-sm-3, .row-cols-sm-4, .row-cols-sm-5, .row-cols-sm-6 , .row-cols-xs-auto, .row-cols-xs-1, .row-cols-xs-2, .row-cols-xs-3, .row-cols-xs-4, .row-cols-xs-5, .row-cols-xs-6 {
-//	& > * {
-//		padding-inline: 10px;
-//
-//		@include media("xs") {
-//			padding-right: 20px;
-//		}
-//	}
-//}
 
 // классы для управления внутренними колонками
 .row-cols {
