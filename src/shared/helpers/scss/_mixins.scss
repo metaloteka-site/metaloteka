@@ -28,3 +28,22 @@
 		}
 	}
 }
+
+
+// ==> подключение шрифтов
+// Миксин connectFonts принимает 5 параметров.
+@mixin connectFonts($family, $file, $weight: normal, $style: normal, $path: "../layout/assets/fonts/") {
+	@font-face {
+		font-family: $family;
+		src: url($path + $file + '.eot');
+		src: local($file), local($file),
+			url($path + $file + '.eot?#iefix') format("embedded-opentype"),
+			url($path + $file + '.woff') format("woff"),
+			url($path + $file + '.ttf') format("truetype");
+
+		font-weight: $weight;
+		font-style: $style;
+		font-stretch: normal;
+		font-display: swap;
+	}
+}

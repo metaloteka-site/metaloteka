@@ -1,96 +1,94 @@
-// класс с основными стилями
 .row {
 	display: flex;
 	flex-wrap: wrap;
-}
 
-// классы для управления внутренними колонками
-.row-cols {
-	&-auto > * {
-		flex: 0 0 auto;
+	&-cols {
+		&-auto > * {
+			flex: 0 0 auto;
 
-		width: auto;
-	}
+			width: auto;
+		}
 
-	&-1 > * {
-		flex: 0 0 100%;
+		&-1 > * {
+			flex: 0 0 100%;
 
-		max-width: 100%;
-	}
+			max-width: 100%;
+		}
 
-	&-2 > * {
-		flex: 0 0 calc(50% - var(--column-gap, 0));
+		&-2 > * {
+			flex: 0 0 calc(50% - var(--column-gap, 0));
 
-		max-width: calc(50% - var(--column-gap, 0));
-	}
+			max-width: calc(50% - var(--column-gap, 0));
+		}
 
-	&-3 > * {
-		flex: 0 0 calc(33.3333333333% - var(--column-gap, 0));
+		&-3 > * {
+			flex: 0 0 calc(33.3333333333% - var(--column-gap, 0));
 
-		width: calc(33.3333333333% - var(--column-gap, 0));
-	}
+			width: calc(33.3333333333% - var(--column-gap, 0));
+		}
 
-	&-4 > * {
-		flex: 0 0 calc(25% - var(--column-gap, 0));
+		&-4 > * {
+			flex: 0 0 calc(25% - var(--column-gap, 0));
 
-		width: calc(25% - var(--column-gap, 0));
-	}
+			width: calc(25% - var(--column-gap, 0));
+		}
 
-	&-5 > * {
-		flex: 0 0 calc(20% - var(--column-gap, 0));
+		&-5 > * {
+			flex: 0 0 calc(20% - var(--column-gap, 0));
 
-		width: calc(20% - var(--column-gap, 0));
-	}
+			width: calc(20% - var(--column-gap, 0));
+		}
 
-	&-6 > * {
-		flex: 0 0 calc(16.6666666667% - var(--column-gap, 0));
+		&-6 > * {
+			flex: 0 0 calc(16.6666666667% - var(--column-gap, 0));
 
-		width: calc(16.6666666667% - var(--column-gap, 0));
-	}
+			width: calc(16.6666666667% - var(--column-gap, 0));
+		}
 
-	@each $key, $value in $breakpoints {
-		@if $key != 'xl' {
-			@include media($key) {
-				&-#{classMedia($key)}-auto > * {
-					flex: 0 0 auto;
+		@each $key, $value in $breakpoints {
+			@if $key != 'xl' {
+				@include media($key) {
+					&-#{classMedia($key)}-auto > * {
+						flex: 0 0 auto;
 
-					width: auto;
-				}
+						width: auto;
+					}
 
-				&-#{classMedia($key)}-1 > * {
-					flex: 0 0 100%;
+					&-#{classMedia($key)}-1 > * {
+						flex: 0 0 100%;
 
-					max-width: 100%;
-				}
+						max-width: 100%;
+					}
 
-				&-#{classMedia($key)}-2 > * {
-					flex: 0 0 calc(50% - var(--column-gap, 0));
+					&-#{classMedia($key)}-2 > * {
+						flex: 0 0 calc(50% - var(--column-gap, 0));
 
-					max-width: calc(50% - var(--column-gap, 0));
-				}
+						max-width: calc(50% - var(--column-gap, 0));
+					}
 
-				&-#{classMedia($key)}-3 > * {
-					flex: 0 0 calc(33.3333333333% - var(--column-gap, 0));
+					&-#{classMedia($key)}-3 > * {
+						flex: 0 0 calc(33.3333333333% - var(--column-gap, 0));
 
-					width: calc(33.3333333333% - var(--column-gap, 0));
-				}
+						width: calc(33.3333333333% - var(--column-gap, 0));
+					}
 
-				&-#{classMedia($key)}-4 > * {
-					flex: 0 0 calc(25% - var(--column-gap, 0));
+					&-#{classMedia($key)}-4 > * {
+						flex: 0 0 calc(25% - var(--column-gap, 0));
 
-					width: calc(25% - var(--column-gap, 0));
-				}
+						width: calc(25% - var(--column-gap, 0));
+					}
 
-				&-#{classMedia($key)}-5 > * {
-					flex: 0 0 calc(20% - var(--column-gap, 0));
+					&-#{classMedia($key)}-5 > * {
+						flex: 0 0 calc(20% - var(--column-gap, 0));
 
-					width: calc(20% - var(--column-gap, 0));
-				}
+						width: calc(20% - var(--column-gap, 0));
+					}
 
-				&-#{classMedia($key)}-6 > * {
-					flex: 0 0 calc(16.6666666667% - var(--column-gap, 0));
+					&-#{classMedia($key)}-6 > * {
+						flex: 0 0 calc(16.6666666667% - var(--column-gap, 0));
 
-					width: calc(16.6666666667% - var(--column-gap, 0));
+						width: calc(16.6666666667% - var(--column-gap, 0));
+					}
 				}
 			}
 		}
