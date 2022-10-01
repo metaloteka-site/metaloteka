@@ -1,33 +1,35 @@
 // *** CSS ПЕРЕМЕННЫЕ ***
 :root {
-	// color standard
+	// +++ color standard +++ //
+	// Пременную '--white' цвета можно переопределить следующими цветами:
+	// - #ffffff36 - белый с опасити 0.21
+	// - #ffffff9f - белый с опасити 0.62
+	// - #fcfcfc - темновато белый
+	// - #f4f2f2 - дымчато белый
 	--white: #ffffff;
-	// *
-	--white-op21: #ffffff36;
-	--white-op62: #ffffff9f;
-	--white-darkish: #fcfcfc;
-	--white-smoky: #f4f2f2;
-	// *
-	--gainsborough: #e4e1e1;
+	// <END
+
+	// Пременную '--wet-asphalt' цвета можно переопределить следующими цветами:
+	// - #46464692 - мокрый освальт с опасити 0.57
+	// - #464646c6 - мокрый освальт с опасити 0.78
 	--wet-asphalt: #464646;
-	// *
-	--wet-asphalt-op57: #46464692;
-	--wet-asphalt-op78: #464646c6;
-	// *
+	// <END
+
+	--gainsborough: #e4e1e1;
 	--liverny-light: #5f575f;
 	--liverny-dark: #4d484d;
 	--transparent: transparent;
 
-	// color gradient
+	// +++ color gradient +++ //
 	--blue-gradient: linear-gradient(225deg, #678c92, #586e8b);
 	--red-gradient: linear-gradient(315deg, #ce7f65, #b66060);
 	--turquoise-blue-gradient: linear-gradient(225deg, #588b75, #5d6c77);
 	--gray-gradient: linear-gradient(171deg, #636267 0%, #47474b 100%), linear-gradient(351deg, #504750 100%, #5f575f 0%);;
 
-	// font-family
+	// +++ font-family +++ //
 	--font-default: "BlissPro", "sans-serif";
 
-	// font-size
+	// +++ font-size +++ //
 	--fs-small: 1.2rem;
 	--fs-default: 1.4rem;
 	--fs-big: 1.6rem;
@@ -52,8 +54,7 @@
 // *** SCSS ПЕРЕМЕННЫЕ ***
 $column-gap: var(--column-gap, 0);
 
-// ==> переменные цветов
-// color standard
+// +++ color standard +++ //
 $white: var(--white);
 $gainsborough: var(--gainsborough);
 $wet-asphalt: var(--wet-asphalt);
@@ -61,17 +62,16 @@ $liverny-light: var(--liverny-light);
 $liverny-dark: var(--liverny-dark);
 $transparent: var(--transparent);
 
-
-// color gradient
+// +++ color gradient +++ //
 $blue-gradient: var(--blue-gradient);
 $red-gradient: var(--red-gradient);
 $turquoise-blue-gradient: var(--turquoise-blue-gradient);
 $gray-gradient: var(--gray-gradient);
 
-// fonts
+// +++ font-family +++ //
 $font-default: var(--font-default);
 
-// font-size
+// +++ font-size +++ //
 $fs-default: var(--fs-default);
 
 // ===> переменная начала пути к файлам картинки
