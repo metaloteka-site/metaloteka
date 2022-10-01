@@ -10,6 +10,9 @@ module.exports = {
 			case 'ui-kit':
 				name = 'UI KIT';
 				break;
+			case 'contacts':
+				name = 'Контакты';
+				break;
 			default:
 				name = 'name page';
 				break;
