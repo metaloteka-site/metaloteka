@@ -1,20 +1,11 @@
-include ../../../node_modules/bempug/index
--
-	BEMPUG.modifier = '_';
-	BEMPUG.afterParse[''] = function (block) {
-		block.classes = [];
-	}
+extends ../../layout/main
 
-let a = 'fff'
+append head
+	title UI-KIT
 
-doctype html
-html
-	head
-		title qqqqqqqqq
-	body
-		+b('profile')
+block main
+	+b('profile')
+		h1 Hellosds Hyruzzled sdsdsdsd
 
-			h1 Hellosds Hyruzzled sdsdsdsd
-
-		+b('ddd')(title='#{a}')
-			+e('ddeee')
+	+b('ddd')(title='#{a}')
+		+e('ddeee')
