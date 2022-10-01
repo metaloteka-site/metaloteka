@@ -5,6 +5,7 @@ include ../../node_modules/bempug/index
 	BEMPUG.afterParse[''] = function (block) {
 		block.classes = [];
 	}
+include store/main.store.pug
 include ../shared/ui
 
 block variables
@@ -26,9 +27,11 @@ html(lang='ru')
 
 		block header
 			include ../sections/header/header
+			+header(main.header)
 
 		block main
 			p append
 
 		block footer
 			include ../sections/footer/footer
+			+footer(main.footer)
