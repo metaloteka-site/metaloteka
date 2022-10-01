@@ -1,38 +1,49 @@
 // *** CSS ПЕРЕМЕННЫЕ ***
 :root {
 	// color standard
-	//--black: #10142f;
-	//--white: #ffffff;
-	//--gray: #b5c2d2;
-	//--light-gray: #f6f8fa;
-	//--dark-gray: #58697c;
-	//--light-blue: #dee5ef;
-	//--light-blue-50: #dee5ef80;
-	//--dark-blue: #2a3064;
-	//--bright-blue: #3487f3;
-	//--bright-blue-50: #3487f380;
-	//--red: #ff4132;
-	//--green: #00ab44;
-	//--orange: #ff6711;
+	--white: #ffffff;
+	// *
+	--white-op21: #ffffff36;
+	--white-op62: #ffffff9f;
+	--white-darkish: #fcfcfc;
+	--white-smoky: #f4f2f2;
+	// *
+	--gainsborough: #e4e1e1;
+	--wet-asphalt: #464646;
+	// *
+	--wet-asphalt-op57: #46464692;
+	--wet-asphalt-op78: #464646c6;
+	// *
+	--liverny-light: #5f575f;
+	--liverny-dark: #4d484d;
 	--transparent: transparent;
 
-	// color hover
-	//--bright-blue-hover: #005cd6;
-	//--red-hover: #db1000;
-	//--green-hover: #00963c;
-
 	// color gradient
-	//--gray-gradient: linear-gradient(90deg, #f6f8fa 0%, #dee5ef 100%);
-	//--blue-gradient: linear-gradient(90deg, #2a3064 0%, #3487f3 100%);
+	--blue-gradient: linear-gradient(225deg, #678c92, #586e8b);
+	--red-gradient: linear-gradient(315deg, #ce7f65, #b66060);
+	--turquoise-blue-gradient: linear-gradient(225deg, #588b75, #5d6c77);
+	--gray-gradient: linear-gradient(171deg, #636267 0%, #47474b 100%), linear-gradient(351deg, #504750 100%, #5f575f 0%);;
 
-	// fonts
-	--font-default: "BlissPro";
+	// font-family
+	--font-default: "BlissPro", "sans-serif";
 
 	// font-size
-	--fz-default: 1.4rem;
-
-	// shadows
-	//--bx-shadow: 0 10px 20px rgba(69, 73, 106, 0.2);
+	--fs-small: 1.2rem;
+	--fs-default: 1.4rem;
+	--fs-big: 1.6rem;
+	--fs-18: 1.8rem;
+	--fs-20: 2rem;
+	--fs-22: 2.2rem;
+	--fs-24: 2.4rem;
+	--fs-26: 2.6rem;
+	--fs-28: 2.8rem;
+	--fs-32: 3.2rem;
+	--fs-36: 3.6rem;
+	--fs-38: 3.8rem;
+	--fs-40: 4rem;
+	--fs-46: 4.6rem;
+	--fs-50: 5rem;
+	--fs-54: 5.4rem;
 
 	// TODO: в будущем понять актуальность в stylelint после 0 пикселей
 	--column-gap: 0px; /* stylelint-disable-line length-zero-no-unit */
@@ -43,38 +54,25 @@ $column-gap: var(--column-gap, 0);
 
 // ==> переменные цветов
 // color standard
-//$black: var(--black);
-//$white: var(--white);
-//$gray: var(--gray);
-//$light-gray: var(--light-gray);
-//$dark-gray: var(--dark-gray);
-//$light-blue: var(--light-blue);
-//$bright-blue-50: var(--bright-blue-50);
-//$dark-blue: var(--dark-blue);
-//$bright-blue: var(--bright-blue);
-//$bright-blue-50: var(--bright-blue-50);
-//$red: var(--red);
-//$green: var(--green);
-//$orange: var(--orange);
+$white: var(--white);
+$gainsborough: var(--gainsborough);
+$wet-asphalt: var(--wet-asphalt);
+$liverny-light: var(--liverny-light);
+$liverny-dark: var(--liverny-dark);
 $transparent: var(--transparent);
 
-// color hover
-//$bright-blue-hover: var(--bright-blue-hover);
-//$red-hover: var(--red-hover);
-//$green-hover: var(--green-hover);
 
 // color gradient
-//$gray-gradient: var(--gray-gradient);
-//$blue-gradient: var(--blue-gradient);
+$blue-gradient: var(--blue-gradient);
+$red-gradient: var(--red-gradient);
+$turquoise-blue-gradient: var(--turquoise-blue-gradient);
+$gray-gradient: var(--gray-gradient);
 
 // fonts
 $font-default: var(--font-default);
 
 // font-size
-$fz-default: var(--fz-default);
-
-// shadows
-//$bx-shadow: var(--bx-shadow);
+$fs-default: var(--fs-default);
 
 // ===> переменная начала пути к файлам картинки
 $path-file : "../layout/assets/images";
