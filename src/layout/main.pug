@@ -1,12 +1,15 @@
-include ../shared/helpers/pug/helpers
+//- подключение плагина bempug
 include ../../node_modules/bempug/index
--
-	BEMPUG.modifier = '_';
-	BEMPUG.afterParse[''] = function (block) {
-		block.classes = [];
-	}
+//- настройки для bempug
+include ../shared/helpers/pug/bempug-options
+//- вспомогательные функции
+include ../shared/helpers/pug/helpers
+//- стор шаблона содержащий данные хеадера и футера
 include store/main.store.pug
+//- подключение простых ui-компонентов для вызова на всех страницах
 include ../shared/ui
+//- подключение миксина для вызова составных компонентов на страницах
+include ../components/components
 
 block variables
 	//- переменная начала пути к картинкам
@@ -25,13 +28,14 @@ html(lang='ru')
 
 	body
 
+		//- секция HEADER
 		block header
 			include ../sections/header/header
 			+header(main.header)
 
 		block main
-			p append
 
+		//- секция FOOTER
 		block footer
 			include ../sections/footer/footer
 			+footer(main.footer)
