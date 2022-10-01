@@ -1,5 +1,11 @@
-+b('header', {}, 'header')
-	p HEADER
+mixin header(section)
+	//- проверка данных получаемых из section
+	include ../../shared/helpers/pug/shortcut-check-store
 
-	img(src=`${pathFile}/logo.svg` alt='fdfd')
-	p test
+	//- верстка секции
+	+b('header', {}, 'header')
+		+Container
+			+e('heading', {}, 'h1') #{S_DATA('text')}
+
+			img(src=`${pathFile}${S_DATA('logo')}` alt='fdfd')
+			p test
