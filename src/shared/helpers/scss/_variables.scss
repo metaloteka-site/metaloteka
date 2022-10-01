@@ -76,22 +76,8 @@ $fz-default: var(--fz-default);
 // shadows
 //$bx-shadow: var(--bx-shadow);
 
-
-// ==> переменные экранов отображения
-// mobile (xs)
-$screen-min-xs: 320px;
-$screen-max-xs: 767px;
-
-// tablet
-$screen-min-sm: 768px;
-$screen-max-sm: 1023px;
-
-// horizontal tablet and notebook (lg)
-$screen-min-lg: 1024px;
-$screen-max-lg: 1439px;
-
-// desktop (xl)
-$screen-min-xl: 1440px;
+// ===> переменная начала пути к файлам картинки
+$path-file : "../layout/assets/images";
 
 // ==> переменные экранов отображения
 $breakpoints: (
