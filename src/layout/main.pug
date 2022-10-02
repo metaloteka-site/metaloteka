@@ -26,14 +26,14 @@ html(lang='ru')
 			meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')/
 			meta(http-equiv='X-UA-Compatible' content='ie=edge')/
 
-	body
+	+b('body', {}, 'body')
+		+Container
+			//- подключение и вызов секции HEADER
+			block header
+				include ../sections/header/header
+				+header(main.header)
 
-		//- подключение и вызов секции HEADER
-		block header
-			include ../sections/header/header
-			+header(main.header)
-
-		block main
+			block main
 
 		//- подключение и вызов секции FOOTER
 		block footer
