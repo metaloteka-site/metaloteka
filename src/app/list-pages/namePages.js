@@ -13,6 +13,9 @@ module.exports = {
 			case 'contacts':
 				name = 'Контакты';
 				break;
+			case 'personal-area':
+				name = 'Личный кабинет';
+				break;
 			default:
 				name = 'name page';
 				break;
