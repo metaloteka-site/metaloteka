@@ -1,0 +1,13 @@
+extends ../../layout/main
+
+block store
+	include store/personal-area.store.pug
+
+append head
+	title Личный кабинет
+
+block main
+
+	//- подключение и вызов секции SECTION-ORDERS-LIST
+	include ../../sections/section-orders-list/section-orders-list
+	+section-orders-list()
