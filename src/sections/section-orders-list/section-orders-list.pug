@@ -1,4 +1,5 @@
 mixin section-orders-list(section)
+	- console.log(section, 'fffff')
 	//- проверка данных получаемых из section
 	include ../../shared/helpers/pug/shortcut-check-store
 
@@ -6,3 +7,9 @@ mixin section-orders-list(section)
 	+b('section-orders-list', {}, 'section')
 		+Container
 			p TESTING PERSONAL AREAD TEST
+
+			for item in section.arrData
+				div
+					p #{item.data.text}
+					p #{item.data.desc}
+					button #{item.data.buttonText}
