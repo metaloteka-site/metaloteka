@@ -1,0 +1,10 @@
+extends ../../layout/main
+
+append head
+	title Личный кабинет
+
+block main
+
+	//- подключение и вызов секции SECTION-ORDERS-LIST
+	include ../../sections/section-orders-list/section-orders-list
+	+section-orders-list()
