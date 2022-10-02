@@ -1972,377 +1972,268 @@
 //		}
 //	}
 //}
-//
-//// *** СТИЛИ ОТСТУПОВ GAP ***
-//// ==> gap
-//.g {
-//	&-0 {
-//		--column-gap: 0;
-//		gap: 0;
-//	}
-//
-//	&-5 {
-//		--column-gap: 5px;
-//		gap: 5px;
-//	}
-//
-//	&-10 {
-//		--column-gap: 10px;
-//		gap: 10px;
-//	}
-//
-//	&-20 {
-//		--column-gap: 20px;
-//		gap: 20px;
-//	}
-//
-//	&-30 {
-//		--column-gap: 30px;
-//		gap: 30px;
-//	}
-//
-//	&-40 {
-//		--column-gap: 40px;
-//		gap: 40px;
-//	}
-//
-//	&-50 {
-//		--column-gap: 50px;
-//		gap: 50px;
-//	}
-//
-//	&-80 {
-//		--column-gap: 80px;
-//		gap: 80px;
-//	}
-//
-//	&-100 {
-//		--column-gap: 100px;
-//		gap: 100px;
-//	}
-//
-//	// для медиазапроса LG
-//	@include to-lg {
-//		&-lg-0 {
-//			--column-gap: 0;
-//			gap: 0;
-//		}
-//
-//		&-lg-10 {
-//			--column-gap: 10px;
-//			gap: 10px;
-//		}
-//
-//		&-lg-20 {
-//			--column-gap: 20px;
-//			gap: 20px;
-//		}
-//
-//		&-lg-30 {
-//			--column-gap: 30px;
-//			gap: 30px;
-//		}
-//
-//		&-lg-40 {
-//			--column-gap: 40px;
-//			gap: 40px;
-//		}
-//
-//		&-lg-50 {
-//			--column-gap: 50px;
-//			gap: 50px;
-//		}
-//
-//		&-lg-80 {
-//			--column-gap: 80px;
-//			gap: 80px;
-//		}
-//
-//		&-lg-100 {
-//			--column-gap: 100px;
-//			gap: 100px;
-//		}
-//	}
-//
-//	// для медиазапроса XS
-//	@include to-xs {
-//		&-xs-0 {
-//			--column-gap: 0;
-//			gap: 0;
-//		}
-//
-//		&-xs-10 {
-//			--column-gap: 10px;
-//			gap: 10px;
-//		}
-//
-//		&-xs-20 {
-//			--column-gap: 20px;
-//			gap: 20px;
-//		}
-//
-//		&-xs-30 {
-//			--column-gap: 30px;
-//			gap: 30px;
-//		}
-//
-//		&-xs-40 {
-//			--column-gap: 40px;
-//			gap: 40px;
-//		}
-//
-//		&-xs-50 {
-//			--column-gap: 50px;
-//			gap: 50px;
-//		}
-//
-//		&-xs-80 {
-//			--column-gap: 80px;
-//			gap: 80px;
-//		}
-//
-//		&-xs-100 {
-//			--column-gap: 100px;
-//			gap: 100px;
-//		}
-//	}
-//}
-//
-//// ==> column-gap
-//.cg {
-//	&-0 {
-//		--column-gap: 0;
-//		column-gap: 0;
-//	}
-//
-//	&-10 {
-//		--column-gap: 10px;
-//		column-gap: 10px;
-//	}
-//
-//	&-20 {
-//		--column-gap: 20px;
-//		column-gap: 20px;
-//	}
-//
-//	&-30 {
-//		--column-gap: 30px;
-//		column-gap: 30px;
-//	}
-//
-//	&-40 {
-//		--column-gap: 40px;
-//		column-gap: 40px;
-//	}
-//
-//	&-50 {
-//		--column-gap: 50px;
-//		column-gap: 50px;
-//	}
-//
-//	&-80 {
-//		--column-gap: 80px;
-//		column-gap: 80px;
-//	}
-//
-//	&-100 {
-//		--column-gap: 100px;
-//		column-gap: 100px;
-//	}
-//
-//	// для медиазапроса LG
-//	@include to-lg {
-//		&-lg-0 {
-//			--column-gap: 0;
-//			column-gap: 0;
-//		}
-//
-//		&-lg-10 {
-//			--column-gap: 10px;
-//			column-gap: 10px;
-//		}
-//
-//		&-lg-20 {
-//			--column-gap: 20px;
-//			column-gap: 20px;
-//		}
-//
-//		&-lg-30 {
-//			--column-gap: 30px;
-//			column-gap: 30px;
-//		}
-//
-//		&-lg-40 {
-//			--column-gap: 40px;
-//			column-gap: 40px;
-//		}
-//
-//		&-lg-50 {
-//			--column-gap: 50px;
-//			column-gap: 50px;
-//		}
-//
-//		&-lg-80 {
-//			--column-gap: 80px;
-//			column-gap: 80px;
-//		}
-//
-//		&-lg-100 {
-//			--column-gap: 100px;
-//			column-gap: 100px;
-//		}
-//	}
-//
-//	// для медиазапроса XS
-//	@include to-xs {
-//		&-xs-0 {
-//			--column-gap: 0;
-//			column-gap: 0;
-//		}
-//
-//		&-xs-10 {
-//			--column-gap: 10px;
-//			column-gap: 10px;
-//		}
-//
-//		&-xs-20 {
-//			--column-gap: 20px;
-//			column-gap: 20px;
-//		}
-//
-//		&-xs-30 {
-//			--column-gap: 30px;
-//			column-gap: 30px;
-//		}
-//
-//		&-xs-40 {
-//			--column-gap: 40px;
-//			column-gap: 40px;
-//		}
-//
-//		&-xs-50 {
-//			--column-gap: 50px;
-//			column-gap: 50px;
-//		}
-//
-//		&-xs-80 {
-//			--column-gap: 80px;
-//			column-gap: 80px;
-//		}
-//
-//		&-xs-100 {
-//			--column-gap: 100px;
-//			column-gap: 100px;
-//		}
-//	}
-//}
-//
-//// ==> row-gap
-//.rg {
-//	&-0 {
-//		row-gap: 0;
-//	}
-//
-//	&-10 {
-//		row-gap: 10px;
-//	}
-//
-//	&-20 {
-//		row-gap: 20px;
-//	}
-//
-//	&-30 {
-//		row-gap: 30px;
-//	}
-//
-//	&-40 {
-//		row-gap: 40px;
-//	}
-//
-//	&-50 {
-//		row-gap: 50px;
-//	}
-//
-//	&-80 {
-//		row-gap: 80px;
-//	}
-//
-//	&-100 {
-//		row-gap: 100px;
-//	}
-//
-//	// для медиазапроса LG
-//	@include to-lg {
-//		&-lg-0 {
-//			row-gap: 0;
-//		}
-//
-//		&-lg-10 {
-//			row-gap: 10px;
-//		}
-//
-//		&-lg-20 {
-//			row-gap: 20px;
-//		}
-//
-//		&-lg-30 {
-//			row-gap: 30px;
-//		}
-//
-//		&-lg-40 {
-//			row-gap: 40px;
-//		}
-//
-//		&-lg-50 {
-//			row-gap: 50px;
-//		}
-//
-//		&-lg-80 {
-//			row-gap: 80px;
-//		}
-//
-//		&-lg-100 {
-//			row-gap: 100px;
-//		}
-//	}
-//
-//	// для медиазапроса XS
-//	@include to-xs {
-//		&-xs-0 {
-//			row-gap: 0;
-//		}
-//
-//		&-xs-10 {
-//			row-gap: 10px;
-//		}
-//
-//		&-xs-20 {
-//			row-gap: 20px;
-//		}
-//
-//		&-xs-30 {
-//			row-gap: 30px;
-//		}
-//
-//		&-xs-40 {
-//			row-gap: 40px;
-//		}
-//
-//		&-xs-50 {
-//			row-gap: 50px;
-//		}
-//
-//		&-xs-80 {
-//			row-gap: 80px;
-//		}
-//
-//		&-xs-100 {
-//			row-gap: 100px;
-//		}
-//	}
-//}
-//
-//
+
+// *** СТИЛИ ОТСТУПОВ GAP ***
+// ==> gap
+.g {
+	&-0 {
+		--column-gap: 0;
+		gap: 0;
+	}
+
+	&-5 {
+		--column-gap: 5px;
+		gap: 5px;
+	}
+
+	&-10 {
+		--column-gap: 10px;
+		gap: 10px;
+	}
+
+	&-20 {
+		--column-gap: 20px;
+		gap: 20px;
+	}
+
+	&-30 {
+		--column-gap: 30px;
+		gap: 30px;
+	}
+
+	&-40 {
+		--column-gap: 40px;
+		gap: 40px;
+	}
+
+	&-50 {
+		--column-gap: 50px;
+		gap: 50px;
+	}
+
+	&-80 {
+		--column-gap: 80px;
+		gap: 80px;
+	}
+
+	&-100 {
+		--column-gap: 100px;
+		gap: 100px;
+	}
+
+	// для медиазапросов
+	@each $key, $value in $breakpoints {
+		@if $key != 'xl' {
+			@include media($key) {
+				&-#{classMedia($key)}-0 {
+					--column-gap: 0;
+					gap: 0;
+				}
+
+				&-#{classMedia($key)}-10 {
+					--column-gap: 10px;
+					gap: 10px;
+				}
+
+				&-#{classMedia($key)}-20 {
+					--column-gap: 20px;
+					gap: 20px;
+				}
+
+				&-#{classMedia($key)}-30 {
+					--column-gap: 30px;
+					gap: 30px;
+				}
+
+				&-#{classMedia($key)}-40 {
+					--column-gap: 40px;
+					gap: 40px;
+				}
+
+				&-#{classMedia($key)}-50 {
+					--column-gap: 50px;
+					gap: 50px;
+				}
+
+				&-#{classMedia($key)}-80 {
+					--column-gap: 80px;
+					gap: 80px;
+				}
+
+				&-#{classMedia($key)}-100 {
+					--column-gap: 100px;
+					gap: 100px;
+				}
+			}
+		}
+	}
+}
+
+// ==> column-gap
+.cg {
+	&-0 {
+		--column-gap: 0;
+		column-gap: 0;
+	}
+
+	&-10 {
+		--column-gap: 10px;
+		column-gap: 10px;
+	}
+
+	&-20 {
+		--column-gap: 20px;
+		column-gap: 20px;
+	}
+
+	&-30 {
+		--column-gap: 30px;
+		column-gap: 30px;
+	}
+
+	&-40 {
+		--column-gap: 40px;
+		column-gap: 40px;
+	}
+
+	&-50 {
+		--column-gap: 50px;
+		column-gap: 50px;
+	}
+
+	&-80 {
+		--column-gap: 80px;
+		column-gap: 80px;
+	}
+
+	&-100 {
+		--column-gap: 100px;
+		column-gap: 100px;
+	}
+
+	// для медиазапросов
+	@each $key, $value in $breakpoints {
+		@if $key != 'xl' {
+			@include media($key) {
+				&-#{classMedia($key)}-0 {
+					--column-gap: 0;
+					column-gap: 0;
+				}
+
+				&-#{classMedia($key)}-10 {
+					--column-gap: 10px;
+					column-gap: 10px;
+				}
+
+				&-#{classMedia($key)}-20 {
+					--column-gap: 20px;
+					column-gap: 20px;
+				}
+
+				&-#{classMedia($key)}-30 {
+					--column-gap: 30px;
+					column-gap: 30px;
+				}
+
+				&-#{classMedia($key)}-40 {
+					--column-gap: 40px;
+					column-gap: 40px;
+				}
+
+				&-#{classMedia($key)}-50 {
+					--column-gap: 50px;
+					column-gap: 50px;
+				}
+
+				&-#{classMedia($key)}-80 {
+					--column-gap: 80px;
+					column-gap: 80px;
+				}
+
+				&-#{classMedia($key)}-100 {
+					--column-gap: 100px;
+					column-gap: 100px;
+				}
+			}
+		}
+	}
+}
+
+// ==> row-gap
+.rg {
+	&-0 {
+		row-gap: 0;
+	}
+
+	&-10 {
+		row-gap: 10px;
+	}
+
+	&-20 {
+		row-gap: 20px;
+	}
+
+	&-30 {
+		row-gap: 30px;
+	}
+
+	&-40 {
+		row-gap: 40px;
+	}
+
+	&-50 {
+		row-gap: 50px;
+	}
+
+	&-80 {
+		row-gap: 80px;
+	}
+
+	&-100 {
+		row-gap: 100px;
+	}
+
+	// для медиазапросов
+	@each $key, $value in $breakpoints {
+		@if $key != 'xl' {
+			@include media($key) {
+				&-#{classMedia($key)}-0 {
+					row-gap: 0;
+				}
+
+				&-#{classMedia($key)}-10 {
+					row-gap: 10px;
+				}
+
+				&-#{classMedia($key)}-20 {
+					row-gap: 20px;
+				}
+
+				&-#{classMedia($key)}-30 {
+					row-gap: 30px;
+				}
+
+				&-#{classMedia($key)}-40 {
+					row-gap: 40px;
+				}
+
+				&-#{classMedia($key)}-50 {
+					row-gap: 50px;
+				}
+
+				&-#{classMedia($key)}-80 {
+					row-gap: 80px;
+				}
+
+				&-#{classMedia($key)}-100 {
+					row-gap: 100px;
+				}
+			}
+		}
+	}
+}
+
+
 //// *** СТИЛИ ТИПА ОТОБРАЖЕНИЯ ЭЛЕМЕНТОВ ***
 //.d {
 //	// ==> display-block

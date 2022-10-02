@@ -6,7 +6,7 @@ html
 	head
 		title Список страниц
 		style.
-			.body {
+			.body-list-pages {
 				padding: 20px;
 			}
 			.h1 {
@@ -22,7 +22,7 @@ html
 			.link:hover {
 				color: #00000080;
 			}
-	+b('body', {}, 'body')
+	+b('body-list-pages', {}, 'body')
 		+b('h1', {}, 'h1') Страницы сайта:
 		for link, idx in listLinks
 			+b('link', {}, 'a')(href=link.link target='_blank' title=link.title accesskey=`${idx + 1}`)
