@@ -15,8 +15,8 @@
 				return dataStore && dataStore.opt && dataStore.opt[storeOpt] ? !!dataStore.opt[storeOpt] : false;
 			},
 			ARR: function ARR(storeArrData, value = []) {
-				return dataStore && dataStore[storeArrData] ? dataStore[storeArrData] : value;
-			}
+				return dataStore && dataStore.elem && dataStore.elem[storeArrData] && dataStore.elem[storeArrData].arrData ? dataStore.elem[storeArrData].arrData : value;
+			},
 		}
 	};
 

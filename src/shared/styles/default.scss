@@ -22,5 +22,15 @@ img {
 }
 
 .body {
-	background: linear-gradient(318deg, #678c92, #586e8b);
+	background: $blue-gradient;
+}
+
+.main {
+	margin-top: 50px;
+	margin-bottom: 90px;
+
+	@include media('xs') {
+		margin-top: 70px;
+		margin-bottom: 160px;
+	}
 }
