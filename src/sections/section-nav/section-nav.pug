@@ -1,0 +1,7 @@
+mixin nav
+	+b('nav', {}, 'span')
+		+e('inner', {}, 'div')
+			+e('link',{}, 'a')(href='#') Главная
+			+e('link', {}, 'span') /
+			+e('link', {}, 'span') Контакты
+		+e('back', {}, 'span') Назад

@@ -1,0 +1,24 @@
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	background-color: #678c92;
+
+	font-size: 20px;
+	line-height: 20px;
+
+	&__link {
+		padding: 10px;
+
+		text-decoration: none;
+
+		color: #ffffff;
+	}
+
+	&__back {
+		color: #ffffff;
+
+		font-size: 28px;
+	}
+}
