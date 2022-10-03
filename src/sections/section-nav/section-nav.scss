@@ -5,11 +5,11 @@
 
 	width: 1373px;
 
-	font-size: 20px;
+	font-size: $fs-20;
 	line-height: 20px;
 
 	&__inner {
-		padding: 10px;
+		padding: 0;
 	}
 
 	&__link {
@@ -21,8 +21,20 @@
 	}
 
 	&__back {
+		display: none;
+
 		color: $white;
 
-		font-size: 28px;
+		font-size:$fs-28;
+	}
+
+	@include media('xs') {
+		&__inner {
+			padding: 10px;
+		}
+
+		&__back {
+			display: block;
+		}
 	}
 }
