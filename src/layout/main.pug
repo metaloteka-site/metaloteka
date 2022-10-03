@@ -14,6 +14,7 @@ include ../components/components
 block variables
 	//- переменная начала пути к картинкам
 	- const pathFile = '../../layout/assets/images';
+	+includeComponents(['ContactHeader'])
 
 block store
 
@@ -33,7 +34,8 @@ html(lang='ru')
 				include ../sections/header/header
 				+header(main.header)
 
-			block main
+			+b('main', {}, 'main')
+				block main
 
 		//- подключение и вызов секции FOOTER
 		block footer

@@ -4,7 +4,14 @@ mixin header(section)
 
 	//- верстка секции
 	+b('header', {}, 'header')
-		+e('heading', {}, 'h1') #{S_DATA('text')}
+		+Row(S_ELEM('Row'))
+			+e('logo', {}, 'img')(src=`${pathFile}${S_DATA('logo')}` alt='логотип metaloteka')
+			for item in S_ARR('ContactHeader')
+				+ContactHeader(item)
 
-		img(src=`${pathFile}${S_DATA('logo')}` alt='fdfd')
-		p test
+		+Row
+			p Российский металлопрокат
+		+Row
+			nav Ссылки
+		+Row
+			p Поиск
