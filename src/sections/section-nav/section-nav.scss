@@ -1,23 +1,27 @@
-.nav {
+.section-nav {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 
-	background-color: #678c92;
+	width: 1373px;
 
 	font-size: 20px;
 	line-height: 20px;
 
-	&__link {
+	&__inner {
 		padding: 10px;
+	}
+
+	&__link {
+		padding: 0 3px;
 
 		text-decoration: none;
 
-		color: #ffffff;
+		color: $white;
 	}
 
 	&__back {
-		color: #ffffff;
+		color: $white;
 
 		font-size: 28px;
 	}
