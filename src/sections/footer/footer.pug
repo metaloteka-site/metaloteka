@@ -5,6 +5,55 @@ mixin footer(section)
 	//- верстка секции
 	+b('footer', {}, 'footer')
 		+Container
-			+Row(S_ELEM('row'))
-				p FOOTER
-				div fdfd
+			+Row(S_ELEM('blogtest'))
+				+Row(S_ELEM('footerMetaloteka'))
+					+b( 'metaloteka-test' )
+						+e ( 'element' ) logo
+					+b( 'metaloteka-test' )
+						+e ( 'element' ) logo
+					+b( 'metaloteka-test2' )
+						include ./logo-telegram.svg
+						include ./logo-telegram.svg
+						include ./logo-telegram.svg
+				+Row(S_ELEM('footerClients'))
+					h1 Клиентам
+					+e('item', {}, 'span') !{footer.company}
+					+e('item', {}, 'span') !{footer.catalogProduct}
+					+e('item', {}, 'span') !{footer.priceList}
+					+e('item', {}, 'span') !{footer.delivery}
+					+e('item', {}, 'span') !{footer.payment}
+					+e('item', {}, 'span') !{footer.сooperation}
+					+e('item', {}, 'span') !{footer.wholesaleSales}
+					+e('item', {}, 'span') !{footer.requisites}
+					+e('item', {}, 'span') !{footer.contacts}
+				+Row(S_ELEM('footerCatalog'))
+					h1 Каталог
+					+e('item', {}, 'span') !{footer.sheetMetal}
+					+e('item', {}, 'span') !{footer.rebarRolling}
+					+e('item', {}, 'span') !{footer.hardwareProducts}
+					+e('item', {}, 'span') !{footer.pipeRolling}
+					+e('item', {}, 'span') !{footer.stainlessSteel}
+					+e('item', {}, 'span') !{footer.ferrousMetals}
+				+Row(S_ELEM('footerContacts'))
+					+b( 'contact-test' )
+						+e ( 'element' ) Москва
+						+e ( 'element' ) г.Москва, ул.Воскресенская, 84 Бизнес-центр «Чистые пруды»
+					+b( 'contact-test' )
+						+e ( 'element' ) +7 495 545 64 20
+						+e ( 'element' ) Телефон клиентской поддержки
+					+b( 'contact-test' )
+						+e ( 'element' ) client@metaloteka.ru
+					+b( 'contact-test2' )
+						+e ( 'element' ) Напишите нам в мессенджер
+			+Row(S_ELEM('infoMetaloteka'))
+				button Написать
+			+Row(S_ELEM('infoMetaloteka'))
+				+e('item', {}, 'span') !{footer.infoMetaloteka}
+			+Row(S_ELEM('privacyPolicy'))
+				+b( 'privacy-policy_item' )
+					+e ( 'element' ) Политика конфиденциальности
+					+e ( 'element' ) Карта сайта
+				+b( 'privacy-policy_item' )
+					+e ( 'element' ) Москва
+				+b( 'privacy-policy_item2' )
+					+e ( 'element' ) Сайт разработан веб-студией Брэнд Бэйкер
