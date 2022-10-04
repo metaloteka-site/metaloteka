@@ -4,6 +4,7 @@
 	// Пременную '--white' цвета можно переопределить следующими цветами:
 	// - #ffffff36 - белый с опасити 0.21
 	// - #ffffff9f - белый с опасити 0.62
+	// - #ffffffcc - белый с опасити 0.85
 	// - #fcfcfc - темновато белый
 	// - #f4f2f2 - дымчато белый
 	--white: #ffffff;
@@ -15,6 +16,7 @@
 	--wet-asphalt: #464646;
 	// <END
 
+	--chestnut: #bf6c62;
 	--gainsborough: #e4e1e1;
 	--liverny-light: #5f575f;
 	--liverny-dark: #4d484d;
@@ -58,8 +60,9 @@ $column-gap: var(--column-gap, 0);
 
 // +++ color standard +++ //
 $white: var(--white);
-$gainsborough: var(--gainsborough);
 $wet-asphalt: var(--wet-asphalt);
+$chestnut: var(--chestnut);
+$gainsborough: var(--gainsborough);
 $liverny-light: var(--liverny-light);
 $liverny-dark: var(--liverny-dark);
 $transparent: var(--transparent);

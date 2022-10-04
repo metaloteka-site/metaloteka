@@ -9,9 +9,12 @@ mixin header(section)
 			for item in S_ELEM_ARR('ContactHeader')
 				+ContactHeader(item)
 
+			+e('', {}, 'div')
+				span 245 т
+				+Text({data: {text: 'отгружено за неделю'}})
+
 		+Row
 			for item in S_DATA_ARR('key1')
-				- console.log(item)
 				//- проверка данных получаемых из section
 				include ../../shared/helpers/pug/shortcut-check-store
 				p #{I_DATA('text')}
