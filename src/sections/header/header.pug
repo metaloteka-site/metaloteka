@@ -6,10 +6,16 @@ mixin header(section)
 	+b('header', {}, 'header')
 		+Row(S_ELEM('Row'))
 			+e('logo', {}, 'img')(src=`${pathFile}${S_DATA('logo')}` alt='логотип metaloteka')
-			for item in S_ARR('ContactHeader')
+			for item in S_ELEM_ARR('ContactHeader')
 				+ContactHeader(item)
 
 		+Row
+			for item in S_DATA_ARR('key1')
+				- console.log(item)
+				//- проверка данных получаемых из section
+				include ../../shared/helpers/pug/shortcut-check-store
+				p #{I_DATA('text')}
+
 			p Российский металлопрокат
 		+Row
 			nav Ссылки
