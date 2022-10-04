@@ -1,0 +1,14 @@
+mixin ContactHeader(props)
+	//- проверка данных получаемых из props
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- логика компонента
+	- const tagContact = OPT('link') ? 'a' : 'span';
+
+	//- верстка компонента
+	+b('contact-header', {b: BEM('margin')}, 'div')
+		if DATA('icon', false)
+			+e('icon', {}, 'img')(src=`${pathFile}${DATA('icon')}` alt='icon')
+		//+e('title', {}, 'span') #{DATA('title')}
+		+Text(ELEM('Text'))
+		+e('contact', {}, tagContact)(href=DATA('href', false)) #{DATA('contact')}

@@ -1,5 +1,17 @@
-+b('header', {}, 'header')
-	p HEADER
+mixin header(section)
+	//- проверка данных получаемых из section
+	include ../../shared/helpers/pug/shortcut-check-store
 
-	img(src=`${pathFile}/logo.svg` alt='fdfd')
-	p test
+	//- верстка секции
+	+b('header', {}, 'header')
+		+Row(S_ELEM('Row'))
+			+e('logo', {}, 'img')(src=`${pathFile}${S_DATA('logo')}` alt='логотип metaloteka')
+			for item in S_ARR('ContactHeader')
+				+ContactHeader(item)
+
+		+Row
+			p Российский металлопрокат
+		+Row
+			nav Ссылки
+		+Row
+			p Поиск

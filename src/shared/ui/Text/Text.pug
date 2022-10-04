@@ -1,0 +1,9 @@
+mixin Text(props)
+	//- проверка данных получаемых из props
+	include ../../helpers/pug/shortcut-check-store
+
+	//- логика компонента
+	- const isElementClass = OPT('isElementClass') ? '&' : false;
+
+	//- верстка компонента
+	+b('text', {e: isElementClass, m: `${BEM('size')}`}, 'span') #{DATA('text')}

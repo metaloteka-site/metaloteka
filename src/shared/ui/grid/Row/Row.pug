@@ -1,7 +1,11 @@
+//- Компонент Row принимает следующие параметры:
+//- - rowCols
+//- - gap
+//- - alignItems
 mixin Row(props)
 	//- проверка данных получаемых из props
 	include ../../../helpers/pug/shortcut-check-store
 
 	//- верстка компонента
-	+b('row', {b: `${BEM('rowCols')}`, p: false}, 'div')
+	+b('row', {b: `${BEM('rowCols')} ${BEM('gap')} ${BEM('alignItems')}`, p: false}, 'div')
 		block

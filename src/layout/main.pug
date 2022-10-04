@@ -1,15 +1,20 @@
-include ../shared/helpers/pug/helpers
+//- подключение плагина bempug
 include ../../node_modules/bempug/index
--
-	BEMPUG.modifier = '_';
-	BEMPUG.afterParse[''] = function (block) {
-		block.classes = [];
-	}
+//- настройки для bempug
+include ../shared/helpers/pug/bempug-options
+//- вспомогательные функции
+include ../shared/helpers/pug/helpers
+//- стор шаблона содержащий данные хеадера и футера
+include store/main.store.pug
+//- подключение простых ui-компонентов для вызова на всех страницах
 include ../shared/ui
+//- подключение миксина для вызова составных компонентов на страницах
+include ../components/components
 
 block variables
 	//- переменная начала пути к картинкам
 	- const pathFile = '../../layout/assets/images';
+	+includeComponents(['ContactHeader'])
 
 block store
 
@@ -22,13 +27,17 @@ html(lang='ru')
 			meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')/
 			meta(http-equiv='X-UA-Compatible' content='ie=edge')/
 
-	body
+	+b('body', {}, 'body')
+		+Container
+			//- подключение и вызов секции HEADER
+			block header
+				include ../sections/header/header
+				+header(main.header)
 
-		block header
-			include ../sections/header/header
+			+b('main', {}, 'main')
+				block main
 
-		block main
-			p append
-
+		//- подключение и вызов секции FOOTER
 		block footer
 			include ../sections/footer/footer
+			+footer(main.footer)
