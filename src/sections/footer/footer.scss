@@ -1,209 +1,253 @@
-.footer {
-	margin-top: 200px;
-	padding-top: 20px;
-	padding-bottom: 107px;
+// .footer {
+// 	margin-top: 200px;
+// 	padding-top: 20px;
+// 	padding-bottom: 107px;
 
-	background: linear-gradient(306deg, #636267, #47474b 0%);
+// 	background: linear-gradient(306deg, #636267, #47474b 0%);
 
-	.ert {
-		// color: red;
-		display: flex;
-		flex-direction: column;
+// 	&_bg {
+// 		background-color: yellow;
+// 	}
 
-		margin-bottom: 20px;
+// 	&__footer-clients {
+// 		display: flex;
+// 		flex-direction: column;
 
-		span {
-			margin-right: 30px;
-		}
-	}
+// 		width: 287px;
+// 		padding: 68px 43px 100px 44px;
 
-	.footer-metaloteka {
-		display: flex;
-		flex-direction: column;
+// 		letter-spacing: normal;
 
-		width: 386px;
+// 		color: $white;
+// 		border-top: solid 1px #d9d8d8;
+// 		border-bottom: solid 1px #d9d8d8;
+// 		border-left: solid 1px #d9d8d8;
 
-		border-top: solid 1px #d9d8d8;
-		border-bottom: solid 1px #d9d8d8;
-		border-left: solid 1px #d9d8d8;
-	}
+// 		font-size: 18px;
+// 		font-weight: 300;
+// 		font-style: normal;
+// 		font-stretch: normal;
+// 		line-height: 1.11;
 
-	.footer-clients {
-		display: flex;
-		flex-direction: column;
+// 		// .rrr{
+// 		// 	color:red;
+// 		// }
+// 		h2{
+// 			// color:red;
+// 		}
 
-		width: 287px;
-		padding: 68px 43px 100px 44px;
+// 		&_mobile {
+// 			font-size: 12px;
+// 		}
 
-		letter-spacing: normal;
+// 		&_ui {
+// 			// border: 3px solid red;
+// 		}
+// 	}
 
-		color: #ffffff;
-		border-top: solid 1px #d9d8d8;
-		border-bottom: solid 1px #d9d8d8;
-		border-left: solid 1px #d9d8d8;
+// 	&__contact {
+// 		// color: blue;
+// 	}
 
-		font-size: 18px;
-		font-weight: 300;
-		font-style: normal;
-		font-stretch: normal;
-		line-height: 1.11;
+// 	.ert {
+// 		// color: red;
+// 		display: flex;
+// 		flex-direction: column;
 
-		span {
-			margin-bottom: 12px;
-		}
+// 		margin-bottom: 20px;
 
-		:last-child {
-			margin-bottom: 0;
-		}
+// 		span {
+// 			margin-right: 30px;
+// 		}
+// 	}
 
-		h1 {
-			margin-bottom: 36px;
+// 	.footer-metaloteka {
+// 		display: flex;
+// 		flex-direction: column;
 
-			letter-spacing: normal;
+// 		width: 386px;
 
-			color: #ffffff;
+// 		border-top: solid 1px #d9d8d8;
+// 		border-bottom: solid 1px #d9d8d8;
+// 		border-left: solid 1px #d9d8d8;
+// 	}
 
-			font-size: 38px;
-			font-weight: 800;
-			font-style: normal;
-			font-stretch: normal;
-			line-height: 0.68;
-		}
-	}
+// 	.footer-clients {
+// 		display: flex;
+// 		flex-direction: column;
 
-	.footer-catalog {
-		display: flex;
-		flex-direction: column;
+// 		width: 287px;
+// 		padding: 68px 43px 100px 44px;
 
-		width: 327px;
-		padding: 68px 43px 88px 44px;
+// 		letter-spacing: normal;
 
-		letter-spacing: normal;
+// 		color: $white;
+// 		border-top: solid 1px #d9d8d8;
+// 		border-bottom: solid 1px #d9d8d8;
+// 		border-left: solid 1px #d9d8d8;
 
-		color: #ffffff;
-		border-top: solid 1px #d9d8d8;
-		border-bottom: solid 1px #d9d8d8;
-		border-left: solid 1px #d9d8d8;
+// 		font-size: 18px;
+// 		font-weight: 300;
+// 		font-style: normal;
+// 		font-stretch: normal;
+// 		line-height: 1.11;
 
-		font-size: 26px;
-		font-weight: 200;
-		font-style: normal;
-		font-stretch: normal;
-		line-height: 1.08;
+// 		span {
+// 			margin-bottom: 12px;
+// 		}
 
-		span {
-			margin-bottom: 24px;
-		}
+// 		:last-child {
+// 			margin-bottom: 0;
+// 		}
 
-		:last-child {
-			margin-bottom: 0;
-		}
+// 		h1 {
+// 			margin-bottom: 36px;
 
-		h1 {
-			margin-bottom: 36px;
+// 			letter-spacing: normal;
 
-			letter-spacing: normal;
+// 			color: #ffffff;
 
-			color: #ffffff;
+// 			font-size: 38px;
+// 			font-weight: 800;
+// 			font-style: normal;
+// 			font-stretch: normal;
+// 			line-height: 0.68;
+// 		}
+// 	}
 
-			font-size: 38px;
-			font-weight: 800;
-			font-style: normal;
-			font-stretch: normal;
-			line-height: 0.68;
-		}
-	}
+// 	.footer-catalog {
+// 		display: flex;
+// 		flex-direction: column;
 
-	.footer-сontacts {
-		display: flex;
-		flex-direction: column;
+// 		width: 327px;
+// 		padding: 68px 43px 88px 44px;
 
-		width: 356px;
+// 		letter-spacing: normal;
 
-		border-top: solid 1px #d9d8d8;
-		border-right: solid 1px #d9d8d8;
-		border-bottom: solid 1px #d9d8d8;
-		border-left: solid 1px #d9d8d8;
-	}
+// 		color: #ffffff;
+// 		border-top: solid 1px #d9d8d8;
+// 		border-bottom: solid 1px #d9d8d8;
+// 		border-left: solid 1px #d9d8d8;
 
-	.info-metaloteka {
-		width: 1356px;
-		padding: 27px 54px 30px 55px;
+// 		font-size: 26px;
+// 		font-weight: 200;
+// 		font-style: normal;
+// 		font-stretch: normal;
+// 		line-height: 1.08;
 
-		letter-spacing: normal;
+// 		span {
+// 			margin-bottom: 24px;
+// 		}
 
-		color: #ffffff;
-		border-right: solid 1px #d9d8d8;
-		border-bottom: solid 1px #d9d8d8;
-		border-left: solid 1px #d9d8d8;
+// 		:last-child {
+// 			margin-bottom: 0;
+// 		}
 
-		font-size: 14px;
-		font-weight: 200;
-		font-style: normal;
-		font-stretch: normal;
-		line-height: 1.29;
-	}
+// 		h1 {
+// 			margin-bottom: 36px;
 
-	.contact-test {
-		height: 125px;
+// 			letter-spacing: normal;
 
-		padding: 36px 53px 35px 43px;
+// 			color: #ffffff;
 
-		color: #ffffff;
-		border-bottom: solid 1px #d9d8d8;
-	}
+// 			font-size: 38px;
+// 			font-weight: 800;
+// 			font-style: normal;
+// 			font-stretch: normal;
+// 			line-height: 0.68;
+// 		}
+// 	}
 
-	.contact-test2 {
-		height: 125px;
+// 	.footer-сontacts {
+// 		display: flex;
+// 		flex-direction: column;
 
-		padding: 36px 53px 35px 43px;
+// 		width: 356px;
 
-		color: #ffffff;
-	}
+// 		border-top: solid 1px #d9d8d8;
+// 		border-right: solid 1px #d9d8d8;
+// 		border-bottom: solid 1px #d9d8d8;
+// 		border-left: solid 1px #d9d8d8;
+// 	}
 
-	.metaloteka-test {
-		height: 184px;
-		padding: 68px 56px 68px 58px;
+// 	.info-metaloteka {
+// 		width: 1356px;
+// 		padding: 27px 54px 30px 55px;
 
-		color: #ffffff;
+// 		letter-spacing: normal;
 
-		border-bottom: solid 1px #d9d8d8;
-	}
+// 		color: #ffffff;
+// 		border-right: solid 1px #d9d8d8;
+// 		border-bottom: solid 1px #d9d8d8;
+// 		border-left: solid 1px #d9d8d8;
 
-	.metaloteka-test2 {
-		height: 184px;
-		padding: 68px 56px 68px 58px;
-	}
+// 		font-size: 14px;
+// 		font-weight: 200;
+// 		font-style: normal;
+// 		font-stretch: normal;
+// 		line-height: 1.29;
+// 	}
 
-	.privacy-policy {
-		display: flex;
-	}
+// 	.contact-test {
+// 		height: 125px;
 
-	.privacy-policy_item {
-		display: flex;
+// 		padding: 36px 53px 35px 43px;
 
-		width: 452px;
-		padding: 33px 64px 33px 66px;
+// 		color: #ffffff;
+// 		border-bottom: solid 1px #d9d8d8;
+// 	}
 
-		color: #ffffff;
-		border-bottom: solid 1px #d9d8d8;
+// 	.contact-test2 {
+// 		height: 125px;
 
-		border-left: solid 1px #d9d8d8;
-		gap: 10px;
-	}
+// 		padding: 36px 53px 35px 43px;
 
-	.privacy-policy_item2 {
-		width: 452px;
-		padding: 33px 64px 33px 66px;
+// 		color: #ffffff;
+// 	}
 
-		color: #ffffff;
-		border-right: solid 1px #d9d8d8;
-		border-bottom: solid 1px #d9d8d8;
+// 	.metaloteka-test {
+// 		height: 184px;
+// 		padding: 68px 56px 68px 58px;
 
-		border-left: solid 1px #d9d8d8;
-	}
+// 		color: #ffffff;
 
-	.blogtest {
-		display: flex;
-	}
-}
+// 		border-bottom: solid 1px #d9d8d8;
+// 	}
+
+// 	.metaloteka-test2 {
+// 		height: 184px;
+// 		padding: 68px 56px 68px 58px;
+// 	}
+
+// 	.privacy-policy {
+// 		display: flex;
+// 	}
+
+// 	.privacy-policy_item {
+// 		display: flex;
+
+// 		width: 452px;
+// 		padding: 33px 64px 33px 66px;
+
+// 		color: #ffffff;
+// 		border-bottom: solid 1px #d9d8d8;
+
+// 		border-left: solid 1px #d9d8d8;
+// 		gap: 10px;
+// 	}
+
+// 	.privacy-policy_item2 {
+// 		width: 452px;
+// 		padding: 33px 64px 33px 66px;
+
+// 		color: #ffffff;
+// 		border-right: solid 1px #d9d8d8;
+// 		border-bottom: solid 1px #d9d8d8;
+
+// 		border-left: solid 1px #d9d8d8;
+// 	}
+
+// 	.blogtest {
+// 		display: flex;
+// 	}
+// }

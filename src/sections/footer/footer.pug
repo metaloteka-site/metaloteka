@@ -3,37 +3,38 @@ mixin footer(section)
 	include ../../shared/helpers/pug/shortcut-check-store
 
 	//- верстка секции
-	+b('footer', {}, 'footer')
+	+b('footer', {m: S_BEM('modFooter')}, 'footer')
+		+b('ert')
 		+Container
-			+Row(S_ELEM('blogtest'))
-				+Row(S_ELEM('footerMetaloteka'))
-					+b( 'metaloteka-test' )
-						+e ( 'element' ) logo
+			+Row(S_ELEM('Row'))
+				+Row(S_ELEM('RowFooterMetaloteka'))
+					+b('metaloteka-test', {m: 'erere'}, 'div')
+						+e ('element', {}, 'div') logo
 					+b( 'metaloteka-test' )
 						+e ( 'element' ) logo
 					+b( 'metaloteka-test2' )
+						//- +e('icon', {}, 'img')(src='logo-telegram.svg' alt='tg')
 						include ./logo-telegram.svg
 						include ./logo-telegram.svg
 						include ./logo-telegram.svg
-				+Row(S_ELEM('footerClients'))
-					h1 Клиентам
-					+e('item', {}, 'span') !{footer.company}
-					+e('item', {}, 'span') !{footer.catalogProduct}
-					+e('item', {}, 'span') !{footer.priceList}
-					+e('item', {}, 'span') !{footer.delivery}
-					+e('item', {}, 'span') !{footer.payment}
-					+e('item', {}, 'span') !{footer.сooperation}
-					+e('item', {}, 'span') !{footer.wholesaleSales}
-					+e('item', {}, 'span') !{footer.requisites}
-					+e('item', {}, 'span') !{footer.contacts}
+				//- +Row(S_ELEM('footerClients'))
+				+e('footer-clients', {m: 'mobile.ui',b: 'rg-20 rg-xl-30'}, 'div')
+					h2 #{S_DATA('titleClients')}
+					for item in section.arrayData.clients.arrData
+						//- проверка данных получаемых из item
+						include ../../shared/helpers/pug/shortcut-check-store
+
+						+e('item', {}, 'span') !{I_DATA('text')}
+					//- +e('contact', {}, 'div') ddfdf
+					//- +e('contact', {}, 'div') dfdf
 				+Row(S_ELEM('footerCatalog'))
-					h1 Каталог
-					+e('item', {}, 'span') !{footer.sheetMetal}
-					+e('item', {}, 'span') !{footer.rebarRolling}
-					+e('item', {}, 'span') !{footer.hardwareProducts}
-					+e('item', {}, 'span') !{footer.pipeRolling}
-					+e('item', {}, 'span') !{footer.stainlessSteel}
-					+e('item', {}, 'span') !{footer.ferrousMetals}
+					h2 #{S_DATA('titleCatalog')}
+
+					for item in section.arrayData.catalog.arrData
+						//- проверка данных получаемых из item
+						include ../../shared/helpers/pug/shortcut-check-store
+
+						+e('item', {}, 'span') !{I_DATA('text')}
 				+Row(S_ELEM('footerContacts'))
 					+b( 'contact-test' )
 						+e ( 'element' ) Москва
