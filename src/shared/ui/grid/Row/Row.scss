@@ -45,6 +45,7 @@
 			width: calc(16.6666666667% - var(--column-gap, 0));
 		}
 
+		// для медиазапросов
 		@each $key, $value in $breakpoints {
 			@if $key != 'xl' {
 				@include media($key) {

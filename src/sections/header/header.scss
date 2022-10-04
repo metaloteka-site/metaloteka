@@ -1,4 +1,7 @@
 .header {
-	color: #ff0000;
-	background: url("#{$path-file}/www/logo3.svg");
+	padding-top: 55px;
+
+	@include media('xs') {
+		padding-top: 35px;
+	}
 }

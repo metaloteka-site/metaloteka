@@ -21,3 +21,16 @@ img {
 	vertical-align: middle;
 }
 
+.body {
+	background: $blue-gradient;
+}
+
+.main {
+	margin-top: 50px;
+	margin-bottom: 90px;
+
+	@include media('xs') {
+		margin-top: 70px;
+		margin-bottom: 160px;
+	}
+}
