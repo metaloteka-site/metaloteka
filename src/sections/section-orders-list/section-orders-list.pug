@@ -1,15 +1,27 @@
 mixin section-orders-list(section)
-	- console.log(section, 'fffff')
 	//- проверка данных получаемых из section
 	include ../../shared/helpers/pug/shortcut-check-store
 
 	//- верстка секции
 	+b('section-orders-list', {}, 'section')
-		+Container
-			p TESTING PERSONAL AREAD TEST
+		p TESTING PERSONAL AREAD TEST
+		+b('flwrap', {}, 'div')
+			+b('tflex', {}, 'h2') Заказ №210522/1-MT
+			+b('tflex', {}, 'h2') ИП Петров Иван
+		+b('tflex-col', {m: 'dfd'}, 'div')
+			+b('text', {m: 'sdsds'}, 'div')
+				+e('t', {m: 'sdsd'}, 'p') Итого:
+				+e('t', {m: 'sdsds'}, 'p') 6 233 944 р.
+				+e('t', {}, 'p') ≈ 4,548 т
+			+b('text', {}, 'div')
+				+b('t', {}, 'p') Всего наимнований (12) на сумму 6 233 944 руб.(в том числе НДС 20%)
+				+b('t', {}, 'p') Сто пятьдесят восемь миллионов двести тридцать три тысячи девятьсот сорок четыре руб. 00 копеек
+			+b('text', {}, 'div')
+				+b('t', {}, 'p') Копия документов на оплату отправлена на вашу электронную почту. В течении ближайшего времени с вами свяжеться менеджер, чтобы обсудить делали заказа.
+				+b('t', {}, 'p') Скачать счет PDF
 
-			for item in section.arrData
-				div
-					p #{item.data.text}
-					p #{item.data.desc}
+		for item in section.arrData
+			div
+				p #{item.data.text}
+				p #{item.data.desc}
 					button #{item.data.buttonText}

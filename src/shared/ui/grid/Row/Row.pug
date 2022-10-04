@@ -1,7 +1,10 @@
+//- Компонент Row принимает два параметра.
+//- - rowCols
+//- - gap
 mixin Row(props)
 	//- проверка данных получаемых из props
 	include ../../../helpers/pug/shortcut-check-store
 
 	//- верстка компонента
-	+b('row', {b: `${BEM('rowCols')}`, p: false}, 'div')
+	+b('row', {b: `${BEM('rowCols')} ${BEM('gap')}`, p: false}, 'div')
 		block

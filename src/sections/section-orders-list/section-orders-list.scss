@@ -1,3 +1,38 @@
 .section-orders-list {
 	// empty
+	
+
+}
+
+.tflex {
+	width: 270px;
+	height: 24px;
+	margin: 0 311px 52px 0;
+
+	letter-spacing: normal;
+
+	color: $wet-asphalt;
+	// font-family: BlissPro;
+	font-size: 28px;
+	font-weight: 800;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 0.86;
+}
+
+.flwrap {
+	display: flex;
+}
+
+.tflex-col {
+	display: flex;
+	// flex-direction: column;
+}
+
+.text {
+	font-size: 14px;
+
+	&__t{
+		line-height: 12px;
+	}
 }

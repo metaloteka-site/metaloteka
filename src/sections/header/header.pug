@@ -4,8 +4,7 @@ mixin header(section)
 
 	//- верстка секции
 	+b('header', {}, 'header')
-		+Container
-			+e('heading', {}, 'h1') #{S_DATA('text')}
+		+e('heading', {}, 'h1') #{S_DATA('text')}
 
-			img(src=`${pathFile}${S_DATA('logo')}` alt='fdfd')
-			p test
+		img(src=`${pathFile}${S_DATA('logo')}` alt='fdfd')
+		p test
