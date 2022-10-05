@@ -49,7 +49,14 @@ mixin footer(section)
 						span #{S_DATA('whatsappWiber')}
 						span #{S_DATA('whatsappWiberInfo')}
 			//-Реквизиты----------------------------------------------------------------------------------------
-			+Row(S_ELEM('infoMetaloteka'))
+			+e('requesites', {}, 'div')
+				+e('logo', {}, 'img')(src=`${pathFile}${S_DATA('iconRuble')}` alt='логотип metaloteka')
+				+e('', {}, 'div')
+					span #{S_DATA('mailInfo')}
+					span #{S_DATA('mailInfo')}
+				+e('', {}, 'div')
+					span #{S_DATA('mailInfo')}
+					span #{S_DATA('mailInfo')}
 				button Написать
 			//-Информация---------------------------------------------------------------------------------------
 			+e('info-metaloteka', {}, 'div')
