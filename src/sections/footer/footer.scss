@@ -1,253 +1,238 @@
-// .footer {
-// 	margin-top: 200px;
-// 	padding-top: 20px;
-// 	padding-bottom: 107px;
-
-// 	background: linear-gradient(306deg, #636267, #47474b 0%);
-
-// 	&_bg {
-// 		background-color: yellow;
-// 	}
+.footer {
+	margin-top: 200px;
+	padding-top: 20px;
+	padding-bottom: 107px;
 
-// 	&__footer-clients {
-// 		display: flex;
-// 		flex-direction: column;
-
-// 		width: 287px;
-// 		padding: 68px 43px 100px 44px;
-
-// 		letter-spacing: normal;
-
-// 		color: $white;
-// 		border-top: solid 1px #d9d8d8;
-// 		border-bottom: solid 1px #d9d8d8;
-// 		border-left: solid 1px #d9d8d8;
+	background: linear-gradient(306deg, #636267, #47474b 0%);
 
-// 		font-size: 18px;
-// 		font-weight: 300;
-// 		font-style: normal;
-// 		font-stretch: normal;
-// 		line-height: 1.11;
-
-// 		// .rrr{
-// 		// 	color:red;
-// 		// }
-// 		h2{
-// 			// color:red;
-// 		}
-
-// 		&_mobile {
-// 			font-size: 12px;
-// 		}
-
-// 		&_ui {
-// 			// border: 3px solid red;
-// 		}
-// 	}
-
-// 	&__contact {
-// 		// color: blue;
-// 	}
+	//-Иконки-----------------------------
+	&__footer-icons {
+		display: grid;
+		grid-template-columns: minmax(100px, 390px) minmax(100px, 287px) minmax(100px, 327px) minmax(100px, 356px);
 
-// 	.ert {
-// 		// color: red;
-// 		display: flex;
-// 		flex-direction: column;
+		border-top: solid 1px #d9d8d8;
+		border-bottom: solid 1px #d9d8d8;
+	}
 
-// 		margin-bottom: 20px;
-
-// 		span {
-// 			margin-right: 30px;
-// 		}
-// 	}
-
-// 	.footer-metaloteka {
-// 		display: flex;
-// 		flex-direction: column;
+	&__metaloteka-icons {
+		border-left: solid 1px #d9d8d8;
+	}
 
-// 		width: 386px;
+	&__metaloteka-logo {
+		display: flex;
+		justify-content: center;
 
-// 		border-top: solid 1px #d9d8d8;
-// 		border-bottom: solid 1px #d9d8d8;
-// 		border-left: solid 1px #d9d8d8;
-// 	}
-
-// 	.footer-clients {
-// 		display: flex;
-// 		flex-direction: column;
-
-// 		width: 287px;
-// 		padding: 68px 43px 100px 44px;
+		padding: 49px 62px 55px 64px;
 
-// 		letter-spacing: normal;
-
-// 		color: $white;
-// 		border-top: solid 1px #d9d8d8;
-// 		border-bottom: solid 1px #d9d8d8;
-// 		border-left: solid 1px #d9d8d8;
-
-// 		font-size: 18px;
-// 		font-weight: 300;
-// 		font-style: normal;
-// 		font-stretch: normal;
-// 		line-height: 1.11;
-
-// 		span {
-// 			margin-bottom: 12px;
-// 		}
-
-// 		:last-child {
-// 			margin-bottom: 0;
-// 		}
+		border-top: solid 1px #d9d8d8;
+		border-bottom: solid 1px #d9d8d8;
+	}
 
-// 		h1 {
-// 			margin-bottom: 36px;
+	&__icons-font {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 
-// 			letter-spacing: normal;
+		padding: 68px 62px 68px 64px;
 
-// 			color: #ffffff;
+		color: $white;
 
-// 			font-size: 38px;
-// 			font-weight: 800;
-// 			font-style: normal;
-// 			font-stretch: normal;
-// 			line-height: 0.68;
-// 		}
-// 	}
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 1;
+		gap: 9px;
+	}
 
-// 	.footer-catalog {
-// 		display: flex;
-// 		flex-direction: column;
+	&__metaloteka-logo_item {
+		max-width: 260px;
+	}
 
-// 		width: 327px;
-// 		padding: 68px 43px 88px 44px;
+	&__social {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-// 		letter-spacing: normal;
+		padding: 46px 53px;
 
-// 		color: #ffffff;
-// 		border-top: solid 1px #d9d8d8;
-// 		border-bottom: solid 1px #d9d8d8;
-// 		border-left: solid 1px #d9d8d8;
+		gap: 20px;
+	}
 
-// 		font-size: 26px;
-// 		font-weight: 200;
-// 		font-style: normal;
-// 		font-stretch: normal;
-// 		line-height: 1.08;
+	&__social-item {
+		max-width: 43px;
+		max-height: 43px;
 
-// 		span {
-// 			margin-bottom: 24px;
-// 		}
+		cursor: pointer;
+	}
 
-// 		:last-child {
-// 			margin-bottom: 0;
-// 		}
+	//-Клиентам----------------------------
 
-// 		h1 {
-// 			margin-bottom: 36px;
+	&__clients {
+		display: flex;
+		flex-direction: column;
 
-// 			letter-spacing: normal;
+		padding: 68px 43px 100px 44px;
+		gap: 12px;
 
-// 			color: #ffffff;
+		color: $white;
+		border-left: solid 1px #d9d8d8;
 
-// 			font-size: 38px;
-// 			font-weight: 800;
-// 			font-style: normal;
-// 			font-stretch: normal;
-// 			line-height: 0.68;
-// 		}
-// 	}
+		font-size: 18px;
+		font-weight: 300;
+		line-height: 1.11;
 
-// 	.footer-сontacts {
-// 		display: flex;
-// 		flex-direction: column;
+		h2 {
+			margin-bottom: 36px;
 
-// 		width: 356px;
+			font-size: 38px;
+			font-weight: 800;
+			line-height: 0.68;
+		}
+	}
 
-// 		border-top: solid 1px #d9d8d8;
-// 		border-right: solid 1px #d9d8d8;
-// 		border-bottom: solid 1px #d9d8d8;
-// 		border-left: solid 1px #d9d8d8;
-// 	}
+	//-Каталог----------------------------
 
-// 	.info-metaloteka {
-// 		width: 1356px;
-// 		padding: 27px 54px 30px 55px;
+	&__catalog {
+		display: flex;
+		flex-direction: column;
 
-// 		letter-spacing: normal;
+		padding: 68px 43px 88px 44px;
 
-// 		color: #ffffff;
-// 		border-right: solid 1px #d9d8d8;
-// 		border-bottom: solid 1px #d9d8d8;
-// 		border-left: solid 1px #d9d8d8;
+		color: $white;
+		border-right: solid 1px #d9d8d8;
+		border-left: solid 1px #d9d8d8;
 
-// 		font-size: 14px;
-// 		font-weight: 200;
-// 		font-style: normal;
-// 		font-stretch: normal;
-// 		line-height: 1.29;
-// 	}
+		font-size: 26px;
+		font-weight: 200;
+		line-height: 1.08;
+		gap: 24px;
 
-// 	.contact-test {
-// 		height: 125px;
+		h2 {
+			margin-bottom: 36px;
 
-// 		padding: 36px 53px 35px 43px;
+			color: $white;
 
-// 		color: #ffffff;
-// 		border-bottom: solid 1px #d9d8d8;
-// 	}
+			font-size: 38px;
+			font-weight: 800;
+			line-height: 0.68;
+		}
+	}
 
-// 	.contact-test2 {
-// 		height: 125px;
+	//-Контакты-----------------------------------
 
-// 		padding: 36px 53px 35px 43px;
+	&__contacts {
+		border-right: solid 1px #d9d8d8;
+	}
 
-// 		color: #ffffff;
-// 	}
+	&__address {
+		display: flex;
+		flex-direction: column;
 
-// 	.metaloteka-test {
-// 		height: 184px;
-// 		padding: 68px 56px 68px 58px;
+		padding: 35px;
 
-// 		color: #ffffff;
+		color: $white;
 
-// 		border-bottom: solid 1px #d9d8d8;
-// 	}
+		font-size: 26px;
+		font-weight: 800;
+		line-height: 1;
+		gap: 5px;
 
-// 	.metaloteka-test2 {
-// 		height: 184px;
-// 		padding: 68px 56px 68px 58px;
-// 	}
+		:last-child {
+			font-size: 18px;
+			font-weight: 300;
+			line-height: 1.11;
+		}
+	}
 
-// 	.privacy-policy {
-// 		display: flex;
-// 	}
+	&__messenger {
+		display: flex;
+		flex-direction: column;
 
-// 	.privacy-policy_item {
-// 		display: flex;
+		padding: 35px;
 
-// 		width: 452px;
-// 		padding: 33px 64px 33px 66px;
+		color: $white;
+		border-top: solid 1px #d9d8d8;
 
-// 		color: #ffffff;
-// 		border-bottom: solid 1px #d9d8d8;
+		font-size: 26px;
+		font-weight: 800;
+		line-height: 1;
+		gap: 5px;
 
-// 		border-left: solid 1px #d9d8d8;
-// 		gap: 10px;
-// 	}
+		:last-child {
+			font-size: 14px;
+			line-height: 1.14;
+		}
+	}
 
-// 	.privacy-policy_item2 {
-// 		width: 452px;
-// 		padding: 33px 64px 33px 66px;
+	//-Информация---------------------------------------
 
-// 		color: #ffffff;
-// 		border-right: solid 1px #d9d8d8;
-// 		border-bottom: solid 1px #d9d8d8;
+	&__info-metaloteka {
+		padding: 27px 56px 30px 55px;
 
-// 		border-left: solid 1px #d9d8d8;
-// 	}
+		color: $white;
+		border-right: solid 1px #d9d8d8;
+		border-bottom: solid 1px #d9d8d8;
+		border-left: solid 1px #d9d8d8;
 
-// 	.blogtest {
-// 		display: flex;
-// 	}
-// }
+		font-size: 14px;
+		font-weight: 200;
+		line-height: 1.29;
+	}
+
+	//-Политика конфидициальности------------------------
+
+	&__privacy-policy {
+		display: grid;
+
+		border-right: solid 1px #d9d8d8;
+		border-bottom: solid 1px #d9d8d8;
+		border-left: solid 1px #d9d8d8;
+		grid-template-columns: minmax(100px, 527px) minmax(100px, 390px) minmax(100px, 410px);
+	}
+
+	&__privacy-policy_item {
+		display: flex;
+
+		padding: 33px 64px 33px 66px;
+
+		color: $white;
+	}
+
+	&__privacy-policy_info {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		padding-right: 64px;
+		padding-left: 55px;
+
+		color: $white;
+
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 1.13;
+	}
+
+	&__privacy-policy_img {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		padding-top: 35px;
+		padding-bottom: 34px;
+
+		border-right: solid 1px #d9d8d8;
+		border-left: solid 1px #d9d8d8;
+	}
+
+	&__privacy-policy_web {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		color: $white;
+
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 1.13;
+	}
+}

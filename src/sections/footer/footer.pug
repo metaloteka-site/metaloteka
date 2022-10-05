@@ -4,57 +4,62 @@ mixin footer(section)
 
 	//- верстка секции
 	+b('footer', {m: S_BEM('modFooter')}, 'footer')
-		+b('ert')
 		+Container
-			+Row(S_ELEM('Row'))
-				+Row(S_ELEM('RowFooterMetaloteka'))
-					+b('metaloteka-test', {m: 'erere'}, 'div')
-						+e ('element', {}, 'div') logo
-					+b( 'metaloteka-test' )
-						+e ( 'element' ) logo
-					+b( 'metaloteka-test2' )
-						//- +e('icon', {}, 'img')(src='logo-telegram.svg' alt='tg')
-						include ./logo-telegram.svg
-						include ./logo-telegram.svg
-						include ./logo-telegram.svg
-				//- +Row(S_ELEM('footerClients'))
-				+e('footer-clients', {m: 'mobile.ui',b: 'rg-20 rg-xl-30'}, 'div')
+			+e('footer-icons', {}, 'div')
+				//-Иконки-------------------------------------------------------------------------------------
+				+e('metaloteka-icons', {}, 'div')
+					+e('icons-font', {}, 'div')
+						+e('logo', {}, 'img')(src=`${pathFile}${S_DATA('logoMetalotekafont')}` alt='логотип metaloteka')
+						h3 #{S_DATA('subtitle')}
+					+e('metaloteka-logo', {}, 'div')
+						+e('metaloteka-logo_item', {}, 'img')(src=`${pathFile}${S_DATA('logo')}` alt='Logo')
+					+e('social', {}, 'div')
+						+e('social-item', {}, 'img')(src=`${pathFile}${S_DATA('logoMail')}` alt='Mail')
+						+e('social-item', {}, 'img')(src=`${pathFile}${S_DATA('logoVk')}` alt='Vk')
+						+e('social-item', {}, 'img')(src=`${pathFile}${S_DATA('logoTg')}` alt='Telegram')
+				//-Клиентам------------------------------------------------------------------------------------
+				+e('clients', {}, 'div')
 					h2 #{S_DATA('titleClients')}
-					for item in section.arrayData.clients.arrData
+					for item in section.dataArr.clients
 						//- проверка данных получаемых из item
 						include ../../shared/helpers/pug/shortcut-check-store
 
 						+e('item', {}, 'span') !{I_DATA('text')}
-					//- +e('contact', {}, 'div') ddfdf
-					//- +e('contact', {}, 'div') dfdf
-				+Row(S_ELEM('footerCatalog'))
+				//-Каталог-------------------------------------------------------------------------------------
+				+e('catalog', {}, 'div')
 					h2 #{S_DATA('titleCatalog')}
 
-					for item in section.arrayData.catalog.arrData
+					for item in section.dataArr.catalog
 						//- проверка данных получаемых из item
 						include ../../shared/helpers/pug/shortcut-check-store
 
 						+e('item', {}, 'span') !{I_DATA('text')}
-				+Row(S_ELEM('footerContacts'))
-					+b( 'contact-test' )
-						+e ( 'element' ) Москва
-						+e ( 'element' ) г.Москва, ул.Воскресенская, 84 Бизнес-центр «Чистые пруды»
-					+b( 'contact-test' )
-						+e ( 'element' ) +7 495 545 64 20
-						+e ( 'element' ) Телефон клиентской поддержки
-					+b( 'contact-test' )
-						+e ( 'element' ) client@metaloteka.ru
-					+b( 'contact-test2' )
-						+e ( 'element' ) Напишите нам в мессенджер
+				//-Контакты-------------------------------------------------------------------------------------
+				+e('contacts', {}, 'div')
+					+e('address', {}, 'div')
+						span #{S_DATA('city')}
+						span #{S_DATA('address')}
+					+e('messenger', {}, 'div')
+						span #{S_DATA('phoneNumber')}
+						span #{S_DATA('phoneInfo')}
+					+e('messenger', {}, 'div')
+						span #{S_DATA('mailAddress')}
+						span #{S_DATA('mailInfo')}
+					+e('messenger', {}, 'div')
+						span #{S_DATA('whatsappWiber')}
+						span #{S_DATA('whatsappWiberInfo')}
+			//-Реквизиты----------------------------------------------------------------------------------------
 			+Row(S_ELEM('infoMetaloteka'))
 				button Написать
-			+Row(S_ELEM('infoMetaloteka'))
-				+e('item', {}, 'span') !{footer.infoMetaloteka}
-			+Row(S_ELEM('privacyPolicy'))
-				+b( 'privacy-policy_item' )
-					+e ( 'element' ) Политика конфиденциальности
-					+e ( 'element' ) Карта сайта
-				+b( 'privacy-policy_item' )
-					+e ( 'element' ) Москва
-				+b( 'privacy-policy_item2' )
-					+e ( 'element' ) Сайт разработан веб-студией Брэнд Бэйкер
+			//-Информация---------------------------------------------------------------------------------------
+			+e('info-metaloteka', {}, 'div')
+				span #{S_DATA('infoMetaloteka')}
+			//-Политика конфидициальности-----------------------------------------------------------------------
+			+e('privacy-policy', {}, 'div')
+				+e('privacy-policy_info', {}, 'div')
+					span #{S_DATA('privacyPolicy')}
+					span #{S_DATA('privacyMap')}
+				+e('privacy-policy_img', {}, 'div')
+					+e('logo', {}, 'img')(src=`${pathFile}${S_DATA('logoMetalotekafont')}` alt='логотип metaloteka')
+				+e('privacy-policy_web', {}, 'div')
+					span #{S_DATA('webStudio')}
