@@ -30,8 +30,8 @@
 	--font-default: "BlissPro", "sans-serif";
 
 	// +++ font-size +++ //
-	--fs-small: 1.2rem;
 	--fs-default: 1.4rem;
+	--fs-small: 1.2rem;
 	--fs-big: 1.6rem;
 	--fs-title6: 1.8rem;
 	--fs-title5: 3rem;
@@ -74,9 +74,15 @@ $gray-gradient: var(--gray-gradient);
 $font-default: var(--font-default);
 
 // +++ font-size +++ //
-$fs-small: var(--fs-small);
 $fs-default: var(--fs-default);
+$fs-small: var(--fs-small);
 $fs-big: var(--fs-big);
+$fs-title6: var(--fs-title6);
+$fs-title5: var(--fs-title5);
+$fs-title4: var(--fs-title4);
+$fs-title3: var(--fs-title3);
+$fs-title2: var(--fs-title2);
+$fs-title1: var(--fs-title1);
 $fs-20: var(--fs-20);
 $fs-22: var(--fs-22);
 $fs-24: var(--fs-24);
