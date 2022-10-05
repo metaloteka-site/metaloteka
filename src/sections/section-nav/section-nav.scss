@@ -3,10 +3,7 @@
 	align-items: center;
 	justify-content: space-between;
 
-	width: 1373px;
-
-	font-size: $fs-20;
-	line-height: 20px;
+	margin-bottom: 50px;
 
 	&__inner {
 		padding: 0;
@@ -18,10 +15,15 @@
 		text-decoration: none;
 
 		color: $white;
+
+		font-size: $fs-20;
+		line-height: 1.2;
 	}
 
 	&__back {
 		display: none;
+
+		text-decoration: none;
 
 		color: $white;
 
