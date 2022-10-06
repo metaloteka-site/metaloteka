@@ -51,13 +51,17 @@ mixin footer(section)
 			//-Реквизиты----------------------------------------------------------------------------------------
 			+e('requesites', {}, 'div')
 				+e('logo', {}, 'img')(src=`${pathFile}${S_DATA('iconRuble')}` alt='логотип metaloteka')
-				+e('', {}, 'div')
-					span #{S_DATA('mailInfo')}
-					span #{S_DATA('mailInfo')}
-				+e('', {}, 'div')
-					span #{S_DATA('mailInfo')}
-					span #{S_DATA('mailInfo')}
-				button Написать
+				+e('individuals', {}, 'div')
+					span #{S_DATA('titleRequesites')}
+					span #{S_DATA('requesitesIndividuals')}
+				+e('legal-entities', {}, 'div')
+					span #{S_DATA('subtitleRequesites')}
+					span #{S_DATA('requesitesLegalEntities')}
+				+e('logo', {}, 'img')(src=`${pathFile}${S_DATA('logoSberbank')}` alt='sber')
+				+e('logo', {}, 'img')(src=`${pathFile}${S_DATA('logoPaymentSbr')}` alt='sber')
+				+e('logo', {}, 'img')(src=`${pathFile}${S_DATA('logoMir')}` alt='mir')
+				+e('button', {}, 'div')
+					button #{S_DATA('requesitesButton')}
 			//-Информация---------------------------------------------------------------------------------------
 			+e('info-metaloteka', {}, 'div')
 				span #{S_DATA('infoMetaloteka')}

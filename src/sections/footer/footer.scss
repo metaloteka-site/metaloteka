@@ -1,4 +1,6 @@
 .footer {
+	display: block;
+
 	margin-top: 200px;
 	padding-top: 20px;
 	padding-bottom: 107px;
@@ -7,53 +9,90 @@
 
 	//-Иконки-----------------------------
 	&__footer-icons {
-		display: grid;
-		grid-template-columns: minmax(100px, 390px) minmax(100px, 287px) minmax(100px, 327px) minmax(100px, 356px);
+		// display: grid;
+		// grid-template-columns: 1fr;
+		display: flex;
+		flex-direction: column;
 
-		border-top: solid 1px #d9d8d8;
-		border-bottom: solid 1px #d9d8d8;
+		@include media(xs) {
+			display: grid;
+			grid-template-columns: minmax(100px, 390px) minmax(100px, 287px) minmax(100px, 327px) minmax(100px, 356px);
+
+			border-top: solid 1px #d9d8d8;
+			border-bottom: solid 1px #d9d8d8;
+		}
 	}
 
 	&__metaloteka-icons {
-		border-left: solid 1px #d9d8d8;
+		border: none;
+
+		@include media(xs) {
+			border-left: solid 1px #d9d8d8;
+		}
 	}
 
 	&__metaloteka-logo {
 		display: flex;
-		justify-content: center;
 
-		padding: 49px 62px 55px 64px;
+		margin-bottom: 42px;
+		padding: 0 10px 0 30px;
 
-		border-top: solid 1px #d9d8d8;
-		border-bottom: solid 1px #d9d8d8;
+		border: none;
+
+		@include media(xs) {
+			justify-content: center;
+
+			padding: 49px 62px 55px 64px;
+
+			border-top: solid 1px #d9d8d8;
+			border-bottom: solid 1px #d9d8d8;
+		}
 	}
 
 	&__icons-font {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
+		display: none;
 
-		padding: 68px 62px 68px 64px;
+		@include media(xs) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 
-		color: $white;
+			padding: 68px 62px 68px 64px;
 
-		font-size: 14px;
-		font-weight: 400;
-		line-height: 1;
-		gap: 9px;
+			text-align: center;
+
+			color: $white;
+
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 1;
+			gap: 9px;
+		}
 	}
 
 	&__metaloteka-logo_item {
-		max-width: 260px;
+		width: 100%;
+		max-width: 288px;
+
+
+		@include media(xs) {
+			width: 100%;
+			max-width: 260px;
+		}
 	}
 
 	&__social {
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		display: none;
 
-		padding: 46px 53px;
-		gap: 20px;
+		@include media(xs) {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			padding: 46px 53px;
+			gap: 20px;
+		}
 	}
 
 	&__social-item {
@@ -69,10 +108,10 @@
 		display: flex;
 		flex-direction: column;
 
-		padding: 68px 43px 100px 44px;
+		margin-bottom: 42px;
+		padding: 0 44px 0;
 
 		color: $white;
-		border-left: solid 1px #d9d8d8;
 
 		font-size: 18px;
 		font-weight: 300;
@@ -86,6 +125,13 @@
 			font-weight: 800;
 			line-height: 0.68;
 		}
+
+		@include media(xs) {
+			margin-bottom: 0;
+			padding: 68px 43px 100px 44px;
+
+			border-left: solid 1px #d9d8d8;
+		}
 	}
 
 	//-Каталог----------------------------
@@ -94,15 +140,13 @@
 		display: flex;
 		flex-direction: column;
 
-		padding: 68px 43px 88px 44px;
+		margin-bottom: 42px;
+		padding: 0 44px 0;
 
 		color: $white;
 
-		border-right: solid 1px #d9d8d8;
-		border-left: solid 1px #d9d8d8;
-
 		font-size: 26px;
-		font-weight: 200;
+		font-weight: 700;
 		line-height: 1.08;
 		gap: 24px;
 
@@ -115,19 +159,36 @@
 			font-weight: 800;
 			line-height: 0.68;
 		}
+
+		@include media(xs) {
+			margin-bottom: 0;
+			padding: 68px 43px 88px 44px;
+
+			border-right: solid 1px #d9d8d8;
+			border-left: solid 1px #d9d8d8;
+
+			font-weight: 200;
+		}
 	}
 
 	//-Контакты-----------------------------------
 
 	&__contacts {
-		border-right: solid 1px #d9d8d8;
+		margin-bottom: 29px;
+
+		@include media(xs) {
+			margin-bottom: 0;
+
+			border-right: solid 1px #d9d8d8;
+		}
 	}
 
 	&__address {
 		display: flex;
 		flex-direction: column;
 
-		padding: 35px;
+		margin-bottom: 28px;
+		padding: 0 40px 0;
 
 		color: $white;
 
@@ -141,68 +202,160 @@
 			font-weight: 300;
 			line-height: 1.11;
 		}
+
+		@include media(xs) {
+			padding: 35px;
+		}
 	}
 
 	&__messenger {
 		display: flex;
 		flex-direction: column;
 
-		padding: 35px;
+		margin-bottom: 28px;
+		padding: 0 40px 0;
 
 		color: $white;
-		border-top: solid 1px #d9d8d8;
 
 		font-size: 26px;
 		font-weight: 800;
 		line-height: 1;
-		gap: 5px;
 
 		:last-child {
 			font-size: 14px;
 			line-height: 1.14;
 		}
+
+		@include media(xs) {
+			margin-bottom: 42px;
+			padding: 35px;
+
+			border-top: solid 1px #d9d8d8;
+			gap: 5px;
+		}
 	}
 
 	//-Реквезиты---------------------------------------
 
-	&__requesites{
+	&__requesites {
 		display: flex;
+		overflow-x: scroll;
 
-		padding-right: 20px;
-		padding-left: 20px;
+		margin-bottom: 21px;
+		padding-left: 30px;
+		gap: 20px;
 
-		border-right: solid 1px #d9d8d8;
-		border-bottom: solid 1px #d9d8d8;
-		border-left: solid 1px #d9d8d8;
+		@include media(xs) {
+			display: grid;
+			overflow: hidden;
+			align-items: center;
 
+			margin-bottom: 0;
+			padding: 46px 53px;
 
+			color: #ffffff;
 
+			border-right: solid 1px #d9d8d8;
+			border-bottom: solid 1px #d9d8d8;
+			border-left: solid 1px #d9d8d8;
+			grid-template-columns:
+				minmax(2px, 90px) minmax(20px, 180px) minmax(20px, 180px) minmax(70px, 210px) minmax(2px, 110px)
+				minmax(20px, 110px) minmax(20px, 272px);
+			gap: 22px;
+		}
+	}
+
+	&__button {
+		padding-top: 10px;
+		padding-right: 30px;
+		padding-bottom: 10px;
+		padding-left: 30px;
+
+		border: solid 1px #ffffff;
+
+		button {
+			max-width: 242px;
+			max-height: 62px;
+
+			text-align: center;
+
+			color: #ffffff;
+			border: none;
+			background: none;
+
+			font-size: 36px;
+			font-weight: 700;
+			line-height: 1;
+		}
+	}
+
+	&__individuals {
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 0.9;
+		
+		:last-child {
+			font-size: 14px;
+			font-weight: 300;
+			line-height: 1.14;
+		}
+	}
+
+	&__legal-entities {
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 0.9;
+
+		:last-child {
+			font-size: 14px;
+			font-weight: 300;
+			line-height: 1.14;
+		}
 	}
 
 	//-Информация---------------------------------------
 
 	&__info-metaloteka {
-		padding: 27px 56px 30px 55px;
+		margin-bottom: 42px;
+		padding: 0 20px 0;
 
 		color: $white;
-		border-right: solid 1px #d9d8d8;
-		border-bottom: solid 1px #d9d8d8;
-		border-left: solid 1px #d9d8d8;
 
-		font-size: 14px;
+		font-size: 12px;
 		font-weight: 200;
 		line-height: 1.29;
+
+		@include media(xs) {
+			margin-bottom: 0;
+			padding: 27px 56px 30px 55px;
+
+			border-right: solid 1px #d9d8d8;
+			border-bottom: solid 1px #d9d8d8;
+			border-left: solid 1px #d9d8d8;
+		}
 	}
 
 	//-Политика конфидициальности------------------------
 
 	&__privacy-policy {
 		display: grid;
-		grid-template-columns: minmax(100px, 527px) minmax(100px, 390px) minmax(100px, 410px);
+		grid-template-columns: 1fr;
 
-		border-right: solid 1px #d9d8d8;
-		border-bottom: solid 1px #d9d8d8;
-		border-left: solid 1px #d9d8d8;
+		@include media(xs) {
+			grid-template-columns: minmax(100px, 527px) minmax(100px, 390px) minmax(100px, 410px);
+
+			border-right: solid 1px #d9d8d8;
+			border-bottom: solid 1px #d9d8d8;
+			border-left: solid 1px #d9d8d8;
+		}
 	}
 
 	&__privacy-policy_item {
@@ -216,28 +369,42 @@
 	&__privacy-policy_info {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
 
-		padding-right: 64px;
-		padding-left: 55px;
+		margin-bottom: 14px;
+		padding: 0 20px 0;
 
 		color: $white;
 
-		font-size: 16px;
+		font-size: 12px;
 		font-weight: 300;
 		line-height: 1.13;
+		gap: 14px;
+
+		@include media(xs) {
+			justify-content: space-between;
+
+			padding-right: 64px;
+			padding-left: 55px;
+
+			font-size: 16px;
+		}
 	}
 
 	&__privacy-policy_img {
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		display: none;
 
-		padding-top: 35px;
-		padding-bottom: 34px;
+		@include media(xs) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
 
-		border-right: solid 1px #d9d8d8;
-		border-left: solid 1px #d9d8d8;
+			padding-top: 35px;
+			padding-bottom: 34px;
+
+			border-right: solid 1px #d9d8d8;
+			border-left: solid 1px #d9d8d8;
+		}
 	}
 
 	&__privacy-policy_web {
@@ -245,10 +412,17 @@
 		align-items: center;
 		justify-content: center;
 
+		padding: 0 20px 0;
+
 		color: $white;
 
-		font-size: 16px;
+		font-size: 12px;
+
 		font-weight: 300;
 		line-height: 1.13;
+
+		@include media(xs) {
+			font-size: 16px;
+		}
 	}
 }
