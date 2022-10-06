@@ -1,0 +1,26 @@
+<svg width="69" height="65" viewBox="0 0 69 65" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <clipPath id="dl3q6myura">
+            <path d="M4500 0v5500H0V0h4500z"/>
+        </clipPath>
+        <clipPath id="a5dmji0u5b">
+            <path d="M9.36 0a7.516 7.516 0 0 1 7.375 6.05l1.363 6.846h47.384a3.24 3.24 0 0 1 2.457 1.1c.62.71.897 1.654.763 2.586l-3.22 22.706c-.859 5.83-5.858 10.15-11.745 10.146H28.51a11.81 11.81 0 0 1-11.56-9.512L10.432 7.308a1.073 1.073 0 0 0-1.074-.86H0V0zm52.407 19.344h-42.38l3.865 19.343a5.37 5.37 0 0 0 5.259 4.299h25.163a5.37 5.37 0 0 0 5.367-4.61l2.726-19.032z"/>
+        </clipPath>
+        <clipPath id="hx4p2o3vkc">
+            <path d="M8.588 4.298c0 5.73-8.588 5.73-8.588 0s8.588-5.73 8.588 0z"/>
+        </clipPath>
+    </defs>
+    <g fill="currentColor" clip-path="url(#dl3q6myura)" transform="translate(-2284 -595)">
+        <g>
+            <g clip-path="url(#a5dmji0u5b)" transform="translate(2284 595.522)">
+                <path d="M0 0h68.735v49.434H0V0z"/>
+            </g>
+            <g clip-path="url(#hx4p2o3vkc)" transform="translate(2338.747 651.405)">
+                <path d="M0 0h8.588v8.595H0V0z"/>
+            </g>
+            <g clip-path="url(#hx4p2o3vkc)" transform="translate(2302.25 651.405)">
+                <path d="M0 0h8.588v8.595H0V0z"/>
+            </g>
+        </g>
+    </g>
+</svg>
