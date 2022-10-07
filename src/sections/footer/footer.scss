@@ -154,25 +154,28 @@
 
 	&__requesites {
 		display: flex;
-		// overflow-x: scroll;
+		overflow-x: scroll;
+		justify-content: center;
 
 		margin-bottom: 21px;
-		padding-left: 30px;
+		padding: 18.5px 26.5px 19px 38.5px;
 		gap: 20px;
+
 	}
 
 	&__requesites-info {
 		display: flex;
-		flex: 1 1 400px;
+		flex: 1 1 556px;
+		gap:16px;
 	}
 
 	&__sber-icons {
 		display: flex;
-		flex: 1 400px;
+		flex: 1 247px;
 		flex-direction: row;
 		flex-wrap: wrap;
-
-		border: 3px solid #2ec548;
+		justify-content: center;
+		gap: 14px;
 	}
 
 	&__logo-sberbank {
@@ -293,7 +296,7 @@
 		display: none;
 	}
 
-	&__privacy-policy_web {
+	&__privacy-policy-web {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -407,11 +410,13 @@
 		}
 
 		&__address {
+			margin-bottom: 0;
 			padding: 35px;
 		}
 
 		&__messenger {
 			margin-bottom: 42px;
+			margin-bottom: 0;
 			padding: 35px;
 
 			border-top: solid 0.5px #d9d8d8;
@@ -422,7 +427,7 @@
 
 		&__requesites {
 			// display: grid;
-			// overflow: hidden;
+			overflow: hidden;
 			align-items: center;
 			flex-wrap: wrap;
 

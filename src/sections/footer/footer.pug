@@ -62,8 +62,8 @@ mixin footer(section)
 					+e('logo-sberbank', {}, 'img')(src=`${pathFile}${S_DATA('logoSberbank')}` alt='sber')
 					+e('logo-payment', {}, 'img')(src=`${pathFile}${S_DATA('logoPaymentSbr')}` alt='sber')
 					+e('logo-mir', {}, 'img')(src=`${pathFile}${S_DATA('logoMir')}` alt='mir')
-					+e('button-wrapper', {}, 'div')
-						+e('button', {}, 'button') #{S_DATA('requesitesButton')}
+				+e('button-wrapper', {}, 'div')
+					+e('button', {}, 'button') #{S_DATA('requesitesButton')}
 			//-Информация---------------------------------------------------------------------------------------
 			+e('info-metaloteka', {}, 'div')
 				span #{S_DATA('infoMetaloteka')}
