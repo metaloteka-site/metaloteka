@@ -24,10 +24,10 @@
 	--blue-gradient: linear-gradient(225deg, #678c92, #586e8b);
 	--red-gradient: linear-gradient(315deg, #ce7f65, #b66060);
 	--turquoise-blue-gradient: linear-gradient(225deg, #588b75, #5d6c77);
-	--gray-gradient: linear-gradient(171deg, #636267 0%, #47474b 100%), linear-gradient(351deg, #504750 100%, #5f575f 0%);;
+	--gray-gradient: linear-gradient(171deg, #636267 0%, #47474b 100%), linear-gradient(351deg, #504750 100%, #5f575f 0%);
 
 	// +++ font-family +++ //
-	--font-default: "BlissPro", "sans-serif";
+	--font-default: 'BlissPro', 'sans-serif';
 
 	// +++ font-size +++ //
 	--fs-default: 1.4rem;
@@ -94,18 +94,18 @@ $fs-40: var(--fs-40);
 $fs-50: var(--fs-50);
 
 // ===> переменная начала пути к файлам картинки
-$path-file : "../layout/assets/images";
+$path-file: '../layout/assets/images';
 
 // ==> переменные экранов отображения
 $breakpoints: (
 	xs: 414,
-	xl: 1406
+	xl: 1406,
 ) !default;
 
-$media-direction: "min" !default;
+$media-direction: 'min' !default;
 
 // ==> переменные для контайнера
 $container: (
 	xs: 414,
-	xl: 1406
+	xl: 1406,
 ) !default;
