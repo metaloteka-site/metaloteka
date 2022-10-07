@@ -10,7 +10,7 @@ mixin footer(section)
 				+e('metaloteka-icons', {}, 'div')
 					+e('icons-font', {}, 'div')
 						+e('logo', {}, 'img')(src=`${pathFile}${S_DATA('logoMetalotekafont')}` alt='логотип metaloteka')
-						+e('title', {}, 'h3') #{S_DATA('subtitle')}
+						+e('subtitle', {}, 'h3') #{S_DATA('subtitle')}
 					+e('metaloteka-logo', {}, 'div')
 						+e('metaloteka-logo_item', {}, 'img')(src=`${pathFile}${S_DATA('logo')}` alt='Logo')
 					+e('social', {}, 'div')
@@ -19,7 +19,8 @@ mixin footer(section)
 						+e('social-item', {}, 'img')(src=`${pathFile}${S_DATA('logoTg')}` alt='Telegram')
 				//-Клиентам------------------------------------------------------------------------------------
 				+e('clients', {}, 'div')
-					h2 #{S_DATA('titleClients')}
+					+e('title', {}, 'h2') #{S_DATA('titleClients')}
+
 					for item in S_DATA_ARR('clients')
 						//- проверка данных получаемых из item
 						include ../../shared/helpers/pug/shortcut-check-store
@@ -27,7 +28,7 @@ mixin footer(section)
 						+e('item', {}, 'span') !{I_DATA('text')}
 				//-Каталог-------------------------------------------------------------------------------------
 				+e('catalog', {}, 'div')
-					h2 #{S_DATA('titleCatalog')}
+					+e('title', {}, 'h2') #{S_DATA('titleCatalog')}
 
 					for item in section.dataArr.catalog
 						//- проверка данных получаемых из item
@@ -36,28 +37,28 @@ mixin footer(section)
 						+e('item', {}, 'span') !{I_DATA('text')}
 				//-Контакты-------------------------------------------------------------------------------------
 				+e('contacts', {}, 'div')
-					+e('address', {}, 'div')
-						span #{S_DATA('city')}
-						span #{S_DATA('address')}
+					+e('address-wrapper', {}, 'div')
+						+e('subtitle', {}, 'span') #{S_DATA('city')}
+						+e('adress-subtitle', {}, 'span') #{S_DATA('address')}
 					+e('messenger', {}, 'div')
-						span #{S_DATA('phoneNumber')}
-						span #{S_DATA('phoneInfo')}
+						+e('subtitle', {}, 'span') #{S_DATA('phoneNumber')}
+						+e('messenger-subtitle', {}, 'span') #{S_DATA('phoneInfo')}
 					+e('messenger', {}, 'div')
-						span #{S_DATA('mailAddress')}
-						span #{S_DATA('mailInfo')}
+						+e('subtitle', {}, 'span') #{S_DATA('mailAddress')}
+						+e('messenger-subtitle', {}, 'span') #{S_DATA('mailInfo')}
 					+e('messenger', {}, 'div')
-						span #{S_DATA('whatsappWiber')}
-						span #{S_DATA('whatsappWiberInfo')}
+						+e('subtitle', {}, 'span') #{S_DATA('whatsappWiber')}
+						+e('messenger-subtitle', {}, 'span') #{S_DATA('whatsappWiberInfo')}
 			//-Реквизиты----------------------------------------------------------------------------------------
 			+e('requesites', {}, 'div')
 				+e('requesites-info', {}, 'div')
-					+e('logo', {}, 'img')(src=`${pathFile}${S_DATA('iconRuble')}` alt='логотип metaloteka')
+					+e('requesites-img', {}, 'img')(src=`${pathFile}${S_DATA('iconRuble')}` alt='логотип metaloteka')
 					+e('individuals', {}, 'div')
-						span #{S_DATA('titleRequesites')}
-						span #{S_DATA('requesitesIndividuals')}
+						+e('title-individuals', {}, 'span') #{S_DATA('titleRequesites')}
+						+e('subtitle-individuals', {}, 'span') #{S_DATA('requesitesIndividuals')}
 					+e('legal-entities', {}, 'div')
-						span #{S_DATA('subtitleRequesites')}
-						span #{S_DATA('requesitesLegalEntities')}
+						+e('title-individuals', {}, 'span') #{S_DATA('subtitleRequesites')}
+						+e('subtitle-individuals', {}, 'span') #{S_DATA('requesitesLegalEntities')}
 				+e('sber-icons', {}, 'div')
 					+e('logo-sberbank', {}, 'img')(src=`${pathFile}${S_DATA('logoSberbank')}` alt='sber')
 					+e('logo-payment', {}, 'img')(src=`${pathFile}${S_DATA('logoPaymentSbr')}` alt='sber')
@@ -65,8 +66,7 @@ mixin footer(section)
 				+e('button-wrapper', {}, 'div')
 					+e('button', {}, 'button') #{S_DATA('requesitesButton')}
 			//-Информация---------------------------------------------------------------------------------------
-			+e('info-metaloteka', {}, 'div')
-				span #{S_DATA('infoMetaloteka')}
+			+e('info-metaloteka', {}, 'span') #{S_DATA('infoMetaloteka')}
 			//-Политика конфидициальности-----------------------------------------------------------------------
 			+e('privacy-policy-wrapper', {}, 'div')
 				+e('privacy-policy-info', {}, 'div')
@@ -74,5 +74,4 @@ mixin footer(section)
 					+e('privacy-policy-map', {}, 'span') #{S_DATA('privacyMap')}
 				+e('privacy-policy-img', {}, 'div')
 					+e('logo', {}, 'img')(src=`${pathFile}${S_DATA('logoMetalotekafont')}` alt='логотип metaloteka')
-				+e('privacy-policy-web', {}, 'div')
-					span #{S_DATA('webStudio')}
+				+e('privacy-policy-web', {}, 'span') #{S_DATA('webStudio')}

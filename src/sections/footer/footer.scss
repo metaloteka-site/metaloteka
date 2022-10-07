@@ -11,8 +11,8 @@
 
 	//-Иконки-----------------------------
 	&__footer-icons {
-		// display: flex;
-		// flex-direction: column;
+		display: flex;
+		flex-direction: column;
 	}
 
 	&__metaloteka-icons {
@@ -34,16 +34,16 @@
 
 	&__metaloteka-logo_item {
 		width: 100%;
-		max-width: 288px;
+		max-width: 130px;
 	}
 
 	&__social {
-		// display: none;
+		display: none;
 	}
 
 	&__social-item {
-		max-width: 43px;
-		max-height: 43px;
+		max-width: 21.5px;
+		max-height: 21.5px;
 
 		cursor: pointer;
 	}
@@ -54,24 +54,25 @@
 		display: flex;
 		flex-direction: column;
 
-		margin-bottom: 42px;
+		margin-bottom: 21px;
 		padding: 0 44px 0;
 
 		color: $white;
 
-		font-size: 18px;
+		font-size: 9px;
 		font-weight: 300;
 		line-height: 1.11;
 		gap: 12px;
+	}
 
-		// TODO: исправить
-		h2 {
-			margin-bottom: 36px;
+	&__title {
+		margin-bottom: 18px;
 
-			font-size: 38px;
-			font-weight: 800;
-			line-height: 0.68;
-		}
+		color: $white;
+
+		font-size: 19px;
+		font-weight: 800;
+		line-height: 0.68;
 	}
 
 	//-Каталог----------------------------
@@ -85,21 +86,11 @@
 
 		color: $white;
 
-		font-size: 26px;
+		font-size: 13px;
 		font-weight: 700;
 		line-height: 1.08;
+
 		gap: 24px;
-
-		// TODO: исправить
-		h2 {
-			margin-bottom: 36px;
-
-			color: $white;
-
-			font-size: 38px;
-			font-weight: 800;
-			line-height: 0.68;
-		}
 	}
 
 	//-Контакты-----------------------------------
@@ -108,26 +99,37 @@
 		margin-bottom: 29px;
 	}
 
-	&__address {
+	&__address-wrapper {
 		display: flex;
 		flex-direction: column;
+		gap: 5px;
 
 		margin-bottom: 28px;
 		padding: 0 40px 0;
+	}
 
+	&__subtitle {
 		color: $white;
 
-		font-size: 26px;
+		font-size: 13px;
 		font-weight: 800;
 		line-height: 1;
-		gap: 5px;
+	}
 
-		// TODO: исправить
-		:last-child {
-			font-size: 18px;
-			font-weight: 300;
-			line-height: 1.11;
-		}
+	&__adress-subtitle {
+		color: $white;
+
+		font-size: 9px;
+		font-weight: 300;
+		line-height: 1.11;
+	}
+
+	&__messenger-subtitle {
+		color: $white;
+
+		font-size: 7px;
+		font-weight: 300;
+		line-height: 1.14;
 	}
 
 	&__messenger {
@@ -142,12 +144,6 @@
 		font-size: 26px;
 		font-weight: 800;
 		line-height: 1;
-
-		// TODO: исправить
-		:last-child {
-			font-size: 14px;
-			line-height: 1.14;
-		}
 	}
 
 	//-Реквезиты---------------------------------------
@@ -160,18 +156,19 @@
 		margin-bottom: 21px;
 		padding: 18.5px 26.5px 19px 38.5px;
 		gap: 20px;
-
 	}
 
 	&__requesites-info {
-		display: flex;
-		flex: 1 1 556px;
-		gap:16px;
+		display: none;
+	}
+
+	&__requesites-img {
+		max-width: 30px;
 	}
 
 	&__sber-icons {
 		display: flex;
-		flex: 1 247px;
+		flex: 1 268px;
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: center;
@@ -187,13 +184,13 @@
 	&__logo-payment {
 		flex: 1 1 190px;
 
-		max-width: 110px;
+		max-width: 54px;
 	}
 
 	&__logo-mir {
 		flex: 1 1 190px;
 
-		max-width: 70px;
+		max-width: 50px;
 	}
 
 	&__button-wrapper {
@@ -204,21 +201,43 @@
 		margin-bottom: 21px;
 	}
 
+	&__button {
+		max-width: 242px;
+		max-height: 62px;
+		padding: 10px;
+		padding: 10px 40px;
+
+		text-align: center;
+
+		color: $white;
+		border: solid 1px $white;
+		background: none;
+
+		font-size: 18px;
+		font-weight: 800;
+		line-height: 1;
+	}
+
 	&__individuals {
 		display: flex;
 		flex-direction: column;
 		gap: 14px;
+	}
 
-		font-size: 20px;
-		font-weight: 700;
+	&__title-individuals {
+		color: $white;
+
+		font-size: 10px;
+		font-weight: 800;
 		line-height: 0.9;
+	}
 
-		// TODO: исправить
-		:last-child {
-			font-size: 14px;
-			font-weight: 300;
-			line-height: 1.14;
-		}
+	&__subtitle-individuals {
+		color: $white;
+
+		font-size: 7px;
+		font-weight: 300;
+		line-height: 1.14;
 	}
 
 	&__legal-entities {
@@ -229,24 +248,19 @@
 		font-size: 20px;
 		font-weight: 700;
 		line-height: 0.9;
-
-		// TODO: исправить
-		:last-child {
-			font-size: 14px;
-			font-weight: 300;
-			line-height: 1.14;
-		}
 	}
 
 	//-Информация---------------------------------------
 
 	&__info-metaloteka {
+		display: inline-block;
+
 		margin-bottom: 42px;
 		padding: 0 20px 0;
 
 		color: $white;
 
-		font-size: 12px;
+		font-size: 8px;
 		font-weight: 200;
 		line-height: 1.29;
 	}
@@ -278,18 +292,22 @@
 
 		color: $white;
 
-		font-size: 12px;
+		font-size: 8px;
 		font-weight: 300;
 		line-height: 1.13;
 		gap: 14px;
 	}
 
 	&__privacy-policy {
+		display: flex;
 		flex: 1 1 100px;
+		justify-content: center;
 	}
 
 	&__privacy-policy-map {
+		display: flex;
 		flex: 1 1 100px;
+		justify-content: center;
 	}
 
 	&__privacy-policy-img {
@@ -303,10 +321,11 @@
 
 		padding: 0 20px 0;
 
+		text-align: right;
+
 		color: $white;
 
-		font-size: 12px;
-
+		font-size: 8px;
 		font-weight: 300;
 		line-height: 1.13;
 	}
@@ -318,6 +337,7 @@
 
 		&__footer-icons {
 			display: flex;
+			flex-direction: row;
 			flex-wrap: wrap;
 
 			border-top: 0.5px solid #d9d8d8;
@@ -325,7 +345,7 @@
 		}
 
 		&__metaloteka-icons {
-			flex: 1 1 226px;
+			flex: 1 1 193px;
 
 			border-right: 0.5px solid #d9d8d8;
 			border-bottom: 0.5px solid #d9d8d8;
@@ -333,6 +353,8 @@
 
 		&__metaloteka-logo {
 			justify-content: center;
+
+			margin-bottom: 0;
 
 			padding: 49px 62px 55px 64px;
 
@@ -351,10 +373,11 @@
 
 			color: $white;
 
-			font-size: 14px;
+			gap: 9px;
+
+			font-size: 7px;
 			font-weight: 400;
 			line-height: 1;
-			gap: 9px;
 		}
 
 		&__metaloteka-logo_item {
@@ -363,45 +386,44 @@
 		}
 
 		&__social {
-			// flex: 1 1 226px;
-			// border-right: 3px solid #2ec548;
-			// border-bottom: 3px solid #2ec548;
-			// display: flex;
-			// align-items: center;
-			// flex-wrap: wrap;
-			// justify-content: center;
+			display: flex;
+			justify-content: center;
+			gap: 10px;
 
 			padding: 46px 53px;
-			gap: 20px;
 		}
 
 		&__clients {
-			flex: 1 1 226px;
+			flex: 1 1 143px;
 
 			margin-bottom: 0;
 
-			padding: 68px 43px 100px 44px;
+			padding: 34px 21.5px 50px 22px;
 
 			border-right: 0.5px solid #d9d8d8;
 			border-bottom: 0.5px solid #d9d8d8;
 		}
 
 		&__catalog {
-			flex: 1 1 226px;
+			flex: 1 1 165px;
 
 			margin-bottom: 0;
-			padding: 68px 43px 88px 44px;
+			padding: 34px 21.5px 44px 22px;
+
+			color: $white;
 
 			border-right: 0.5px solid #d9d8d8;
 			border-bottom: 0.5px solid #d9d8d8;
 
+			font-size: 13px;
 			font-weight: 200;
+			line-height: 1.08;
 		}
 
 		//-Контакты-----------------------------------
 
 		&__contacts {
-			flex: 1 1 226px;
+			flex: 1 1 278px;
 
 			margin-bottom: 0;
 
@@ -409,7 +431,7 @@
 			border-bottom: 0.5px solid #d9d8d8;
 		}
 
-		&__address {
+		&__address-wrapper {
 			margin-bottom: 0;
 			padding: 35px;
 		}
@@ -441,6 +463,14 @@
 			gap: 22px;
 		}
 
+		&__requesites-info {
+			display: flex;
+			align-items: center;
+			flex: 1 1 476px;
+			justify-content: center;
+			gap: 16px;
+		}
+
 		&__button-wrapper {
 			display: flex;
 			align-items: center;
@@ -450,23 +480,6 @@
 			padding-right: 30px;
 			padding-bottom: 10px;
 			padding-left: 30px;
-		}
-
-		&__button {
-			max-width: 242px;
-			max-height: 62px;
-			padding: 10px;
-			padding: 10px 40px;
-
-			text-align: center;
-
-			color: $white;
-			border: solid 1px $white;
-			background: none;
-
-			font-size: 36px;
-			font-weight: 700;
-			line-height: 1;
 		}
 
 		//-Информация---------------------------------------
@@ -502,8 +515,6 @@
 
 			border-right: 0.5px solid #d9d8d8;
 			border-bottom: 0.5px solid #d9d8d8;
-
-			font-size: 16px;
 		}
 
 		&__privacy-policy-img {
@@ -524,8 +535,6 @@
 
 			border-right: 0.5px solid #d9d8d8;
 			border-bottom: 0.5px solid #d9d8d8;
-
-			font-size: 16px;
 		}
 	}
 }
