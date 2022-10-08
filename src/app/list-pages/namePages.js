@@ -16,6 +16,9 @@ module.exports = {
 			case 'personal-area':
 				name = 'Личный кабинет';
 				break;
+			case 'catalog':
+				name = 'Каталог';
+				break;
 			default:
 				name = 'name page';
 				break;
