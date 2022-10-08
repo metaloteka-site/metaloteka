@@ -11,6 +11,7 @@
 			logoMir: '/logo-mirlogo.svg',
 			iconRuble: '/icon-ruble.svg',
 			logoMetalotekafont: '/metaloteka-font-logo.svg',
+			logoMetaloteka: '/metaloteka-logo.svg',
 			subtitle: 'Металлопрокат оптом и в розницу',
 			titleCatalog: 'Каталог',
 			titleClients: 'Клиентам',
@@ -36,21 +37,31 @@
 			modFooter: 'ml-xl-60'
 		},
 		elem: {
-			ComponyLeft: {
-				arrData: [
+			ContactFooterffff: {
+				elemArr: [
 					{
 						data: {
-								text: '1'
+								contact: 'Ренат',
+								href:'vk.com'
 						},
 						bem:{
 							//- lh: 'line-height',
 							margin: 'ml-xl-60'
+						},
+						elem: {
+							Text: {
+								data: {
+									text: 'Казань'
+								}
+							}
 						}
 					},
 					{
 
 						data: {
-								text: '2'
+								text: 'Дима',
+								href:'tel:+79278797644'
+
 						},
 						bem:{
 							lh: 'line-height'
@@ -59,10 +70,78 @@
 					{
 
 						data: {
-								text: '3'
+								text: 'Саша',
+								href:'vk.com'
 						},
 						bem:{
 							lh: 'line-height'
+						}
+					}
+				]
+			},
+			ContactFooter: {
+				elemArr: [
+					{
+						data: {
+							contact: 'г. Москва',
+							icon: '/logo.svg'
+						},
+						bem: {
+							margin: 'ml-xl-60'
+						},
+						elem: {
+							Text: {
+								data: {
+									text: 'г.Москва, ул.Воскресенская, 84 Бизнес-центр «Чистые пруды»'
+								},
+								opt: {
+									isElementClass: true
+								}
+							}
+						}
+					},
+					{
+						data: {
+							contact: '+7 495 545 64 20',
+							href: 'tel:+74955456420'
+						},
+						bem: {
+							margin: 'ml-xl-35'
+						},
+						opt: {
+							link: true
+						},
+						elem: {
+							Text: {
+								data: {
+									text: 'Телефон клиентской поддержки'
+								},
+								opt: {
+									isElementClass: true
+								}
+							}
+						}
+					},
+					{
+						data: {
+							contact: 'info@metaloteka.ru',
+							href: 'mailto:info@metaloteka.ru'
+						},
+						bem: {
+							margin: 'ml-xl-35'
+						},
+						opt: {
+							link: true
+						},
+						elem: {
+							Text: {
+								data: {
+									text: 'Адрес электронной почты'
+								},
+								opt: {
+									isElementClass: true
+								}
+							}
 						}
 					}
 				]
@@ -138,6 +217,8 @@
 					{
 						data: {
 							text: "О компании",
+							href: 'tel:+74955456420'
+
 						},
 						bem: {
 
@@ -199,7 +280,7 @@
 					{
 						data: {
 							text: "Москва",
-							natimeme: "239399333",
+							href: "239399333",
 						},
 						bem: {
 							margin: 'ml-xl-60'

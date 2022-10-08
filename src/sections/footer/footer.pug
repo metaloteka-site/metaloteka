@@ -9,8 +9,8 @@ mixin footer(section)
 				//-Иконки-------------------------------------------------------------------------------------
 				+e('metaloteka-icons', {}, 'div')
 					+e('icons-font', {}, 'div')
-						+e('logo', {}, 'img')(src=`${pathFile}${S_DATA('logoMetalotekafont')}` alt='логотип metaloteka')
-						+e('subtitle', {}, 'h3') #{S_DATA('subtitle')}
+						+e('logo', {}, 'img')(src=`${pathFile}${S_DATA('logoMetaloteka')}` alt='логотип metaloteka')
+						+e('icon-subtitle', {}, 'h3') #{S_DATA('subtitle')}
 					+e('metaloteka-logo', {}, 'div')
 						+e('metaloteka-logo_item', {}, 'img')(src=`${pathFile}${S_DATA('logo')}` alt='Logo')
 					+e('social', {}, 'div')
@@ -75,8 +75,19 @@ mixin footer(section)
 				+e('privacy-policy-img-wrapper', {}, 'div')
 					+e('privacy-policy-img', {}, 'img')(src=`${pathFile}${S_DATA('logoMetalotekafont')}` alt='логотип metaloteka')
 				+e('privacy-policy-web', {}, 'span') #{S_DATA('webStudio')}
-			for item in section.dataArr.testiu
-				//- проверка данных получаемых из item
-				include ../../shared/helpers/pug/shortcut-check-store
+			//- +e('test-div', {}, 'div')
+				for item in S_DATA_ARR('testiu')
+					//- проверка данных получаемых из section
+					include ../../shared/helpers/pug/shortcut-check-store
+					p #{I_DATA('text')}
+				for item in S_ELEM_ARR('ComponyLeft')
+					p #{I_DATA('elemArr')}
+					//- +ComponyLeft(item)
+				for item in S_ELEM_ARR('ComponyLeft')
+					//- проверка данных получаемых из item
+					include ../../shared/helpers/pug/shortcut-check-store
 
-				+e('item', {}, 'span') !{I_DATA('text')}
+					+e('item', {}, 'span') !{I_DATA('text')}
+					+e('contact', {}, 'a')(href=DATA('href')) #{DATA('contact')}
+				for item in S_ELEM_ARR('ContactFooter')
+					+ContactFooter(item)

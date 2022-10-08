@@ -1,0 +1,15 @@
+mixin ContactFooter(props)
+	//- проверка данных получаемых из props
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- логика компонента
+	- const tagContactF =  'a';
+	//- - const tagContactF = OPT('link') ? 'a' : 'span';
+
+	//- верстка компонента
+	+b('contact-footer', {b: BEM('margin')}, 'div')
+		if DATA('icon', false)
+			+e('icon', {}, 'img')(src=`${pathFile}${DATA('icon')}` alt='icon')
+		//+e('title', {}, 'span') #{DATA('title')}
+		+Text(ELEM('Text'))
+		+e('contact', {}, tagContactF)(href=DATA('href', false)) #{DATA('contact')}
