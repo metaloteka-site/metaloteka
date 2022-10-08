@@ -1,4 +1,17 @@
 extends ../../layout/main
 
+append variables
+	+includeComponents(['ContactInformation'])
+
+block store
+	include store/contacts.store.pug
+
 block main
-	p CONTACTS
+
+	//- подключение и вызов секции SECTION-BREADCRUMBS
+	include ../../sections/section-breadcrumbs/section-breadcrumbs
+	+section-breadcrumbs(contacts.sectionBreadcrumbs)
+
+	//- подключение и вызов секции SECTION-CONTACT
+	include ../../sections/section-contact/section-contact
+	+section-contact(contacts.sectionContact)
