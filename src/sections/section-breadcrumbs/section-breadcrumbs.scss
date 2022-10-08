@@ -1,0 +1,30 @@
+.section-breadcrumbs{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	margin-bottom: 50px;
+
+	&__link {
+		margin: 0 3px;
+
+		text-decoration: none;
+
+		font-size: $fs-20;
+		line-height: 1.2;
+	}
+
+	&__back {
+		display: none;
+	}
+
+	@include media('xs') {
+		&__back {
+			display: block;
+
+			text-decoration: none;
+
+			font-size:$fs-28;
+		}
+	}
+}

@@ -19,8 +19,9 @@ block variables
 
 block store
 
-doctype html
-html(lang='ru')
+block layout
+	doctype html
+	html(lang='ru')
 
 	head
 		block head
@@ -29,17 +30,17 @@ html(lang='ru')
 			meta(http-equiv='X-UA-Compatible' content='ie=edge')/
 			meta(name='theme-color' content='#678c92')/
 
-	+b('body', {}, 'body')
-		+Container
-			//- подключение и вызов секции HEADER
-			block header
-				include ../sections/header/header
-				+header(main.header)
+		+b('body', {}, 'body')
+			+Container
+				//- подключение и вызов секции HEADER
+				block header
+					include ../sections/header/header
+					+header(main.header)
 
-			+b('main', {}, 'main')
-				block main
+				+b('main', {}, 'main')
+					block main
 
-		//- подключение и вызов секции FOOTER
-		block footer
-			include ../sections/footer/footer
-			+footer(main.footer)
+			//- подключение и вызов секции FOOTER
+			block footer
+				include ../sections/footer/footer
+				+footer(main.footer)
