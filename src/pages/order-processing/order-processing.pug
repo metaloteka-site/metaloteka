@@ -1,0 +1,10 @@
+extends ../../layout/main
+
+block store
+	include store/order-processing.store.pug
+
+append head
+	title Оформление заказа
+
+block main
+	p order-processing

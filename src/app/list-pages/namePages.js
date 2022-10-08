@@ -25,6 +25,9 @@ module.exports = {
 			case 'cart-page':
 				name = 'Страница корзины';
 				break;
+			case 'order-processing':
+				name = 'Оформление заказа';
+				break;
 			default:
 				name = 'name page';
 				break;
