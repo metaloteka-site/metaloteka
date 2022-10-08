@@ -1,20 +1,14 @@
-.bread-crumbs {
+.section-breadcrumbs{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 
 	margin-bottom: 50px;
 
-	&__inner {
-		padding: 0;
-	}
-
 	&__link {
-		padding: 0 3px;
+		margin: 0 3px;
 
 		text-decoration: none;
-
-		color: $white;
 
 		font-size: $fs-20;
 		line-height: 1.2;
@@ -22,21 +16,15 @@
 
 	&__back {
 		display: none;
-
-		text-decoration: none;
-
-		color: $white;
-
-		font-size:$fs-28;
 	}
 
 	@include media('xs') {
-		&__inner {
-			padding: 10px;
-		}
-
 		&__back {
 			display: block;
+
+			text-decoration: none;
+
+			font-size:$fs-28;
 		}
 	}
 }

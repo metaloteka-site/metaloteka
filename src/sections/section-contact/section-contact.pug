@@ -1,41 +1,34 @@
-mixin section-contact
+mixin section-contact(section)
+	//- проверка данных получаемых из section
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- верстка секции
 	+b('contacts', {}, 'section')
 		+e('circle', {}, 'div') MT
 		+e('appellation', {}, 'div') Металотека
 		+e('title', {}, 'div') Контакты
 		+e('map', {}, 'div')
-		include ../../components/contactInformation/contactInformation
-		+ContactInformation(main.contact)
-			+e('wrapper', {}, 'div')
-				+e('item-description', {}, 'div')
-					+e('adress', {}, 'div') #{'Московская обл., \n г.Дзержинский, \n	ул.Алексеевская, д.5А'}
-					+e('schedule', {}, 'div')
-						| 9:30-18:00 (пн.-пт.)
-						br
-						| 9:30-15:00 (сб.,вс.)
-					+e('location', {}, 'div') Территория склада располагается рядом с торговым центро «Триал Маркет». Территория склада располагается рядом с торговым центро «Триал Маркет»
-				+e('item-link', {}, 'div')
-					+e('link', {}, 'a')(href='#') На карте
-				+e('item-contact-info')
-					+e('phone', {}, 'a')(href='tel:+74952231141') 8 (495) 223-11-41
-					+e('mail',{}, 'a')(href='mailto:msk@metaloteka.ru') msk@metaloteka.ru
-			+e('wrapper', {}, 'div')
-				+e('item-description', {}, 'div')
-					+e('adress', {}, 'div')
-						|	г.Москва
-						br
-						|	ул.Алексеевская, д.5А
-					+e('schedule', {}, 'div')
-						| 9:30-18:00 (пн.-пт.)
-						br
-						| 9:30-15:00 (сб.,вс.)
-					+e('location', {}, 'div') Территория склада располагается рядом с торговым центро «Триал Маркет»
-				+e('item-link', {}, 'div')
-					+e('link', {}, 'a')(href='#') На карте
-				+e('item-contact-info')
-					+e('phone', {b: 'block'}, 'a')(href='tel:+79884002030') 8 (988) 400-20-30
-					+e('phone', {b:'block'}, 'a')(href='tel:+79994002030') 8 (999) 400-20-30
-					+e('mail',{}, 'a')(href='mailto:alekseev.anton@metaloteka.ru') alekseev.anton@metaloteka.ru
+
+		for item in S_ELEM_ARR('ContactInformation')
+			+ContactInformation(item)
+
+		+e('wrapper', {}, 'div')
+			+e('item-description', {}, 'div')
+				+e('adress', {}, 'div')
+					|	г.Москва
+					br
+					|	ул.Алексеевская, д.5А
+				+e('schedule', {}, 'div')
+					| 9:30-18:00 (пн.-пт.)
+					br
+					| 9:30-15:00 (сб.,вс.)
+				+e('location', {}, 'div') Территория склада располагается рядом с торговым центро «Триал Маркет»
+			+e('item-link', {}, 'div')
+				+e('link', {}, 'a')(href='#') На карте
+			+e('item-contact-info')
+				+e('phone', {b: 'block'}, 'a')(href='tel:+79884002030') 8 (988) 400-20-30
+				+e('phone', {b:'block'}, 'a')(href='tel:+79994002030') 8 (999) 400-20-30
+				+e('mail',{}, 'a')(href='mailto:alekseev.anton@metaloteka.ru') alekseev.anton@metaloteka.ru
 		+e('city', {m:'block'}, 'div')
 			+e('sub-title', {}, 'div')
 				+e('icon', {}, 'img')(src='../../layout/assets/images/icon-pin-map.svg')
