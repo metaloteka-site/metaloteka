@@ -72,6 +72,11 @@ mixin footer(section)
 				+e('privacy-policy-info', {}, 'div')
 					+e('privacy-policy', {}, 'span') #{S_DATA('privacyPolicy')}
 					+e('privacy-policy-map', {}, 'span') #{S_DATA('privacyMap')}
-				+e('privacy-policy-img', {}, 'div')
-					+e('logo', {}, 'img')(src=`${pathFile}${S_DATA('logoMetalotekafont')}` alt='логотип metaloteka')
+				+e('privacy-policy-img-wrapper', {}, 'div')
+					+e('privacy-policy-img', {}, 'img')(src=`${pathFile}${S_DATA('logoMetalotekafont')}` alt='логотип metaloteka')
 				+e('privacy-policy-web', {}, 'span') #{S_DATA('webStudio')}
+			for item in section.dataArr.testiu
+				//- проверка данных получаемых из item
+				include ../../shared/helpers/pug/shortcut-check-store
+
+				+e('item', {}, 'span') !{I_DATA('text')}
