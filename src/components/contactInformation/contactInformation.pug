@@ -1,0 +1,8 @@
+mixin ContactInformation(props)
+
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	+e('city', {}, 'div')
+		+e('sub-title', {}, 'div')
+			+e('icon', {}, 'img')
+			+e('town', {}, 'div')= props.cities[0].name

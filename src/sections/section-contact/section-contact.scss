@@ -67,10 +67,17 @@
 		height: 40px;
 	}
 
+	&__city {
+		&_block {
+			display: none;
+		}
+	}
+
 	&__wrapper {
 		display: flex;
 		align-items: flex-start;
 		flex-direction: column;
+		flex-wrap: wrap;
 		justify-content: space-between;
 
 		margin-bottom: 48px;
@@ -80,7 +87,7 @@
 		display: flex;
 		flex-direction: column;
 
-		width: 320px;
+		width: 100%;
 		row-gap: 22px
 	}
 
@@ -111,7 +118,7 @@
 		display: flex;
 		flex-direction: column;
 
-		width: 300px;
+		width: 100%;
 		row-gap: 8px;
 	}
 
@@ -130,27 +137,63 @@
 
 	&__tabs {
 		display: flex;
+		overflow: auto;
 		flex-direction: row;
 		justify-content: flex-start;
+
+		margin-right: -22%;
 		column-gap: 24px;
 	}
 
 	&__choice {
 		margin-bottom: 23px;
 
+		white-space: nowrap;
+
 		font-size: $fs-title6;
 		font-weight: 500;
 		line-height: 1.1;
+
+		&.active {
+			border-bottom: 4px solid #586e8b;
+		}
 
 		&:active {
 			border-bottom: 4px solid #586e8b;
 		}
 	}
 
-	&__content {
-		margin-bottom: 95px;
+	.opened {
+		display: -webkit-box;
+		overflow: hidden;
+
+		text-overflow: ellipsis;
+		-webkit-line-clamp: 20; 
+		line-clamp: 20; 
+		-webkit-box-orient: vertical;
 	}
 
+	&__button {
+		display: block;
+
+		color:$wet-asphalt;
+		border: none;
+		background-color: $white;
+
+		font-size: $fs-default;
+		line-height: 1.14;
+
+	}
+
+	&__content-wrapper {
+		margin-bottom: 14px;
+	}
+
+	&__content {
+		display: none;
+		
+	}
+	
 	&__footer {
 		display: none;
 		align-items: flex-start;
@@ -182,6 +225,8 @@
 		}
 
 		&-number {
+			color: $wet-asphalt;
+
 			font-size: $fs-20;
 		}
 
@@ -190,6 +235,8 @@
 		}
 
 		&-mail {
+			color: $wet-asphalt;
+
 			font-size: $fs-20;
 		}
 
@@ -218,8 +265,22 @@
 			line-height: 100%;
 		}
 
+		&__city {
+			&_block {
+				display: block;
+			}
+		}
+
 		&__wrapper {
 			flex-direction: row;
+		}
+
+		&__item-description  {
+			width: 320px;
+		}
+
+		&__item-contact-info {
+			width: 300px;
 		}
 
 		&__schedule {
@@ -240,8 +301,17 @@
 			}
 		}
 
+		&__button {
+			display: none;
+		}
+
 		&__footer {
 			display: flex;
+			flex-wrap: wrap;
 		}
 	}
+}
+
+.active {
+	display: block;
 }
