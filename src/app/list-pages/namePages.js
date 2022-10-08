@@ -19,6 +19,9 @@ module.exports = {
 			case 'catalog':
 				name = 'Каталог';
 				break;
+			case 'product-details':
+				name = 'Информация о продукте';
+				break;
 			default:
 				name = 'name page';
 				break;
