@@ -4,21 +4,26 @@ mixin section-orders-list(section)
 
 	//- верстка секции
 	+b('section-orders-list', {}, 'section')
-		p TESTING PERSONAL AREAD TEST
-		+b('flwrap', {}, 'div')
-			+b('tflex', {}, 'h2') Заказ №210522/1-MT
-			+b('tflex', {}, 'h2') ИП Петров Иван
-		+b('tflex-col', {m: 'dfd'}, 'div')
-			+b('text', {m: 'sdsds'}, 'div')
-				+e('t', {m: 'sdsd'}, 'p') Итого:
-				+e('t', {m: 'sdsds'}, 'p') 6 233 944 р.
-				+e('t', {}, 'p') ≈ 4,548 т
-			+b('text', {}, 'div')
-				+b('t', {}, 'p') Всего наимнований (12) на сумму 6 233 944 руб.(в том числе НДС 20%)
-				+b('t', {}, 'p') Сто пятьдесят восемь миллионов двести тридцать три тысячи девятьсот сорок четыре руб. 00 копеек
-			+b('text', {}, 'div')
-				+b('t', {}, 'p') Копия документов на оплату отправлена на вашу электронную почту. В течении ближайшего времени с вами свяжеться менеджер, чтобы обсудить делали заказа.
-				+b('t', {}, 'p') Скачать счет PDF
+		for item in section.arrData
+			+b('cart', {}, 'div')
+				+b('title', {}, 'div')
+					+e('order', {}, 'h2') Заказ #{item.data.order}
+					+e('firm', {}, 'h2') #{item.data.firm}
+				+b('line', {}, 'div')
+				+b('call', {}, 'div')
+					+b('summ', {m: 'left'}, 'div')
+						+e('total', {}, 'p') Итого:
+						+e('total', {m: 'sum'}, 'p') #{item.data.sum} р.
+						+e('line', {}, 'div')
+						+e('total', {}, 'p') ≈ #{item.data.weight} т
+					+b('summ', {m: 'center'}, 'div')
+						+e('total', {m: 'bold'}, 'p') Всего наимнований (#{item.data.count}) на сумму #{item.data.sum} руб.(в том числе НДС 20%)
+						+e('total', {m: 'small'}, 'p') #{item.data.numberInWords}
+					+b('summ', {m: 'right'}, 'div')
+						+e('total', {m: 'mini'}, 'p') Копия документов на оплату отправлена на вашу электронную почту. В течении ближайшего времени с вами свяжеться менеджер, чтобы обсудить делали заказа.
+						+e('total', {m: 'wrap'}, 'p')
+							+e('r', {}, 'a')(href='!#') Скачать счет PDF
+							+e('r', {}, 'p') (действителен до 21.05.2022)
 
 		for item in section.arrData
 			div
