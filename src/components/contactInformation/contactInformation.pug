@@ -6,20 +6,17 @@ mixin ContactInformation(props)
 	+e('city', {}, 'div')
 		if OPT('city')
 			+e('sub-title', {}, 'div')
-				+e('icon', {}, 'img')
+				+e('icon', {}, 'img')(src='../../layout/assets/images/icon-pin-map.svg')
 				+e('town', {}, 'div') #{DATA('name')}
 
 		+e('wrapper', {}, 'div')
 
 			+e('item-description', {}, 'div')
 				+e('adress', {}, 'div') #{DATA('address')}
-				+e('schedule', {}, 'div')
-					| 9:30-18:00 (пн.-пт.)
-					br
-					| 9:30-15:00 (сб.,вс.)
-				+e('location', {}, 'div') Территория склада располагается рядом с торговым центро «Триал Маркет». Территория склада располагается рядом с торговым центро «Триал Маркет»
+				+e('schedule', {}, 'div') #{DATA('schedule')}
+				+e('location', {}, 'div') #{DATA('location')}
 			+e('item-link', {}, 'div')
-				+e('link', {}, 'a')(href='#') На карте
+				+e('link', {}, 'a')(href=I_DATA('mapLink')) #{DATA('mapText')}
 
 			+e('item-contact-info')
 				for item in DATA_ARR('telephone')
@@ -27,5 +24,8 @@ mixin ContactInformation(props)
 					include ../../shared/helpers/pug/shortcut-check-store
 
 					+e('phone', {}, 'a')(href=I_DATA('href')) #{I_DATA('text')}
+				for item in DATA_ARR('mail')
+					//- проверка данных получаемых из item
+					include ../../shared/helpers/pug/shortcut-check-store
 
-				+e('mail',{}, 'a')(href='mailto:msk@metaloteka.ru') msk@metaloteka.ru
+					+e('mail',{}, 'a')(href=I_DATA('mailHref')) #{I_DATA('mail')}

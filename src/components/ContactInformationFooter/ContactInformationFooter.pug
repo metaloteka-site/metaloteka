@@ -1,0 +1,30 @@
+mixin ContactInformationFooter(props)
+	//- проверка данных получаемых из props
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- верстка компонента
+	+e('footer', {}, 'div')
+		+e('qr', {}, 'img')(src=`${pathFile}${DATA('icon')}` alt='icon')
+		+e('footer-name', {}, 'div')
+			+e('footer-title', {}, 'div') #{DATA('name')}
+			+e('footer-text', {}, 'div') #{DATA('text')}
+			+e('footer-range', {}, 'div')
+			+e('footer-text', {}, 'div') #{DATA('qr')}
+
+		+e('footer-phone', {}, 'div')
+			for item in DATA_ARR('telephone')
+				//- проверка данных получаемых из item
+				include ../../shared/helpers/pug/shortcut-check-store
+
+				+e('footer-number', {}, 'a')(href=I_DATA('href')) #{I_DATA('text')}
+			+e('footer-range', {}, 'div')
+			+e('footer-text', {}, 'div') #{DATA('support')}
+			+e('footer-text', {m:'bold'}, 'div') #{DATA('orders')}
+		+e('footer-letter', {}, 'div')
+
+			for item in DATA_ARR('mail')
+				//- проверка данных получаемых из item
+				include ../../shared/helpers/pug/shortcut-check-store
+				+e('footer-mail', {}, 'a')(href=I_DATA('mailHref')) #{I_DATA('mail')}
+			+e('footer-range', {}, 'div')
+			+e('footer-text', {}, 'div') #{DATA('answers')}
