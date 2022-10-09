@@ -1,0 +1,21 @@
+<svg width="44" height="43" viewBox="0 0 44 43" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <clipPath id="ekerytbrra">
+            <path d="M4500 0v5500H0V0h4500z"/>
+        </clipPath>
+        <clipPath id="bdchh8nhbb">
+            <path d="M40.243 3.023c2.883 2.863 3.034 7.38 3.042 16.12v4.713c-.008 8.74-.16 13.258-3.042 16.121-2.883 2.864-7.43 3.015-16.228 3.023H19.27c-8.799-.008-13.346-.16-16.228-3.023C.16 37.114.008 32.597 0 23.857v-4.713c.008-8.74.16-13.258 3.043-16.121C5.925.159 10.473.008 19.27 0h4.744c8.798.008 13.345.16 16.228 3.023z"/>
+        </clipPath>
+        <clipPath id="0xesvkkm1c">
+            <path d="M4.942 0c.162 8.206 3.805 11.682 6.69 12.398V0h4.654v7.077c2.85-.304 5.844-3.53 6.854-7.077h4.653c-.776 4.372-4.022 7.597-6.33 8.922 2.308 1.075 6.005 3.888 7.412 8.977h-5.122c-1.1-3.404-3.841-6.038-7.467-6.397V17.9h-.559C5.862 17.899.234 11.18 0 0h4.942z"/>
+        </clipPath>
+    </defs>
+    <g clip-path="url(#ekerytbrra)" transform="translate(-2549 -1222)">
+        <g clip-path="url(#bdchh8nhbb)" transform="translate(2549 1222)">
+            <path fill="#07F" d="M0 0h43.286v43H0V0z"/>
+        </g>
+        <g clip-path="url(#0xesvkkm1c)" transform="translate(2556.305 1235.08)">
+            <path fill="#FFF" d="M0 0h28.875v17.899H0V0z"/>
+        </g>
+    </g>
+</svg>
