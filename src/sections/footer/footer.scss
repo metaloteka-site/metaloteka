@@ -34,18 +34,11 @@
 
 	&__metaloteka-logo_item {
 		width: 100%;
-		max-width: 130px;
+		max-width: 288px;
 	}
 
 	&__social {
 		display: none;
-	}
-
-	&__social-item {
-		max-width: 21.5px;
-		max-height: 21.5px;
-
-		cursor: pointer;
 	}
 
 	//-Клиентам----------------------------
@@ -54,23 +47,19 @@
 		display: flex;
 		flex-direction: column;
 
-		margin-bottom: 21px;
-		padding: 0 44px 0;
+		margin-bottom: 42px;
+		padding: 0 45px 0;
 
-		color: $white;
-
-		font-size: 9px;
+		font-size: 18px;
 		font-weight: 300;
 		line-height: 1.11;
 		gap: 12px;
 	}
 
 	&__title {
-		margin-bottom: 18px;
+		margin-bottom: 20px;
 
-		color: $white;
-
-		font-size: 19px;
+		font-size: 38px;
 		font-weight: 800;
 		line-height: 0.68;
 	}
@@ -82,12 +71,10 @@
 		flex-direction: column;
 
 		margin-bottom: 42px;
-		padding: 0 44px 0;
+		padding: 0 40px 0;
 
-		color: $white;
-
-		font-size: 13px;
-		font-weight: 700;
+		font-size: 26px;
+		font-weight: 200;
 		line-height: 1.08;
 
 		gap: 24px;
@@ -109,25 +96,21 @@
 	}
 
 	&__subtitle {
-		color: $white;
+		word-break: break-word;
 
-		font-size: 13px;
+		font-size: 26px;
 		font-weight: 800;
 		line-height: 1;
 	}
 
 	&__adress-subtitle {
-		color: $white;
-
-		font-size: 9px;
+		font-size: 18px;
 		font-weight: 300;
 		line-height: 1.11;
 	}
 
 	&__messenger-subtitle {
-		color: $white;
-
-		font-size: 7px;
+		font-size: 14px;
 		font-weight: 300;
 		line-height: 1.14;
 	}
@@ -139,8 +122,6 @@
 		margin-bottom: 28px;
 		padding: 0 40px 0;
 
-		color: $white;
-
 		font-size: 26px;
 		font-weight: 800;
 		line-height: 1;
@@ -150,14 +131,14 @@
 
 	&__requesites {
 		display: flex;
-		overflow-x: scroll;
-
 		flex-wrap: wrap;
 		justify-content: center;
 
 		margin-bottom: 21px;
-		padding: 18.5px 26.5px 19px 38.5px;
-		gap: 20px;
+		// padding: 18px 26px 19px 38px;
+		padding: 18px 26px 0 38px;
+	
+		gap: 0;
 	}
 
 	&__requesites-info {
@@ -172,27 +153,29 @@
 		display: flex;
 		flex: 1 268px;
 		flex-direction: row;
-		// flex-wrap: wrap;
+		flex-wrap: wrap;
 		justify-content: center;
 		gap: 14px;
+
+		margin-bottom: 42px;
 	}
 
 	&__logo-sberbank {
 		flex: 1 1 140px;
 
-		max-width: 100px;
+		max-width: 150px;
 	}
 
 	&__logo-payment {
 		flex: 1 1 190px;
 
-		max-width: 54px;
+		max-width: 65px;
 	}
 
 	&__logo-mir {
 		flex: 1 1 190px;
 
-		max-width: 50px;
+		max-width: 60px;
 	}
 
 	&__button-wrapper {
@@ -204,10 +187,9 @@
 	}
 
 	&__button {
-		max-width: 242px;
+		max-width: 310px;
 		max-height: 62px;
 		padding: 10px;
-		padding: 10px 40px;
 
 		text-align: center;
 
@@ -215,7 +197,7 @@
 		border: solid 1px $white;
 		background: none;
 
-		font-size: 18px;
+		font-size: 38px;
 		font-weight: 800;
 		line-height: 1;
 	}
@@ -227,17 +209,13 @@
 	}
 
 	&__title-individuals {
-		color: $white;
-
-		font-size: 10px;
+		font-size: 20px;
 		font-weight: 800;
 		line-height: 0.9;
 	}
 
 	&__subtitle-individuals {
-		color: $white;
-
-		font-size: 7px;
+		font-size: 14px;
 		font-weight: 300;
 		line-height: 1.14;
 	}
@@ -258,11 +236,11 @@
 		display: inline-block;
 
 		margin-bottom: 42px;
-		padding: 0 20px 0;
+		padding: 0 40px 0;
 
-		color: $white;
+		word-break: break-word;
 
-		font-size: 8px;
+		font-size: 14px;
 		font-weight: 200;
 		line-height: 1.29;
 	}
@@ -272,6 +250,8 @@
 	&__privacy-policy-wrapper {
 		display: grid;
 		grid-template-columns: 1fr;
+
+		padding: 0 40px 0;
 	}
 
 	&__privacy-policy_item {
@@ -279,8 +259,6 @@
 		flex: 1 1 330px;
 
 		padding: 33px 64px 33px 66px;
-
-		color: $white;
 	}
 
 	&__privacy-policy-info {
@@ -288,28 +266,26 @@
 		align-items: center;
 		flex-wrap: wrap;
 		justify-content: center;
+		gap: 14px;
 
+		// padding: 0 20px 0;
 		margin-bottom: 14px;
-		padding: 0 20px 0;
 
-		color: $white;
-
-		font-size: 8px;
+		font-size: 16px;
 		font-weight: 300;
 		line-height: 1.13;
-		gap: 14px;
 	}
 
 	&__privacy-policy {
 		display: flex;
 		flex: 1 1 100px;
-		justify-content: center;
+		// justify-content: center;
 	}
 
 	&__privacy-policy-map {
 		display: flex;
 		flex: 1 1 100px;
-		justify-content: center;
+		// justify-content: center;
 	}
 
 	&__privacy-policy-img-wrapper {
@@ -319,15 +295,11 @@
 	&__privacy-policy-web {
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		// justify-content: center;
+		// padding: 0 20px 0;
 
-		padding: 0 20px 0;
-
-		text-align: right;
-
-		color: $white;
-
-		font-size: 8px;
+		// text-align: right;
+		font-size: 16px;
 		font-weight: 300;
 		line-height: 1.13;
 	}
@@ -347,7 +319,7 @@
 		}
 
 		&__metaloteka-icons {
-			flex: 1 1 193px;
+			flex: 1 1 386px;
 
 			border-right: 0.5px solid #d9d8d8;
 			border-bottom: 0.5px solid #d9d8d8;
@@ -358,7 +330,7 @@
 
 			margin-bottom: 0;
 
-			padding: 49px 62px 55px 64px;
+			padding: 50px 60px 55px 65px;
 
 			border-top: solid 0.5px #d9d8d8;
 			border-bottom: solid 0.5px #d9d8d8;
@@ -368,16 +340,13 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
+			gap: 9px;
 
-			padding: 68px 62px 68px 64px;
+			padding: 70px 55px;
 
 			text-align: center;
 
-			color: $white;
-
-			gap: 9px;
-
-			font-size: 7px;
+			font-size: 14px;
 			font-weight: 400;
 			line-height: 1;
 		}
@@ -390,42 +359,42 @@
 		&__social {
 			display: flex;
 			justify-content: center;
-			gap: 10px;
+			gap: 20px;
 
-			padding: 46px 53px;
+			padding: 52px 53px;
+		}
+
+		&__social-item {
+			max-width: 43px;
+			max-height: 43px;
+
+			cursor: pointer;
 		}
 
 		&__clients {
-			flex: 1 1 143px;
+			flex: 1 1 287px;
 
 			margin-bottom: 0;
-
-			padding: 34px 21.5px 50px 22px;
+			padding: 70px 45px 100px;
 
 			border-right: 0.5px solid #d9d8d8;
 			border-bottom: 0.5px solid #d9d8d8;
 		}
 
 		&__catalog {
-			flex: 1 1 165px;
+			flex: 1 1 327px;
 
 			margin-bottom: 0;
-			padding: 34px 21.5px 44px 22px;
-
-			color: $white;
+			padding: 70px 45px 90px;
 
 			border-right: 0.5px solid #d9d8d8;
 			border-bottom: 0.5px solid #d9d8d8;
-
-			font-size: 13px;
-			font-weight: 200;
-			line-height: 1.08;
 		}
 
 		//-Контакты-----------------------------------
 
 		&__contacts {
-			flex: 1 1 278px;
+			flex: 1 1 356px;
 
 			margin-bottom: 0;
 
@@ -435,13 +404,14 @@
 
 		&__address-wrapper {
 			margin-bottom: 0;
-			padding: 35px;
+			padding: 35px 50px 35px 45px;
+			gap: 5px;
 		}
 
 		&__messenger {
 			margin-bottom: 42px;
 			margin-bottom: 0;
-			padding: 35px;
+			padding: 42px 50px 35px 45px;
 
 			border-top: solid 0.5px #d9d8d8;
 			gap: 5px;
@@ -456,9 +426,8 @@
 			flex-wrap: wrap;
 
 			margin-bottom: 0;
-			padding: 46px 53px;
+			padding: 35px 50px 40px 75px;
 
-			color: $white;
 			border-right: solid 0.5px #d9d8d8;
 
 			border-left: solid 0.5px #d9d8d8;
@@ -470,7 +439,7 @@
 			align-items: center;
 			flex: 1 1 476px;
 			justify-content: center;
-			gap: 16px;
+			gap: 32px;
 		}
 
 		&__sber-icons {
@@ -479,9 +448,10 @@
 			flex-direction: row;
 			flex-wrap: wrap;
 			justify-content: center;
+
+			margin-bottom: 0;
 			gap: 14px;
 		}
-	
 
 		&__button-wrapper {
 			display: flex;
@@ -494,14 +464,17 @@
 			padding-left: 30px;
 		}
 
+		&__button {
+			padding: 10px 60px 15px;
+		}
+
 		//-Информация---------------------------------------
 
 		&__info-metaloteka {
 			margin-bottom: 0;
-			padding: 27px 56px 30px 55px;
+			padding: 30px 55px;
 
 			border-top: solid 0.5px #d9d8d8;
-
 			border-right: solid 0.5px #d9d8d8;
 			border-left: solid 0.5px #d9d8d8;
 		}
@@ -511,6 +484,8 @@
 		&__privacy-policy-wrapper {
 			display: flex;
 			flex-wrap: wrap;
+
+			padding: 0;
 
 			border-top: 0.5px solid #d9d8d8;
 			border-left: 0.5px solid #d9d8d8;
@@ -522,8 +497,9 @@
 
 			margin-bottom: 0;
 
-			padding-right: 64px;
-			padding-left: 55px;
+			// padding-right: 64px;
+			// padding-left: 55px;
+			padding-left: 65px;
 
 			border-right: 0.5px solid #d9d8d8;
 			border-bottom: 0.5px solid #d9d8d8;
@@ -535,25 +511,23 @@
 			flex: 1 1 330px;
 			justify-content: center;
 
-			padding-top: 35px;
-			padding-bottom: 34px;
+			padding: 35px 0;
 
 			border-right: 0.5px solid #d9d8d8;
 			border-bottom: 0.5px solid #d9d8d8;
 		}
 
 		&__privacy-policy-img {
-			max-width: 130px;
+			max-width: 176px;
 		}
 
 		&__privacy-policy-web {
 			flex: 1 1 330px;
+			justify-content: center;
 
 			border-right: 0.5px solid #d9d8d8;
 			border-bottom: 0.5px solid #d9d8d8;
 		}
-
-	
 	}
 }
 

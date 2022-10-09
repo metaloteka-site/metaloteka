@@ -37,48 +37,6 @@
 			modFooter: 'ml-xl-60'
 		},
 		elem: {
-			ContactFooterffff: {
-				elemArr: [
-					{
-						data: {
-								contact: 'Ренат',
-								href:'vk.com'
-						},
-						bem:{
-							//- lh: 'line-height',
-							margin: 'ml-xl-60'
-						},
-						elem: {
-							Text: {
-								data: {
-									text: 'Казань'
-								}
-							}
-						}
-					},
-					{
-
-						data: {
-								text: 'Дима',
-								href:'tel:+79278797644'
-
-						},
-						bem:{
-							lh: 'line-height'
-						}
-					},
-					{
-
-						data: {
-								text: 'Саша',
-								href:'vk.com'
-						},
-						bem:{
-							lh: 'line-height'
-						}
-					}
-				]
-			},
 			ContactFooter: {
 				elemArr: [
 					{
@@ -86,64 +44,117 @@
 							contact: 'г. Москва',
 							icon: '/logo.svg'
 						},
+						dataArr: {
+							address: [
+								{
+									data: {
+										text: 'Москва',
+									}
+								},
+								{
+									data: {
+										text: 'г.Москва, ул.Воскресенская, 84 Бизнес-центр «Чистые пруды»',
+									}
+								}
+							],
+							phoneInfo: [
+								{
+									data: {
+										tel: '+7 (495) 545 64 20',
+										href: 'tel:+74955456420'
+									}
+								},
+								{
+									data: {
+										text: 'Телефон клиентской поддержки',
+									}
+								}
+							],
+							mailInfo: [
+								{
+									data: {
+										mail: 'client@metaloteka.ru',
+										href: 'mailto:client@metaloteka.ru'
+									}
+								},
+								{
+									data: {
+										text: 'Адрес электронной почты',
+									}
+								}
+							],
+							whatsappWiber: [
+								{
+									data: {
+										text: 'Whatsapp | Viber',
+									}
+								},
+								{
+									data: {
+										info: 'Напишите нам в мессенджер',
+									}
+								}
+							],
+						},
 						bem: {
 							margin: 'ml-xl-60'
-						},
-						elem: {
-							Text: {
-								data: {
-									text: 'г.Москва, ул.Воскресенская, 84 Бизнес-центр «Чистые пруды»'
-								},
-								opt: {
-									isElementClass: true
-								}
-							}
 						}
-					},
-					{
-						data: {
-							contact: '+7 495 545 64 20',
-							href: 'tel:+74955456420'
-						},
-						bem: {
-							margin: 'ml-xl-35'
-						},
-						opt: {
-							link: true
-						},
-						elem: {
-							Text: {
-								data: {
-									text: 'Телефон клиентской поддержки'
-								},
-								opt: {
-									isElementClass: true
-								}
-							}
-						}
-					},
-					{
-						data: {
-							contact: 'info@metaloteka.ru',
-							href: 'mailto:info@metaloteka.ru'
-						},
-						bem: {
-							margin: 'ml-xl-35'
-						},
-						opt: {
-							link: true
-						},
-						elem: {
-							Text: {
-								data: {
-									text: 'Адрес электронной почты'
-								},
-								opt: {
-									isElementClass: true
-								}
-							}
-						}
+						//- elem: {
+						//- 	Text: {
+						//- 		data:{
+						//- 			text: 'г.Москва, ул.Воскресенская, 84 Бизнес-центр «Чистые пруды»',
+						//- 			mesto: 'Турек, ул.Воскресенская, 84 Бизнес-центр «Чистые пруды»',
+						//- 		},
+						//- 		opt: {
+						//- 			isElementClass: true
+						//- 		}
+						//- 	}
+						//- }
 					}
+					//- {
+					//- 	data: {
+					//- 		contact: '+7 495 545 64 20',
+					//- 		href: 'tel:+74955456420'
+					//- 	},
+					//- 	bem: {
+					//- 		margin: 'ml-xl-35'
+					//- 	},
+					//- 	opt: {
+					//- 		link: true
+					//- 	},
+					//- 	elem: {
+					//- 		Text: {
+					//- 			data: {
+					//- 				text: 'Телефонccc клиентской поддержки'
+					//- 			},
+					//- 			opt: {
+					//- 				isElementClass: true
+					//- 			}
+					//- 		}
+					//- 	}
+					//- },
+					//- {
+					//- 	data: {
+					//- 		contact: 'info@metaloteka.ru',
+					//- 		href: 'mailto:info@metaloteka.ru'
+					//- 	},
+					//- 	bem: {
+					//- 		margin: 'ml-xl-35'
+					//- 	},
+					//- 	opt: {
+					//- 		link: true
+					//- 	},
+					//- 	elem: {
+					//- 		Text: {
+					//- 			data: {
+					//- 				text: 'Адрес электронной почты'
+					//- 			},
+					//- 			opt: {
+					//- 				isElementClass: true
+					//- 			}
+					//- 		}
+					//- 	}
+					//- }
 				]
 			},
 			ComponyRight: {
