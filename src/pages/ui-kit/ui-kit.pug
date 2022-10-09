@@ -4,8 +4,43 @@ append head
 	title UI-KIT
 
 block main
-	+b('profile')
-		h1 Hellosds Hyruzzled sdsdsdsd
+	//- стили используемые только для для страницы UI-KIT
+	style.
+		.h1 {
+			font-size: var(--fs-title1);
+			font-weight: 900;
+			text-align: center;
+		}
+		.h2 {
+			font-size: var(--fs-title3);
+			text-align: center;
+		}
+		.h3 {
+			--white: #ffffff9f;
+			font-size: var(--fs-title5);
+			color: var(--white);
+		}
+		.h4 {
+			font-size: var(--fs-22);
+		}
+		.p {
+			font-size: var(--fs-big);
+		}
+		.p code {
+			--white: #ffffff36;
+			font-family: monospace;
+			font-weight: 700;
+			background: var(--white);
+			padding: 0 4px;
+			border-radius: 15px;
+		}
 
-	+b('ddd')(title='#{a}')
-		+e('ddeee')
+	//- Верстка и элементы с описанием
+	+b('h1', {}, 'h1') ~ UI-KIT Metaloteka ~
+
+	+b('section-shared-component', {}, 'section')
+		+b('h2', {}, 'h2') Shared component:
+
+		include example-components/example-container
+
+		include example-components/example-row
