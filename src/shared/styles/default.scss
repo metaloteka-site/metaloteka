@@ -10,6 +10,8 @@ html {
 }
 
 body {
+	color: $white;
+
 	font-family: $font-default;
 	font-size: $fs-default;
 	font-weight: 300;
@@ -19,6 +21,17 @@ body {
 
 img {
 	vertical-align: middle;
+}
+
+a {
+	color: $white;
+
+	&:hover {
+		--white: #ffffffcc;
+		transition: all 0.3s;
+
+		color: $white;
+	}
 }
 
 .body {

@@ -1,0 +1,11 @@
+mixin section-breadcrumbs(section)
+	//- проверка данных получаемых из section
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- верстка секции
+	+b('section-breadcrumbs', {}, 'section')
+		+e('inner', {} , 'div')
+			+e('link', {}, 'a')(href=S_DATA('prevPageHref')) #{S_DATA('prevPage')}
+			+e('link', {}, 'span') #{S_DATA('separation')}
+			+e('link', {}, 'span') #{S_DATA('page')}
+		+e('back', {}, 'a')(href=S_DATA('backHref')) #{S_DATA('back')}

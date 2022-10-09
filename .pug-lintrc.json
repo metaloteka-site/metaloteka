@@ -9,7 +9,7 @@
 	"disallowLegacyMixinCall": true,
 	"disallowMultipleLineBreaks": true,
 	"disallowSpacesInsideAttributeBrackets": true,
-	"disallowSpecificAttributes": "class",
+	"disallowSpecificAttributes": ["class", "style"],
 	"disallowTrailingSpaces": true,
 	"requireClassLiteralsBeforeAttributes": true,
 	"requireIdLiteralsBeforeAttributes": true,

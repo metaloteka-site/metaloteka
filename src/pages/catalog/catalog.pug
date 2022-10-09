@@ -1,0 +1,13 @@
+extends ../../layout/main
+
+block store
+	include store/catalog.store.pug
+
+append head
+	title Каталог
+
+block main
+
+	//- подключение и вызов секции SECTION-BREADCRUMBS
+	include ../../sections/section-breadcrumbs/section-breadcrumbs
+	+section-breadcrumbs(catalog.sectionBreadcrumbs)

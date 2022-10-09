@@ -1,0 +1,13 @@
+extends ../../layout/main
+
+block store
+	include store/cart-page.store.pug
+
+append head
+	title Страница корзины
+
+block main
+
+	//- подключение и вызов секции SECTION-BREADCRUMBS
+	include ../../sections/section-breadcrumbs/section-breadcrumbs
+	+section-breadcrumbs(cartPage.sectionBreadcrumbs)

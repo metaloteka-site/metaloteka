@@ -3,8 +3,77 @@ mixin footer(section)
 	include ../../shared/helpers/pug/shortcut-check-store
 
 	//- верстка секции
-	+b('footer', {}, 'footer')
+	+b('footer', {m: S_BEM('modFooter')}, 'footer')
 		+Container
-			+Row(S_ELEM('row'))
-				p FOOTER
-				div fdfd
+			+e('footer-icons', {}, 'div')
+				//-Иконки-------------------------------------------------------------------------------------
+				+e('metaloteka-icons', {}, 'div')
+					+e('icons-font', {}, 'div')
+						+e('logo', {}, 'img')(src=`${pathFile}${S_DATA('logoMetaloteka')}` alt='логотип metaloteka')
+						+e('icon-subtitle', {}, 'h3') #{S_DATA('subtitle')}
+					+e('metaloteka-logo', {}, 'div')
+						+e('metaloteka-logo_item', {}, 'img')(src=`${pathFile}${S_DATA('logo')}` alt='Logo')
+					+e('social', {}, 'div')
+						+e('social-item', {}, 'img')(src=`${pathFile}${S_DATA('logoMail')}` alt='Mail')
+						+e('social-item', {}, 'img')(src=`${pathFile}${S_DATA('logoVk')}` alt='Vk')
+						+e('social-item', {}, 'img')(src=`${pathFile}${S_DATA('logoTg')}` alt='Telegram')
+				//-Клиентам------------------------------------------------------------------------------------
+				+e('clients', {}, 'div')
+					+e('title', {}, 'h2') #{S_DATA('titleClients')}
+
+					for item in S_DATA_ARR('clients')
+						//- проверка данных получаемых из item
+						include ../../shared/helpers/pug/shortcut-check-store
+
+						+e('item', {}, 'span') !{I_DATA('text')}
+				//-Каталог-------------------------------------------------------------------------------------
+				+e('catalog', {}, 'div')
+					+e('title', {}, 'h2') #{S_DATA('titleCatalog')}
+
+					for item in section.dataArr.catalog
+						//- проверка данных получаемых из item
+						include ../../shared/helpers/pug/shortcut-check-store
+
+						+e('item', {}, 'span') !{I_DATA('text')}
+				//-Контакты-------------------------------------------------------------------------------------
+				+e('contacts', {}, 'div')
+					+e('address-wrapper', {}, 'div')
+						+e('subtitle', {}, 'span') #{S_DATA('city')}
+						+e('adress-subtitle', {}, 'span') #{S_DATA('address')}
+					+e('messenger', {}, 'div')
+						+e('subtitle', {}, 'span') #{S_DATA('phoneNumber')}
+						+e('messenger-subtitle', {}, 'span') #{S_DATA('phoneInfo')}
+					+e('messenger', {}, 'div')
+						+e('subtitle', {}, 'span') #{S_DATA('mailAddress')}
+						+e('messenger-subtitle', {}, 'span') #{S_DATA('mailInfo')}
+					+e('messenger', {}, 'div')
+						+e('subtitle', {}, 'span') #{S_DATA('whatsappWiber')}
+						+e('messenger-subtitle', {}, 'span') #{S_DATA('whatsappWiberInfo')}
+			//-Реквизиты----------------------------------------------------------------------------------------
+			+e('requesites', {}, 'div')
+				+e('requesites-info', {}, 'div')
+					+e('requesites-img', {}, 'img')(src=`${pathFile}${S_DATA('iconRuble')}` alt='логотип metaloteka')
+					+e('individuals', {}, 'div')
+						+e('title-individuals', {}, 'span') #{S_DATA('titleRequesites')}
+						+e('subtitle-individuals', {}, 'span') #{S_DATA('requesitesIndividuals')}
+					+e('legal-entities', {}, 'div')
+						+e('title-individuals', {}, 'span') #{S_DATA('subtitleRequesites')}
+						+e('subtitle-individuals', {}, 'span') #{S_DATA('requesitesLegalEntities')}
+				+e('sber-icons', {}, 'div')
+					+e('logo-sberbank', {}, 'img')(src=`${pathFile}${S_DATA('logoSberbank')}` alt='sber')
+					+e('logo-payment', {}, 'img')(src=`${pathFile}${S_DATA('logoPaymentSbr')}` alt='sber')
+					+e('logo-mir', {}, 'img')(src=`${pathFile}${S_DATA('logoMir')}` alt='mir')
+				+e('button-wrapper', {}, 'div')
+					+e('button', {}, 'button') #{S_DATA('requesitesButton')}
+			//-Информация---------------------------------------------------------------------------------------
+			+e('info-metaloteka', {}, 'span') #{S_DATA('infoMetaloteka')}
+			//-Политика конфидициальности-----------------------------------------------------------------------
+			+e('privacy-policy-wrapper', {}, 'div')
+				+e('privacy-policy-info', {}, 'div')
+					+e('privacy-policy', {}, 'span') #{S_DATA('privacyPolicy')}
+					+e('privacy-policy-map', {}, 'span') #{S_DATA('privacyMap')}
+				+e('privacy-policy-img-wrapper', {}, 'div')
+					+e('privacy-policy-img', {}, 'img')(src=`${pathFile}${S_DATA('logoMetalotekafont')}` alt='логотип metaloteka')
+				+e('privacy-policy-web', {}, 'span') #{S_DATA('webStudio')}
+			//- for item in S_ELEM_ARR('ContactFooter')
+			//- 	+ContactFooter(item)
