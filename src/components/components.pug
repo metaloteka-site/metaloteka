@@ -1,5 +1,8 @@
 mixin includeComponents(components)
 	for component in components
-		//-case inc
-			//-when 'brand-button'
-				//-include brand-button/brand-button
+		case component
+			when 'ContactHeader'
+				include ContactHeader/ContactHeader
+		case component
+			when 'ContactInformation'
+				include contactInformation/contactInformation

@@ -1,0 +1,690 @@
+// *** СТИЛИ ОТСТУПОВ MARGIN ***
+// ==> margin
+.m {
+	&-auto {
+		margin: auto;
+	}
+
+	&-0 {
+		margin: 0;
+	}
+
+	&-10 {
+		margin: 10px;
+	}
+
+	&-20 {
+		margin: 20px;
+	}
+
+	&-30 {
+		margin: 30px;
+	}
+
+	&-35 {
+		margin: 35px;
+	}
+
+	&-40 {
+		margin: 40px;
+	}
+
+	&-50 {
+		margin: 50px;
+	}
+
+	&-60 {
+		margin: 60px;
+	}
+
+	&-80 {
+		margin: 80px;
+	}
+
+	&-100 {
+		margin: 100px;
+	}
+
+	// для медиазапросов
+	@each $key, $value in $breakpoints {
+		@if $key != 'xl' {
+			@include media($key) {
+				&-#{classMedia($key)}-auto {
+					margin: auto;
+				}
+
+				&-#{classMedia($key)}-0 {
+					margin: 0;
+				}
+
+				&-#{classMedia($key)}-10 {
+					margin: 10px;
+				}
+
+				&-#{classMedia($key)}-20 {
+					margin: 20px;
+				}
+
+				&-#{classMedia($key)}-30 {
+					margin: 30px;
+				}
+
+				&-#{classMedia($key)}-35 {
+					margin: 35px;
+				}
+
+				&-#{classMedia($key)}-40 {
+					margin: 40px;
+				}
+
+				&-#{classMedia($key)}-50 {
+					margin: 50px;
+				}
+
+				&-#{classMedia($key)}-60 {
+					margin: 60px;
+				}
+
+				&-#{classMedia($key)}-80 {
+					margin: 80px;
+				}
+
+				&-#{classMedia($key)}-100 {
+					margin: 100px;
+				}
+			}
+		}
+	}
+}
+
+// ==> margin-top
+.mt {
+	&-auto {
+		margin-top: auto;
+	}
+
+	&-0 {
+		margin-top: 0;
+	}
+
+	&-10 {
+		margin-top: 10px;
+	}
+
+	&-20 {
+		margin-top: 20px;
+	}
+
+	&-30 {
+		margin-top: 30px;
+	}
+
+	&-35 {
+		margin-top: 35px;
+	}
+
+	&-40 {
+		margin-top: 40px;
+	}
+
+	&-50 {
+		margin-top: 50px;
+	}
+
+	&-60 {
+		margin-top: 60px;
+	}
+
+	&-80 {
+		margin-top: 80px;
+	}
+
+	&-90 {
+		margin-top: 90px;
+	}
+
+	&-100 {
+		margin-top: 100px;
+	}
+
+	// для медиазапросов
+	@each $key, $value in $breakpoints {
+		@if $key != 'xl' {
+			@include media($key) {
+				&-#{classMedia($key)}-auto {
+					margin-top: auto;
+				}
+
+				&-#{classMedia($key)}-0 {
+					margin-top: 0;
+				}
+
+				&-#{classMedia($key)}-10 {
+					margin-top: 10px;
+				}
+
+				&-#{classMedia($key)}-20 {
+					margin-top: 20px;
+				}
+
+				&-#{classMedia($key)}-30 {
+					margin-top: 30px;
+				}
+
+				&-#{classMedia($key)}-35 {
+					margin-top: 35px;
+				}
+
+				&-#{classMedia($key)}-40 {
+					margin-top: 40px;
+				}
+
+				&-#{classMedia($key)}-50 {
+					margin-top: 50px;
+				}
+
+				&-#{classMedia($key)}-60 {
+					margin-top: 60px;
+				}
+
+				&-#{classMedia($key)}-80 {
+					margin-top: 80px;
+				}
+
+				&-#{classMedia($key)}-100 {
+					margin-top: 100px;
+				}
+			}
+		}
+	}
+}
+
+// ==> margin-right
+.mr {
+	&-auto {
+		margin-right: auto;
+	}
+
+	&-0 {
+		margin-right: 0;
+	}
+
+	&-10 {
+		margin-right: 10px;
+	}
+
+	&-20 {
+		margin-right: 20px;
+	}
+
+	&-30 {
+		margin-right: 30px;
+	}
+
+	&-35 {
+		margin-right: 35px;
+	}
+
+	&-40 {
+		margin-right: 40px;
+	}
+
+	&-50 {
+		margin-right: 50px;
+	}
+
+	&-60 {
+		margin-right: 60px;
+	}
+
+	&-80 {
+		margin-right: 80px;
+	}
+
+	&-100 {
+		margin-right: 100px;
+	}
+
+	// для медиазапросов
+	@each $key, $value in $breakpoints {
+		@if $key != 'xl' {
+			@include media($key) {
+				&-#{classMedia($key)}-auto {
+					margin-right: auto;
+				}
+
+				&-#{classMedia($key)}-0 {
+					margin-right: 0;
+				}
+
+				&-#{classMedia($key)}-10 {
+					margin-right: 10px;
+				}
+
+				&-#{classMedia($key)}-20 {
+					margin-right: 20px;
+				}
+
+				&-#{classMedia($key)}-30 {
+					margin-right: 30px;
+				}
+
+				&-#{classMedia($key)}-35 {
+					margin-right: 35px;
+				}
+
+				&-#{classMedia($key)}-40 {
+					margin-right: 40px;
+				}
+
+				&-#{classMedia($key)}-50 {
+					margin-right: 50px;
+				}
+
+				&-#{classMedia($key)}-60 {
+					margin-right: 60px;
+				}
+
+				&-#{classMedia($key)}-80 {
+					margin-right: 80px;
+				}
+
+				&-#{classMedia($key)}-100 {
+					margin-right: 100px;
+				}
+			}
+		}
+	}
+}
+
+// ==> margin-bottom
+.mb {
+	&-auto {
+		margin-bottom: auto;
+	}
+
+	&-0 {
+		margin-bottom: 0;
+	}
+
+	&-10 {
+		margin-bottom: 10px;
+	}
+
+	&-20 {
+		margin-bottom: 20px;
+	}
+
+	&-30 {
+		margin-bottom: 30px;
+	}
+
+	&-35 {
+		margin-bottom: 35px;
+	}
+
+	&-40 {
+		margin-bottom: 40px;
+	}
+
+	&-50 {
+		margin-bottom: 50px;
+	}
+
+	&-60 {
+		margin-bottom: 60px;
+	}
+
+	&-80 {
+		margin-bottom: 80px;
+	}
+
+	&-100 {
+		margin-bottom: 100px;
+	}
+
+	// для медиазапросов
+	@each $key, $value in $breakpoints {
+		@if $key != 'xl' {
+			@include media($key) {
+				&-#{classMedia($key)}-auto {
+					margin-bottom: auto;
+				}
+
+				&-#{classMedia($key)}-0 {
+					margin-bottom: 0;
+				}
+
+				&-#{classMedia($key)}-10 {
+					margin-bottom: 10px;
+				}
+
+				&-#{classMedia($key)}-20 {
+					margin-bottom: 20px;
+				}
+
+				&-#{classMedia($key)}-30 {
+					margin-bottom: 30px;
+				}
+
+				&-#{classMedia($key)}-35 {
+					margin-bottom: 35px;
+				}
+
+				&-#{classMedia($key)}-40 {
+					margin-bottom: 40px;
+				}
+
+				&-#{classMedia($key)}-50 {
+					margin-bottom: 50px;
+				}
+
+				&-#{classMedia($key)}-60 {
+					margin-bottom: 60px;
+				}
+
+				&-#{classMedia($key)}-80 {
+					margin-bottom: 80px;
+				}
+
+				&-#{classMedia($key)}-100 {
+					margin-bottom: 100px;
+				}
+			}
+		}
+	}
+}
+
+// ==> margin-left
+.ml {
+	&-auto {
+		margin-left: auto;
+	}
+
+	&-0 {
+		margin-left: 0;
+	}
+
+	&-10 {
+		margin-left: 10px;
+	}
+
+	&-20 {
+		margin-left: 20px;
+	}
+
+	&-30 {
+		margin-left: 30px;
+	}
+
+	&-35 {
+		margin-left: 35px;
+	}
+
+	&-40 {
+		margin-left: 40px;
+	}
+
+	&-50 {
+		margin-left: 50px;
+	}
+
+	&-60 {
+		margin-left: 60px;
+	}
+
+	&-80 {
+		margin-left: 80px;
+	}
+
+	&-100 {
+		margin-left: 100px;
+	}
+
+	// для медиазапросов
+	@each $key, $value in $breakpoints {
+		@if $key != 'xl' {
+			@include media($key) {
+				&-#{classMedia($key)}-auto {
+					margin-left: auto;
+				}
+
+				&-#{classMedia($key)}-0 {
+					margin-left: 0;
+				}
+
+				&-#{classMedia($key)}-10 {
+					margin-left: 10px;
+				}
+
+				&-#{classMedia($key)}-20 {
+					margin-left: 20px;
+				}
+
+				&-#{classMedia($key)}-30 {
+					margin-left: 30px;
+				}
+
+				&-#{classMedia($key)}-35 {
+					margin-left: 35px;
+				}
+
+				&-#{classMedia($key)}-40 {
+					margin-left: 40px;
+				}
+
+				&-#{classMedia($key)}-50 {
+					margin-left: 50px;
+				}
+
+				&-#{classMedia($key)}-60 {
+					margin-left: 60px;
+				}
+
+				&-#{classMedia($key)}-80 {
+					margin-left: 80px;
+				}
+
+				&-#{classMedia($key)}-100 {
+					margin-left: 100px;
+				}
+			}
+		}
+	}
+}
+
+// ==> margin-right && margin-left
+.mx {
+	&-auto {
+		margin-inline: auto;
+	}
+
+	&-0 {
+		margin-inline: 0;
+	}
+
+	&-10 {
+		margin-inline: 10px;
+	}
+
+	&-20 {
+		margin-inline: 20px;
+	}
+
+	&-30 {
+		margin-inline: 30px;
+	}
+
+	&-35 {
+		margin-inline: 35px;
+	}
+
+	&-40 {
+		margin-inline: 40px;
+	}
+
+	&-50 {
+		margin-inline: 50px;
+	}
+
+	&-60 {
+		margin-inline: 60px;
+	}
+
+	&-80 {
+		margin-inline: 80px;
+	}
+
+	&-100 {
+		margin-inline: 100px;
+	}
+
+	// для медиазапросов
+	@each $key, $value in $breakpoints {
+		@if $key != 'xl' {
+			@include media($key) {
+				&-#{classMedia($key)}-auto {
+					margin-inline: auto;
+				}
+
+				&-#{classMedia($key)}-0 {
+					margin-inline: 0;
+				}
+
+				&-#{classMedia($key)}-10 {
+					margin-inline: 10px;
+				}
+
+				&-#{classMedia($key)}-20 {
+					margin-inline: 20px;
+				}
+
+				&-#{classMedia($key)}-30 {
+					margin-inline: 30px;
+				}
+
+				&-#{classMedia($key)}-35 {
+					margin-inline: 35px;
+				}
+
+				&-#{classMedia($key)}-40 {
+					margin-inline: 40px;
+				}
+
+				&-#{classMedia($key)}-50 {
+					margin-inline: 50px;
+				}
+
+				&-#{classMedia($key)}-60 {
+					margin-inline: 60px;
+				}
+
+				&-#{classMedia($key)}-80 {
+					margin-inline: 80px;
+				}
+
+				&-#{classMedia($key)}-100 {
+					margin-inline: 100px;
+				}
+			}
+		}
+	}
+}
+
+// ==> margin-top && margin-bottom
+.my {
+	&-auto {
+		margin-block: auto;
+	}
+
+	&-0 {
+		margin-block: 0;
+	}
+
+	&-10 {
+		margin-block: 10px;
+	}
+
+	&-20 {
+		margin-block: 20px;
+	}
+
+	&-30 {
+		margin-block: 30px;
+	}
+
+	&-35 {
+		margin-block: 30px;
+	}
+
+	&-40 {
+		margin-block: 40px;
+	}
+
+	&-50 {
+		margin-block: 50px;
+	}
+
+	&-60 {
+		margin-block: 60px;
+	}
+
+	&-80 {
+		margin-block: 80px;
+	}
+
+	&-100 {
+		margin-block: 100px;
+	}
+
+	// для медиазапросов
+	@each $key, $value in $breakpoints {
+		@if $key != 'xl' {
+			@include media($key) {
+				&-#{classMedia($key)}-auto {
+					margin-block: auto;
+				}
+
+				&-#{classMedia($key)}-0 {
+					margin-block: 0;
+				}
+
+				&-#{classMedia($key)}-10 {
+					margin-block: 10px;
+				}
+
+				&-#{classMedia($key)}-20 {
+					margin-block: 20px;
+				}
+
+				&-#{classMedia($key)}-30 {
+					margin-block: 30px;
+				}
+
+				&-#{classMedia($key)}-35 {
+					margin-block: 35px;
+				}
+
+				&-#{classMedia($key)}-40 {
+					margin-block: 40px;
+				}
+
+				&-#{classMedia($key)}-50 {
+					margin-block: 50px;
+				}
+
+				&-#{classMedia($key)}-60 {
+					margin-block: 60px;
+				}
+
+				&-#{classMedia($key)}-80 {
+					margin-block: 80px;
+				}
+
+				&-#{classMedia($key)}-100 {
+					margin-block: 100px;
+				}
+			}
+		}
+	}
+}

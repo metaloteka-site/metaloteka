@@ -12,20 +12,19 @@
 	border-radius: 37px;
 	background: $gainsborough;
 	box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.03);
-	// padding: 25.5px 26.5px 37px;
 }
 
 .title{
 	display: flex;
 	justify-content: space-between;
 
-	padding: 25.5px 25.5px 9.5px 25.5px;
+	padding: 51px 53px 19px 53px;
 
 	&__order{
 		letter-spacing: normal;
 
-		color: #464646;
-		// font-family: 'BlissPro';
+		color: $wet-asphalt;
+
 		font-size: 28px;
 		font-weight: 800;
 		font-style: normal;
@@ -37,8 +36,8 @@
 		text-align: right;
 		letter-spacing: normal;
 
-		color: #464646;
-		// font-family: 'BlissPro';
+		color: $wet-asphalt;
+
 		font-size: 28px;
 		font-weight: 800;
 		font-style: normal;
@@ -48,9 +47,11 @@
 }
 
 .line{
+	height: 1px;
 	margin-bottom: 32px;
 
-	border: solid 1px #efefef;
+	border: 0;
+	background: #efefef;
 }
 
 .call {
@@ -100,7 +101,7 @@
 	&__total{
 		letter-spacing: normal;
 
-		color: #464646;
+		color: $wet-asphalt;
 
 		font-size: 16px;
 		font-weight: normal;
@@ -132,7 +133,6 @@
 
 		&_wrap{
 			display: flex;
-			flex-direction: column;
 		}
 	}
 }

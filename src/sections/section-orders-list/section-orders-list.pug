@@ -9,11 +9,11 @@ mixin section-orders-list(section)
 				+b('title', {}, 'div')
 					+e('order', {}, 'h2') Заказ #{item.data.order}
 					+e('firm', {}, 'h2') #{item.data.firm}
-				+b('line', {}, 'div')
+				+b('line', {}, 'hr')(noshade)
 				+b('call', {}, 'div')
 					+b('summ', {m: 'left'}, 'div')
 						+e('total', {}, 'p') Итого:
-						+e('total', {m: 'sum'}, 'p') #{item.data.sum} р.
+						+e('total', {m: 'summ'}, 'p') #{item.data.sum} р.
 						+e('line', {}, 'div')
 						+e('total', {}, 'p') ≈ #{item.data.weight} т
 					+b('summ', {m: 'center'}, 'div')
@@ -21,12 +21,6 @@ mixin section-orders-list(section)
 						+e('total', {m: 'small'}, 'p') #{item.data.numberInWords}
 					+b('summ', {m: 'right'}, 'div')
 						+e('total', {m: 'mini'}, 'p') Копия документов на оплату отправлена на вашу электронную почту. В течении ближайшего времени с вами свяжеться менеджер, чтобы обсудить делали заказа.
-						+e('total', {m: 'wrap'}, 'p')
+						+e('total', {m: 'wrap'}, 'div')
 							+e('r', {}, 'a')(href='!#') Скачать счет PDF
-							+e('r', {}, 'p') (действителен до 21.05.2022)
-
-		for item in section.arrData
-			div
-				p #{item.data.text}
-				p #{item.data.desc}
-					button #{item.data.buttonText}
+							+e('r', {}, 'span') (действителен до 21.05.2022)

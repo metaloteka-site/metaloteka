@@ -10,6 +10,8 @@ html {
 }
 
 body {
+	color: $white;
+
 	font-family: $font-default;
 	font-size: $fs-default;
 	font-weight: 300;
@@ -21,6 +23,27 @@ img {
 	vertical-align: middle;
 }
 
+a {
+	color: $white;
+
+	&:hover {
+		--white: #ffffffcc;
+		transition: all 0.3s;
+
+		color: $white;
+	}
+}
+
 .body {
-	background: linear-gradient(318deg, #678c92, #586e8b);
+	background: $blue-gradient;
+}
+
+.main {
+	margin-top: 50px;
+	margin-bottom: 90px;
+
+	@include media('xs') {
+		margin-top: 70px;
+		margin-bottom: 160px;
+	}
 }

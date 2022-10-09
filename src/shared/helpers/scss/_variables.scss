@@ -4,6 +4,7 @@
 	// Пременную '--white' цвета можно переопределить следующими цветами:
 	// - #ffffff36 - белый с опасити 0.21
 	// - #ffffff9f - белый с опасити 0.62
+	// - #ffffffcc - белый с опасити 0.85
 	// - #fcfcfc - темновато белый
 	// - #f4f2f2 - дымчато белый
 	--white: #ffffff;
@@ -15,6 +16,7 @@
 	--wet-asphalt: #464646;
 	// <END
 
+	--chestnut: #bf6c62;
 	--gainsborough: #e4e1e1;
 	--liverny-light: #5f575f;
 	--liverny-dark: #4d484d;
@@ -30,10 +32,15 @@
 	--font-default: "BlissPro", "sans-serif";
 
 	// +++ font-size +++ //
-	--fs-small: 1.2rem;
 	--fs-default: 1.4rem;
+	--fs-small: 1.2rem;
 	--fs-big: 1.6rem;
-	--fs-18: 1.8rem;
+	--fs-title6: 1.8rem;
+	--fs-title5: 3rem;
+	--fs-title4: 3.8rem;
+	--fs-title3: 4.6rem;
+	--fs-title2: 5.4rem;
+	--fs-title1: 7.2rem;
 	--fs-20: 2rem;
 	--fs-22: 2.2rem;
 	--fs-24: 2.4rem;
@@ -41,11 +48,10 @@
 	--fs-28: 2.8rem;
 	--fs-32: 3.2rem;
 	--fs-36: 3.6rem;
-	--fs-38: 3.8rem;
 	--fs-40: 4rem;
-	--fs-46: 4.6rem;
 	--fs-50: 5rem;
 	--fs-54: 5.4rem;
+
 
 	// TODO: в будущем понять актуальность в stylelint после 0 пикселей
 	--column-gap: 0px; /* stylelint-disable-line length-zero-no-unit */
@@ -56,8 +62,9 @@ $column-gap: var(--column-gap, 0);
 
 // +++ color standard +++ //
 $white: var(--white);
-$gainsborough: var(--gainsborough);
 $wet-asphalt: var(--wet-asphalt);
+$chestnut: var(--chestnut);
+$gainsborough: var(--gainsborough);
 $liverny-light: var(--liverny-light);
 $liverny-dark: var(--liverny-dark);
 $transparent: var(--transparent);
@@ -73,6 +80,24 @@ $font-default: var(--font-default);
 
 // +++ font-size +++ //
 $fs-default: var(--fs-default);
+$fs-small: var(--fs-small);
+$fs-big: var(--fs-big);
+$fs-title6: var(--fs-title6);
+$fs-title5: var(--fs-title5);
+$fs-title4: var(--fs-title4);
+$fs-title3: var(--fs-title3);
+$fs-title2: var(--fs-title2);
+$fs-title1: var(--fs-title1);
+$fs-20: var(--fs-20);
+$fs-22: var(--fs-22);
+$fs-24: var(--fs-24);
+$fs-26: var(--fs-26);
+$fs-28: var(--fs-28);
+$fs-32: var(--fs-32);
+$fs-36: var(--fs-36);
+$fs-40: var(--fs-40);
+$fs-50: var(--fs-50);
+$fs-54: var(--fs-54);
 
 // ===> переменная начала пути к файлам картинки
 $path-file : "../layout/assets/images";

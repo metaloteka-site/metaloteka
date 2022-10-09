@@ -14,9 +14,12 @@
 			OPT: function OPT(storeOpt) {
 				return dataStore && dataStore.opt && dataStore.opt[storeOpt] ? !!dataStore.opt[storeOpt] : false;
 			},
-			ARR: function ARR(storeArrData, value = []) {
-				return dataStore && dataStore[storeArrData] ? dataStore[storeArrData] : value;
-			}
+			ELEM_ARR: function ELEM_ARR(storeElemArr, value = []) {
+				return dataStore && dataStore.elem && dataStore.elem[storeElemArr] && dataStore.elem[storeElemArr].elemArr ? dataStore.elem[storeElemArr].elemArr : value;
+			},
+			DATA_ARR: function DATA_ARR(storeDataArr, value = []) {
+				return dataStore && dataStore.dataArr && dataStore.dataArr[storeDataArr] ? dataStore.dataArr[storeDataArr] : value;
+			},
 		}
 	};
 

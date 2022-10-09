@@ -1,9 +1,13 @@
 extends ../../layout/main
 
+block store
+	include store/index.store.pug
+
 append head
 	title Главная
 
 block main
-	+Container
-		+Row({bem: {rowCols: 'row-cols-3'}})
-			h1 МЕЙН
+
+	//- подключение и вызов секции SECTION-SLIDER
+	include ../../sections/section-slider/section-slider
+	+section-slider

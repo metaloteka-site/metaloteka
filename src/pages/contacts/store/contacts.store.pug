@@ -1,2 +1,10 @@
 //- инстанст функции для дробления store на отдельные секции
 - let contacts = addSections();
+
+//- секция SECTION-BREADCRUMBS
+include contacts-section-breadcrumbs
+- contacts.section = 'sectionBreadcrumbs';
+
+//- секция CONTACT
+include contacts-section-contact
+- contacts.section = 'sectionContact';

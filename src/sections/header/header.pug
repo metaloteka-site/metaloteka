@@ -4,7 +4,35 @@ mixin header(section)
 
 	//- верстка секции
 	+b('header', {}, 'header')
-		+e('heading', {}, 'h1') #{S_DATA('text')}
+		+Row(S_ELEM('Row'))
+			//- логотип
+			+e('logo', {}, 'img')(src=`${pathFile}${S_DATA('logo')}` alt='логотип metaloteka')
 
-		img(src=`${pathFile}${S_DATA('logo')}` alt='fdfd')
-		p test
+			//- контакты
+			for item in S_ELEM_ARR('ContactHeader')
+				+ContactHeader(item)
+
+			//- отгружено тон
+			+e('shipped', {}, 'div')
+				+e('number-shipped', {}, 'span') 245 т
+				+e('divider-shipped', {}, 'div')
+				+Text({data: {text: 'отгружено за неделю'}})
+
+			//- корзина
+			+e('wrap-basket', {}, 'div')
+				+e('basket', {m: 'full'}, 'button')
+					+e('basket-num', {}, 'div') 120
+					+e('basket-icon', {}, 'div')
+						include ../../layout/assets/images/basket.svg
+
+		+Row
+			for item in S_DATA_ARR('key1')
+				//- проверка данных получаемых из section
+				include ../../shared/helpers/pug/shortcut-check-store
+				p #{I_DATA('text')}
+
+			p Российский металлопрокат
+		+Row
+			nav Ссылки
+		+Row
+			p Поиск

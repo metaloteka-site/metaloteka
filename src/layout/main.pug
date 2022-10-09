@@ -14,28 +14,31 @@ include ../components/components
 block variables
 	//- переменная начала пути к картинкам
 	- const pathFile = '../../layout/assets/images';
+	+includeComponents(['ContactHeader'])
 
 block store
 
-doctype html
-html(lang='ru')
+block layout
+	doctype html
+	html(lang='ru')
 
-	head
-		block head
-			meta(charset='UTF-8')/
-			meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')/
-			meta(http-equiv='X-UA-Compatible' content='ie=edge')/
+		head
+			block head
+				meta(charset='UTF-8')/
+				meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')/
+				meta(http-equiv='X-UA-Compatible' content='ie=edge')/
 
-	+b('body', {}, 'body')
-		+Container
-			//- подключение и вызов секции HEADER
-			block header
-				include ../sections/header/header
-				+header(main.header)
+		+b('body', {}, 'body')
+			+Container
+				//- подключение и вызов секции HEADER
+				block header
+					include ../sections/header/header
+					+header(main.header)
 
-			block main
+				+b('main', {}, 'main')
+					block main
 
-		//- подключение и вызов секции FOOTER
-		block footer
-			include ../sections/footer/footer
-			+footer(main.footer)
+			//- подключение и вызов секции FOOTER
+			block footer
+				include ../sections/footer/footer
+				+footer(main.footer)

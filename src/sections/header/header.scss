@@ -1,4 +1,79 @@
 .header {
-	color: #ff0000;
-	background: url("#{$path-file}/www/logo3.svg") no-repeat;
+	$self: &;
+
+	padding-top: 55px;
+
+	&__shipped {
+		display: none;
+	}
+
+	&__wrap-basket {
+		padding-inline: 27px;
+
+		padding-bottom: 30px;
+	}
+
+	&__basket {
+		position: relative;
+
+		cursor: pointer;
+
+		border: none;
+		background: inherit;
+
+		&_full {
+			#{$self}__basket-icon {
+				--white: #ffffff;
+				color: $white;
+			}
+		}
+	}
+
+	&__basket-num {
+		position: absolute;
+		top: -10px;
+		right: -5px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		width: 44px;
+		height: 44px;
+
+		color: $white;
+		border-radius: 50%;
+		background: linear-gradient(45deg, #b66060 0%, #ce7f65);
+
+		font-size: $fs-big;
+		font-weight: 900;
+	}
+
+	&__basket-icon {
+		--white: #ffffff9f;
+		color: $white;
+	}
+
+	@include media('xs') {
+		padding-top: 35px;
+
+		&__shipped {
+			display: block;
+
+			margin-left: 40px;
+		}
+
+		&__number-shipped {
+			font-size: $fs-54;
+			font-weight: 900;
+			line-height: 0.89;
+		}
+
+		&__divider-shipped {
+			height: 8px;
+			margin-block: 5px;
+
+			background: $red-gradient;
+		}
+	}
 }
