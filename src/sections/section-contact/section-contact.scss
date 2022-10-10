@@ -70,7 +70,7 @@
 		margin-bottom: 53px;
 		column-gap: 16px;
 	}
-		
+
 	&__town {
 		font-size: $fs-title5;
 	}
@@ -126,7 +126,7 @@
 	&__link {
 		color: #464646;
 
-		font-size: $fs-title6;
+		font-size: $fs-18;
 		font-weight: 500;
 		line-height: 1.3;
 
@@ -170,7 +170,7 @@
 
 		white-space: nowrap;
 
-		font-size: $fs-title6;
+		font-size: $fs-18;
 		font-weight: 500;
 		line-height: 1.1;
 
@@ -188,8 +188,8 @@
 		overflow: hidden;
 
 		text-overflow: ellipsis;
-		-webkit-line-clamp: 20; 
-		line-clamp: 20; 
+		-webkit-line-clamp: 20;
+		line-clamp: 20;
 		-webkit-box-orient: vertical;
 	}
 
@@ -211,9 +211,9 @@
 
 	&__content {
 		display: none;
-		
+
 	}
-	
+
 	&__footer {
 		display: none;
 
@@ -321,7 +321,7 @@
 		}
 
 		&__schedule {
-			font-size: $fs-title6;
+			font-size: $fs-18;
 			line-height: 1.3;
 		}
 
