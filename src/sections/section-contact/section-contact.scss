@@ -1,13 +1,26 @@
 .contacts {
-	position: relative;
+	&__left {
+		position: relative;
 
+		max-width: 900px;
+		padding: 56px;
 
-	max-width: 900px;
-	padding: 56px;
+		color: #464646;
+		border-radius: 37px;
+		background-color: #fcfcfc;
+	}
 
-	color: #464646;
-	border-radius: 37px;
-	background-color: #fcfcfc;
+	&__right {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		width: 370px;
+		height: 620px;
+
+		border-radius: 30px;
+		background-color: $wet-asphalt;
+	}
 
 	&__circle {
 		position: absolute;
@@ -262,8 +275,6 @@
 		}
 	}
 	@include media('xs') {
-		padding: 42px;
-
 		&__circle {
 			display: flex;
 		}
