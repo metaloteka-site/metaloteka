@@ -1,0 +1,19 @@
+style.
+	.example-container {
+		height: 16px;
+	}
+
+	.example-container .container {
+		--wet-asphalt: #46464692;
+		position: absolute;
+		left: 0;
+		background: var(--wet-asphalt);
+	}
+
++b('h3', {b: 'mt-20'}, 'h3') Компонент Container
++b('p', {}, 'p') - Данный компонент вызывается как #[code +Container].
++b('p', {}, 'p') - Компонент Container уже изначально имеет определенные стили. Данные стили позицианируют весь контент сайта в завернутом контейнере.
++b('p', {}, 'p') - Дополнительных параметров не имеет.
++b('example-container', {b: 'mt-10'}, 'div')
+	+Container
+		div Пример использования

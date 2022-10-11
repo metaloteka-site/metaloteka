@@ -1,0 +1,54 @@
+style.
+	.example-text__properties {
+		--wet-asphalt: #46464692;
+		background: var(--wet-asphalt);
+		display: flex;
+		flex-direction: column;
+	}
+
+	.example-text__properties_dark {
+		--white: #f4f2f2;
+		background: var(--white);
+	}
+
++b('h3', { b: 'mt-20' }, 'h3') Компонент Text
++b('p', {}, 'p') - Данный компонент вызывается как #[code +Text].
++b('p', {}, 'p') - Данный компонент имеет заранее определенные стили.
++b('p', {}, 'p') - Принимает следующие параметры в объект bem - #[code size], #[code color].
++b('p', {}, 'p') - Принимает следующие параметры в объект opt - #[code p]. Параметр p является boolean. Если передать ему true, то текст будет обернут в тег параграфа.
++b('example-text', { b: 'mt-10' }, 'div')
+	+b('h4', { b: 'mt-10' }, 'h4') Использования компонента с параметром size
+	+e('properties', {}, 'div')
+		+Text({ data: { text: 'Пример использования без параметров. Имеет font-size: 14px' } })
+		+Text({ data: { text: 'Пример использования для font-size: 12px' }, bem: { size: 'small' } })
+		+Text({ data: { text: 'Пример использования для font-size: 16px' }, bem: { size: 'big' } })
+		+Text({ data: { text: 'Пример использования для font-size: 18px' }, bem: { size: 'fs-18' } })
+		+Text({ data: { text: 'Пример использования для font-size: 20px' }, bem: { size: 'fs-20' } })
+		+Text({ data: { text: 'Пример использования для font-size: 22px' }, bem: { size: 'fs-22' } })
+		+Text({ data: { text: 'Пример использования для font-size: 24px' }, bem: { size: 'fs-24' } })
+		+Text({ data: { text: 'Пример использования для font-size: 26px' }, bem: { size: 'fs-26' } })
+		+Text({ data: { text: 'Пример использования для font-size: 28px' }, bem: { size: 'fs-28' } })
+		+Text({ data: { text: 'Пример использования для font-size: 30px' }, bem: { size: 'fs-30' } })
+		+Text({ data: { text: 'Пример использования для font-size: 32px' }, bem: { size: 'fs-32' } })
+		+Text({ data: { text: 'Пример использования для font-size: 36px' }, bem: { size: 'fs-36' } })
+		+Text({ data: { text: 'Пример использования для font-size: 38px' }, bem: { size: 'fs-38' } })
+		+Text({ data: { text: 'Пример использования для font-size: 40px' }, bem: { size: 'fs-40' } })
+		+Text({ data: { text: 'Пример использования для font-size: 46px' }, bem: { size: 'fs-46' } })
+		+Text({ data: { text: 'Пример использования для font-size: 50px' }, bem: { size: 'fs-50' } })
+		+Text({ data: { text: 'Пример использования для font-size: 54px' }, bem: { size: 'fs-54' } })
+		+Text({ data: { text: 'Пример использования для font-size: 72px' }, bem: { size: 'fs-72' } })
+
+	+b('h4', { b: 'mt-10' }, 'h4') Использования компонента с параметром size и color
+	+e('properties', { m: 'dark' }, 'div')
+		+Text({
+			data: { text: 'Пример использования для font-size: 22px и color - wet-asphalt' },
+			bem: { size: 'fs-22', color: 'wet-asphalt' }
+		})
+
+	+b('h4', { b: 'mt-10' }, 'h4') Использования компонента с параметром size и p
+	+e('properties', {}, 'div')
+		+Text({
+			data: { text: 'Пример использования для font-size: 22px и opt: p' },
+			bem: { size: 'fs-22'},
+			opt: {p: true}
+		})

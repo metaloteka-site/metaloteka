@@ -1,0 +1,37 @@
+mixin ContactFooter(props)
+	//- проверка данных получаемых из props
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- логика компонента
+	//- - const tagContactF =  'a';
+	//- - const tagContactF = OPT('link') ? 'a' : 'span';
+
+	//- верстка компонента
+	+b('contact-footer', {b: BEM('margin')}, 'div')
+		//- if DATA('icon', false)
+		//- 	+e('icon', {}, 'img')(src=`${pathFile}${DATA('icon')}` alt='icon')
+		//- //+e('title', {}, 'span') #{DATA('title')}
+		//- +Text(ELEM('Text'))
+		for item in DATA_ARR('address')
+			//- проверка данных получаемых из item
+			include ../../shared/helpers/pug/shortcut-check-store
+
+			+e('phone', {}, 'span')(href=I_DATA('href')) #{I_DATA('text')}
+		for item in DATA_ARR('phoneInfo')
+			//- проверка данных получаемых из item
+			include ../../shared/helpers/pug/shortcut-check-store
+
+			+e('phone', {}, 'span')(href=I_DATA('href')) #{I_DATA('tel')}
+			+e('phone', {}, 'span')(href=I_DATA('href')) #{I_DATA('text')}
+		for item in DATA_ARR('mailInfo')
+			//- проверка данных получаемых из item
+			include ../../shared/helpers/pug/shortcut-check-store
+
+			+e('phone', {}, 'span')(href=I_DATA('href')) #{I_DATA('mail')}
+			+e('phone', {}, 'span')(href=I_DATA('href')) #{I_DATA('text')}
+		for item in DATA_ARR('whatsappWiber')
+			//- проверка данных получаемых из item
+			include ../../shared/helpers/pug/shortcut-check-store
+
+			+e('phone', {}, 'span')(href=I_DATA('href')) #{I_DATA('text')}
+			+e('phone', {}, 'span')(href=I_DATA('href')) #{I_DATA('info')}

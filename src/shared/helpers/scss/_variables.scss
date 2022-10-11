@@ -26,21 +26,21 @@
 	--blue-gradient: linear-gradient(225deg, #678c92, #586e8b);
 	--red-gradient: linear-gradient(315deg, #ce7f65, #b66060);
 	--turquoise-blue-gradient: linear-gradient(225deg, #588b75, #5d6c77);
-	--gray-gradient: linear-gradient(171deg, #636267 0%, #47474b 100%), linear-gradient(351deg, #504750 100%, #5f575f 0%);;
+	--gray-gradient: linear-gradient(171deg, #636267 0%, #47474b 100%), linear-gradient(351deg, #504750 100%, #5f575f 0%);
 
 	// +++ font-family +++ //
-	--font-default: "BlissPro", "sans-serif";
+	--font-default: 'BlissPro', 'sans-serif';
 
 	// +++ font-size +++ //
 	--fs-default: 1.4rem;
 	--fs-small: 1.2rem;
 	--fs-big: 1.6rem;
-	--fs-title6: 1.8rem;
 	--fs-title5: 3rem;
 	--fs-title4: 3.8rem;
 	--fs-title3: 4.6rem;
 	--fs-title2: 5.4rem;
 	--fs-title1: 7.2rem;
+	--fs-18: 1.8rem;
 	--fs-20: 2rem;
 	--fs-22: 2.2rem;
 	--fs-24: 2.4rem;
@@ -50,7 +50,6 @@
 	--fs-36: 3.6rem;
 	--fs-40: 4rem;
 	--fs-50: 5rem;
-	--fs-54: 5.4rem;
 
 
 	// TODO: в будущем понять актуальность в stylelint после 0 пикселей
@@ -82,12 +81,12 @@ $font-default: var(--font-default);
 $fs-default: var(--fs-default);
 $fs-small: var(--fs-small);
 $fs-big: var(--fs-big);
-$fs-title6: var(--fs-title6);
 $fs-title5: var(--fs-title5);
 $fs-title4: var(--fs-title4);
 $fs-title3: var(--fs-title3);
 $fs-title2: var(--fs-title2);
 $fs-title1: var(--fs-title1);
+$fs-18: var(--fs-18);
 $fs-20: var(--fs-20);
 $fs-22: var(--fs-22);
 $fs-24: var(--fs-24);
@@ -100,18 +99,18 @@ $fs-50: var(--fs-50);
 $fs-54: var(--fs-54);
 
 // ===> переменная начала пути к файлам картинки
-$path-file : "../layout/assets/images";
+$path-file: '../layout/assets/images';
 
 // ==> переменные экранов отображения
 $breakpoints: (
 	xs: 414,
-	xl: 1406
+	xl: 1406,
 ) !default;
 
-$media-direction: "min" !default;
+$media-direction: 'min' !default;
 
 // ==> переменные для контайнера
 $container: (
 	xs: 414,
-	xl: 1406
+	xl: 1406,
 ) !default;

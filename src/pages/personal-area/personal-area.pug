@@ -8,6 +8,10 @@ append head
 
 block main
 
+	//- подключение и вызов секции SECTION-BREADCRUMBS
+	include ../../sections/section-breadcrumbs/section-breadcrumbs
+	+section-breadcrumbs(personalArea.sectionBreadcrumbs)
+
 	//- подключение и вызов секции SECTION-ORDERS-LIST
 	include ../../sections/section-orders-list/section-orders-list
 	+section-orders-list(personalArea.sectionOrdersList)

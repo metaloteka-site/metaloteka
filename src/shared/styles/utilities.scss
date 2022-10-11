@@ -1127,100 +1127,58 @@
 //		}
 //	}
 //}
-//
-//// *** СТИЛИ ВЫРАВНИВАНИЯ СЕТКИ ***
-//// ==> justify-content
-//.justify-content {
-//	&-start {
-//		justify-content: flex-start;
-//	}
-//
-//	&-end {
-//		justify-content: flex-end;
-//	}
-//
-//	&-center {
-//		justify-content: center;
-//	}
-//
-//	&-between {
-//		justify-content: space-between;
-//	}
-//
-//	&-around {
-//		justify-content: space-around;
-//	}
-//
-//	// для медиазапроса LG
-//	@include to-lg {
-//		&-lg-start {
-//			justify-content: flex-start;
-//		}
-//
-//		&-lg-end {
-//			justify-content: flex-end;
-//		}
-//
-//		&-lg-center {
-//			justify-content: center;
-//		}
-//
-//		&-lg-between {
-//			justify-content: space-between;
-//		}
-//
-//		&-lg-around {
-//			justify-content: space-around;
-//		}
-//	}
-//
-//	// для медиазапроса SM
-//	@include to-sm {
-//		&-sm-start {
-//			justify-content: flex-start;
-//		}
-//
-//		&-sm-end {
-//			justify-content: flex-end;
-//		}
-//
-//		&-sm-center {
-//			justify-content: center;
-//		}
-//
-//		&-sm-between {
-//			justify-content: space-between;
-//		}
-//
-//		&-sm-around {
-//			justify-content: space-around;
-//		}
-//	}
-//
-//	// для медиазапроса XS
-//	@include to-xs {
-//		&-xs-start {
-//			justify-content: flex-start;
-//		}
-//
-//		&-xs-end {
-//			justify-content: flex-end;
-//		}
-//
-//		&-xs-center {
-//			justify-content: center;
-//		}
-//
-//		&-xs-between {
-//			justify-content: space-between;
-//		}
-//
-//		&-xs-around {
-//			justify-content: space-around;
-//		}
-//	}
-//}
-//
+
+// *** СТИЛИ ВЫРАВНИВАНИЯ СЕТКИ ***
+// ==> justify-content
+.justify-content {
+	&-start {
+		justify-content: flex-start;
+	}
+
+	&-end {
+		justify-content: flex-end;
+	}
+
+	&-center {
+		justify-content: center;
+	}
+
+	&-between {
+		justify-content: space-between;
+	}
+
+	&-around {
+		justify-content: space-around;
+	}
+
+	// для медиазапросов
+	@each $key, $value in $breakpoints {
+		@if $key != 'xl' {
+			@include media($key) {
+				&-#{classMedia($key)}-start {
+					justify-content: flex-start;
+				}
+
+				&-#{classMedia($key)}-end {
+					justify-content: flex-end;
+				}
+
+				&-#{classMedia($key)}-center {
+					justify-content: center;
+				}
+
+				&-#{classMedia($key)}-between {
+					justify-content: space-between;
+				}
+
+				&-#{classMedia($key)}-around {
+					justify-content: space-around;
+				}
+			}
+		}
+	}
+}
+
 // ==> align-items
 .align-items {
 	&-start {

@@ -1,3 +1,525 @@
 .footer {
+	//Mobile
+
+	display: block;
+
+	margin-top: 200px;
+	padding-top: 45px;
+	padding-bottom: 33px;
+
 	background: linear-gradient(306deg, #636267, #47474b 0%);
+
+	//-Иконки-----------------------------
+	&__footer-icons {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__metaloteka-logo {
+		display: flex;
+
+		margin-bottom: 42px;
+		padding: 0 10px 0 30px;
+
+		border: none;
+	}
+
+	&__icons-font {
+		display: none;
+	}
+
+	&__metaloteka-logo_item {
+		width: 100%;
+		max-width: 288px;
+	}
+
+	&__social {
+		display: none;
+	}
+
+	//-Клиентам----------------------------
+
+	&__clients {
+		display: flex;
+		flex-direction: column;
+
+		margin-bottom: 42px;
+		padding: 0 45px 0;
+
+		font-size: $fs-18;
+		font-weight: 300;
+		line-height: 1.11;
+		gap: 12px;
+	}
+
+	&__title {
+		margin-bottom: 20px;
+		margin-bottom: 36px;
+
+		font-size: 38px;
+		font-weight: 800;
+		line-height: 0.68;
+	}
+
+	//-Каталог----------------------------
+
+	&__catalog {
+		display: flex;
+		flex-direction: column;
+
+		margin-bottom: 42px;
+		padding: 0 40px 0;
+
+		font-size: 26px;
+		font-weight: 200;
+		line-height: 1.08;
+
+		gap: 24px;
+	}
+
+	//-Контакты-----------------------------------
+
+	&__contacts {
+		margin-bottom: 29px;
+	}
+
+	&__address-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+
+		margin-bottom: 28px;
+		padding: 0 40px 0;
+	}
+
+	&__subtitle {
+		word-break: break-word;
+
+		font-size: $fs-26;
+		font-weight: 800;
+		line-height: 1;
+	}
+
+	&__adress-subtitle {
+		font-size: $fs-18;
+		font-weight: 300;
+		line-height: 1.11;
+	}
+
+	&__messenger-subtitle {
+		font-size: $fs-default;
+		font-weight: 300;
+		line-height: 1.14;
+	}
+
+	&__messenger {
+		display: flex;
+		flex-direction: column;
+
+		margin-bottom: 28px;
+		padding: 0 40px 0;
+
+		font-size: $fs-26;
+		font-weight: 800;
+		line-height: 1;
+	}
+
+	//-Реквезиты---------------------------------------
+
+	&__requesites {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		margin-bottom: 21px;
+		padding: 18px 26px 0 38px;
+
+		gap: 0;
+	}
+
+	&__requesites-info {
+		display: none;
+	}
+
+	&__requesites-img {
+		max-width: 30px;
+	}
+
+	&__sber-icons {
+		display: flex;
+		flex: 1 268px;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 14px;
+
+		margin-bottom: 42px;
+	}
+
+	&__logo-sberbank {
+		flex: 1 1 140px;
+
+		max-width: 150px;
+	}
+
+	&__logo-payment {
+		flex: 1 1 190px;
+
+		max-width: 65px;
+	}
+
+	&__logo-mir {
+		flex: 1 1 190px;
+
+		max-width: 60px;
+	}
+
+	&__button-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		margin-bottom: 21px;
+	}
+
+	&__button {
+		max-width: 310px;
+		max-height: 62px;
+		padding: 10px;
+
+		text-align: center;
+
+		color: $white;
+		border: solid 1px $white;
+		background: none;
+
+		font-size: 38px;
+		font-weight: 800;
+		line-height: 1;
+	}
+
+	&__individuals {
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+	}
+
+	&__title-individuals {
+		font-size: $fs-20;
+		font-weight: 800;
+		line-height: 0.9;
+	}
+
+	&__subtitle-individuals {
+		font-size: $fs-default;
+		font-weight: 300;
+		line-height: 1.14;
+	}
+
+	&__legal-entities {
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+
+		font-size: $fs-20;
+		font-weight: 700;
+		line-height: 0.9;
+	}
+
+	//-Информация---------------------------------------
+
+	&__info-metaloteka {
+		display: inline-block;
+
+		margin-bottom: 42px;
+		padding: 0 40px 0;
+
+		word-break: break-word;
+
+		font-size: $fs-default;
+		font-weight: 200;
+		line-height: 1.29;
+	}
+
+	//-Политика конфидициальности------------------------
+
+	&__privacy-policy-wrapper {
+		display: grid;
+		grid-template-columns: 1fr;
+
+		padding: 0 40px 0;
+	}
+
+	&__privacy-policy_item {
+		display: flex;
+		flex: 1 1 330px;
+
+		padding: 33px 64px 33px 66px;
+	}
+
+	&__privacy-policy-info {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 14px;
+
+		margin-bottom: 14px;
+
+		font-size: $fs-big;
+		font-weight: 300;
+		line-height: 1.13;
+	}
+
+	&__privacy-policy {
+		display: flex;
+		flex: 1 1 100px;
+	}
+
+	&__privacy-policy-map {
+		display: flex;
+		flex: 1 1 100px;
+	}
+
+	&__privacy-policy-img-wrapper {
+		display: none;
+	}
+
+	&__privacy-policy-web {
+		display: flex;
+		align-items: center;
+
+		font-size: $fs-big;
+		font-weight: 300;
+		line-height: 1.13;
+	}
+
+	//Desctop
+
+	@include media(xs) {
+		//-Иконки-----------------------------
+
+		&__footer-icons {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+
+			border-top: 0.5px solid #d9d8d8;
+			border-left: 0.5px solid #d9d8d8;
+		}
+
+		&__metaloteka-icons {
+			flex: 1 1 386px;
+
+			border-right: 0.5px solid #d9d8d8;
+			border-bottom: 0.5px solid #d9d8d8;
+		}
+
+		&__metaloteka-logo {
+			justify-content: center;
+
+			margin-bottom: 0;
+
+			padding: 50px 60px 55px 65px;
+
+			border-top: solid 0.5px #d9d8d8;
+			border-bottom: solid 0.5px #d9d8d8;
+		}
+
+		&__icons-font {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			gap: 9px;
+
+			padding: 70px 55px;
+
+			text-align: center;
+
+			font-size: $fs-default;
+			font-weight: 400;
+			line-height: 1;
+		}
+
+		&__metaloteka-logo_item {
+			width: 100%;
+			max-width: 260px;
+		}
+
+		&__social {
+			display: flex;
+			justify-content: center;
+			gap: 20px;
+
+			padding: 52px 53px;
+		}
+
+		&__social-item {
+			max-width: 43px;
+			max-height: 43px;
+
+			cursor: pointer;
+		}
+
+		&__clients {
+			flex: 1 1 287px;
+
+			margin-bottom: 0;
+			padding: 70px 45px 100px;
+
+			border-right: 0.5px solid #d9d8d8;
+			border-bottom: 0.5px solid #d9d8d8;
+		}
+
+		&__catalog {
+			flex: 1 1 327px;
+
+			margin-bottom: 0;
+			padding: 70px 45px 90px;
+
+			border-right: 0.5px solid #d9d8d8;
+			border-bottom: 0.5px solid #d9d8d8;
+		}
+
+		//-Контакты-----------------------------------
+
+		&__contacts {
+			flex: 1 1 356px;
+
+			margin-bottom: 0;
+
+			border-right: 0.5px solid #d9d8d8;
+			border-bottom: 0.5px solid #d9d8d8;
+		}
+
+		&__address-wrapper {
+			margin-bottom: 0;
+			padding: 35px 50px 35px 45px;
+			gap: 5px;
+		}
+
+		&__messenger {
+			margin-bottom: 42px;
+			margin-bottom: 0;
+			padding: 42px 50px 35px 45px;
+
+			border-top: solid 0.5px #d9d8d8;
+			gap: 5px;
+		}
+
+		//-Реквезиты---------------------------------------
+
+		&__requesites {
+			overflow: hidden;
+			align-items: center;
+			flex-wrap: wrap;
+
+			margin-bottom: 0;
+			padding: 35px 50px 40px 75px;
+
+			border-right: solid 0.5px #d9d8d8;
+
+			border-left: solid 0.5px #d9d8d8;
+			gap: 22px;
+		}
+
+		&__requesites-info {
+			display: flex;
+			align-items: center;
+			flex: 1 1 476px;
+			justify-content: center;
+			gap: 32px;
+		}
+
+		&__sber-icons {
+			display: flex;
+			flex: 1 268px;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			margin-bottom: 0;
+			gap: 14px;
+		}
+
+		&__button-wrapper {
+			display: flex;
+			align-items: center;
+
+			margin-bottom: 0;
+			padding-top: 10px;
+			padding-right: 30px;
+			padding-bottom: 10px;
+			padding-left: 30px;
+		}
+
+		&__button {
+			padding: 10px 60px 15px;
+		}
+
+		//-Информация---------------------------------------
+
+		&__info-metaloteka {
+			margin-bottom: 0;
+			padding: 30px 55px;
+
+			border-top: solid 0.5px #d9d8d8;
+			border-right: solid 0.5px #d9d8d8;
+			border-left: solid 0.5px #d9d8d8;
+		}
+
+		//-Политика конфидициальности------------------------
+
+		&__privacy-policy-wrapper {
+			display: flex;
+			flex-wrap: wrap;
+
+			padding: 0;
+
+			border-top: 0.5px solid #d9d8d8;
+			border-left: 0.5px solid #d9d8d8;
+		}
+
+		&__privacy-policy-info {
+			flex: 1 1 330px;
+			justify-content: space-between;
+
+			margin-bottom: 0;
+			padding-left: 65px;
+
+			border-right: 0.5px solid #d9d8d8;
+			border-bottom: 0.5px solid #d9d8d8;
+		}
+
+		&__privacy-policy-img-wrapper {
+			display: flex;
+			align-items: center;
+			flex: 1 1 330px;
+			justify-content: center;
+
+			padding: 35px 0;
+
+			border-right: 0.5px solid #d9d8d8;
+			border-bottom: 0.5px solid #d9d8d8;
+		}
+
+		&__privacy-policy-img {
+			max-width: 176px;
+		}
+
+		&__privacy-policy-web {
+			flex: 1 1 330px;
+			justify-content: center;
+
+			border-right: 0.5px solid #d9d8d8;
+			border-bottom: 0.5px solid #d9d8d8;
+		}
+	}
+}
+
+@include media(xs) {
+	.footer {
+		padding-top: 103px;
+		padding-bottom: 107px;
+	}
 }

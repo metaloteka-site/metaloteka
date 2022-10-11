@@ -1,5 +1,6 @@
 import '../../layout/assets/images/icon-pin-map.svg';
-import '../../layout/assets/images/qr.svg';
+import '../../layout/assets/images/icon-qr.svg';
+import '../../layout/assets/images/map.jpg';
 const tabs = document.querySelectorAll('.js-tab');
 const tabContents = document.querySelectorAll('.js-tab-content');
 const btn = document.getElementById('btn');
