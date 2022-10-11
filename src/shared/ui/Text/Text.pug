@@ -4,6 +4,7 @@ mixin Text(props)
 
 	//- логика компонента
 	- const isElementClass = OPT('isElementClass') ? '&' : false;
+	- const tag = OPT('p') ? 'p' : 'span';
 
 	//- верстка компонента
-	+b('text', {e: isElementClass, m: `${BEM('size')}`}, 'span') #{DATA('text')}
+	+b('text', {e: isElementClass, m: `${BEM('size')}.${BEM('color')}`}, tag) #{DATA('text')}

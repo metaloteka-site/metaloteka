@@ -1,9 +1,75 @@
 .text {
-	&__small {
+	// модификаторы цвета
+	&_wet-asphalt {
+		color: $wet-asphalt;
+	}
+
+	// модификаторы размеров
+	&_small {
 		font-size: $fs-small;
 	}
 
-	&__big {
+	&_big {
 		font-size: $fs-big;
+	}
+
+	&_fs-18 {
+		font-size: $fs-18;
+	}
+
+	&_fs-20 {
+		font-size: $fs-20;
+	}
+
+	&_fs-22 {
+		font-size: $fs-22;
+	}
+
+	&_fs-24 {
+		font-size: $fs-24;
+	}
+
+	&_fs-26 {
+		font-size: $fs-26;
+	}
+
+	&_fs-28 {
+		font-size: $fs-28;
+	}
+
+	&_fs-30 {
+		font-size: $fs-title5;
+	}
+
+	&_fs-32 {
+		font-size: $fs-32;
+	}
+
+	&_fs-36 {
+		font-size: $fs-36;
+	}
+
+	&_fs-38 {
+		font-size: $fs-title4;
+	}
+
+	&_fs-40 {
+		font-size: $fs-40;
+	}
+
+	&_fs-46 {
+		font-size: $fs-title3;
+	}
+
+	&_fs-50 {
+		font-size: $fs-50;
+	}
+
+	&_fs-54 {
+		font-size: $fs-title2;
+	}
+
+	&_fs-72 {
+		font-size: $fs-title1;
 	}
 }
