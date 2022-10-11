@@ -323,6 +323,8 @@
 	&__privacy-policy {
 		display: flex;
 		flex: 1 1 190px;
+
+		text-decoration: none;
 	}
 
 	&__privacy-policy-map {
@@ -330,6 +332,8 @@
 		flex: 1 1 100px;
 
 		padding-left: 32px;
+
+		text-decoration: none;
 	}
 
 	&__privacy-policy-img-wrapper {
@@ -341,6 +345,8 @@
 		align-items: center;
 
 		padding-left: 12px;
+
+		text-decoration: none;
 
 		font-size: $fs-big;
 		font-weight: 300;
@@ -459,7 +465,7 @@
 		&__messenger {
 			margin-bottom: 42px;
 			margin-bottom: 0;
-			padding: 43px 50px 35px 45px;
+			padding: 36px 50px 35px 45px;
 
 			border-top: solid 0.5px #d9d8d8;
 			gap: 5px;
@@ -468,7 +474,7 @@
 		&__messenger-phone {
 			margin-bottom: 42px;
 			margin-bottom: 0;
-			padding: 36px 50px 27px 45px;
+			padding: 36px 50px 35px 45px;
 
 			border-top: solid 0.5px #d9d8d8;
 			gap: 5px;
@@ -582,7 +588,7 @@
 		}
 
 		&__privacy-policy-info {
-			flex: 1 1 452px;
+			flex: 1 1 322px;
 			justify-content: space-between;
 
 			margin-bottom: 0;
@@ -598,7 +604,8 @@
 			flex: 1 1 326px;
 
 			padding: 35px 0;
-			padding-left: 40px;
+			padding-right: 120px;
+			padding-left: 120px;
 
 			border-right: 0.5px solid #d9d8d8;
 			border-bottom: 0.5px solid #d9d8d8;
@@ -609,6 +616,8 @@
 		}
 
 		&__privacy-policy-map {
+			flex: 1 1 0;
+
 			padding-left: 0;
 		}
 
@@ -617,7 +626,7 @@
 		}
 
 		&__privacy-policy-web {
-			flex: 1 1 330px;
+			flex: 1 1 324px;
 			justify-content: center;
 
 			padding-left: 0;

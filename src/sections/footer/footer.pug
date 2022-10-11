@@ -11,12 +11,15 @@ mixin footer(section)
 					+e('icons-font', {}, 'div')
 						+e('logo', {}, 'img')(src=`${pathFile}${S_DATA('logoMetaloteka')}` alt='логотип metaloteka')
 						+e('icon-subtitle', {}, 'h3') #{S_DATA('subtitle')}
-					+e('metaloteka-logo', {}, 'div')
+					+e('metaloteka-logo', {}, 'a')(href='#')
 						+e('metaloteka-logo_item', {}, 'img')(src=`${pathFile}${S_DATA('logo')}` alt='Logo')
 					+e('social', {}, 'div')
-						+e('social-item', {}, 'img')(src=`${pathFile}${S_DATA('logoMail')}` alt='Mail')
-						+e('social-item', {}, 'img')(src=`${pathFile}${S_DATA('logoVk')}` alt='Vk')
-						+e('social-item', {}, 'img')(src=`${pathFile}${S_DATA('logoTg')}` alt='Telegram')
+						+e('clients-item', {}, 'a')(href='#')
+							+e('social-item', {}, 'img')(src=`${pathFile}${S_DATA('logoMail')}` alt='Mail')
+						+e('clients-item', {}, 'a')(href='#')
+							+e('social-item', {}, 'img')(src=`${pathFile}${S_DATA('logoVk')}` alt='Vk')
+						+e('clients-item', {}, 'a')(href='#')
+							+e('social-item', {}, 'img')(src=`${pathFile}${S_DATA('logoTg')}` alt='Telegram')
 				//-Клиентам------------------------------------------------------------------------------------
 				+e('clients', {}, 'div')
 					+e('clients-title', {}, 'h2') #{S_DATA('titleClients')}
@@ -70,10 +73,10 @@ mixin footer(section)
 			//-Политика конфидициальности-----------------------------------------------------------------------
 			+e('privacy-policy-wrapper', {}, 'div')
 				+e('privacy-policy-info', {}, 'div')
-					+e('privacy-policy', {}, 'span') #{S_DATA('privacyPolicy')}
-					+e('privacy-policy-map', {}, 'span') #{S_DATA('privacyMap')}
+					+e('privacy-policy', {}, 'a')(href='#') #{S_DATA('privacyPolicy')}
+					+e('privacy-policy-map', {}, 'a')(href='#') #{S_DATA('privacyMap')}
 				+e('privacy-policy-img-wrapper', {}, 'a')(href='metaloteka.ru')
 					+e('privacy-policy-img', {}, 'img')(src=`${pathFile}${S_DATA('logoMetalotekafont')}` alt='логотип metaloteka')
-				+e('privacy-policy-web', {}, 'span') #{S_DATA('webStudio')}
+				+e('privacy-policy-web', {}, 'a')(href='#') #{S_DATA('webStudio')}
 			//- for item in S_ELEM_ARR('ContactFooter')
 			//- 	+ContactFooter(item)
