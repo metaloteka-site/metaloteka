@@ -3,7 +3,7 @@ import '../../layout/assets/images/icon-qr.svg';
 import '../../layout/assets/images/map.jpg';
 const tabs = document.querySelectorAll('.js-tab');
 const tabContents = document.querySelectorAll('.js-tab-content');
-const btn = document.getElementById('btn');
+const btn = document.querySelector('.js-collapse');
 
 tabs.forEach((tab, index) => {
 	tab.addEventListener('click', (event) => {
@@ -17,10 +17,10 @@ tabs.forEach((tab, index) => {
 
 btn.addEventListener('click', () => {
 	const activeTabContent = document.querySelector('.js-tab-content.active');
+	activeTabContent.classList.toggle('opened');
 	if (activeTabContent.classList.contains('opened')) {
 		btn.innerHTML = 'Скрыть';
 	} else {
 		btn.innerHTML = 'Развернуть';
 	}
-	activeTabContent.classList.toggle('opened');
 });
