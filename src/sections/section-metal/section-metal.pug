@@ -4,10 +4,11 @@ mixin section-metal(section)
 
 	//- верстка секции
 	+b('section-metal', {}, 'section')
-		+e('title', {}, 'h2') #{S_DATA('title')}
-		+e('line', {}, 'div')
-		+e('metal-steel', {}, 'div') #{S_DATA('metalSteel')}
-		+e('subtitle', {}, 'h3') #{S_DATA('metalDelivery')}
-		+e('metal-info', {}, 'span') #{S_DATA('metalSphere')}
-		+e('subtitle', {}, 'h3') #{S_DATA('metalReserve')}
-		+e('metal-info', {}, 'span') #{S_DATA('metalProduction')}
+		+Container
+			+e('title', {}, 'h2') #{S_DATA('title')}
+			+e('line', {}, 'div')
+			+e('metal-steel', {}, 'div') #{S_DATA('metalSteel')}
+			+e('subtitle', {}, 'h3') #{S_DATA('metalDelivery')}
+			+e('metal-info', {}, 'span') #{S_DATA('metalSphere')}
+			+e('subtitle', {}, 'h3') #{S_DATA('metalReserve')}
+			+e('metal-info', {}, 'span') #{S_DATA('metalProduction')}
