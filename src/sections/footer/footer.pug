@@ -11,43 +11,46 @@ mixin footer(section)
 					+e('icons-font', {}, 'div')
 						+e('logo', {}, 'img')(src=`${pathFile}${S_DATA('logoMetaloteka')}` alt='логотип metaloteka')
 						+e('icon-subtitle', {}, 'h3') #{S_DATA('subtitle')}
-					+e('metaloteka-logo', {}, 'div')
+					+e('metaloteka-logo', {}, 'a')(href='#')
 						+e('metaloteka-logo_item', {}, 'img')(src=`${pathFile}${S_DATA('logo')}` alt='Logo')
 					+e('social', {}, 'div')
-						+e('social-item', {}, 'img')(src=`${pathFile}${S_DATA('logoMail')}` alt='Mail')
-						+e('social-item', {}, 'img')(src=`${pathFile}${S_DATA('logoVk')}` alt='Vk')
-						+e('social-item', {}, 'img')(src=`${pathFile}${S_DATA('logoTg')}` alt='Telegram')
+						+e('clients-item', {}, 'a')(href='#')
+							+e('social-item', {}, 'img')(src=`${pathFile}${S_DATA('logoMail')}` alt='Mail')
+						+e('clients-item', {}, 'a')(href='#')
+							+e('social-item', {}, 'img')(src=`${pathFile}${S_DATA('logoVk')}` alt='Vk')
+						+e('clients-item', {}, 'a')(href='#')
+							+e('social-item', {}, 'img')(src=`${pathFile}${S_DATA('logoTg')}` alt='Telegram')
 				//-Клиентам------------------------------------------------------------------------------------
 				+e('clients', {}, 'div')
-					+e('title', {}, 'h2') #{S_DATA('titleClients')}
+					+e('clients-title', {}, 'h2') #{S_DATA('titleClients')}
 
 					for item in S_DATA_ARR('clients')
 						//- проверка данных получаемых из item
 						include ../../shared/helpers/pug/shortcut-check-store
 
-						+e('item', {}, 'span') !{I_DATA('text')}
+						+e('clients-item', {}, 'a')(href='#') !{I_DATA('text')}
 				//-Каталог-------------------------------------------------------------------------------------
 				+e('catalog', {}, 'div')
-					+e('title', {}, 'h2') #{S_DATA('titleCatalog')}
+					+e('catalog-title', {}, 'h2') #{S_DATA('titleCatalog')}
 
 					for item in section.dataArr.catalog
 						//- проверка данных получаемых из item
 						include ../../shared/helpers/pug/shortcut-check-store
 
-						+e('item', {}, 'span') !{I_DATA('text')}
+						+e('catalog-item', {}, 'a')(href='#')  !{I_DATA('text')}
 				//-Контакты-------------------------------------------------------------------------------------
 				+e('contacts', {}, 'div')
 					+e('address-wrapper', {}, 'div')
 						+e('subtitle', {}, 'span') #{S_DATA('city')}
 						+e('adress-subtitle', {}, 'span') #{S_DATA('address')}
-					+e('messenger', {}, 'div')
-						+e('subtitle', {}, 'span') #{S_DATA('phoneNumber')}
+					+e('messenger-phone', {}, 'div')
+						+e('subtitle', {}, 'a')(href='tel:+799999999999') #{S_DATA('phoneNumber')}
 						+e('messenger-subtitle', {}, 'span') #{S_DATA('phoneInfo')}
 					+e('messenger', {}, 'div')
-						+e('subtitle', {}, 'span') #{S_DATA('mailAddress')}
+						+e('subtitle', {}, 'a')(href='mailto:renat@metaloteka.ru') #{S_DATA('mailAddress')}
 						+e('messenger-subtitle', {}, 'span') #{S_DATA('mailInfo')}
-					+e('messenger', {}, 'div')
-						+e('subtitle', {}, 'span') #{S_DATA('whatsappWiber')}
+					+e('messenger-wiber', {}, 'div')
+						+e('subtitle', {}, 'a')(href='viber://chat?number=%2B380950000000') #{S_DATA('whatsappWiber')}
 						+e('messenger-subtitle', {}, 'span') #{S_DATA('whatsappWiberInfo')}
 			//-Реквизиты----------------------------------------------------------------------------------------
 			+e('requesites', {}, 'div')
@@ -70,10 +73,10 @@ mixin footer(section)
 			//-Политика конфидициальности-----------------------------------------------------------------------
 			+e('privacy-policy-wrapper', {}, 'div')
 				+e('privacy-policy-info', {}, 'div')
-					+e('privacy-policy', {}, 'span') #{S_DATA('privacyPolicy')}
-					+e('privacy-policy-map', {}, 'span') #{S_DATA('privacyMap')}
-				+e('privacy-policy-img-wrapper', {}, 'div')
+					+e('privacy-policy', {}, 'a')(href='#') #{S_DATA('privacyPolicy')}
+					+e('privacy-policy-map', {}, 'a')(href='#') #{S_DATA('privacyMap')}
+				+e('privacy-policy-img-wrapper', {}, 'a')(href='metaloteka.ru')
 					+e('privacy-policy-img', {}, 'img')(src=`${pathFile}${S_DATA('logoMetalotekafont')}` alt='логотип metaloteka')
-				+e('privacy-policy-web', {}, 'span') #{S_DATA('webStudio')}
+				+e('privacy-policy-web', {}, 'a')(href='#') #{S_DATA('webStudio')}
 			//- for item in S_ELEM_ARR('ContactFooter')
 			//- 	+ContactFooter(item)
