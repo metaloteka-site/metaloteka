@@ -19,18 +19,24 @@
 		display: none;
 	}
 
-	.opened {
-		display: -webkit-box;
-		overflow: hidden;
-
-		text-overflow: ellipsis;
-		-webkit-line-clamp: 20;
-		line-clamp: 20;
-		-webkit-box-orient: vertical;
-	}
-
 	&__metal-production{
 		display: none;
+
+		word-break: break-all;
+
+		&.active {
+			display: -webkit-box;
+			overflow: hidden;
+	
+			text-overflow: ellipsis;
+			-webkit-line-clamp: 20;
+			line-clamp: 20;
+			-webkit-box-orient: vertical;
+		}
+	
+		&.opened {
+			display: block;
+		}
 	}
 	
 
