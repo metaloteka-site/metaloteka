@@ -3,14 +3,12 @@ mixin ContactInformation(props)
 	include ../../shared/helpers/pug/shortcut-check-store
 
 	//- верстка компонента
-	+e('city', {}, 'div')
-		if OPT('city')
+	+b('contact-information', {}, 'div')
+		if OPT('contact-information')
 			+e('sub-title', {}, 'div')
 				+e('icon', {}, 'img')(src='../../layout/assets/images/icon-pin-map.svg')
 				+e('town', {}, 'div') #{DATA('name')}
-
 		+e('wrapper', {}, 'div')
-
 			+e('item-description', {}, 'div')
 				+e('adress', {}, 'div') #{DATA('address')}
 				+e('schedule', {}, 'div') #{DATA('schedule')}

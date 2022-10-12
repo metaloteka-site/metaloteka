@@ -1,0 +1,60 @@
+.contact-information-footer {
+	&__name{
+		width: 176px;
+	}
+
+	&__title {
+		font-size: $fs-32;
+		font-weight: 800;
+	}
+
+	&__text {
+		margin-bottom: 12px;
+
+		font-size: $fs-small;
+		line-height: 1.2;
+	}
+
+	&__text_bold {
+		font-weight: bold;
+	}
+
+	&__phone {
+		width: 146px;
+	}
+
+	&__number {
+		color: $wet-asphalt;
+
+		font-size: $fs-20;
+	}
+
+	&__letter {
+		width: 162px;
+	}
+
+	&__mail {
+		color: $wet-asphalt;
+
+		font-size: $fs-20;
+	}
+
+	&__range {
+		height: 2px;
+		margin: 11px 0;
+
+		border-width: 6px;
+		border-style: solid;
+		border-image-source: linear-gradient(271deg, #ce7f65, #b66060);
+		border-image-slice: 1;
+	}
+
+	&__number, &__mail {
+		&:hover {
+			--wet-asphalt: #464646c6;
+			color: $wet-asphalt;
+		}
+	}
+	
+		
+}
