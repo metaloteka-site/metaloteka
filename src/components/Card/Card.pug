@@ -1,0 +1,25 @@
+mixin Card(props)
+	//- проверка данных получаемых из props
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- верстка компонента
+	+b('card', {}, 'div')
+		+b('title', {}, 'div')
+			+Text(ELEM('TextOrder'))
+			//- +e('order', {}, 'h2') #{ DATA('order') }
+			+e('firm', {}, 'h2') #{ DATA('firm') }
+		+b('line', {}, 'hr')(noshade)
+		+b('call', {}, 'div')
+			+b('summ', {m: 'left'}, 'div')
+				+e('total', {}, 'p') Итого:
+				+e('total', {m: 'summ'}, 'p') #{ DATA('sum') }
+				+e('line', {}, 'div')
+				+e('total', {}, 'p') #{ DATA('weight') }
+			+b('summ', {m: 'center'}, 'div')
+				+e('total', {m: 'bold'}, 'p') #{ DATA('count') }
+				+e('total', {m: 'small'}, 'p') #{ DATA('numberInWords') }
+			+b('summ', {m: 'right'}, 'div')
+				+e('total', {m: 'mini'}, 'p') Копия документов на оплату отправлена на вашу электронную почту. В течении ближайшего времени с вами свяжеться менеджер, чтобы обсудить делали заказа.
+				+e('total', {m: 'wrap'}, 'div')
+					+e('r', {}, 'a')(href='!#') Скачать счет PDF
+					+e('r', {}, 'span') (действителен до 21.05.2022)

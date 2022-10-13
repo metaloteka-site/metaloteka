@@ -4,23 +4,5 @@ mixin section-orders-list(section)
 
 	//- верстка секции
 	+b('section-orders-list', {}, 'section')
-		for item in section.arrData
-			+b('cart', {}, 'div')
-				+b('title', {}, 'div')
-					+e('order', {}, 'h2') Заказ #{item.data.order}
-					+e('firm', {}, 'h2') #{item.data.firm}
-				+b('line', {}, 'hr')(noshade)
-				+b('call', {}, 'div')
-					+b('summ', {m: 'left'}, 'div')
-						+e('total', {}, 'p') Итого:
-						+e('total', {m: 'summ'}, 'p') #{item.data.sum} р.
-						+e('line', {}, 'div')
-						+e('total', {}, 'p') ≈ #{item.data.weight} т
-					+b('summ', {m: 'center'}, 'div')
-						+e('total', {m: 'bold'}, 'p') Всего наимнований (#{item.data.count}) на сумму #{item.data.sum} руб.(в том числе НДС 20%)
-						+e('total', {m: 'small'}, 'p') #{item.data.numberInWords}
-					+b('summ', {m: 'right'}, 'div')
-						+e('total', {m: 'mini'}, 'p') Копия документов на оплату отправлена на вашу электронную почту. В течении ближайшего времени с вами свяжеться менеджер, чтобы обсудить делали заказа.
-						+e('total', {m: 'wrap'}, 'div')
-							+e('r', {}, 'a')(href='!#') Скачать счет PDF
-							+e('r', {}, 'span') (действителен до 21.05.2022)
+		for item in S_ELEM_ARR('Card')
+			+Card(item)
