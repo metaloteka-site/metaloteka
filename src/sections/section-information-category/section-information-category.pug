@@ -1,0 +1,7 @@
+mixin section-information-category(section)
+	//- проверка данных получаемых из section
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- верстка секции
+	+b('section-information-category', {}, 'section')
+		+e('footer-icons', {}, 'div')
