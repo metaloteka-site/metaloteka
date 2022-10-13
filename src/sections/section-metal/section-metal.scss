@@ -1,8 +1,8 @@
 .section-metal {
-	padding-top: 70px;
-	// background: url("#{$path-file}/logo.svg") no-repeat;
+	padding-top: 59px;
+	padding-bottom: 90px;
+
 	background: linear-gradient(306deg, #636267, #47474b 0%);
-	// padding-bottom: 20px;
 
 	&__title {
 		max-width: 738px;
@@ -10,7 +10,7 @@
 
 		word-break: break-word;
 
-		font-size: 46px;
+		font-size: $fs-title3;
 		font-weight: 800;
 		line-height: 0.78;
 	}
@@ -19,39 +19,40 @@
 		display: none;
 	}
 
-	&__metal-production{
+	&__metal-production {
 		display: none;
-
-		word-break: break-all;
 
 		&.active {
 			display: -webkit-box;
 			overflow: hidden;
-	
+
 			text-overflow: ellipsis;
-			-webkit-line-clamp: 20;
+			-webkit-line-clamp: 6;
 			line-clamp: 20;
 			-webkit-box-orient: vertical;
 		}
-	
+
 		&.opened {
 			display: block;
 		}
+
+		// font-size: $fs-18;
+		// font-weight: 200;
+		// line-height: 1.44;
 	}
-	
 
 	&__button {
 		display: block;
 
-		color:$wet-asphalt;
+		margin-top: 28px;
+
+		color: $white;
 		border: none;
-		background-color: $white;
+		background: none;
 
 		font-size: $fs-default;
 		line-height: 1.14;
-
 	}
-	
 
 	&__line {
 		margin-right: -23px;
@@ -59,27 +60,27 @@
 		margin-left: -23px;
 
 		opacity: 0.21;
-		border-bottom: solid 8px #ffffff;
+		border-bottom: solid 8px $white;
 	}
 
 	&__metal-steel {
 		margin-bottom: 40px;
 
-		font-size: 24px;
+		font-size: $fs-24;
 		font-weight: 400;
 		line-height: 1.08;
 	}
 
-	&__metal-list{
+	&__metal-list {
 		margin-bottom: 52px;
 
-		font-size: 18px;
+		font-size: $fs-18;
 		font-weight: 200;
 		line-height: 1.44;
 	}
 
-	&__metal-delivery{
-		font-size: 18px;
+	&__metal-delivery {
+		font-size: $fs-18;
 		font-weight: 200;
 		line-height: 1.44;
 	}
@@ -87,7 +88,7 @@
 	&__metal-info {
 		display: none;
 
-		font-size: 18px;
+		font-size: $fs-18;
 		font-weight: 200;
 		line-height: 1.44;
 	}
@@ -99,7 +100,7 @@
 
 			word-break: break-word;
 
-			font-size: 72px;
+			font-size: $fs-title1;
 			font-weight: 800;
 			line-height: 0.79;
 		}
@@ -119,9 +120,9 @@
 			margin-right: 0;
 			margin-bottom: 46px;
 			margin-left: 0;
-			// height: 10px;
+
 			opacity: 0.21;
-			border-bottom: solid 8px #ffffff;
+			border-bottom: solid 8px $white;
 		}
 
 		&__metal-steel {
@@ -129,29 +130,24 @@
 			margin-bottom: 60px;
 		}
 
-		&__metal-list{
+		&__metal-list {
 			display: none;
 		}
-
-		// &__metal-delivery{
-		// 	display: none;
-		// }
-	
 
 		&__metal-info {
 			display: block;
 
 			margin-bottom: 33px;
 
-			font-size: 18px;
+			font-size: $fs-18;
 			font-weight: 200;
 			line-height: 1.44;
 		}
 
-		&__metal-production{
+		&__metal-production {
 			margin-bottom: 33px;
 
-			font-size: 18px;
+			font-size: $fs-18;
 			font-weight: 200;
 			line-height: 1.44;
 		}
@@ -159,5 +155,12 @@
 		&__button {
 			display: none;
 		}
+	}
+}
+
+@include media(xs) {
+	.section-metal {
+		padding-top: 103px;
+		padding-bottom: 10px;
 	}
 }
