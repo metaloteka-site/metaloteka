@@ -8,35 +8,31 @@
 		font-weight: 800;
 	}
 
+	&__sub-title {
+		font-size: $fs-small;
+		line-height: 1;
+	}
+
 	&__text {
 		margin-bottom: 12px;
 
+		white-space: pre-line;
+
 		font-size: $fs-small;
-		line-height: 1.2;
+		line-height: 1.17;
 	}
 
 	&__text_bold {
 		font-weight: bold;
 	}
 
-	&__phone {
-		width: 146px;
-	}
+	&__link {
+		text-decoration: none;
 
-	&__number {
 		color: $wet-asphalt;
 
 		font-size: $fs-20;
-	}
-
-	&__letter {
-		width: 162px;
-	}
-
-	&__mail {
-		color: $wet-asphalt;
-
-		font-size: $fs-20;
+		line-height: $fs-20;
 	}
 
 	&__range {
