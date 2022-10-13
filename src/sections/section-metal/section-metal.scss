@@ -22,6 +22,10 @@
 	&__metal-production {
 		display: none;
 
+		font-size: $fs-18;
+		font-weight: 200;
+		line-height: 1.44;
+
 		&.active {
 			display: -webkit-box;
 			overflow: hidden;
@@ -35,10 +39,6 @@
 		&.opened {
 			display: block;
 		}
-
-		// font-size: $fs-18;
-		// font-weight: 200;
-		// line-height: 1.44;
 	}
 
 	&__button {
