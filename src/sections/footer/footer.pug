@@ -40,6 +40,13 @@ mixin footer(section)
 						+e('catalog-item', {}, 'a')(href='#')  !{I_DATA('text')}
 				//-Контакты-------------------------------------------------------------------------------------
 				+e('contacts', {}, 'div')
+					//- for item in S_DATA_ARR('testiu')
+					//- 	//- проверка данных получаемых из section
+					//- 	include ../../shared/helpers/pug/shortcut-check-store
+					//- 	+e('address-wrapper', {}, 'div')
+					//- 		+e('testrte', {}, 'div')
+					//- 			+e('subtitle', {}, 'p') #{I_DATA('text')}
+					//- 			+e('messenger-subtitle', {}, 'p') #{I_DATA('maga')}
 					+e('address-wrapper', {}, 'div')
 						+e('subtitle', {}, 'span') #{S_DATA('city')}
 						+e('adress-subtitle', {}, 'span') #{S_DATA('address')}
@@ -79,4 +86,11 @@ mixin footer(section)
 					+e('privacy-policy-img', {}, 'img')(src=`${pathFile}${S_DATA('logoMetalotekafont')}` alt='логотип metaloteka')
 				+e('privacy-policy-web', {}, 'a')(href='#') #{S_DATA('webStudio')}
 			//- for item in S_ELEM_ARR('ContactFooter')
-			//- 	+ContactFooter(item)
+				+ContactFooter(item)
+			//- for item in S_DATA_ARR('testiu')
+			//- 	//- проверка данных получаемых из section
+			//- 	include ../../shared/helpers/pug/shortcut-check-store
+			//- 	+e('subtitle', {}, 'p') #{I_DATA('text')}
+			//- 	+e('adress-subtitle', {}, 'p') #{I_DATA('submaga')}
+			//- 	+e('messenger-subtitle', {}, 'p') #{I_DATA('maga')}
+			//- 	p #{I_DATA('mail')}
