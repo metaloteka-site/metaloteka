@@ -4,4 +4,23 @@ mixin section-information-category(section)
 
 	//- верстка секции
 	+b('section-information-category', {}, 'section')
-		+e('footer-icons', {}, 'h1') dsfsdsfsdsssfsfssssssfsfssssssssssssssssfsfssssssssssssssssfsfssssssssssssssssfsfsssssssssssssssssssssssssssssssssssssfssfsfsf
+		+e('footer-icons', {}, 'div')
+		for item in S_DATA_ARR('proba')
+			include ../../shared/helpers/pug/shortcut-check-store
+			+e('information-wrapper', {}, 'div')
+				+e('information-left', {}, 'div')
+					+e('', {}, 'span') #{I_DATA('name')}
+					+e('', {}, 'span') #{I_DATA('time')}
+					+e('information-line', {}, 'span')
+					+e('', {}, 'span') #{I_DATA('time')}
+					+e('', {}, 'span') #{I_DATA('name')}
+				+e('information-right', {}, 'div')
+					+e('', {}, 'span') #{I_DATA('name')}
+					+e('', {}, 'span') #{I_DATA('msg')}
+					+e('', {}, 'span') #{I_DATA('prof')}
+					+e('', {}, 'img')(src=`${pathFile}${S_DATA('logo')}` alt='Logo')
+			//- +e('msgtest-name', {}, 'span') #{I_DATA('name')}
+			//- +e('msgtest-time', {}, 'span') #{I_DATA('time')}
+			//- +e('msgtest-msg', {}, 'span') #{I_DATA('msg')}
+			//- +e('msgtest-msg', {}, 'img') #{I_DATA('msg')}
+			//- +e('msgtest-msg', {}, 'img')(src=`${pathFile}${S_DATA('logo')}` alt='Logo')
