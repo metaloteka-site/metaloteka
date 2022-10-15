@@ -6,6 +6,7 @@ mixin section-information-category(section)
 	+b('section-information-category', {}, 'section')
 		+e('footer-icons', {}, 'div')
 		for item in S_DATA_ARR('proba')
+			- console.log(item)
 			include ../../shared/helpers/pug/shortcut-check-store
 			+e('information-wrapper', {}, 'div')
 				+e('information-left', {}, 'div')
@@ -18,7 +19,8 @@ mixin section-information-category(section)
 					+e('', {}, 'span') #{I_DATA('name')}
 					+e('', {}, 'span') #{I_DATA('msg')}
 					+e('', {}, 'span') #{I_DATA('prof')}
-					+e('', {}, 'img')(src=`${pathFile}${S_DATA('logo')}` alt='Logo')
+					//- +e('', {}, 'img')(src=`${pathFile}${S_DATA('logo')}` alt='Logo')
+					+e('', {}, 'img')(src=`../../layout/assets/images/${I_DATA('logo')}` alt='Logo')
 			//- +e('msgtest-name', {}, 'span') #{I_DATA('name')}
 			//- +e('msgtest-time', {}, 'span') #{I_DATA('time')}
 			//- +e('msgtest-msg', {}, 'span') #{I_DATA('msg')}
