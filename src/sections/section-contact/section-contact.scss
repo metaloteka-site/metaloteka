@@ -2,12 +2,13 @@
 	&__left {
 		position: relative;
 
-		max-width: 900px;
-		padding: 56px;
+		max-width: 100%;
+		padding: 56px 43px;
 
 		color: #464646;
 		border-radius: 37px;
 		background-color: #fcfcfc;
+		
 	}
 
 	&__right {
@@ -45,47 +46,26 @@
 	&__appellation {
 		display: block;
 
+		margin-bottom: 10px;
+
 		font-size: $fs-24;
 		line-height: 0.84;
 	}
 
 	&__title {
-		width: 222px;
+		width: 284px;
+		margin-bottom: 45px;
+		padding-bottom: 21px;
 
 		border-bottom: 10px solid #ce7f65;
 
 		font-size: $fs-title2;
-		font-weight: 500;
+		font-weight: 900;
 		line-height: 0.82;
 	}
 
 	&__map {
 		display: none;
-	}
-
-	&__tabs {
-		display: flex;
-		overflow: auto;
-		flex-direction: row;
-		justify-content: flex-start;
-
-		margin-right: -22%;
-		column-gap: 24px;
-	}
-
-	&__choice {
-		margin-bottom: 23px;
-
-		white-space: nowrap;
-
-		font-size: $fs-18;
-		font-weight: 500;
-		line-height: 1.1;
-
-		&.active {
-			border-bottom: 4px solid #586e8b;
-		}
-
 	}
 
 	&__button {
@@ -105,7 +85,9 @@
 	}
 	
 	&__content-wrapper {
-		margin-bottom: 14px;
+		padding-bottom: 52px;
+
+		border-bottom: none;
 	}
 
 	&__content {
@@ -124,9 +106,16 @@
 		&.opened {
 			display: block;
 		}
+		
 	}
 
 	@include media('xs') {
+		&__left {
+			width: 100%;
+			max-width: 900px;
+			padding: 56px;
+		}
+
 		&__circle {
 			display: flex;
 		}
@@ -136,7 +125,9 @@
 		}
 
 		&__title {
-			margin-bottom: 80px;
+			width: 234px;
+			margin-bottom: 66px;
+			padding-bottom: 14px;
 
 			line-height: 100%;
 		}
@@ -147,21 +138,15 @@
 			width: 100%;
 			max-width: 790px;
 			height: 310px;
-			margin-bottom: 62px;
-		}
-
-		&__tabs {
-			overflow: auto;
-
-			margin-right: 0;
-
-			&::-webkit-scrollbar {
-				display: none;
-			}
+			margin-bottom: 54px;
 		}
 
 		&__button {
 			display: none;
+		}
+
+		&__content-wrapper{
+			border-bottom: 1px solid #efefef;
 		}
 
 		&__footer {
@@ -169,8 +154,10 @@
 			align-items: flex-start;
 			flex-direction: row;
 			flex-wrap: wrap;
-			justify-content: flex-start;
+			justify-content: center;
 			column-gap: 35px;
+
+			padding-top: 57px
 		}
 
 		&__content {
@@ -179,5 +166,10 @@
 			}
 		}
 
+	}
+	@include media('m') {
+		&__footer {
+			justify-content: flex-start;
+		}
 	}
 }
