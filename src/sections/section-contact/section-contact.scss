@@ -3,7 +3,7 @@
 		position: relative;
 
 		max-width: 100%;
-		padding: 56px;
+		padding: 56px 43px;
 
 		color: #464646;
 		border-radius: 37px;
@@ -53,14 +53,14 @@
 	}
 
 	&__title {
-		width: 222px;
-		margin-bottom: 60px;
-		padding-bottom: 25px;
+		width: 284px;
+		margin-bottom: 45px;
+		padding-bottom: 21px;
 
 		border-bottom: 10px solid #ce7f65;
 
 		font-size: $fs-title2;
-		font-weight: 500;
+		font-weight: 900;
 		line-height: 0.82;
 	}
 
@@ -111,7 +111,9 @@
 
 	@include media('xs') {
 		&__left {
+			width: 100%;
 			max-width: 900px;
+			padding: 56px;
 		}
 
 		&__circle {
@@ -123,7 +125,9 @@
 		}
 
 		&__title {
-			margin-bottom: 80px;
+			width: 234px;
+			margin-bottom: 66px;
+			padding-bottom: 14px;
 
 			line-height: 100%;
 		}
@@ -134,7 +138,7 @@
 			width: 100%;
 			max-width: 790px;
 			height: 310px;
-			margin-bottom: 62px;
+			margin-bottom: 54px;
 		}
 
 		&__button {
@@ -150,10 +154,10 @@
 			align-items: flex-start;
 			flex-direction: row;
 			flex-wrap: wrap;
-			justify-content: flex-start;
+			justify-content: center;
 			column-gap: 35px;
 
-			padding-top: 42px
+			padding-top: 57px
 		}
 
 		&__content {
@@ -162,5 +166,10 @@
 			}
 		}
 
+	}
+	@include media('m') {
+		&__footer {
+			justify-content: flex-start;
+		}
 	}
 }
