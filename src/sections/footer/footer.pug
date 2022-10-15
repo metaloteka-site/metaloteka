@@ -11,7 +11,7 @@ mixin footer(section)
 					+e('icons-font', {}, 'div')
 						+e('logo', {}, 'img')(src=`${pathFile}${S_DATA('logoMetaloteka')}` alt='логотип metaloteka')
 						+e('icon-subtitle', {}, 'h3') #{S_DATA('subtitle')}
-					+e('metaloteka-logo', {}, 'a')(href='#')
+					+e('metaloteka-logo', {}, 'a')(href='/')
 						+e('metaloteka-logo_item', {}, 'img')(src=`${pathFile}${S_DATA('logo')}` alt='Logo')
 					+e('social', {}, 'div')
 						+e('clients-item', {}, 'a')(href='#')
@@ -40,18 +40,29 @@ mixin footer(section)
 						+e('catalog-item', {}, 'a')(href='#')  !{I_DATA('text')}
 				//-Контакты-------------------------------------------------------------------------------------
 				+e('contacts', {}, 'div')
-					+e('address-wrapper', {}, 'div')
-						+e('subtitle', {}, 'span') #{S_DATA('city')}
-						+e('adress-subtitle', {}, 'span') #{S_DATA('address')}
-					+e('messenger-phone', {}, 'div')
-						+e('subtitle', {}, 'a')(href='tel:+799999999999') #{S_DATA('phoneNumber')}
-						+e('messenger-subtitle', {}, 'span') #{S_DATA('phoneInfo')}
-					+e('messenger', {}, 'div')
-						+e('subtitle', {}, 'a')(href='mailto:renat@metaloteka.ru') #{S_DATA('mailAddress')}
-						+e('messenger-subtitle', {}, 'span') #{S_DATA('mailInfo')}
-					+e('messenger-wiber', {}, 'div')
-						+e('subtitle', {}, 'a')(href='viber://chat?number=%2B380950000000') #{S_DATA('whatsappWiber')}
-						+e('messenger-subtitle', {}, 'span') #{S_DATA('whatsappWiberInfo')}
+					//- for item in S_ELEM_ARR('ContactFooter')
+					//- 	+ContactFooter(item)
+					for item in S_DATA_ARR('testiu')
+						//- проверка данных получаемых из section
+						include ../../shared/helpers/pug/shortcut-check-store
+						+e('address-wrapper', {}, 'div')
+							+e('social-wrapper', {}, 'div')
+								+e('subtitle', {}, 'p') #{I_DATA('text')}
+								+e('subtitle', {}, 'p') #{I_DATA('viber')}
+							+e('messenger-title', {}, 'p') #{I_DATA('info1')}
+							+e('messenger-subtitle', {}, 'p') #{I_DATA('info')}
+					//- +e('address-wrapper', {}, 'div')
+					//- 	+e('subtitle', {}, 'span') #{S_DATA('city')}
+					//- 	+e('adress-subtitle', {}, 'span') #{S_DATA('address')}
+					//- +e('messenger-phone', {}, 'div')
+					//- 	+e('subtitle', {}, 'a')(href='tel:+799999999999') #{S_DATA('phoneNumber')}
+					//- 	+e('messenger-subtitle', {}, 'span') #{S_DATA('phoneInfo')}
+					//- +e('messenger', {}, 'div')
+					//- 	+e('subtitle', {}, 'a')(href='mailto:renat@metaloteka.ru') #{S_DATA('mailAddress')}
+					//- 	+e('messenger-subtitle', {}, 'span') #{S_DATA('mailInfo')}
+					//- +e('messenger-wiber', {}, 'div')
+					//- 	+e('subtitle', {}, 'a')(href='viber://chat?number=%2B380950000000') #{S_DATA('whatsappWiber')}
+					//- 	+e('messenger-subtitle', {}, 'span') #{S_DATA('whatsappWiberInfo')}
 			//-Реквизиты----------------------------------------------------------------------------------------
 			+e('requesites', {}, 'div')
 				+e('requesites-info', {}, 'div')
@@ -75,8 +86,15 @@ mixin footer(section)
 				+e('privacy-policy-info', {}, 'div')
 					+e('privacy-policy', {}, 'a')(href='#') #{S_DATA('privacyPolicy')}
 					+e('privacy-policy-map', {}, 'a')(href='#') #{S_DATA('privacyMap')}
-				+e('privacy-policy-img-wrapper', {}, 'a')(href='metaloteka.ru')
+				+e('privacy-policy-img-wrapper', {}, 'a')(href='/')
 					+e('privacy-policy-img', {}, 'img')(src=`${pathFile}${S_DATA('logoMetalotekafont')}` alt='логотип metaloteka')
 				+e('privacy-policy-web', {}, 'a')(href='#') #{S_DATA('webStudio')}
 			//- for item in S_ELEM_ARR('ContactFooter')
-			//- 	+ContactFooter(item)
+				+ContactFooter(item)
+			//- for item in S_DATA_ARR('testiu')
+			//- 	//- проверка данных получаемых из section
+			//- 	include ../../shared/helpers/pug/shortcut-check-store
+			//- 	+e('subtitle', {}, 'p') #{I_DATA('text')}
+			//- 	+e('adress-subtitle', {}, 'p') #{I_DATA('submaga')}
+			//- 	+e('messenger-subtitle', {}, 'p') #{I_DATA('maga')}
+			//- 	p #{I_DATA('mail')}
