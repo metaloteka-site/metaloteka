@@ -33,13 +33,18 @@
 
 		font-size: $fs-20;
 		line-height: $fs-20;
+
+		&:hover {
+			--wet-asphalt: rgba(70,70,70,0.77647);
+			color: $wet-asphalt;
+		}
 	}
 
 	&__range {
 		height: 2px;
-		margin: 11px 0;
+		margin: 8px 0;
 
-		border-width: 6px;
+		border-width: 3px;
 		border-style: solid;
 		border-image-source: linear-gradient(271deg, #ce7f65, #b66060);
 		border-image-slice: 1;
