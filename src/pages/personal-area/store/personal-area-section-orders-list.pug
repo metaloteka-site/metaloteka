@@ -1,21 +1,144 @@
 -
 	const sectionOrdersList = {
-		//- данные секции
-		data: {
-			text: 'TESTING PERSONAL AREAD TEST Ахмед'
-			//- данные text, id и любой другой атрибут
-		},
-		bem: {
-			//- классы стилей
-		},
-		opt: {
-			//- boolean (heading: true)
-		},
 		elem: {
-			row: {
-				bem: {
-					rowCols: 'row-cols-5'
+			Card: {
+				elemArr: [
+					{
+						data: {
+							text: 'TESTING PERSONAL AREAD TEST Sashat1',
+							desc: '123',
+							buttonText: 'Button23',
+							//- order: 'Заказ №210522/1-MT',
+							firm: 'ИП Петров Иван',
+							sum: '6 233 944 ',
+							weight: '≈ 4,548 т',
+							count: 'Всего наименований (12)\n на сумму 6 233 944 руб.\n (в том числе НДС 20%)',
+							numberInWords: 'Сто пятьдесят восемь миллионов двести\n тридцать три тысячи девятьсот сорок четыре\n руб. 00 копеек',
+							description:'Копия документов на оплату отправлена на вашу электронную почту. В течении ближайшего времени с вами свяжеться менеджер, чтобы обсудить делали заказа.',
+							link: 'Скачать счет PDF',
+							blank: 'Бланк заказа PDF',
+							date: '(действителен до 21.05.2022)'
+						},
+						elem: {
+							TextOrder: {
+								data: {
+									text: 'Заказ №210522/1-MT'
+								},
+								bem: {
+									size: 'fs-28',
+									color: 'wet-asphalt'
+								}
+							}
+						},
+						opt: {
+							link: true,
+						}
+					},
+					{
+						data: {
+							text: 'TESTING PERSONAL AREAD TEST Sashat1',
+							desc: '123',
+							buttonText: 'Button23',
+							order: 'Заказ №210522/2-MT',
+							firm: 'Петров Иван',
+							sum: '6 233 944',
+							weight: '≈ 4,548 т',
+							count: 'Всего наименований (12)\n на сумму 6 233 944 руб.\n (в том числе НДС 20%)',
+							numberInWords: 'Сто пятьдесят восемь миллионов двести\n тридцать три тысячи девятьсот сорок четыре\n руб. 00 копеек',
+							description:'Копия документов на оплату отправлена на вашу электронную почту. В течении ближайшего времени с вами свяжеться менеджер, чтобы обсудить делали заказа.',
+							link: 'Скачать счет PDF',
+							blank: 'Бланк заказа PDF',
+							date: '(действителен до 21.05.2022)'
+						},
+						elem: {
+							TextOrder: {
+								data: {
+									text: 'Заказ №210522/2-MT'
+								},
+								bem: {
+									size: 'fs-28',
+									color: 'wet-asphalt'
+								}
+							}
+						},
+					},
+					{
+						data: {
+							text: 'TESTING PERSONAL AREAD TEST Sashat1',
+							desc: '123',
+							buttonText: 'Button23',
+							order: 'Заказ №210522/1-MT',
+							firm: 'ООО «Черномор»',
+							sum: '6 233 944 ',
+							weight: '≈ 4,548 т',
+							count: 'Всего наименований (12)\n на сумму 6 233 944 руб.\n (в том числе НДС 20%)',
+							numberInWords: 'Сто пятьдесят восемь миллионов двести\n тридцать три тысячи девятьсот сорок четыре\n руб. 00 копеек',
+							description:'Копия документов на оплату отправлена на вашу электронную почту. В течении ближайшего времени с вами свяжеться менеджер, чтобы обсудить делали заказа.',
+							link: 'Скачать счет PDF',
+							blank: 'Бланк заказа PDF',
+							date: '(действителен до 21.05.2022)'
+						},
+						elem: {
+							TextOrder: {
+								data: {
+									text: 'Заказ №210522/1-MT'
+								},
+								bem: {
+									size: 'fs-28',
+									color: 'wet-asphalt'
+								}
+							}
+						},
+						opt: {
+							link: true,
+						},
+						bem: {
+							hide: 'hide'
+						},
+					},
+				]
+			}
+		},
+		//- данные секции
+		dataArr: [
+			{
+				data: {
+					text: 'TESTING PERSONAL AREAD TEST Sashat1',
+					desc: '123',
+					buttonText: 'Button23',
+					order: '№210522/1-MT',
+					firm: 'ИП Петров Иван',
+					sum: '6 233 944',
+					weight: '4,548',
+					count: '12',
+					numberInWords: 'Сто пятьдесят восемь миллионов двести тридцать три тысячи девятьсот сорок четыре руб. 00 копеек',
 				},
 			},
-		}
+			{
+				data: {
+					text: 'TESTING PERSONAL AREAD TEST Sashat2',
+					desc: '7777',
+					buttonText: 'Button444',
+					order: '№210522/2-MT',
+					firm: 'Петров Иван',
+					sum: '6 233 944',
+					weight: '4,548',
+					count: '12',
+					numberInWords: 'Сто пятьдесят восемь миллионов двести тридцать три тысячи девятьсот сорок четыре руб. 00 копеек',
+				},
+			},
+						{
+				data: {
+					text: 'TESTING PERSONAL AREAD TEST Sashat2',
+					desc: '7777',
+					buttonText: 'Button444',
+					order: '№210522/1-MT',
+					firm: 'ООО «Черномор»',
+					sum: '6 233 944',
+					weight: '4,548',
+					count: '12',
+					numberInWords: 'Сто пятьдесят восемь миллионов двести тридцать три тысячи девятьсот сорок четыре руб. 00 копеек'
+				},
+			}
+		]
 	};
