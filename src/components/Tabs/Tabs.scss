@@ -1,14 +1,28 @@
 .tabs {
-	display: flex;
-	overflow-x: scroll;
+	//display: flex;
+	//overflow-x: scroll;
+	//
+	//margin-right: -16%;
+	//column-gap: 29px;
+	//-ms-overflow-style: none;
+	//scrollbar-width: none;
+	//
+	//&::-webkit-scrollbar {
+	//	display: none;
+	//}
 
-	margin-right: -16%;
-	column-gap: 29px;
-	-ms-overflow-style: none;
-	scrollbar-width: none;
+	&__button {
+		display: flex;
+		overflow-x: scroll;
 
-	&::-webkit-scrollbar {
-		display: none;
+		margin-right: -16%;
+		column-gap: 29px;
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
 	}
 
 	&__choice {
@@ -34,12 +48,47 @@
 		}
 	}
 
+	&__content {
+		display: none;
+
+		&.active {
+			display: -webkit-box;
+			overflow: hidden;
+
+			text-overflow: ellipsis;
+			-webkit-line-clamp: 20;
+			line-clamp: 20;
+			-webkit-box-orient: vertical;
+		}
+
+		&.opened {
+			display: block;
+		}
+	}
+
+	&__body {
+		padding-bottom: 52px;
+
+		border-bottom: none;
+	}
+
 	@include media('xs') {
-		overflow: auto;
+		&__button {
+			overflow: auto;
 
-		margin-right: 0;
-		padding-top: 23px;
+			margin-right: 0;
+			padding-top: 23px;
+		}
 
+		&__body {
+			border-bottom: 1px solid #efefef;
+		}
+
+		&__content {
+			&.active {
+				display: block;
+			}
+		}
 	}
 }
 

@@ -83,30 +83,6 @@
 		display: none;
 	}
 
-	&__content-wrapper {
-		padding-bottom: 52px;
-
-		border-bottom: none;
-	}
-
-	&__content {
-		display: none;
-
-		&.active {
-			display: -webkit-box;
-			overflow: hidden;
-
-			text-overflow: ellipsis;
-			-webkit-line-clamp: 20;
-			line-clamp: 20;
-			-webkit-box-orient: vertical;
-		}
-
-		&.opened {
-			display: block;
-		}
-	}
-
 	@include media('xs') {
 		&__left {
 			width: 100%;
@@ -143,10 +119,6 @@
 			display: none;
 		}
 
-		&__content-wrapper{
-			border-bottom: 1px solid #efefef;
-		}
-
 		&__footer {
 			display: flex;
 			align-items: flex-start;
@@ -156,12 +128,6 @@
 			column-gap: 35px;
 
 			padding-top: 57px
-		}
-
-		&__content {
-			&.active {
-				display: block;
-			}
 		}
 	}
 }
