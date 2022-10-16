@@ -15,7 +15,7 @@ mixin section-contact(section)
 					+ContactInformation(item)
 
 				for item in S_ELEM_ARR('ContactTabs')
-					+ContactTabs(item)
+					+Tabs(item)
 				+e('button js-collapse', {}, 'button') Развернуть
 				+e('footer', {b: 'cg-20'}, 'div')
 					+e('qr', {}, 'img')(src=`${pathFile}/icon-qr.svg`)
