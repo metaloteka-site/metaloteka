@@ -1,10 +1,13 @@
 .card{
+	--white: #fcfcfc;
 	max-width: 896px;
 	max-height: 321px;
 	margin-bottom: 27px;
 
 	border-radius: 37px;
-	background: $gainsborough;
+	
+	background: $white;
+	
 	box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.03);
 }
 
@@ -15,14 +18,10 @@
 	padding: 51px 53px 19px 53px;
 
 	&__order{
-		letter-spacing: normal;
-
 		color: $wet-asphalt;
 
 		font-size: 28px;
 		font-weight: 800;
-		font-style: normal;
-		font-stretch: normal;
 		line-height: 0.86;
 	}
 
@@ -40,9 +39,14 @@
 	}
 }
 
+.text {
+	font-weight: 800;
+	line-height: 0.86;
+}
+
 .line{
 	height: 1px;
-	margin-bottom: 32px;
+	margin-bottom: 24px;
 
 	border: 0;
 	background: #efefef;
@@ -52,55 +56,64 @@
 	display: flex;
 	justify-content: space-between;
 
-	padding-bottom: 74px;
+	padding: 0 65px 74px 55px;
 }
 
 .summ {
 	display: flex;
 	flex-direction: column;
 
-	&:first-child{
-		padding: 0 24px 0 53px;
-	}
-
-	&:last-child{
-		padding: 0 53px 0 36px;
-	}
-
 	&_left{
 		gap: 6px;
 
-		width: 19.7%;
+		width: 155px;
 	}
 
 	&_center{
 		gap: 12px;
 
-		width: 29.7%;
+		width: 235px;
 	}
 
 	&_right{
 		gap: 12px;
 
-		width: 42.8%;
+		width: 333px;
 	}
 
 	&__line{
-		border-width: 4px;
+		width: 123px;
+
+		border-width: 2px;
 		border-style: solid;
 		border-image-source: linear-gradient(271deg, #ce7f65, #b66060);
 		border-image-slice: 1;
 	}
 
+	&__link {
+		display: flex;
+		gap: 19px;
+		
+	}
+
+	&__download {
+		color: $wet-asphalt;
+
+		&:hover {
+			--wet-asphalt: #464646c6;
+			color: $wet-asphalt;
+		}
+	}
+
 	&__total{
-		letter-spacing: normal;
+		display: flex;
+		flex-direction: row;
+
+		white-space: pre-line;
 
 		color: $wet-asphalt;
 
 		font-size: 16px;
-		font-weight: normal;
-		font-style: normal;
-		font-stretch: normal;
 		line-height: 1.25;
 
 		&_summ{
@@ -118,7 +131,7 @@
 			font-weight: 300;
 			line-height: 1.33;
 		}
-
+		
 		&_mini{
 			font-size: 10px;
 			font-weight: 300;
@@ -127,6 +140,8 @@
 
 		&_wrap{
 			display: flex;
+			flex-direction: column;
+			row-gap: 10px;
 		}
 	}
 }

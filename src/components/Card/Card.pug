@@ -12,14 +12,20 @@ mixin Card(props)
 		+b('call', {}, 'div')
 			+b('summ', {m: 'left'}, 'div')
 				+e('total', {}, 'p') Итого:
-				+e('total', {m: 'summ'}, 'p') #{ DATA('sum') }
+				+e('total', {m: 'summ'}, 'div')
+					+e('number', {m: 'summ'}, 'p') #{ DATA('sum') }
+					+e('ruble', {}, 'p') р.
 				+e('line', {}, 'div')
 				+e('total', {}, 'p') #{ DATA('weight') }
 			+b('summ', {m: 'center'}, 'div')
 				+e('total', {m: 'bold'}, 'p') #{ DATA('count') }
 				+e('total', {m: 'small'}, 'p') #{ DATA('numberInWords') }
 			+b('summ', {m: 'right'}, 'div')
-				+e('total', {m: 'mini'}, 'p') Копия документов на оплату отправлена на вашу электронную почту. В течении ближайшего времени с вами свяжеться менеджер, чтобы обсудить делали заказа.
+				+e('total', {m: 'mini'}, 'p') #{ DATA('description') }
 				+e('total', {m: 'wrap'}, 'div')
-					+e('r', {}, 'a')(href='!#') Скачать счет PDF
-					+e('r', {}, 'span') (действителен до 21.05.2022)
+					+e('link', {}, 'div')
+						+e('download', {}, 'a')(href='!#') #{ DATA('link')}
+						+e('date', {}, 'span') #{ DATA('date')}
+					+e('link', {}, 'div')
+						+e('download', {}, 'a')(href='!#') #{ DATA('blank')}
+						+e('date', {}, 'span') #{ DATA('date')}
