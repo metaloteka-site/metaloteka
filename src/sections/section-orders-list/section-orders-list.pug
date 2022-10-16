@@ -4,5 +4,8 @@ mixin section-orders-list(section)
 
 	//- верстка секции
 	+b('section-orders-list', {}, 'section')
-		for item in S_ELEM_ARR('Card')
-			+Card(item)
+		+Row(S_ELEM('Row'))
+			+e('left', {}, 'div')
+				for item in S_ELEM_ARR('Card')
+					+Card(item)
+			+e('right', {}, 'div') slider

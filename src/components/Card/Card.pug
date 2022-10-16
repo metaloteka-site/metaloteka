@@ -3,7 +3,7 @@ mixin Card(props)
 	include ../../shared/helpers/pug/shortcut-check-store
 
 	//- верстка компонента
-	+b('card', {}, 'div')
+	+b('card', {m:BEM('hide')}, 'div')
 		+b('title', {}, 'div')
 			+Text(ELEM('TextOrder'))
 			//- +e('order', {}, 'h2') #{ DATA('order') }
@@ -24,8 +24,9 @@ mixin Card(props)
 				+e('total', {m: 'mini'}, 'p') #{ DATA('description') }
 				+e('total', {m: 'wrap'}, 'div')
 					+e('link', {}, 'div')
-						+e('download', {}, 'a')(href='!#') #{ DATA('link')}
-						+e('date', {}, 'span') #{ DATA('date')}
+						if OPT('link')
+							+e('download', {}, 'a')(href='!#') #{ DATA('link')}
+							+e('date', {}, 'span') #{ DATA('date')}
 					+e('link', {}, 'div')
 						+e('download', {}, 'a')(href='!#') #{ DATA('blank')}
 						+e('date', {}, 'span') #{ DATA('date')}
