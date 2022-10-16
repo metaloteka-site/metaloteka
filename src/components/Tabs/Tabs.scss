@@ -11,7 +11,7 @@
 	//	display: none;
 	//}
 
-	&__button {
+	&__buttons {
 		display: flex;
 		overflow-x: scroll;
 
@@ -25,23 +25,26 @@
 		}
 	}
 
-	&__choice {
+	&__button {
 		margin-bottom: 23px;
 
 		white-space: nowrap;
+
+		border: 0;
+		background: none;
 
 		font-size: $fs-18;
 		font-weight: 800;
 		line-height: 1.1;
 
 		&:hover {
-			--wet-asphalt: rgba(70,70,70,0.77647);
+			--wet-asphalt: #464646c5;
 			cursor: pointer;
 
 			color: $wet-asphalt;
 		}
 
-		&.active {
+		&.js-active {
 			padding-bottom: 5px;
 
 			border-bottom: 4px solid #586e8b;
@@ -51,7 +54,7 @@
 	&__content {
 		display: none;
 
-		&.active {
+		&.js-active {
 			display: -webkit-box;
 			overflow: hidden;
 
@@ -85,7 +88,7 @@
 		}
 
 		&__content {
-			&.active {
+			&.js-active {
 				display: block;
 			}
 		}

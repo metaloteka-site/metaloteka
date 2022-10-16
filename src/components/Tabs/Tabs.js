@@ -1,18 +1,19 @@
 class TabsControl {
 	constructor(elem) {
+		this.parent = '.tabs__';
 		this.component = elem;
-		this.tabBtns = this.component.querySelectorAll('.js-tab');
-		this.tabContents = document.querySelectorAll('.tabs__content');
+		this.tabButtons = this.component.querySelectorAll(`${this.parent}button`);
+		this.tabContents = document.querySelectorAll(`${this.parent}content`);
 	}
 
 	tabs() {
-		this.tabBtns.forEach((tab, index) => {
+		this.tabButtons.forEach((tab, index) => {
 			tab.addEventListener('click', (event) => {
-				this.tabContents.forEach((tabContent) => tabContent.classList.remove('active'));
-				this.tabBtns.forEach((tab) => tab.classList.remove('active'));
+				this.tabContents.forEach((tabContent) => tabContent.classList.remove('js-active'));
+				this.tabButtons.forEach((tab) => tab.classList.remove('js-active'));
 
-				event.currentTarget.classList.add('active');
-				this.tabContents[index].classList.add('active');
+				event.currentTarget.classList.add('js-active');
+				this.tabContents[index].classList.add('js-active');
 			});
 		});
 	}

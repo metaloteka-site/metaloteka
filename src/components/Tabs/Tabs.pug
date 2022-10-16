@@ -4,16 +4,15 @@ mixin Tabs(props)
 
 	//- верстка компонента
 	+b('tabs', {}, 'div')
-		+e('button', {}, 'div')
+		+e('buttons', {}, 'div')
 			for item, index in DATA_ARR('tabs')
 				//- проверка данных получаемых из item
 				include ../../shared/helpers/pug/shortcut-check-store
 
-				+e(`choice js-tab ${index === 0 ? 'active' : ''}`, {}, 'div') #{I_DATA('tabName')}
+				+e('button', {b: `${index === 0 ? 'js-active' : ''}`}, 'button') #{I_DATA('tabName')}
 
 		+e('body', {}, 'div')
 			for item, index in DATA_ARR('tabs')
 				//- проверка данных получаемых из item
 				include ../../shared/helpers/pug/shortcut-check-store
-
-				+e(`content js-tab-content ${index === 0 ? 'active' : ''}`) #{I_DATA('tabContent')}
+				+e('content', {b: `${index === 0 ? 'js-active' : ''}`}, 'div') #{I_DATA('tabContent')}
