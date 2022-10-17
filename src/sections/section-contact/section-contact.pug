@@ -18,7 +18,8 @@ mixin section-contact(section)
 					+Tabs(item)
 				+e('button js-collapse', {}, 'button') Развернуть
 				+e('footer', {b: 'cg-20'}, 'div')
-					+e('qr', {}, 'img')(src=`${pathFile}/icon-qr.svg`)
+					+e('qr', {}, 'img')(src=`${pathFile}${S_DATA('qr')}`)
 					for item in S_ELEM_ARR('ContactInformationFooter')
 						+ContactInformationFooter(item)
+
 			+e('right', {}, 'div') slider
