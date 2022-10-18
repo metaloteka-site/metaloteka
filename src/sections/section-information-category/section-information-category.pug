@@ -10,19 +10,18 @@ mixin section-information-category(section)
 			include ../../shared/helpers/pug/shortcut-check-store
 			+e('information-wrapper', {}, 'div')
 				+e('information-left', {}, 'div')
-					+e('', {}, 'span') #{I_DATA('name')}
-					+e('', {}, 'span') #{I_DATA('time')}
+					+e('information-subtitle', {}, 'span') #{I_DATA('subtitle')}
+					+e('information-left-title', {}, 'span') #{I_DATA('title')}
 					+e('information-line', {}, 'span')
-					+e('', {}, 'span') #{I_DATA('time')}
-					+e('', {}, 'span') #{I_DATA('name')}
+					+e('information-left-text', {}, 'span') #{I_DATA('text')}
+					+e('information-left-img-wrapper', {}, 'div')
+						+e('information-left-img', {}, 'img')(src=`../../layout/assets/images/${I_DATA('logo')}` alt='Logo')
+						+e('information-left-info', {}, 'span') #{I_DATA('textLogo')}
 				+e('information-right', {}, 'div')
-					+e('', {}, 'span') #{I_DATA('name')}
-					+e('', {}, 'span') #{I_DATA('msg')}
-					+e('', {}, 'span') #{I_DATA('prof')}
-					//- +e('', {}, 'img')(src=`${pathFile}${S_DATA('logo')}` alt='Logo')
-					+e('', {}, 'img')(src=`../../layout/assets/images/${I_DATA('logo')}` alt='Logo')
-			//- +e('msgtest-name', {}, 'span') #{I_DATA('name')}
-			//- +e('msgtest-time', {}, 'span') #{I_DATA('time')}
-			//- +e('msgtest-msg', {}, 'span') #{I_DATA('msg')}
-			//- +e('msgtest-msg', {}, 'img') #{I_DATA('msg')}
-			//- +e('msgtest-msg', {}, 'img')(src=`${pathFile}${S_DATA('logo')}` alt='Logo')
+					+e('information-right-title', {}, 'span') #{I_DATA('titleRight')}
+					+e('information-right-img-wrapper', {}, 'div')
+						+e('information-right-img', {}, 'img')(src=`../../layout/assets/images/${I_DATA('img')}` alt='Logo')
+						+e('information-right-text-wrapper', {}, 'div')
+							+e('', {}, 'span') dgg
+							+e('', {}, 'span') fdgd
+							+e('', {}, 'span') fdgd
