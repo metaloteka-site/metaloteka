@@ -1,13 +1,14 @@
-.contacts {
+.section-contact {
 	&__left {
+		--white: #fcfcfc;
 		position: relative;
 
 		max-width: 100%;
 		padding: 56px 43px;
 
-		color: #464646;
+		color: $wet-asphalt;
 		border-radius: 37px;
-		background-color: #fcfcfc;
+		background-color: $white;
 	}
 
 	&__right {
@@ -36,7 +37,7 @@
 
 		color: $white;
 		border-radius: 50%;
-		background-color: #b66060;
+		background: linear-gradient(315deg, #b66060, #ce7f65);
 
 		font-size: $fs-36;
 		font-weight: 600;
@@ -122,12 +123,15 @@
 		&__footer {
 			display: flex;
 			align-items: flex-start;
-			flex-direction: row;
 			flex-wrap: wrap;
-			justify-content: center;
 			column-gap: 35px;
 
 			padding-top: 57px
+		}
+
+		&__qr {
+			width: 123px;
+			aspect-ratio: 1;
 		}
 	}
 }
