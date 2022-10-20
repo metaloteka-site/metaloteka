@@ -5,7 +5,7 @@ mixin section-information-category(section)
 	//- верстка секции
 	+b('section-information-category', {}, 'section')
 		+e('footer-icons', {}, 'div')
-		for item in S_DATA_ARR('proba')
+		for item in S_DATA_ARR('category')
 			- console.log(item)
 			include ../../shared/helpers/pug/shortcut-check-store
 			+e('information-wrapper', {}, 'div')
@@ -19,9 +19,11 @@ mixin section-information-category(section)
 						+e('information-left-info', {}, 'span') #{I_DATA('textLogo')}
 				+e('information-right', {}, 'div')
 					+e('information-right-title', {}, 'span') #{I_DATA('titleRight')}
-					+e('information-right-img-wrapper', {}, 'div')
-						+e('information-right-img', {}, 'img')(src=`../../layout/assets/images/${I_DATA('img')}` alt='Logo')
-						+e('information-right-text-wrapper', {}, 'div')
-							+e('', {}, 'span') dgg
-							+e('', {}, 'span') fdgd
-							+e('', {}, 'span') fdgd
+					//- +e('information-right-img-wrapper', {}, 'div')
+						//- +e('information-right-img', {}, 'img')(src=`../../layout/assets/images/${I_DATA('img')}` alt='Logo')
+					+e('information-right-text-wrapper', {}, 'div')
+						for item in S_DATA_ARR('size')
+							//- проверка данных получаемых из item
+							include ../../shared/helpers/pug/shortcut-check-store
+							+e('', {}, 'a')(href='#') !{I_DATA('text')}
+				+e('information-right-img', {}, 'img')(src=`../../layout/assets/images/${I_DATA('img')}` alt='Logo')

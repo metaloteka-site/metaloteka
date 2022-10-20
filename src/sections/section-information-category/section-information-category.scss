@@ -1,16 +1,18 @@
 .section-information-category {
 	@include media(xs) {
 		&__information-wrapper {
-			display: flex;
-			// justify-content: space-between;
-			gap:55px;
+			position: relative;
 
-			margin-bottom: 40px;
+			display: flex;
+
+			// margin-bottom: 40px;
 			padding-top: 35px;
 
 			color: #000000;
-			border: 1px solid rgb(174, 4, 4);
+			// border: 1px solid rgb(174, 4, 4);
 			background-image: linear-gradient(279deg, #8a8898, #6a6781 0%);
+			// justify-content: space-between;
+			gap: 55px;
 		}
 
 		// Левый блок
@@ -85,10 +87,12 @@
 
 			letter-spacing: normal;
 
+			opacity: 0.75;
+
 			color: #ffffff;
 
 			font-size: 12px;
-			font-weight: 300;
+			font-weight: 400;
 			line-height: 1;
 		}
 
@@ -97,6 +101,8 @@
 		&__information-right {
 			display: flex;
 			flex-direction: column;
+
+			max-width: 891px;
 		}
 
 		&__information-right-title {
@@ -111,20 +117,37 @@
 			line-height: 0.83;
 		}
 
-		&__information-right-img-wrapper{
-			position: relative;
-
+		&__information-right-img-wrapper {
+			// position: relative;
+			// display: inline-block;
 		}
 
-		&__information-right-img{
+		&__information-right-img {
+			position: absolute;
+			// top: 0;
+			// left: 0;
+			right: 0;
+			bottom: 0;
+
 			max-width: 891px;
 			max-height: 341px;
 		}
 
-		&__information-right-text-wrapper{
-			position: absolute;
-			top: 0;
-			left: 0;
+		&__information-right-text-wrapper {
+			// position: absolute;
+			// top: 0;
+			// left: 0;
+			display: flex;
+			flex-wrap: wrap;
+
+			letter-spacing: normal;
+
+			color: #ffffff;
+
+			font-size: 20px;
+			font-weight: 400;
+			line-height: 1;
+			gap:14px;
 		}
 	}
 }
