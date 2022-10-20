@@ -3,7 +3,12 @@
 		--white: #fcfcfc;
 		position: relative;
 
+		flex: 1 0 550px;
+
+		min-width: min(550px, 100%);
+
 		max-width: 100%;
+		max-width: min(900px, 100%);
 		padding: 56px 43px;
 
 		color: $wet-asphalt;
