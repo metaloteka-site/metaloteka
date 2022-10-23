@@ -40,9 +40,10 @@ block layout
 				+b('main', {}, 'main')
 					block main
 
-			block pre-footer
+			+b('bg-footer', {}, 'div')
+				block pre-footer
 
-			//- подключение и вызов секции FOOTER
-			block footer
-				include ../sections/footer/footer
-				+footer(main.footer)
+				//- подключение и вызов секции FOOTER
+				block footer
+					include ../sections/footer/footer
+					+footer(main.footer)
