@@ -19,8 +19,6 @@ mixin section-information-category(section)
 						+e('information-left-info', {}, 'span') #{I_DATA('textLogo')}
 				+e('information-right', {}, 'div')
 					+e('information-right-title', {}, 'span') #{I_DATA('titleRight')}
-					//- +e('information-right-img-wrapper', {}, 'div')
-						//- +e('information-right-img', {}, 'img')(src=`../../layout/assets/images/${I_DATA('img')}` alt='Logo')
 					+e('information-right-text-wrapper', {}, 'div')
 						for item in S_DATA_ARR('size')
 							//- проверка данных получаемых из item
