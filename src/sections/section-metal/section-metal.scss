@@ -32,33 +32,15 @@
 	}
 
 	&__subtitle {
-		display: none;
+		margin-block: 33px;
+
+		font-size: 38px;
+		font-weight: 800;
+		line-height: 1;
 	}
 
-	&__metal-production {
-		display: none;
-
-		font-size: $fs-18;
-		font-weight: 200;
+	&__metal-info {
 		line-height: 1.44;
-
-		&.active {
-			display: -webkit-box;
-			overflow: hidden;
-
-			text-overflow: ellipsis;
-			-webkit-line-clamp: 7;
-			line-clamp: 20;
-			-webkit-box-orient: vertical;
-		}
-
-		&.opened {
-			display: block;
-		}
-	}
-
-	&__content-wrapper{
-		padding-right: 21px;
 	}
 
 	&__button {
@@ -73,29 +55,6 @@
 
 		font-size: $fs-20;
 		line-height: 1.14;
-	}
-
-	&__metal-list {
-		margin-bottom: 26px;
-		padding-right: 22px;
-
-		font-size: $fs-18;
-		font-weight: 200;
-		line-height: 1.44;
-	}
-
-	&__metal-delivery {
-		font-size: $fs-18;
-		font-weight: 200;
-		line-height: 1.44;
-	}
-
-	&__metal-info {
-		display: none;
-
-		font-size: $fs-18;
-		font-weight: 200;
-		line-height: 1.44;
 	}
 
 	@include media(xs) {
@@ -116,41 +75,6 @@
 			margin-bottom: 60px;
 
 			white-space: pre-line;
-		}
-
-		&__subtitle {
-			display: block;
-
-			margin-top: 33px;
-			margin-bottom: 33px;
-
-			font-size: 38px;
-			font-weight: 800;
-			line-height: 1;
-		}
-
-		&__metal-list {
-			display: none;
-		}
-
-		&__metal-info {
-			display: block;
-
-			margin-bottom: 33px;
-
-			font-size: $fs-18;
-			font-weight: 200;
-			line-height: 1.44;
-		}
-
-		&__metal-production {
-			font-size: $fs-18;
-			font-weight: 200;
-			line-height: 1.44;
-		}
-
-		&__content-wrapper{
-			padding-right: 0;
 		}
 
 		&__button {

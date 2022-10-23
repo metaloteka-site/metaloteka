@@ -8,11 +8,11 @@ mixin section-metal(section)
 			+e('title', {}, 'h2') #{S_DATA('title')}
 			+e('line', {}, 'hr')
 			+Text(S_ELEM('TextMetalSteel'))
-			+e('metal-list', {}, 'div') #{S_DATA('metalLisMobile')}
-			+e('subtitle', {}, 'h3') #{S_DATA('metalDelivery')}
-			+e('metal-info', {}, 'p') #{S_DATA('metalSphere')}
-			+e('subtitle', {}, 'h3') #{S_DATA('metalReserve')}
-			+e('metal-production', {}, 'p') #{S_DATA('metalProduction')}
-			+e('content-wrapper', {}, 'div')
-				+e('metal-production js-tab-content active', {}, 'p') Обширная сфера применения обусловлена тем, что при производстве листа можно использовать очень широкий перечень марок стали, за счет чего лист будет обладать различными и нужными заказчику физическими и химическими свойствами. Такие листы имеют широкий диапазон толщин, получают методом прессования разогретой горячей заготовки при температуре от 250-400 градусов. Горячекатаные листы, по сути, имеют вид большого металлического прямоугольника, которые для удобства упаковывают в пачки или поставляют в рулонах (возможно, с последующей размоткой). Горячекатаный лист отличается простотой производства, для обработки заготовки и получения плоского изделия не нужно сложное и дорогостоящее оборудование.
+
+			for item in S_DATA_ARR('metalInfo')
+				//- проверка данных получаемых из item
+				include ../../shared/helpers/pug/shortcut-check-store
+				+e('subtitle', {}, 'h3') #{I_DATA('text')}
+				+Text(I_ELEM('Text'))
+
 			+e('button js-collapse', {}, 'button') Развернуть
