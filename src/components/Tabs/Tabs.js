@@ -2,24 +2,37 @@ class TabsControl {
 	constructor(elem) {
 		this.parent = '.tabs__';
 		this.component = elem;
-		this.tabButtons = this.component.querySelectorAll(`${this.parent}button`);
-		this.tabContents = this.component.querySelectorAll(`${this.parent}content`);
+		this.tabsButtons = this.component.querySelector(`${this.parent}buttons`);
+		this.tabButtons = this.component.querySelectorAll('[data-tab-button]');
+		this.tabContents = this.component.querySelectorAll('[data-tab-content]');
 	}
 
-	tabs() {
-		this.tabButtons.forEach((tab, index) => {
-			tab.addEventListener('click', (event) => {
-				this.tabContents.forEach((tabContent) => tabContent.classList.remove('js-active'));
-				this.tabButtons.forEach((tab) => tab.classList.remove('js-active'));
-
-				event.currentTarget.classList.add('js-active');
-				this.tabContents[index].classList.add('js-active');
-			});
+	// Определяем активный tabs__button
+	activeTabButton(dataTabButton) {
+		this.tabButtons.forEach((item) => {
+			item.classList.remove('js-active');
 		});
+		return this.component.querySelector(`[data-tab-button='${dataTabButton}']`).classList.add('js-active');
 	}
 
+	// Определяем активный tabs__content
+	activeTabContent(dataTabContent) {
+		this.tabContents.forEach((item) => {
+			item.classList.remove('js-active');
+		});
+		return this.component.querySelector(`[data-tab-content='${dataTabContent}']`).classList.add('js-active');
+	}
+
+	// Инициализация класса Tabs
 	init() {
-		this.tabs();
+		this.tabsButtons.addEventListener('click', (e) => {
+			const dataTabButton = e.target.dataset.tabButton;
+
+			if (dataTabButton) {
+				this.activeTabButton(dataTabButton);
+				this.activeTabContent(dataTabButton);
+			}
+		});
 	}
 }
 
