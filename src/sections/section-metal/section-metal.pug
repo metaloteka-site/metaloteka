@@ -6,7 +6,7 @@ mixin section-metal(section)
 	+b('section-metal', {}, 'section')
 		+Container
 			+e('title', {}, 'h2') #{S_DATA('title')}
-			+e('line', {}, 'div')
+			+e('line', {}, 'hr')
 			+e('metal-steel', {}, 'div') #{S_DATA('metalSteel')}
 			+e('metal-list', {}, 'div') #{S_DATA('metalLisMobile')}
 			+e('subtitle', {}, 'h3') #{S_DATA('metalDelivery')}

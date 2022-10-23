@@ -6,8 +6,6 @@
 	padding-inline: 24px;
 
 	&__title {
-		margin-bottom: 36px;
-
 		white-space: pre-line;
 
 		word-break: break-word;
@@ -15,6 +13,16 @@
 		font-size: $fs-title3;
 		font-weight: 800;
 		line-height: 0.79;
+	}
+
+	&__line {
+		height: 8px;
+
+		opacity: 0.21;
+		border: 0;
+		background: $white;
+		margin-block: 40px;
+		margin-inline: -47px;
 	}
 
 	&__subtitle {
@@ -61,15 +69,6 @@
 		line-height: 1.14;
 	}
 
-	&__line {
-		margin-right: -23px;
-		margin-bottom: 38px;
-		margin-left: -46px;
-
-		opacity: 0.21;
-		border-bottom: solid 8px $white;
-	}
-
 	&__metal-steel {
 		margin-bottom: 40px;
 
@@ -106,9 +105,12 @@
 		padding-inline: 0;
 
 		&__title {
-			margin-bottom: 40px;
-
 			font-size: $fs-title1;
+		}
+
+		&__line {
+			margin-block: 45px;
+			margin-inline: 0;
 		}
 
 		&__subtitle {
@@ -120,15 +122,6 @@
 			font-size: 38px;
 			font-weight: 800;
 			line-height: 1;
-		}
-
-		&__line {
-			margin-right: 0;
-			margin-bottom: 46px;
-			margin-left: 0;
-
-			opacity: 0.21;
-			border-bottom: solid 8px $white;
 		}
 
 		&__metal-steel {
