@@ -3,8 +3,7 @@
 
 	display: block;
 
-	margin-top: 200px;
-	padding-top: 45px;
+	padding-top: 38px;
 	padding-bottom: 33px;
 
 	background: linear-gradient(306deg, #636267, #47474b 0%);
@@ -639,7 +638,8 @@
 
 @include media(xs) {
 	.footer {
-		padding-top: 103px;
+		padding-top: 24px;
 		padding-bottom: 107px;
+		padding-left: 22px;
 	}
 }
