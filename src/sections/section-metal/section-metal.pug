@@ -1,0 +1,18 @@
+mixin section-metal(section)
+	//- проверка данных получаемых из section
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- верстка секции
+	+b('section-metal', {}, 'section')
+		+Container
+			+e('title', {}, 'h2') #{S_DATA('title')}
+			+e('line', {}, 'hr')
+			+Text(S_ELEM('TextMetalSteel'))
+
+			for item in S_DATA_ARR('metalInfo')
+				//- проверка данных получаемых из item
+				include ../../shared/helpers/pug/shortcut-check-store
+				+e('subtitle', {}, 'h3') #{I_DATA('text')}
+				+Text(I_ELEM('Text'))
+
+			+e('button js-collapse', {}, 'button') Развернуть

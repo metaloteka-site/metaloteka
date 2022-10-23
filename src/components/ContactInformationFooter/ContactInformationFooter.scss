@@ -1,0 +1,61 @@
+.contact-information-footer {
+	&__name{
+		width: 176px;
+	}
+
+	&__title {
+		font-size: $fs-32;
+		font-weight: 800;
+	}
+
+	&__sub-title {
+		font-size: $fs-small;
+		line-height: 1;
+	}
+
+	&__text {
+		margin-bottom: 12px;
+
+		white-space: pre-line;
+
+		font-size: $fs-small;
+		line-height: 1.17;
+	}
+
+	&__text_bold {
+		font-weight: bold;
+	}
+
+	&__link {
+		text-decoration: none;
+
+		color: $wet-asphalt;
+
+		font-size: $fs-20;
+		line-height: $fs-20;
+
+		&:hover {
+			--wet-asphalt: rgba(70,70,70,0.77647);
+			color: $wet-asphalt;
+		}
+	}
+
+	&__range {
+		height: 2px;
+		margin: 8px 0;
+
+		border-width: 3px;
+		border-style: solid;
+		border-image-source: linear-gradient(271deg, #ce7f65, #b66060);
+		border-image-slice: 1;
+	}
+
+	&__number, &__mail {
+		&:hover {
+			--wet-asphalt: #464646c6;
+			color: $wet-asphalt;
+		}
+	}
+	
+		
+}

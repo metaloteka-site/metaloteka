@@ -1,0 +1,84 @@
+.section-metal {
+	margin-bottom: 90px;
+	padding-top: 60px;
+
+	background: linear-gradient(306deg, #636267, #47474b 0%);
+	padding-inline: 24px;
+
+	&__title {
+		white-space: pre-line;
+
+		word-break: break-word;
+
+		font-size: $fs-title3;
+		font-weight: 800;
+		line-height: 0.79;
+	}
+
+	&__line {
+		height: 8px;
+
+		opacity: 0.21;
+		border: 0;
+		background: $white;
+		margin-block: 40px;
+		margin-inline: -47px;
+	}
+
+	&__metal-steel {
+		margin-bottom: 40px;
+
+		line-height: 1.08;
+	}
+
+	&__subtitle {
+		margin-block: 33px;
+
+		font-size: 38px;
+		font-weight: 800;
+		line-height: 1;
+	}
+
+	&__metal-info {
+		line-height: 1.44;
+	}
+
+	&__button {
+		display: block;
+
+		margin-top: 28px;
+		margin-left: -6px;
+
+		color: $white;
+		border: none;
+		background: none;
+
+		font-size: $fs-20;
+		line-height: 1.14;
+	}
+
+	@include media(xs) {
+		margin-bottom: 70px;
+		padding-top: 70px;
+		padding-inline: 0;
+
+		&__title {
+			font-size: $fs-title1;
+		}
+
+		&__line {
+			margin-block: 45px;
+			margin-inline: 0;
+		}
+
+		&__metal-steel {
+			margin-bottom: 60px;
+
+			white-space: pre-line;
+		}
+
+		&__button {
+			display: none;
+		}
+	}
+}

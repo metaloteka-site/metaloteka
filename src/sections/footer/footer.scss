@@ -3,9 +3,8 @@
 
 	display: block;
 
-	margin-top: 200px;
-	padding-top: 45px;
-	padding-bottom: 67px;
+	padding-top: 38px;
+	padding-bottom: 33px;
 
 	background: linear-gradient(306deg, #636267, #47474b 0%);
 
@@ -120,7 +119,6 @@
 		font-size: $fs-26;
 		font-weight: 800;
 		line-height: 1;
-		// margin-bottom: 5px;
 	}
 
 	&__adress-subtitle {
@@ -339,10 +337,9 @@
 	&__privacy-policy-info {
 		display: grid;
 		grid-template-columns: minmax(20px, 220px) minmax(20px, 81px);
-		// display: flex;
+
 		align-items: center;
 		flex-wrap: wrap;
-		// justify-content: center;
 		gap: 14px;
 
 		margin-bottom: 14px;
@@ -365,7 +362,6 @@
 		display: flex;
 		flex: 1 1 100px;
 
-		// padding-left: 32px;
 
 		text-decoration: none;
 
@@ -576,9 +572,7 @@
 			display: flex;
 			overflow-x: hidden;
 			align-items: center;
-			// flex: 1 268px;
 			flex: 1 318px;
-			// 1 318px;
 			flex-direction: row;
 			flex-wrap: wrap;
 			justify-content: center;
@@ -591,7 +585,6 @@
 
 		&__logo-sberbank {
 			flex: 1 1 140px;
-			// padding-top: 13px;
 
 			max-width: 188px;
 		}
@@ -604,7 +597,6 @@
 
 		&__logo-mir {
 			flex: 1 1 190px;
-			// padding-top: 13px;
 
 			max-width: 76px;
 		}
@@ -616,10 +608,8 @@
 			margin-right: 33px;
 
 			margin-bottom: 0;
-			// padding-left: 32px;
 			margin-left: 20px;
 			padding-top: 8px;
-			// padding-right: 33px;
 			padding-bottom: 12px;
 		}
 
@@ -631,7 +621,6 @@
 
 		&__info-metaloteka {
 			margin-bottom: 0;
-			// padding: 29px 55px;
 			padding-top: 29px;
 			padding-right: 55px;
 			padding-bottom: 29px;
