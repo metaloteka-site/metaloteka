@@ -12,6 +12,10 @@
 	}
 
 	&__button {
+		position: relative;
+
+		padding-bottom: 7px;
+
 		white-space: nowrap;
 
 		border: 0;
@@ -28,10 +32,18 @@
 			color: $wet-asphalt;
 		}
 
-		&.js-active {
-			padding-bottom: 5px;
+		&.js-active::after {
+			position: absolute;
+			bottom: 0;
 
-			border-bottom: 4px solid #586e8b;
+			display: block;
+
+			width: 100%;
+			height: 4px;
+
+			content: '';
+
+			background: linear-gradient(269deg, #678c92, #586e8b);
 		}
 	}
 
