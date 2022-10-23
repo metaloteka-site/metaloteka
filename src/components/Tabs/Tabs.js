@@ -3,7 +3,7 @@ class TabsControl {
 		this.parent = '.tabs__';
 		this.component = elem;
 		this.tabButtons = this.component.querySelectorAll(`${this.parent}button`);
-		this.tabContents = document.querySelectorAll(`${this.parent}content`);
+		this.tabContents = this.component.querySelectorAll(`${this.parent}content`);
 	}
 
 	tabs() {

@@ -39,7 +39,7 @@
 		display: none;
 
 		&.js-active {
-			display: -webkit-box;
+			display: block;
 			overflow: hidden;
 
 			text-overflow: ellipsis;
@@ -60,18 +60,8 @@
 	}
 
 	@include media('xs') {
-		&__button {
-			overflow: auto;
-		}
-
 		&__body {
 			border-bottom: 1px solid #efefef;
-		}
-
-		&__content {
-			&.js-active {
-				display: block;
-			}
 		}
 	}
 }
