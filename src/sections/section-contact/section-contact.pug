@@ -17,6 +17,7 @@ mixin section-contact(section)
 				+Tabs(S_ELEM('Tabs'))
 
 				+e('button js-collapse', {}, 'button') Развернуть
+				+e('line', {}, 'hr')
 				+e('footer', {b: 'cg-20'}, 'div')
 					+e('qr', {}, 'img')(src=`${pathFile}${S_DATA('qr')}`)
 					for item in S_ELEM_ARR('ContactInformationFooter')

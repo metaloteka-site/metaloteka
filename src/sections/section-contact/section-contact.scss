@@ -84,6 +84,10 @@
 
 	}
 
+	&__line {
+		display: none;
+	}
+
 	&__footer {
 		display: none;
 	}
@@ -124,13 +128,24 @@
 			display: none;
 		}
 
+		&__line {
+			--white: #efefef;
+			display: block;
+
+			height: 1px;
+			margin-top: 50px;
+			margin-bottom: 40px;
+
+			border: 0;
+			background: $white;
+			margin-inline: -56px;
+		}
+
 		&__footer {
 			display: flex;
 			align-items: flex-start;
 			flex-wrap: wrap;
 			column-gap: 35px;
-
-			padding-top: 57px
 		}
 
 		&__qr {

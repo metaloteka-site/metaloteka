@@ -64,17 +64,5 @@
 			display: block;
 		}
 	}
-
-	&__body {
-		padding-bottom: 50px;
-
-		border-bottom: none;
-	}
-
-	@include media('xs') {
-		&__body {
-			border-bottom: 1px solid #efefef;
-		}
-	}
 }
 
