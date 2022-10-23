@@ -2,14 +2,14 @@ class TabsControl {
 	constructor(elem) {
 		this.parent = '.tabs__';
 		this.component = elem;
-		this.tabsButtons = this.component.querySelector(`${this.parent}buttons`);
-		this.tabButtons = this.component.querySelectorAll('[data-tab-button]');
+		this.tabsWrapButtons = this.component.querySelector(`${this.parent}buttons`);
+		this.tabsButtons = this.component.querySelectorAll('[data-tab-button]');
 		this.tabContents = this.component.querySelectorAll('[data-tab-content]');
 	}
 
 	// Определяем активный tabs__button
 	activeTabButton(dataTabButton) {
-		this.tabButtons.forEach((item) => {
+		this.tabsButtons.forEach((item) => {
 			item.classList.remove('js-active');
 		});
 		return this.component.querySelector(`[data-tab-button='${dataTabButton}']`).classList.add('js-active');
@@ -25,13 +25,16 @@ class TabsControl {
 
 	// Инициализация класса Tabs
 	init() {
-		this.tabsButtons.addEventListener('click', (e) => {
+		this.tabsWrapButtons.addEventListener('click', (e) => {
 			const dataTabButton = e.target.dataset.tabButton;
 
 			if (dataTabButton) {
 				this.activeTabButton(dataTabButton);
 				this.activeTabContent(dataTabButton);
 			}
+
+			// Горизонтальный подскролл к табу
+			e.target.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' });
 		});
 	}
 }
