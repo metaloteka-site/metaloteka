@@ -25,6 +25,13 @@
 		margin-inline: -47px;
 	}
 
+	&__metal-steel {
+		margin-bottom: 40px;
+
+		font-size: $fs-24;
+		line-height: 1.08;
+	}
+
 	&__subtitle {
 		display: none;
 	}
@@ -69,13 +76,6 @@
 		line-height: 1.14;
 	}
 
-	&__metal-steel {
-		margin-bottom: 40px;
-
-		font-size: $fs-24;
-		line-height: 1.08;
-	}
-
 	&__metal-list {
 		margin-bottom: 26px;
 		padding-right: 22px;
@@ -113,6 +113,12 @@
 			margin-inline: 0;
 		}
 
+		&__metal-steel {
+			margin-bottom: 60px;
+
+			white-space: pre-line;
+		}
+
 		&__subtitle {
 			display: block;
 
@@ -122,11 +128,6 @@
 			font-size: 38px;
 			font-weight: 800;
 			line-height: 1;
-		}
-
-		&__metal-steel {
-			max-width: 550px;
-			margin-bottom: 60px;
 		}
 
 		&__metal-list {
