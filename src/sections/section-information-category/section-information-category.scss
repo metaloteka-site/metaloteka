@@ -93,6 +93,7 @@
 			position: relative;
 
 			display: flex;
+			flex-wrap: wrap;
 
 			padding-top: 0;
 
@@ -182,7 +183,11 @@
 
 		&__information-right {
 			display: flex;
+
+			flex: 1 0 163px;
 			flex-direction: column;
+
+			min-width: min(49px, 100%);
 
 			max-width: 891px;
 			padding-top: 35px;
