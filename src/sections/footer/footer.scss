@@ -1,13 +1,9 @@
 .footer {
 	//Mobile
-
 	display: block;
 
-	margin-top: 200px;
-	padding-top: 45px;
-	padding-bottom: 67px;
-
-	background: linear-gradient(306deg, #636267, #47474b 0%);
+	padding-top: 105px;
+	padding-bottom: 70px;
 
 	//-Иконки-----------------------------
 	&__footer-icons {
@@ -120,7 +116,6 @@
 		font-size: $fs-26;
 		font-weight: 800;
 		line-height: 1;
-		// margin-bottom: 5px;
 	}
 
 	&__adress-subtitle {
@@ -339,10 +334,9 @@
 	&__privacy-policy-info {
 		display: grid;
 		grid-template-columns: minmax(20px, 220px) minmax(20px, 81px);
-		// display: flex;
+
 		align-items: center;
 		flex-wrap: wrap;
-		// justify-content: center;
 		gap: 14px;
 
 		margin-bottom: 14px;
@@ -364,8 +358,6 @@
 	&__privacy-policy-map {
 		display: flex;
 		flex: 1 1 100px;
-
-		// padding-left: 32px;
 
 		text-decoration: none;
 
@@ -392,8 +384,10 @@
 	//Desctop
 
 	@include media(xs) {
-		//-Иконки-----------------------------
+		padding-top: 70px;
+		padding-bottom: 110px;
 
+		//-Иконки-----------------------------
 		&__footer-icons {
 			display: flex;
 			flex-direction: row;
@@ -518,7 +512,6 @@
 		}
 
 		&__messenger {
-			margin-bottom: 42px;
 			margin-bottom: 0;
 			padding: 36px 50px 35px 45px;
 
@@ -527,7 +520,6 @@
 		}
 
 		&__messenger-phone {
-			margin-bottom: 42px;
 			margin-bottom: 0;
 			padding: 36px 50px 35px 45px;
 
@@ -536,7 +528,6 @@
 		}
 
 		&__messenger-wiber {
-			margin-bottom: 42px;
 			margin-bottom: 0;
 			padding: 39px 50px 27px 45px;
 
@@ -576,9 +567,7 @@
 			display: flex;
 			overflow-x: hidden;
 			align-items: center;
-			// flex: 1 268px;
 			flex: 1 318px;
-			// 1 318px;
 			flex-direction: row;
 			flex-wrap: wrap;
 			justify-content: center;
@@ -591,7 +580,6 @@
 
 		&__logo-sberbank {
 			flex: 1 1 140px;
-			// padding-top: 13px;
 
 			max-width: 188px;
 		}
@@ -604,7 +592,6 @@
 
 		&__logo-mir {
 			flex: 1 1 190px;
-			// padding-top: 13px;
 
 			max-width: 76px;
 		}
@@ -616,10 +603,8 @@
 			margin-right: 33px;
 
 			margin-bottom: 0;
-			// padding-left: 32px;
 			margin-left: 20px;
 			padding-top: 8px;
-			// padding-right: 33px;
 			padding-bottom: 12px;
 		}
 
@@ -631,7 +616,6 @@
 
 		&__info-metaloteka {
 			margin-bottom: 0;
-			// padding: 29px 55px;
 			padding-top: 29px;
 			padding-right: 55px;
 			padding-bottom: 29px;
@@ -709,10 +693,6 @@
 	}
 }
 
-@include media(xs) {
-	.footer {
-		padding-top: 24px;
-		padding-bottom: 107px;
-		padding-left: 22px;
-	}
+.section-metal + .footer {
+	padding-top: 0;
 }
