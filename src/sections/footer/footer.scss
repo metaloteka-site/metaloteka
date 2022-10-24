@@ -1,13 +1,9 @@
 .footer {
 	//Mobile
-
 	display: block;
 
-	margin-top: 200px;
-	padding-top: 45px;
-	padding-bottom: 33px;
-
-	background: linear-gradient(306deg, #636267, #47474b 0%);
+	padding-top: 105px;
+	padding-bottom: 70px;
 
 	//-Иконки-----------------------------
 	&__footer-icons {
@@ -31,6 +27,11 @@
 	&__metaloteka-logo_item {
 		width: 100%;
 		max-width: 288px;
+	}
+
+	&__social-wrapper {
+		display: flex;
+		align-items: center;
 	}
 
 	&__social {
@@ -57,7 +58,7 @@
 	}
 
 	&__clients-title {
-		margin-bottom: 24px;
+		margin-bottom: 25px;
 
 		font-size: 38px;
 		font-weight: 800;
@@ -65,7 +66,7 @@
 	}
 
 	&__catalog-title {
-		margin-bottom: 13px;
+		margin-bottom: 11px;
 
 		font-size: 38px;
 		font-weight: 800;
@@ -96,7 +97,7 @@
 
 	&__contacts {
 		margin-bottom: 18px;
-		padding: 0 39px 0 6px;
+		padding: 0 36px 0 6px;
 	}
 
 	&__address-wrapper {
@@ -104,12 +105,12 @@
 		flex-direction: column;
 		gap: 5px;
 
-		margin-bottom: 28px;
+		margin-bottom: 22px;
 		padding: 0 40px 0;
 	}
 
 	&__subtitle {
-		text-decoration: none;
+		text-decoration: underline;
 		word-break: break-word;
 
 		font-size: $fs-26;
@@ -123,8 +124,13 @@
 		line-height: 1.11;
 	}
 
+	&__messenger-title {
+		font-size: $fs-18;
+		font-weight: 300;
+		line-height: 1.11;
+	}
+
 	&__messenger-subtitle {
-		font-size: $fs-default;
 		font-weight: 300;
 		line-height: 1.14;
 	}
@@ -223,9 +229,21 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+
+		margin-right: 25px;
+
+		margin-bottom: 46px;
+		margin-left: 23px;
+
+		cursor: pointer;
+		transition: all 0.3s;
+
+		border: solid 1px $white;
 		grid-area: b;
 
-		margin-bottom: 42px;
+		&:hover {
+			opacity: 0.8;
+		}
 	}
 
 	&__button {
@@ -234,15 +252,22 @@
 		max-height: 62px;
 		padding: 16px;
 
+		cursor: pointer;
+		transition: all 0.3s;
+
 		text-align: center;
 
 		color: $white;
-		border: solid 1px $white;
+		border: none;
 		background: none;
 
 		font-size: 28px;
 		font-weight: 800;
 		line-height: 1;
+
+		:hover {
+			opacity: 0.8;
+		}
 	}
 
 	&__individuals {
@@ -307,10 +332,11 @@
 	}
 
 	&__privacy-policy-info {
-		display: flex;
+		display: grid;
+		grid-template-columns: minmax(20px, 220px) minmax(20px, 81px);
+
 		align-items: center;
 		flex-wrap: wrap;
-		justify-content: center;
 		gap: 14px;
 
 		margin-bottom: 14px;
@@ -325,15 +351,17 @@
 		flex: 1 1 190px;
 
 		text-decoration: none;
+
+		font-size: $fs-big;
 	}
 
 	&__privacy-policy-map {
 		display: flex;
 		flex: 1 1 100px;
 
-		padding-left: 32px;
-
 		text-decoration: none;
+
+		font-size: $fs-big;
 	}
 
 	&__privacy-policy-img-wrapper {
@@ -356,8 +384,10 @@
 	//Desctop
 
 	@include media(xs) {
-		//-Иконки-----------------------------
+		padding-top: 70px;
+		padding-bottom: 110px;
 
+		//-Иконки-----------------------------
 		&__footer-icons {
 			display: flex;
 			flex-direction: row;
@@ -379,7 +409,7 @@
 
 			margin-bottom: 0;
 
-			padding: 50px 60px 55px 65px;
+			padding: 50px 60px 52px 65px;
 
 			border-top: solid 0.5px #d9d8d8;
 			border-bottom: solid 0.5px #d9d8d8;
@@ -411,6 +441,7 @@
 			gap: 20px;
 
 			padding: 48px 53px;
+			padding-bottom: 51px;
 		}
 
 		&__social-item {
@@ -456,14 +487,31 @@
 			border-bottom: 0.5px solid #d9d8d8;
 		}
 
-		&__address-wrapper {
-			margin-bottom: 0;
-			padding: 35px 50px 35px 45px;
+		&__social-wrapper {
+			display: flex;
+			align-items: center;
 			gap: 5px;
 		}
 
+		&__address-wrapper {
+			margin-bottom: 0;
+			padding: 39px 50px 27px 45px;
+			gap: 4px;
+
+			border-bottom: 0.5px solid #d9d8d8;
+
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+
+		&__subtitle {
+			margin-bottom: 0;
+
+			text-decoration: none;
+		}
+
 		&__messenger {
-			margin-bottom: 42px;
 			margin-bottom: 0;
 			padding: 36px 50px 35px 45px;
 
@@ -472,7 +520,6 @@
 		}
 
 		&__messenger-phone {
-			margin-bottom: 42px;
 			margin-bottom: 0;
 			padding: 36px 50px 35px 45px;
 
@@ -481,7 +528,6 @@
 		}
 
 		&__messenger-wiber {
-			margin-bottom: 42px;
 			margin-bottom: 0;
 			padding: 39px 50px 27px 45px;
 
@@ -499,7 +545,7 @@
 			justify-content: center;
 
 			margin-bottom: 0;
-			padding: 35px 20px 30px 75px;
+			padding: 27px 20px 30px 75px;
 
 			border-right: solid 0.5px #d9d8d8;
 
@@ -520,13 +566,14 @@
 		&__sber-icons {
 			display: flex;
 			overflow-x: hidden;
-			flex: 1 268px;
+			align-items: center;
+			flex: 1 318px;
 			flex-direction: row;
 			flex-wrap: wrap;
 			justify-content: center;
 
 			margin-bottom: 0;
-			padding-top: 16px;
+			padding-top: 26px;
 			padding-left: 0;
 			gap: 29px;
 		}
@@ -553,22 +600,26 @@
 			display: flex;
 			align-items: center;
 
+			margin-right: 33px;
+
 			margin-bottom: 0;
-			padding-top: 10px;
-			padding-right: 30px;
-			padding-bottom: 10px;
-			padding-left: 32px;
+			margin-left: 20px;
+			padding-top: 8px;
+			padding-bottom: 12px;
 		}
 
 		&__button {
-			padding: 12px 60px;
+			padding: 6px 60px;
 		}
 
 		//-Информация---------------------------------------
 
 		&__info-metaloteka {
 			margin-bottom: 0;
-			padding: 29px 55px;
+			padding-top: 29px;
+			padding-right: 55px;
+			padding-bottom: 29px;
+			padding-left: 55px;
 
 			border-top: solid 0.5px #d9d8d8;
 			border-right: solid 0.5px #d9d8d8;
@@ -588,11 +639,12 @@
 		}
 
 		&__privacy-policy-info {
+			display: flex;
 			flex: 1 1 322px;
 			justify-content: space-between;
 
 			margin-bottom: 0;
-			padding-left: 65px;
+			padding-left: 66px;
 
 			border-right: 0.5px solid #d9d8d8;
 			border-bottom: 0.5px solid #d9d8d8;
@@ -605,20 +657,24 @@
 
 			padding: 35px 0;
 			padding-right: 120px;
-			padding-left: 120px;
+			padding-left: 124px;
 
 			border-right: 0.5px solid #d9d8d8;
 			border-bottom: 0.5px solid #d9d8d8;
 		}
 
 		&__privacy-policy {
-			flex: 1 1 100px;
+			flex: 1 1 82px;
+
+			font-size: $fs-big;
 		}
 
 		&__privacy-policy-map {
 			flex: 1 1 0;
 
 			padding-left: 0;
+
+			font-size: $fs-big;
 		}
 
 		&__privacy-policy-img {
@@ -629,7 +685,7 @@
 			flex: 1 1 324px;
 			justify-content: center;
 
-			padding-left: 0;
+			padding-left: 5px;
 
 			border-right: 0.5px solid #d9d8d8;
 			border-bottom: 0.5px solid #d9d8d8;
@@ -637,9 +693,6 @@
 	}
 }
 
-@include media(xs) {
-	.footer {
-		padding-top: 103px;
-		padding-bottom: 107px;
-	}
+.section-metal + .footer {
+	padding-top: 0;
 }

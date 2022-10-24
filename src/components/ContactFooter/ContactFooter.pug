@@ -8,10 +8,6 @@ mixin ContactFooter(props)
 
 	//- верстка компонента
 	+b('contact-footer', {b: BEM('margin')}, 'div')
-		//- if DATA('icon', false)
-		//- 	+e('icon', {}, 'img')(src=`${pathFile}${DATA('icon')}` alt='icon')
-		//- //+e('title', {}, 'span') #{DATA('title')}
-		//- +Text(ELEM('Text'))
 		for item in DATA_ARR('address')
 			//- проверка данных получаемых из item
 			include ../../shared/helpers/pug/shortcut-check-store

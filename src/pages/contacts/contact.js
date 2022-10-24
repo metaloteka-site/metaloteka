@@ -1,27 +1,11 @@
-import '../../layout/assets/images/icon-pin-map.svg';
-import '../../layout/assets/images/icon-qr.svg';
-import '../../layout/assets/images/map.jpg';
-import '../../layout/assets/images/icon-warning.svg';
-const tabs = document.querySelectorAll('.js-tab');
-const tabContents = document.querySelectorAll('.js-tab-content');
-const btn = document.getElementById('btn');
-
-tabs.forEach((tab, index) => {
-	tab.addEventListener('click', (event) => {
-		tabContents.forEach((tabContent) => tabContent.classList.remove('active'));
-		tabs.forEach((tab) => tab.classList.remove('active'));
-
-		event.currentTarget.classList.add('active');
-		tabContents[index].classList.add('active');
-	});
-});
+const btn = document.querySelector('.js-collapse');
 
 btn.addEventListener('click', () => {
 	const activeTabContent = document.querySelector('.js-tab-content.active');
+	activeTabContent.classList.toggle('opened');
 	if (activeTabContent.classList.contains('opened')) {
 		btn.innerHTML = 'Скрыть';
 	} else {
 		btn.innerHTML = 'Развернуть';
 	}
-	activeTabContent.classList.toggle('opened');
 });
