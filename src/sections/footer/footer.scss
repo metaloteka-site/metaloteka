@@ -42,13 +42,13 @@
 
 	&__clients {
 		display: flex;
+		align-items: flex-start;
 		flex-direction: column;
 
-		margin-bottom: 42px;
-		padding: 0 45px 0;
+		margin-bottom: 40px;
+		padding-inline: 45px;
 
 		font-size: $fs-18;
-		font-weight: 300;
 		line-height: 1.11;
 		gap: 12px;
 	}
@@ -225,47 +225,34 @@
 		max-width: 76px;
 	}
 
-	&__button-wrapper {
+	&__button {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 
+		width: 100%;
+		max-width: 270px;
+
 		margin-right: 25px;
 
-		margin-bottom: 46px;
-		margin-left: 23px;
+		margin-bottom: 45px;
+		margin-left: 25px;
+		padding-block: 12px;
 
 		cursor: pointer;
 		transition: all 0.3s;
-
-		border: solid 1px $white;
-		grid-area: b;
-
-		&:hover {
-			opacity: 0.8;
-		}
-	}
-
-	&__button {
-		width: 100%;
-		max-width: 320px;
-		max-height: 62px;
-		padding: 16px;
-
-		cursor: pointer;
-		transition: all 0.3s;
-
 		text-align: center;
 
 		color: $white;
-		border: none;
+
+		border: solid 1px $white;
 		background: none;
 
-		font-size: 28px;
+		font-size: $fs-36;
 		font-weight: 800;
 		line-height: 1;
 
-		:hover {
+		&:hover {
 			opacity: 0.8;
 		}
 	}
@@ -451,7 +438,7 @@
 			flex: 1 1 287px;
 
 			margin-bottom: 0;
-			padding: 68px 42px 78px;
+			padding: 70px 40px 80px;
 
 			border-right: 0.5px solid #d9d8d8;
 			border-bottom: 0.5px solid #d9d8d8;
@@ -592,20 +579,11 @@
 			max-width: 76px;
 		}
 
-		&__button-wrapper {
-			display: flex;
-			align-items: center;
-
-			margin-right: 33px;
+		&__button {
+			margin-right: 35px;
 
 			margin-bottom: 0;
 			margin-left: 20px;
-			padding-top: 8px;
-			padding-bottom: 12px;
-		}
-
-		&__button {
-			padding: 6px 60px;
 		}
 
 		//-Информация---------------------------------------
