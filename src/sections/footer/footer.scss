@@ -5,17 +5,17 @@
 	padding-top: 105px;
 	padding-bottom: 70px;
 
-	//-Иконки-----------------------------
-	&__footer-icons {
+	&__footer-top {
 		display: flex;
 		flex-direction: column;
 	}
 
+	//-Иконки-----------------------------
 	&__metaloteka-logo {
 		display: flex;
 
 		margin-bottom: 40px;
-		padding: 2px 10px 0 39px;
+		padding-inline: 40px;
 
 		border: none;
 	}
@@ -303,8 +303,6 @@
 	//-Информация---------------------------------------
 
 	&__info-metaloteka {
-		display: inline-block;
-
 		margin-bottom: 26px;
 		padding: 0 30px 0 23px;
 
@@ -387,9 +385,7 @@
 		padding-top: 70px;
 		padding-bottom: 110px;
 
-		//-Иконки-----------------------------
-		&__footer-icons {
-			display: flex;
+		&__footer-top {
 			flex-direction: row;
 			flex-wrap: wrap;
 
@@ -397,6 +393,7 @@
 			border-left: 0.5px solid #d9d8d8;
 		}
 
+		//-Иконки-----------------------------
 		&__metaloteka-icons {
 			flex: 1 1 386px;
 
@@ -409,23 +406,23 @@
 
 			margin-bottom: 0;
 
-			padding: 50px 60px 52px 65px;
+			padding-block: 50px;
 
 			border-top: solid 0.5px #d9d8d8;
 			border-bottom: solid 0.5px #d9d8d8;
 		}
 
 		&__icons-font {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			gap: 10px;
+			display: block;
 
-			padding: 67px 55px;
+			padding-block: 67px;
 
 			text-align: center;
+		}
 
-			font-size: $fs-default;
+		&__icon-subtitle {
+			margin-top: 10px;
+
 			font-weight: 400;
 			line-height: 1;
 		}
@@ -440,8 +437,7 @@
 			justify-content: center;
 			gap: 20px;
 
-			padding: 48px 53px;
-			padding-bottom: 51px;
+			padding-block: 50px;
 		}
 
 		&__social-item {

@@ -5,21 +5,23 @@ mixin footer(section)
 	//- верстка секции
 	+b('footer', {}, 'footer')
 		+Container
-			+e('footer-icons', {}, 'div')
+			+e('footer-top', {}, 'div')
 				//-Иконки-------------------------------------------------------------------------------------
 				+e('metaloteka-icons', {}, 'div')
 					+e('icons-font', {}, 'div')
 						+e('logo', {}, 'img')(src=`${pathFile}${S_DATA('logoMetaloteka')}` alt='логотип metaloteka')
-						+e('icon-subtitle', {}, 'h3') #{S_DATA('subtitle')}
+						+e('icon-subtitle', {}, 'p') #{S_DATA('subtitle')}
+
 					+e('metaloteka-logo', {}, 'a')(href='/')
 						+e('metaloteka-logo_item', {}, 'img')(src=`${pathFile}${S_DATA('logo')}` alt='Logo')
+
 					+e('social', {}, 'div')
-						+e('clients-item', {}, 'a')(href='#')
-							+e('social-item', {}, 'img')(src=`${pathFile}${S_DATA('logoMail')}` alt='Mail')
-						+e('clients-item', {}, 'a')(href='#')
-							+e('social-item', {}, 'img')(src=`${pathFile}${S_DATA('logoVk')}` alt='Vk')
-						+e('clients-item', {}, 'a')(href='#')
-							+e('social-item', {}, 'img')(src=`${pathFile}${S_DATA('logoTg')}` alt='Telegram')
+						for item in S_DATA_ARR('socialIcons')
+							//- проверка данных получаемых из item
+							include ../../shared/helpers/pug/shortcut-check-store
+							+e('clients-item', {}, 'a')(href='#')
+								+e('social-item', {}, 'img')(src=`${pathFile}${I_DATA('icon')}` alt=I_DATA('alt'))
+
 				//-Клиентам------------------------------------------------------------------------------------
 				+e('clients', {}, 'div')
 					+e('clients-title', {}, 'h2') #{S_DATA('titleClients')}
@@ -67,7 +69,7 @@ mixin footer(section)
 				+e('button-wrapper', {}, 'div')
 					+e('button', {}, 'button') #{S_DATA('requesitesButton')}
 			//-Информация---------------------------------------------------------------------------------------
-			+e('info-metaloteka', {}, 'span') #{S_DATA('infoMetaloteka')}
+			+e('info-metaloteka', {}, 'div') #{S_DATA('infoMetaloteka')}
 			//-Политика конфидициальности-----------------------------------------------------------------------
 			+e('privacy-policy-wrapper', {}, 'div')
 				+e('privacy-policy-info', {}, 'div')
