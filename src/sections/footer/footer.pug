@@ -12,14 +12,14 @@ mixin footer(section)
 						+e('logo', {}, 'img')(src=`${pathFile}${S_DATA('logoMetaloteka')}` alt='логотип metaloteka')
 						+e('icon-subtitle', {}, 'p') #{S_DATA('subtitle')}
 
-					+e('metaloteka-logo', {}, 'a')(href='/')
-						+e('metaloteka-logo_item', {}, 'img')(src=`${pathFile}${S_DATA('logo')}` alt='Logo')
+					+e('metaloteka-logo', {}, 'a')(href=S_DATA('hrefLogo'))
+						+e('metaloteka-logo_item', {}, 'img')(src=`${pathFile}${S_DATA('logo')}` alt=S_DATA('altLogo'))
 
 					+e('social', {}, 'div')
 						for item in S_DATA_ARR('socialIcons')
 							//- проверка данных получаемых из item
 							include ../../shared/helpers/pug/shortcut-check-store
-							+e('clients-item', {}, 'a')(href='#')
+							+e('clients-item', {}, 'a')(href=I_DATA('href'))
 								+e('social-item', {}, 'img')(src=`${pathFile}${I_DATA('icon')}` alt=I_DATA('alt'))
 
 				//-Клиентам------------------------------------------------------------------------------------
@@ -38,7 +38,7 @@ mixin footer(section)
 					for item in section.dataArr.catalog
 						//- проверка данных получаемых из item
 						include ../../shared/helpers/pug/shortcut-check-store
-						+e('catalog-item', {}, 'a')(href='#')  !{I_DATA('text')}
+						+e('catalog-item', {}, 'a')(href=I_DATA('href'))  !{I_DATA('text')}
 
 				//-Контакты-------------------------------------------------------------------------------------
 				+e('contacts', {}, 'div')
@@ -47,15 +47,15 @@ mixin footer(section)
 						include ../../shared/helpers/pug/shortcut-check-store
 						+e('address-wrapper', {}, 'div')
 							+e('social-wrapper', {}, 'div')
-								+e('subtitle', {}, 'p') #{I_DATA('text')}
-								+e('subtitle', {}, 'p') #{I_DATA('viber')}
+								+e('subtitle', {}, 'a')(href=I_DATA('href')) #{I_DATA('text')}
+								+e('subtitle', {}, 'a')(href=I_DATA('hrefWb')) #{I_DATA('viber')}
 							+e('messenger-title', {}, 'p') #{I_DATA('info1')}
 							+e('messenger-subtitle', {}, 'p') #{I_DATA('info')}
 
 			//-Реквизиты----------------------------------------------------------------------------------------
 			+e('requesites', {}, 'div')
 				+e('requesites-info', {}, 'div')
-					+e('requesites-img', {}, 'img')(src=`${pathFile}${S_DATA('iconRuble')}` alt='логотип metaloteka')
+					+e('requesites-img', {}, 'img')(src=`${pathFile}${S_DATA('iconRuble')}` alt=S_DATA('altRuble'))
 					+e('individuals', {}, 'div')
 						+e('title-individuals', {}, 'span') #{S_DATA('titleRequesites')}
 						+e('subtitle-individuals', {}, 'span') #{S_DATA('requesitesIndividuals')}
@@ -63,9 +63,11 @@ mixin footer(section)
 						+e('title-individuals', {}, 'span') #{S_DATA('subtitleRequesites')}
 						+e('subtitle-individuals', {}, 'span') #{S_DATA('requesitesLegalEntities')}
 				+e('sber-icons', {}, 'div')
-					+e('logo-sberbank', {}, 'img')(src=`${pathFile}${S_DATA('logoSberbank')}` alt='sber')
-					+e('logo-payment', {}, 'img')(src=`${pathFile}${S_DATA('logoPaymentSbr')}` alt='sber')
-					+e('logo-mir', {}, 'img')(src=`${pathFile}${S_DATA('logoMir')}` alt='mir')
+					for item in S_DATA_ARR('sberlIcons')
+						//- проверка данных получаемых из item
+						include ../../shared/helpers/pug/shortcut-check-store
+						+e('clients-item', {}, 'a')(href=I_DATA('href'))
+							+e('logo-sberbank ', {}, 'img')(src=`${pathFile}${I_DATA('icon')}` alt=I_DATA('alt'))
 				+e('button', {}, 'button') #{S_DATA('requesitesButton')}
 
 			//-Информация---------------------------------------------------------------------------------------
@@ -74,8 +76,8 @@ mixin footer(section)
 			//-Политика конфидициальности-----------------------------------------------------------------------
 			+e('privacy-policy-wrapper', {}, 'div')
 				+e('privacy-policy-info', {}, 'div')
-					+e('privacy-policy', {}, 'a')(href='#') #{S_DATA('privacyPolicy')}
-					+e('privacy-policy-map', {}, 'a')(href='#') #{S_DATA('privacyMap')}
-				+e('privacy-policy-img-wrapper', {}, 'a')(href='/')
-					+e('privacy-policy-img', {}, 'img')(src=`${pathFile}${S_DATA('logoMetalotekafont')}` alt='логотип metaloteka')
-				+e('privacy-policy-web', {}, 'a')(href='#') #{S_DATA('webStudio')}
+					+e('privacy-policy', {}, 'a')(href=S_DATA('hrefPrivacyPolicy')) #{S_DATA('privacyPolicy')}
+					+e('privacy-policy-map', {}, 'a')(href=S_DATA('hrefPrivacyMap')) #{S_DATA('privacyMap')}
+				+e('privacy-policy-img-wrapper', {}, 'a')(href=S_DATA('hrefLogoMetalotekafont'))
+					+e('privacy-policy-img', {}, 'img')(src=`${pathFile}${S_DATA('logoMetalotekafont')}` alt=S_DATA('altLogoMetalotekafont'))
+				+e('privacy-policy-web', {}, 'a')(href=S_DATA('hrefWebStudio')) #{S_DATA('webStudio')}

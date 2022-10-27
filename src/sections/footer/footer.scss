@@ -68,6 +68,10 @@
 	&__catalog-title {
 		margin-bottom: 11px;
 
+		letter-spacing: normal;
+
+		color: #ffffff;
+
 		font-size: 38px;
 		font-weight: 800;
 		line-height: 0.68;
@@ -77,9 +81,10 @@
 
 	&__catalog {
 		display: flex;
+		align-items: flex-start;
 		flex-direction: column;
 
-		margin-bottom: 43px;
+		margin-bottom: 45px;
 		padding: 0 39px 0 46px;
 
 		font-size: $fs-26;
@@ -96,8 +101,8 @@
 	//-Контакты-----------------------------------
 
 	&__contacts {
-		margin-bottom: 18px;
-		padding: 0 36px 0 6px;
+		margin-bottom: 30px;
+		padding: 0 35px 0 5px;
 	}
 
 	&__address-wrapper {
@@ -148,32 +153,6 @@
 		line-height: 1;
 	}
 
-	&__messenger-phone {
-		display: flex;
-		flex-direction: column;
-		gap: 7px;
-
-		margin-bottom: 26px;
-		padding: 0 40px 0;
-
-		font-size: $fs-26;
-		font-weight: 800;
-		line-height: 1;
-	}
-
-	&__messenger-wiber {
-		display: flex;
-		flex-direction: column;
-		gap: 6px;
-
-		margin-bottom: 28px;
-		padding: 0 40px 0;
-
-		font-size: $fs-26;
-		font-weight: 800;
-		line-height: 1;
-	}
-
 	//-Реквезиты---------------------------------------
 
 	&__requesites {
@@ -195,7 +174,6 @@
 	&__sber-icons {
 		display: flex;
 		overflow-x: scroll;
-		flex-direction: row;
 		flex-wrap: nowrap;
 
 		max-width: 502px;
@@ -210,19 +188,10 @@
 	&__logo-sberbank {
 		flex: 1 1 140px;
 
-		max-width: 188px;
-	}
+		// max-width: 188px;
 
-	&__logo-payment {
-		flex: 1 1 190px;
-
-		max-width: 80px;
-	}
-
-	&__logo-mir {
-		flex: 1 1 190px;
-
-		max-width: 76px;
+		max-width: max-content;
+		height: 30px;
 	}
 
 	&__button {
@@ -231,7 +200,7 @@
 		justify-content: center;
 
 		width: 100%;
-		max-width: 270px;
+		max-width: 319px;
 
 		margin-right: 25px;
 
@@ -249,7 +218,7 @@
 		background: none;
 
 		font-size: $fs-36;
-		font-weight: 800;
+		font-weight: 700;
 		line-height: 1;
 
 		&:hover {
@@ -291,11 +260,10 @@
 
 	&__info-metaloteka {
 		margin-bottom: 26px;
-		padding: 0 30px 0 23px;
+		padding: 0 30px 0 25px;
 
 		word-break: break-word;
 
-		font-size: $fs-default;
 		font-weight: 200;
 		line-height: 1.29;
 	}
@@ -392,7 +360,6 @@
 			justify-content: center;
 
 			margin-bottom: 0;
-
 			padding-block: 50px;
 
 			border-top: solid 0.5px #d9d8d8;
@@ -401,7 +368,6 @@
 
 		&__icons-font {
 			display: block;
-
 			padding-block: 67px;
 
 			text-align: center;
@@ -423,7 +389,6 @@
 			display: flex;
 			justify-content: center;
 			gap: 20px;
-
 			padding-block: 50px;
 		}
 
@@ -453,8 +418,7 @@
 			border-right: 0.5px solid #d9d8d8;
 			border-bottom: 0.5px solid #d9d8d8;
 
-			font-size: 24px;
-
+			font-size: $fs-24;
 			gap: 26px;
 		}
 
@@ -471,8 +435,6 @@
 		}
 
 		&__social-wrapper {
-			display: flex;
-			align-items: center;
 			gap: 5px;
 		}
 
@@ -496,23 +458,7 @@
 
 		&__messenger {
 			margin-bottom: 0;
-			padding: 36px 50px 35px 45px;
-
-			border-top: solid 0.5px #d9d8d8;
-			gap: 5px;
-		}
-
-		&__messenger-phone {
-			margin-bottom: 0;
-			padding: 36px 50px 35px 45px;
-
-			border-top: solid 0.5px #d9d8d8;
-			gap: 5px;
-		}
-
-		&__messenger-wiber {
-			margin-bottom: 0;
-			padding: 39px 50px 27px 45px;
+			padding: 35px 50px 35px 45px;
 
 			border-top: solid 0.5px #d9d8d8;
 			gap: 5px;
@@ -528,7 +474,7 @@
 			justify-content: center;
 
 			margin-bottom: 0;
-			padding: 27px 20px 30px 75px;
+			padding: 37px 20px 30px 75px;
 
 			border-right: solid 0.5px #d9d8d8;
 
@@ -547,11 +493,9 @@
 		}
 
 		&__sber-icons {
-			display: flex;
 			overflow-x: hidden;
 			align-items: center;
 			flex: 1 318px;
-			flex-direction: row;
 			flex-wrap: wrap;
 			justify-content: center;
 
@@ -580,6 +524,7 @@
 		}
 
 		&__button {
+			max-width: 270px;
 			margin-right: 35px;
 
 			margin-bottom: 0;
@@ -590,10 +535,7 @@
 
 		&__info-metaloteka {
 			margin-bottom: 0;
-			padding-top: 29px;
-			padding-right: 55px;
-			padding-bottom: 29px;
-			padding-left: 55px;
+			padding: 30px 55px 30px 55px;
 
 			border-top: solid 0.5px #d9d8d8;
 			border-right: solid 0.5px #d9d8d8;
@@ -628,10 +570,9 @@
 			display: flex;
 			align-items: center;
 			flex: 1 1 326px;
+			justify-content: center;
 
 			padding: 35px 0;
-			padding-right: 120px;
-			padding-left: 124px;
 
 			border-right: 0.5px solid #d9d8d8;
 			border-bottom: 0.5px solid #d9d8d8;
