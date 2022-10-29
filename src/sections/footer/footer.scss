@@ -1,25 +1,21 @@
 .footer {
 	//Mobile
-
 	display: block;
 
-	margin-top: 200px;
-	padding-top: 45px;
-	padding-bottom: 67px;
+	padding-top: 105px;
+	padding-bottom: 70px;
 
-	background: linear-gradient(306deg, #636267, #47474b 0%);
-
-	//-Иконки-----------------------------
-	&__footer-icons {
+	&__footer-top {
 		display: flex;
 		flex-direction: column;
 	}
 
+	//-Иконки-----------------------------
 	&__metaloteka-logo {
 		display: flex;
 
 		margin-bottom: 40px;
-		padding: 2px 10px 0 39px;
+		padding-inline: 40px;
 
 		border: none;
 	}
@@ -46,13 +42,13 @@
 
 	&__clients {
 		display: flex;
+		align-items: flex-start;
 		flex-direction: column;
 
-		margin-bottom: 42px;
-		padding: 0 45px 0;
+		margin-bottom: 40px;
+		padding-inline: 45px;
 
 		font-size: $fs-18;
-		font-weight: 300;
 		line-height: 1.11;
 		gap: 12px;
 	}
@@ -72,6 +68,10 @@
 	&__catalog-title {
 		margin-bottom: 11px;
 
+		letter-spacing: normal;
+
+		color: #ffffff;
+
 		font-size: 38px;
 		font-weight: 800;
 		line-height: 0.68;
@@ -81,9 +81,10 @@
 
 	&__catalog {
 		display: flex;
+		align-items: flex-start;
 		flex-direction: column;
 
-		margin-bottom: 43px;
+		margin-bottom: 45px;
 		padding: 0 39px 0 46px;
 
 		font-size: $fs-26;
@@ -100,8 +101,8 @@
 	//-Контакты-----------------------------------
 
 	&__contacts {
-		margin-bottom: 18px;
-		padding: 0 36px 0 6px;
+		margin-bottom: 30px;
+		padding: 0 35px 0 5px;
 	}
 
 	&__address-wrapper {
@@ -120,7 +121,6 @@
 		font-size: $fs-26;
 		font-weight: 800;
 		line-height: 1;
-		// margin-bottom: 5px;
 	}
 
 	&__adress-subtitle {
@@ -153,32 +153,6 @@
 		line-height: 1;
 	}
 
-	&__messenger-phone {
-		display: flex;
-		flex-direction: column;
-		gap: 7px;
-
-		margin-bottom: 26px;
-		padding: 0 40px 0;
-
-		font-size: $fs-26;
-		font-weight: 800;
-		line-height: 1;
-	}
-
-	&__messenger-wiber {
-		display: flex;
-		flex-direction: column;
-		gap: 6px;
-
-		margin-bottom: 28px;
-		padding: 0 40px 0;
-
-		font-size: $fs-26;
-		font-weight: 800;
-		line-height: 1;
-	}
-
 	//-Реквезиты---------------------------------------
 
 	&__requesites {
@@ -200,7 +174,6 @@
 	&__sber-icons {
 		display: flex;
 		overflow-x: scroll;
-		flex-direction: row;
 		flex-wrap: nowrap;
 
 		max-width: 502px;
@@ -210,67 +183,49 @@
 		gap: 74px;
 		grid-area: a;
 		grid-template-columns: 1fr;
+
+		&::-webkit-scrollbar {
+			width: 0;
+		}
 	}
 
 	&__logo-sberbank {
 		flex: 1 1 140px;
 
-		max-width: 188px;
+		// max-width: 188px;
+
+		max-width: max-content;
+		height: 30px;
 	}
 
-	&__logo-payment {
-		flex: 1 1 190px;
-
-		max-width: 80px;
-	}
-
-	&__logo-mir {
-		flex: 1 1 190px;
-
-		max-width: 76px;
-	}
-
-	&__button-wrapper {
+	&__button {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 
+		width: 100%;
+		max-width: 319px;
+
 		margin-right: 25px;
 
-		margin-bottom: 46px;
-		margin-left: 23px;
+		margin-bottom: 45px;
+		margin-left: 25px;
+		padding-block: 12px;
 
 		cursor: pointer;
 		transition: all 0.3s;
-
-		border: solid 1px $white;
-		grid-area: b;
-
-		&:hover {
-			opacity: 0.8;
-		}
-	}
-
-	&__button {
-		width: 100%;
-		max-width: 320px;
-		max-height: 62px;
-		padding: 16px;
-
-		cursor: pointer;
-		transition: all 0.3s;
-
 		text-align: center;
 
 		color: $white;
-		border: none;
+
+		border: solid 1px $white;
 		background: none;
 
-		font-size: 28px;
-		font-weight: 800;
+		font-size: $fs-36;
+		font-weight: 700;
 		line-height: 1;
 
-		:hover {
+		&:hover {
 			opacity: 0.8;
 		}
 	}
@@ -308,14 +263,11 @@
 	//-Информация---------------------------------------
 
 	&__info-metaloteka {
-		display: inline-block;
-
 		margin-bottom: 26px;
-		padding: 0 30px 0 23px;
+		padding: 0 30px 0 25px;
 
 		word-break: break-word;
 
-		font-size: $fs-default;
 		font-weight: 200;
 		line-height: 1.29;
 	}
@@ -339,10 +291,9 @@
 	&__privacy-policy-info {
 		display: grid;
 		grid-template-columns: minmax(20px, 220px) minmax(20px, 81px);
-		// display: flex;
+
 		align-items: center;
 		flex-wrap: wrap;
-		// justify-content: center;
 		gap: 14px;
 
 		margin-bottom: 14px;
@@ -364,8 +315,6 @@
 	&__privacy-policy-map {
 		display: flex;
 		flex: 1 1 100px;
-
-		// padding-left: 32px;
 
 		text-decoration: none;
 
@@ -392,10 +341,10 @@
 	//Desctop
 
 	@include media(xs) {
-		//-Иконки-----------------------------
+		padding-top: 70px;
+		padding-bottom: 110px;
 
-		&__footer-icons {
-			display: flex;
+		&__footer-top {
 			flex-direction: row;
 			flex-wrap: wrap;
 
@@ -403,6 +352,7 @@
 			border-left: 0.5px solid #d9d8d8;
 		}
 
+		//-Иконки-----------------------------
 		&__metaloteka-icons {
 			flex: 1 1 386px;
 
@@ -414,24 +364,22 @@
 			justify-content: center;
 
 			margin-bottom: 0;
-
-			padding: 50px 60px 52px 65px;
+			padding-block: 50px;
 
 			border-top: solid 0.5px #d9d8d8;
 			border-bottom: solid 0.5px #d9d8d8;
 		}
 
 		&__icons-font {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			gap: 10px;
-
-			padding: 67px 55px;
+			display: block;
+			padding-block: 67px;
 
 			text-align: center;
+		}
 
-			font-size: $fs-default;
+		&__icon-subtitle {
+			margin-top: 10px;
+
 			font-weight: 400;
 			line-height: 1;
 		}
@@ -445,9 +393,7 @@
 			display: flex;
 			justify-content: center;
 			gap: 20px;
-
-			padding: 48px 53px;
-			padding-bottom: 51px;
+			padding-block: 50px;
 		}
 
 		&__social-item {
@@ -461,7 +407,7 @@
 			flex: 1 1 287px;
 
 			margin-bottom: 0;
-			padding: 68px 42px 78px;
+			padding: 70px 40px 80px;
 
 			border-right: 0.5px solid #d9d8d8;
 			border-bottom: 0.5px solid #d9d8d8;
@@ -476,8 +422,7 @@
 			border-right: 0.5px solid #d9d8d8;
 			border-bottom: 0.5px solid #d9d8d8;
 
-			font-size: 24px;
-
+			font-size: $fs-24;
 			gap: 26px;
 		}
 
@@ -494,8 +439,6 @@
 		}
 
 		&__social-wrapper {
-			display: flex;
-			align-items: center;
 			gap: 5px;
 		}
 
@@ -518,27 +461,8 @@
 		}
 
 		&__messenger {
-			margin-bottom: 42px;
 			margin-bottom: 0;
-			padding: 36px 50px 35px 45px;
-
-			border-top: solid 0.5px #d9d8d8;
-			gap: 5px;
-		}
-
-		&__messenger-phone {
-			margin-bottom: 42px;
-			margin-bottom: 0;
-			padding: 36px 50px 35px 45px;
-
-			border-top: solid 0.5px #d9d8d8;
-			gap: 5px;
-		}
-
-		&__messenger-wiber {
-			margin-bottom: 42px;
-			margin-bottom: 0;
-			padding: 39px 50px 27px 45px;
+			padding: 35px 50px 35px 45px;
 
 			border-top: solid 0.5px #d9d8d8;
 			gap: 5px;
@@ -554,7 +478,7 @@
 			justify-content: center;
 
 			margin-bottom: 0;
-			padding: 27px 20px 30px 75px;
+			padding: 37px 20px 30px 75px;
 
 			border-right: solid 0.5px #d9d8d8;
 
@@ -573,13 +497,9 @@
 		}
 
 		&__sber-icons {
-			display: flex;
 			overflow-x: hidden;
 			align-items: center;
-			// flex: 1 268px;
 			flex: 1 318px;
-			// 1 318px;
-			flex-direction: row;
 			flex-wrap: wrap;
 			justify-content: center;
 
@@ -591,7 +511,6 @@
 
 		&__logo-sberbank {
 			flex: 1 1 140px;
-			// padding-top: 13px;
 
 			max-width: 188px;
 		}
@@ -604,38 +523,23 @@
 
 		&__logo-mir {
 			flex: 1 1 190px;
-			// padding-top: 13px;
 
 			max-width: 76px;
 		}
 
-		&__button-wrapper {
-			display: flex;
-			align-items: center;
-
-			margin-right: 33px;
+		&__button {
+			max-width: 270px;
+			margin-right: 35px;
 
 			margin-bottom: 0;
-			// padding-left: 32px;
 			margin-left: 20px;
-			padding-top: 8px;
-			// padding-right: 33px;
-			padding-bottom: 12px;
-		}
-
-		&__button {
-			padding: 6px 60px;
 		}
 
 		//-Информация---------------------------------------
 
 		&__info-metaloteka {
 			margin-bottom: 0;
-			// padding: 29px 55px;
-			padding-top: 29px;
-			padding-right: 55px;
-			padding-bottom: 29px;
-			padding-left: 55px;
+			padding: 30px 55px 30px 55px;
 
 			border-top: solid 0.5px #d9d8d8;
 			border-right: solid 0.5px #d9d8d8;
@@ -670,10 +574,9 @@
 			display: flex;
 			align-items: center;
 			flex: 1 1 326px;
+			justify-content: center;
 
 			padding: 35px 0;
-			padding-right: 120px;
-			padding-left: 124px;
 
 			border-right: 0.5px solid #d9d8d8;
 			border-bottom: 0.5px solid #d9d8d8;
@@ -709,10 +612,6 @@
 	}
 }
 
-@include media(xs) {
-	.footer {
-		padding-top: 24px;
-		padding-bottom: 107px;
-		padding-left: 22px;
-	}
+.section-metal + .footer {
+	padding-top: 0;
 }

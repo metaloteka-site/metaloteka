@@ -3,7 +3,7 @@ mixin section-contact(section)
 	include ../../shared/helpers/pug/shortcut-check-store
 
 	//- верстка секции
-	+b('contacts', {}, 'section')
+	+b('section-contact', {}, 'section')
 		+Row(S_ELEM('Row'))
 			+e('left')
 				+e('circle', {}, 'div') MT
@@ -14,11 +14,13 @@ mixin section-contact(section)
 				for item in S_ELEM_ARR('ContactInformation')
 					+ContactInformation(item)
 
-				for item in S_ELEM_ARR('ContactTabs')
-					+ContactTabs(item)
+				+Tabs(S_ELEM('Tabs'))
+
 				+e('button js-collapse', {}, 'button') Развернуть
+				+e('line', {}, 'hr')
 				+e('footer', {b: 'cg-20'}, 'div')
-					+e('qr', {}, 'img')(src=`${pathFile}/icon-qr.svg`)
+					+e('qr', {}, 'img')(src=`${pathFile}${S_DATA('qr')}`)
 					for item in S_ELEM_ARR('ContactInformationFooter')
 						+ContactInformationFooter(item)
+
 			+e('right', {}, 'div') slider
