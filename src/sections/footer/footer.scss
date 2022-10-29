@@ -183,6 +183,10 @@
 		gap: 74px;
 		grid-area: a;
 		grid-template-columns: 1fr;
+
+		&::-webkit-scrollbar {
+			width: 0;
+		}
 	}
 
 	&__logo-sberbank {
