@@ -1,6 +1,9 @@
 import './app.scss';
-import '../pages/contacts/contact';
-class Game {
-	name = 'Violin Charades';
-}
-new Game();
+
+// подключение js компонентов
+import { Tabs } from '../components';
+
+// Вызов js после загрузки DOM дерева
+window.addEventListener('DOMContentLoaded', () => {
+	Tabs();
+});
