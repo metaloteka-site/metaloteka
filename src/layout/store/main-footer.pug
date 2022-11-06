@@ -3,14 +3,13 @@
 		data: {
 			srcLogo: './logo.svg',
 			logo: '/logo.svg',
-			logoMail: '/logo-mail.svg',
-			logoVk: '/logo-vk.svg',
-			logoTg: '/logo-tg.svg',
-			logoPaymentSbr: '/payment-logo-sbp.svg',
-			logoSberbank: '/logo-sberbank.svg',
-			logoMir: '/logo-mirlogo.svg',
+			altLogo:'Logo',
+			hrefLogo:'#',
 			iconRuble: '/icon-ruble.svg',
+			altRuble: 'iconRuble',
 			logoMetalotekafont: '/metaloteka-font-logo.svg',
+			hrefLogoMetalotekafont: '#',
+			altLogoMetalotekafont: 'metaloteka-font-logo',
 			logoMetaloteka: '/metaloteka-logo.svg',
 			subtitle: 'Металлопрокат оптом и в розницу',
 			titleCatalog: 'Каталог',
@@ -29,317 +28,187 @@
 			whatsappWiber:"Whatsapp | Viber",
 			whatsappWiberInfo:"Напишите нам в мессенджер",
 			webStudio:"Сайт разработан веб-студией Брэнд Бэйкер",
+			hrefWebStudio:"#",
 			privacyPolicy:"Политика конфиденциальности",
+			hrefPrivacyPolicy:"#",
 			privacyMap:"Карта сайта",
+			hrefPrivacyMap:"#",
 			infoMetaloteka: "Metaloteka, 2021. Все ресурсы сайта www.metaloteka.ru, включая (но не ограничиваясь) текстовую, графическую, фотографическую и видео информацию, структуру, дизайн и оформление страниц, товарные знаки, доменное имя, фирменное наименование являются объектами авторского права и прав на интеллектуальную собственность, защищены российским законодательством и международными соглашениями об охране авторских прав и интеллектуальной собственности. Указанные на сайте цены не являются публичной офертой (ст. 435 ГК РФ).",
 		},
-		elem: {
-			ContactFooter: {
-				elemArr: [
-					{
-						data: {
-							contact: 'г. Москва',
-							icon: '/icon-pin-map.svg'
-						},
-						bem: {
-							margin: 'ml-xl-60'
-						},
-						elem: {
-							Text: {
-								data: {
-									text: 'Регион'
-								},
-								opt: {
-									isElementClass: true
-								}
-							}
-						}
-					},
-					{
-						data: {
-							contact: 'г. Москва',
-							icon: '/logo.svg'
-						},
-						dataArr: {
-							address: [
-								{
-									data: {
-										text: 'Москва',
-									}
-								},
-								{
-									data: {
-										text: 'г.Москва, ул.Воскресенская, 84 Бизнес-центр «Чистые пруды»',
-									}
-								}
-							],
-							phoneInfo: [
-								{
-									data: {
-										tel: '+7 (495) 545 64 20',
-										href: 'tel:+74955456420'
-									}
-								},
-								{
-									data: {
-										text: 'Телефон клиентской поддержки',
-									}
-								}
-							],
-							mailInfo: [
-								{
-									data: {
-										mail: 'client@metaloteka.ru',
-										href: 'mailto:client@metaloteka.ru'
-									}
-								},
-								{
-									data: {
-										text: 'Адрес электронной почты',
-									}
-								}
-							],
-							whatsappWiber: [
-								{
-									data: {
-										text: 'Whatsapp | Viber',
-									}
-								},
-								{
-									data: {
-										info: 'Напишите нам в мессенджер',
-									}
-								}
-							],
-						},
-						bem: {
-							margin: 'ml-xl-60'
-						}
-						//- elem: {
-						//- 	Text: {
-						//- 		data:{
-						//- 			text: 'г.Москва, ул.Воскресенская, 84 Бизнес-центр «Чистые пруды»',
-						//- 			mesto: 'Турек, ул.Воскресенская, 84 Бизнес-центр «Чистые пруды»',
-						//- 		},
-						//- 		opt: {
-						//- 			isElementClass: true
-						//- 		}
-						//- 	}
-						//- }
-					}
-					//- {
-					//- 	data: {
-					//- 		contact: '+7 495 545 64 20',
-					//- 		href: 'tel:+74955456420'
-					//- 	},
-					//- 	bem: {
-					//- 		margin: 'ml-xl-35'
-					//- 	},
-					//- 	opt: {
-					//- 		link: true
-					//- 	},
-					//- 	elem: {
-					//- 		Text: {
-					//- 			data: {
-					//- 				text: 'Телефонccc клиентской поддержки'
-					//- 			},
-					//- 			opt: {
-					//- 				isElementClass: true
-					//- 			}
-					//- 		}
-					//- 	}
-					//- },
-					//- {
-					//- 	data: {
-					//- 		contact: 'info@metaloteka.ru',
-					//- 		href: 'mailto:info@metaloteka.ru'
-					//- 	},
-					//- 	bem: {
-					//- 		margin: 'ml-xl-35'
-					//- 	},
-					//- 	opt: {
-					//- 		link: true
-					//- 	},
-					//- 	elem: {
-					//- 		Text: {
-					//- 			data: {
-					//- 				text: 'Адрес электронной почты'
-					//- 			},
-					//- 			opt: {
-					//- 				isElementClass: true
-					//- 			}
-					//- 		}
-					//- 	}
-					//- }
-				]
-			},
-			ComponyRight: {
-				elemArr: [
-					{
-						data: {
-								text: '441'
-						},
-					},
-					{
-						data: {
-							text: 'trt441'
-						},
-					},
-				]
-			},
-			Row: {
-				bem: {
-					rowCols: 'row-cols-xl-3 row-cols-2',
-					gap: 'rg-20 rg-xl-30'
-				}
-			},
-			RowFooterMetaloteka: {
-				rowCols: 'row-cols-xl-3 row-cols-2',
-				gap: 'rg-20 rg-xl-30'
-			},
-			col : {
-				data: {},
-				bem: { rowCols: 'ert' },
-				opt: {}, elem: {}
-			}
-		},
 		dataArr: {
-				catalog: [
-					{
-						data: {
-							text: "Листовой прокат",
-							link: 'fdf'
-						},
-						bem: {
-							margin: 'ml-xl-60'
-						}
+			socialIcons: [
+				{
+					data: {
+						icon: '/logo-mail.svg',
+						alt: 'Mail',
+						href: '#'
+					}
+				},
+				{
+					data: {
+						icon: '/logo-vk.svg',
+						alt: 'Vk',
+						href: '#'
+					}
+				},
+				{
+					data: {
+						icon: '/logo-tg.svg',
+						alt: 'Telegram',
+						href: '#'
+					}
+				}
+			],
+			clients: [
+				{
+					data: {
+						text: "О компании",
+						href: '#'
+					}
+				},
+				{
+					data: {
+						text: "Каталог продукции",
+						href: '#'
+					}
+				},
+				{
+					data: {
+						text: "Прайс-лист",
+						href: '#'
+					}
+				},
+				{
+					data: {
+						text: "Доставка",
+						href: '#'
+					}
+				},
+				{
+					data: {
+						text: "Оплата",
+						href: '#'
+					}
+				},
+				{
+					data: {
+						text: "Сотрудничество",
+						href: '#'
+					}
+				},
+				{
+					data: {
+						text: "Оптовые продажи",
+						href: '#'
+					}
+				},
+				{
+					data: {
+						text: "Реквезиты организации",
+						href: '#'
+					}
+				},
+				{
+					data: {
+						text: "Контакты",
+						href: '/contacts.html'
+					}
+				},
+			],
+			catalog: [
+				{
+					data: {
+						text: "Листовой прокат",
+						href: '#'
 					},
-					{
-						data: {
-							text: "Арматурный прокат"
-						}
+				},
+				{
+					data: {
+						text: "Арматурный прокат",
+						href: '#'
+					}
+				},
+				{
+					data: {
+						text: "Метизная продукция",
+						href: '#'
+					}
+				},
+				{
+					data: {
+						text: "Трубный прокат",
+						href: '#'
+					}
+				},
+				{
+					data: {
+						text: "Нержавеющая сталь",
+						href: '#'
+					}
+				},
+				{
+					data: {
+						text: "Цветные металлы",
+						href: '#'
+					}
+				},
+			],
+			contacts: [
+				{
+					data: {
+						text: "Москва",
+						info1:"г.Москва, ул.Воскресенская, 84 Бизнес-центр «Чистые пруды»",
 					},
-					{
-						data: {
-							text: "Метизная продукция"
-						}
-					},
-					{
-						data: {
-							text: "Трубный прокат"
-						}
-					},
-					{
-						data: {
-							text: "Нержавеющая сталь"
-						}
-					},
-					{
-						data: {
-							text: "Цветные металлы"
-						}
-					},
-				],
-				clients: [
-					{
-						data: {
-							text: "О компании",
-							href: 'tel:+74955456420'
-
-						},
-						bem: {
-
-						}
-					},
-					{
-						data: {
-							text: "Каталог продукции"
-						}
-					},
-					{
-						data: {
-							text: "Прайс-лист"
-						}
-					},
-					{
-						data: {
-							text: "Доставка"
-						}
-					},
-					{
-						data: {
-							text: "Оплата"
-						}
-					},
-					{
-						data: {
-							text: "Сотрудничество"
-						}
-					},
-					{
-						data: {
-							text: "Оптовые продажи"
-						}
-					},
-					{
-						data: {
-							text: "Реквезиты организации"
-						}
-					},
-					{
-						data: {
-							text: "Контакты"
-						}
-					},
-				],
-				contacts: [
-					{
-						data: {
-							text: "Москва",
-						},
-						bem: {
-							margin: 'ml-xl-60'
-
-						}
-					},
-					{
-						data: {
-							text: "г.Москва, ул.Воскресенская, 84 Бизнес-центр «Чистые пруды»"
-						}
-					},
-				],
-				testiu: [
-					{
-						data: {
-							text: "Москва",
-							href: "239399333",
-							//- info:"г.Москва, ул.Воскресенская, 84 Бизнес-центр «Чистые пруды»",
-							info1:"г.Москва, ул.Воскресенская, 84 Бизнес-центр «Чистые пруды»",
-						},
-						bem: {
-							margin: 'ml-xl-60'
-
-						}
-					},
-					{
-						data: {
-							text: "8934255233252",
-							info:"Телефон клиентской поддержки",
-						}
-					},
-					{
-						data: {
-							text: "client@metaloteka.ru",
-							info:"Адрес электронной почты",
-						}
-					},
-					{
-						data: {
-							text: "Whatsapp |",
-							viber: " Viber",
-							info:"Напишите нам в мессенджер",
-						}
-					},
-				],
+					bem: {
+						margin: 'ml-xl-60'
+					}
+				},
+				{
+					data: {
+						text: "+7 495 545 64 20",
+						href: "+74955456420",
+						info:"Телефон клиентской поддержки",
+					}
+				},
+				{
+					data: {
+						text: "client@metaloteka.ru",
+						href: "client@metaloteka.ru",
+						info:"Адрес электронной почты",
+					}
+				},
+				{
+					data: {
+						text: "Whatsapp |",
+						hrefWs: "+74955456420",
+						viber: " Viber",
+						hrefWb: "+74955456420",
+						info:"Напишите нам в мессенджер",
+					}
+				},
+			],
+			sberlIcons: [
+				{
+					data: {
+						icon: '/logo-sberbank.svg',
+						alt: 'logo-sberbank',
+						href: '#'
+					}
+				},
+				{
+					data: {
+						icon: '/payment-logo-sbp.svg',
+						alt: 'payment-logo-sbp',
+						href: '#'
+					}
+				},
+				{
+					data: {
+						icon: '/logo-mirlogo.svg',
+						alt: 'logo-mirlogo',
+						href: '#'
+					}
+				}
+			],
 		},
 	}
