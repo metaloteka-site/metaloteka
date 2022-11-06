@@ -1,0 +1,10 @@
+mixin ContactHeaderWarning(props)
+	//- проверка данных получаемых из props
+	include ../../shared/helpers/pug/shortcut-check-store
+	+b('contact-header-warning', {}, 'div')
+		+e('title', {}, 'p') #{DATA('title')}
+		+e('line', {}, 'div')
+		+e('right', {}, 'div')
+			+e('img', {}, 'img')(src=`${pathFile}${DATA('icon')}` alt='icon')
+			+e('warning', {}, 'p') #{DATA('warning')}
+		+e('line', {}, 'div')
