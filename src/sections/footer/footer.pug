@@ -62,12 +62,12 @@ mixin footer(section)
 					+e('legal-entities', {}, 'div')
 						+e('title-individuals', {}, 'span') #{S_DATA('subtitleRequesites')}
 						+e('subtitle-individuals', {}, 'span') #{S_DATA('requesitesLegalEntities')}
-				+e('sber-icons', {}, 'div')
+				+e('bank-icons', {}, 'div')
 					for item in S_DATA_ARR('sberlIcons')
 						//- проверка данных получаемых из item
 						include ../../shared/helpers/pug/shortcut-check-store
 						+e('clients-item', {}, 'a')(href=I_DATA('href'))
-							+e('logo-sberbank ', {}, 'img')(src=`${pathFile}${I_DATA('icon')}` alt=I_DATA('alt'))
+							+e('logo-bank ', {}, 'img')(src=`${pathFile}${I_DATA('icon')}` alt=I_DATA('alt'))
 				+e('button', {}, 'button') #{S_DATA('requesitesButton')}
 
 			//-Информация---------------------------------------------------------------------------------------

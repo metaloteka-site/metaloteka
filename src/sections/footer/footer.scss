@@ -160,6 +160,9 @@
 		grid-template-areas:
 			'a'
 			'b';
+		padding-inline: 25px;
+
+		margin-bottom: 45px;
 	}
 
 	&__requesites-info {
@@ -171,16 +174,16 @@
 		margin-right: 28px;
 	}
 
-	&__sber-icons {
+	&__bank-icons {
 		display: flex;
 		overflow-x: scroll;
+		align-items: center;
 		flex-wrap: nowrap;
 
-		max-width: 502px;
-		margin-bottom: 16px;
-		padding-bottom: 30px;
-		padding-left: 21px;
-		gap: 74px;
+		margin-bottom: 20px;
+
+		transform: translate(30px) scale(1.2);
+		gap: 30px;
 		grid-area: a;
 		grid-template-columns: 1fr;
 
@@ -189,27 +192,12 @@
 		}
 	}
 
-	&__logo-sberbank {
-		flex: 1 1 140px;
-
-		// max-width: 188px;
-
-		max-width: max-content;
-		height: 30px;
-	}
-
 	&__button {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 
 		width: 100%;
-		max-width: 319px;
-
-		margin-right: 25px;
-
-		margin-bottom: 45px;
-		margin-left: 25px;
 		padding-block: 12px;
 
 		cursor: pointer;
@@ -478,7 +466,7 @@
 			justify-content: center;
 
 			margin-bottom: 0;
-			padding: 37px 20px 30px 75px;
+			padding: 30px 20px 30px 75px;
 
 			border-right: solid 0.5px #d9d8d8;
 
@@ -496,42 +484,21 @@
 			max-width: 470px;
 		}
 
-		&__sber-icons {
+		&__bank-icons {
 			overflow-x: hidden;
-			align-items: center;
 			flex: 1 318px;
 			flex-wrap: wrap;
 			justify-content: center;
 
 			margin-bottom: 0;
-			padding-top: 26px;
-			padding-left: 0;
-			gap: 29px;
-		}
 
-		&__logo-sberbank {
-			flex: 1 1 140px;
-
-			max-width: 188px;
-		}
-
-		&__logo-payment {
-			flex: 1 1 190px;
-
-			max-width: 80px;
-		}
-
-		&__logo-mir {
-			flex: 1 1 190px;
-
-			max-width: 76px;
+			transform: none;
+			gap: 30px;
 		}
 
 		&__button {
 			max-width: 270px;
 			margin-right: 35px;
-
-			margin-bottom: 0;
 			margin-left: 20px;
 		}
 
