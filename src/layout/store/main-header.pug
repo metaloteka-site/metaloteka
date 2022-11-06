@@ -9,7 +9,7 @@
 				elemArr: [
 					{
 						data: {
-							contact: 'г. Москва',
+							contact: 'г.Москва',
 							icon: '/icon-pin-map.svg'
 						},
 						bem: {
@@ -18,7 +18,7 @@
 						elem: {
 							Text: {
 								data: {
-									text: 'Регион'
+									text: 'Регион доставки'
 								},
 								opt: {
 									isElementClass: true
@@ -32,7 +32,7 @@
 							href: 'tel:+74955456420'
 						},
 						bem: {
-							margin: 'ml-xl-35'
+							margin: 'ml-xl-20'
 						},
 						opt: {
 							link: true
@@ -54,7 +54,7 @@
 							href: 'mailto:info@metaloteka.ru'
 						},
 						bem: {
-							margin: 'ml-xl-35'
+							margin: 'ml-xl-20'
 						},
 						opt: {
 							link: true
@@ -76,20 +76,57 @@
 				bem: {
 					alignItems: 'align-items-xl-center'
 				}
-			}
-		},
-		dataArr: {
-			key1: [
+			},
+			ContactHeaderWarning: {
+			elemArr: [
 				{
 					data: {
-						text: '1werwer'
+						title: 'Российский металлопрокат',
+						icon: '/icon-warning.svg',
+						warning:'В связи с высокой волатильность\n отпускных цен комбинатов актуальные\n цены на металл уточняйте\n у менеджеров'
+					}
+				}
+			]
+		},
+	},
+		dataArr: {
+			key: [
+				{
+					data: {
+						link: 'О компании',
+						href: '#'
 					}
 				},
 				{
 					data: {
-						text: '2werwer'
+						link: 'Каталог продукции',
+						href: '/catalog.html'
 					}
-				}
-			]
+				},
+				{
+					data: {
+						link: 'Доставка',
+						href: '#'
+					}
+				},
+				{
+					data: {
+						link: 'Оплата',
+						href:'/cart-page.html'
+					}
+				},
+				{
+					data: {
+						link: 'Госты',
+						href: '#'
+					}
+				},
+				{
+					data: {
+						link: 'Контакты',
+						href: '/contacts.html'
+					}
+				},
+			],
 		}
 	}
