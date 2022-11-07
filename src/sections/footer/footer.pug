@@ -46,11 +46,14 @@ mixin footer(section)
 						//- проверка данных получаемых из section
 						include ../../shared/helpers/pug/shortcut-check-store
 						+e('address-wrapper', {}, 'div')
-							+e('social-wrapper', {}, 'div')
+							if I_DATA('href')
 								+e('subtitle', {}, 'a')(href=I_DATA('href')) #{I_DATA('text')}
-								+e('subtitle', {}, 'a')(href=I_DATA('hrefWb')) #{I_DATA('viber')}
-							+e('messenger-title', {}, 'p') #{I_DATA('info1')}
-							+e('messenger-subtitle', {}, 'p') #{I_DATA('info')}
+							if !I_DATA('href')
+								+e('subtitle', {}, 'p')(href=I_DATA('href')) #{I_DATA('text')}
+							if I_DATA('info1')
+								+e('messenger-title', {}, 'p') #{I_DATA('info1')}
+							if I_DATA('info')
+								+e('messenger-subtitle', {}, 'p') #{I_DATA('info')}
 
 			//-Реквизиты----------------------------------------------------------------------------------------
 			+e('requesites', {}, 'div')
@@ -62,12 +65,12 @@ mixin footer(section)
 					+e('legal-entities', {}, 'div')
 						+e('title-individuals', {}, 'span') #{S_DATA('subtitleRequesites')}
 						+e('subtitle-individuals', {}, 'span') #{S_DATA('requesitesLegalEntities')}
-				+e('sber-icons', {}, 'div')
+				+e('bank-icons', {}, 'div')
 					for item in S_DATA_ARR('sberlIcons')
 						//- проверка данных получаемых из item
 						include ../../shared/helpers/pug/shortcut-check-store
 						+e('clients-item', {}, 'a')(href=I_DATA('href'))
-							+e('logo-sberbank ', {}, 'img')(src=`${pathFile}${I_DATA('icon')}` alt=I_DATA('alt'))
+							+e('logo-bank ', {}, 'img')(src=`${pathFile}${I_DATA('icon')}` alt=I_DATA('alt'))
 				+e('button', {}, 'button') #{S_DATA('requesitesButton')}
 
 			//-Информация---------------------------------------------------------------------------------------

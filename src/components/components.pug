@@ -4,6 +4,9 @@ mixin includeComponents(components)
 			when 'ContactHeader'
 				include ContactHeader/ContactHeader
 		case component
+			when 'ContactHeaderWarning'
+				include ContactHeaderWarning/ContactHeaderWarning
+		case component
 			when 'ContactInformation'
 				include ContactInformation/ContactInformation
 		case component
@@ -17,3 +20,8 @@ mixin includeComponents(components)
 				include Card/Card
 			when 'Tabs'
 				include Tabs/Tabs
+			when 'Tabs'
+				include Tabs/Tabs
+		case component
+			when 'Card'
+				include Card/Card

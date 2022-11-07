@@ -17,7 +17,10 @@
 
 		letter-spacing: normal;
 
+		color: $white;
+
 		font-size: $fs-24;
+
 		font-weight: 300;
 		line-height: 0.83;
 	}
@@ -46,12 +49,15 @@
 
 		letter-spacing: normal;
 
+		color: $white;
+
 		font-size: $fs-22;
 		font-weight: 300;
 		line-height: 1.09;
 	}
 
 	&__information-left-img-wrapper {
+		display: flex;
 		flex-direction: column;
 		gap: 15px;
 	}
@@ -70,8 +76,10 @@
 
 		letter-spacing: normal;
 
+		color: $white;
+
 		font-size: $fs-small;
-		font-style: normal;
+		font-style: 400;
 		line-height: 1;
 	}
 
@@ -93,6 +101,7 @@
 			position: relative;
 
 			display: flex;
+			flex-wrap: wrap;
 
 			padding-top: 0;
 
@@ -108,26 +117,13 @@
 
 		&__information-subtitle {
 			margin-bottom: 10px;
-
-			letter-spacing: normal;
-
-			color: $white;
-
-			font-size: $fs-24;
-			font-weight: 300;
-			line-height: 0.83;
 		}
 
 		&__information-left-text {
 			max-width: 296px;
 			margin-bottom: 56px;
 
-			letter-spacing: normal;
-
-			color: $white;
-
 			font-size: $fs-24;
-			font-weight: 300;
 			line-height: 1;
 		}
 
@@ -135,13 +131,9 @@
 			max-width: 392px;
 			margin-bottom: 20px;
 
-			letter-spacing: normal;
-
 			color: $white;
 
 			font-size: 58px;
-			font-weight: 800;
-			line-height: 0.79;
 		}
 
 		&__information-line {
@@ -150,7 +142,6 @@
 		}
 
 		&__information-left-img-wrapper {
-			display: flex;
 			flex-direction: row;
 
 			margin-bottom: 37px;
@@ -167,22 +158,20 @@
 			max-height: 60px;
 			padding-top: 6px;
 
-			letter-spacing: normal;
-
 			opacity: 0.75;
 
-			color: $white;
-
 			font-size: $fs-small;
-			font-weight: 400;
-			line-height: 1;
 		}
 
 		// Правый блок
 
 		&__information-right {
 			display: flex;
+
+			flex: 1 0 163px;
 			flex-direction: column;
+
+			min-width: min(49px, 100%);
 
 			max-width: 891px;
 			padding-top: 35px;
