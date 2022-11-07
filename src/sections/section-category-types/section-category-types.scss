@@ -2,7 +2,6 @@
 	@include media(xs) {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
 
 		padding-top: 56px;
 		column-gap: 68px;
@@ -12,7 +11,7 @@
 			flex-direction: column;
 
 			max-width: 206px;
-			margin-bottom: 20px;
+			margin-bottom: 30px;
 		}
 
 		&__title {
