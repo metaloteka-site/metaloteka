@@ -4,8 +4,11 @@
 	flex-wrap: nowrap;
 
 	padding-top: 30px;
-
 	column-gap: 34px;
+
+	&::-webkit-scrollbar {
+		width: 0;
+	}
 
 	&__information {
 		display: flex;
@@ -57,7 +60,7 @@
 	}
 
 	@include media(xs) {
-		overflow-x:auto;
+		overflow-x: auto;
 		flex-wrap: wrap;
 
 		padding-top: 56px;
