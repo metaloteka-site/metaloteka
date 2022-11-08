@@ -17,7 +17,12 @@ block main
 	+section-information-category(index.sectionInformationCategory1)
 	+section-information-category(index.sectionInformationCategory2)
 	+section-information-category(index.sectionInformationCategory3)
-//- block pre-footer
-//- 	//- подключение и вызов секции SECTION-METAL
-//- 	include ../../sections/section-metal/section-metal
-//- 	+section-metal(index.sectionMetal)
+
+	//- подключение и вызов секции SECTION-CATEGORY_TYPES
+	include ../../sections/section-category-types/section-category-types
+	+section-category-types(index.sectionCategoryTypes)
+
+block pre-footer
+	//- подключение и вызов секции SECTION-METAL
+	include ../../sections/section-metal/section-metal
+	+section-metal(index.sectionMetal)
