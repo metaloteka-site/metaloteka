@@ -3,8 +3,8 @@ mixin Text(props)
 	include ../../helpers/pug/shortcut-check-store
 
 	//- логика компонента
-	- const isElementClass = OPT('isElementClass') ? '&' : false;
+	- const isElementClass = OPT('isElementClass') ? '&' : '';
 	- const tag = OPT('p') ? 'p' : 'span';
 
 	//- верстка компонента
-	+b('text', {e: isElementClass, m: `${BEM('size')}.${BEM('color')}`}, tag) #{DATA('text')}
+	+b('text', {e: `${isElementClass}:${BEM('elementClassIndividual')}`, m: `${BEM('size')}.${BEM('color')}.${BEM('fw')}`}, tag) #{DATA('text')}

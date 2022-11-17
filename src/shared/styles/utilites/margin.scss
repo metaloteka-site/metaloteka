@@ -335,6 +335,10 @@
 		margin-bottom: 60px;
 	}
 
+	&-65 {
+		margin-bottom: 65px;
+	}
+
 	&-80 {
 		margin-bottom: 80px;
 	}
@@ -381,6 +385,10 @@
 
 				&-#{classMedia($key)}-60 {
 					margin-bottom: 60px;
+				}
+
+				&-#{classMedia($key)}-65 {
+					margin-bottom: 65px;
 				}
 
 				&-#{classMedia($key)}-80 {

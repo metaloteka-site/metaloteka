@@ -4,6 +4,31 @@
 		color: $wet-asphalt;
 	}
 
+	// вес начертания
+	&_fw-200 {
+		font-weight: 200;
+	}
+
+	&_fw-500 {
+		font-weight: 500;
+	}
+
+	&_fw-normal {
+		font-weight: normal;
+	}
+
+	&_fw-bold {
+		font-weight: bold;
+	}
+
+	&_fw-800 {
+		font-weight: 800;
+	}
+
+	&_fw-900 {
+		font-weight: 900;
+	}
+
 	// модификаторы размеров
 	&_small {
 		font-size: $fs-small;
