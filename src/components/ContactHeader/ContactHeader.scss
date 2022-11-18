@@ -21,10 +21,12 @@
 	}
 
 	&__text {
+		align-self: flex-end;
+
+		font-size: 14px;
+		line-height: 1.2;
 		grid-column: 2 / 3;
 		grid-row: 1 / 2;
-
-		align-self: flex-end;
 	}
 
 	&__contact {
