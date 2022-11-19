@@ -20,13 +20,13 @@ mixin Card(props)
 			+b('summ', {m: 'center'}, 'div')
 				+e('total', {m: 'bold'}, 'p') #{ DATA('count') }
 				+e('total', {m: 'small'}, 'p') #{ DATA('numberInWords') }
+			+b('line__s', {}, 'hr')(noshade)
 			+b('summ', {m: 'right'}, 'div')
 				+e('total', {m: 'mini'}, 'p') #{ DATA('description') }
 				+e('total', {m: 'wrap'}, 'div')
-					+e('link', {}, 'div')
-						if OPT('link')
-							+e('download', {}, 'a')(href='!#') #{ DATA('link')}
-							+e('date', {}, 'span') #{ DATA('date')}
-					+e('link', {}, 'div')
-						+e('download', {}, 'a')(href='!#') #{ DATA('blank')}
-						+e('date', {}, 'span') #{ DATA('date')}
+					for item in DATA_ARR('linkPdf')
+						//- проверка данных получаемых из item
+						include ../../shared/helpers/pug/shortcut-check-store
+						+e('link', {}, 'div')
+							+e('download', {}, 'a')(href=I_DATA('href')) #{ I_DATA('linkText')}
+							+e('date', {}, 'span') #{I_DATA('date')}
