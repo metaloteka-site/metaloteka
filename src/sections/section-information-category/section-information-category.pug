@@ -4,7 +4,6 @@ mixin section-information-category(section)
 
 	//- верстка секции
 	+b('section-information-category', {m: S_BEM('color')}, 'section')
-		+e('footer-icons', {}, 'div')
 		for item in S_DATA_ARR('category')
 			- console.log(item)
 			include ../../shared/helpers/pug/shortcut-check-store
