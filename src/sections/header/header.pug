@@ -16,13 +16,13 @@ mixin header(section)
 
 				//- отгружено тон
 			+e('shipped', {margin:'ml-xl-60'}, 'div')
-				+e('number-shipped', {}, 'span') 245 т
+				+e('number-shipped', {}, 'span') 245т
 				+e('divider-shipped', {}, 'div')
 				+Text({data: {text: 'отгружено за неделю'}})
 
 				//- корзина
 			+e('wrap-basket', {}, 'div')
-				+e('basket', {m: 'full'}, 'button')
+				+e('basket', {m: 'full'}, 'a')(href='#')
 					+e('basket-num', {}, 'div') 120
 					+e('basket-icon', {}, 'div')
 						include ../../layout/assets/images/basket.svg
@@ -38,7 +38,7 @@ mixin header(section)
 						include ../../shared/helpers/pug/shortcut-check-store
 						+e('link', {}, 'a')(href=I_DATA('href')) #{I_DATA('link')}
 				+e('date', {}, 'div')
-					+e('name', {}, 'div') Петров Иван
+					+e('name', {}, 'div') Иван Петров
 					+e('stick', {}, 'span') |
 					+e('exit', {}, 'a') Выйти
 		+Row
