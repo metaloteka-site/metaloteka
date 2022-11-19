@@ -1,6 +1,6 @@
 .section-information-category {
 	margin-bottom: 42px;
-	padding: 49px 43px 223px 42px;
+	padding: 49px 43px 194px 42px;
 
 	border-radius: 30px;
 	background: rgba(255, 0, 0, 0.096);
@@ -156,7 +156,6 @@
 		&__information-left-info {
 			max-width: 128px;
 			max-height: 60px;
-			padding-top: 6px;
 
 			opacity: 0.75;
 
@@ -217,8 +216,9 @@
 
 @include media(xs) {
 	.section-information-category {
+		margin-bottom: -20px;
 		padding: 0;
-
+		
 		border-radius: 0;
 		background: none;
 	}
