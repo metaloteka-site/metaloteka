@@ -13,7 +13,7 @@
 
 		width: calc(100% + 46px);
 		height: 2px;
-		margin: 0 -23px;
+		margin: 0 -25px;
 
 		background-color: rgba($color: #ffffff, $alpha: 0.21);
 
@@ -26,8 +26,6 @@
 		order: 4;
 
 		padding:33px;
-		// padding-top: 33px;
-		// padding-left: 34px;
 	}
 
 	&__shipped {
@@ -111,6 +109,8 @@
 	}
 
 	&__exit {
+		text-decoration: none;
+
 		font-size: 18px;
 		font-weight: bold;
 		line-height: 1.11;
@@ -124,35 +124,6 @@
 		display: none;
 	}
 
-	&__search {
-		width: 100%;
-		max-width: 860px;
-		height: 100%;
-		padding-left: 50px;
-
-		border: none;
-		border-radius: 10px 0 0 10px;
-		background-color: #ffffff;
-
-		font-size: 24px;
-		font-weight: 300;
-		line-height: 1.08;
-	}
-
-	&__button {
-		width: 175px;
-		height: 100%;
-
-		color:$wet-asphalt;
-		border: none;
-		border-radius: 0 10px 10px 0;
-		background-color: #ffffff;
-
-		font-size: 24px;
-		font-weight: bold;
-		line-height: 1.08;
-
-	}
 	@include media('xs') {
 		padding-top: 35px;
 
@@ -173,8 +144,6 @@
 			order: 0;
 
 			padding: 0;
-			// padding-top: 0;
-			// padding-left: 0;
 		}
 
 		&__wrap-basket {
@@ -217,28 +186,67 @@
 		}
 
 		&__catalog {
-			display: block;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 
 			width: 100%;
 			max-width: 300px;
 			height: 85px;
 
+			cursor: pointer;
+
 			color:$wet-asphalt;
 			border: none;
 			border-radius: 10px;
-			background-color: #ffffff;
+			background-color: $white;
 
-			font-size: 24px;
-			font-weight: bold;
-			line-height: 1.08;
+			&:hover {
+				--white: #ffffffcc;
+				background-color: $white;
+			}
 		}
 
 		&__right {
-			display: block;
+			display: flex;
 
 			width: 100%;
 			max-width: 1035px;
 			height: 85px;
+		}
+
+		&__search {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			width: 100%;
+			max-width: 860px;
+			height: 100%;
+			padding-left: 50px;
+
+			border: none;
+			border-radius: 10px 0 0 10px;
+			outline: none;
+			background-color: #ffffff;
+
+			font-size: 24px;
+			font-weight: 300;
+			line-height: 1.08;
+		}
+
+		&__button-search {
+			width: 175px;
+			height: 100%;
+
+			color:$wet-asphalt;
+			border: none;
+			border-radius: 0 10px 10px 0;
+			background-color: #ffffff;
+
+			&:hover {
+				cursor: pointer;
+			}
 		}
 	}
 }

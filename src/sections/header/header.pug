@@ -40,9 +40,11 @@ mixin header(section)
 				+e('date', {}, 'div')
 					+e('name', {}, 'div') Иван Петров
 					+e('stick', {}, 'span') |
-					+e('exit', {}, 'a') Выйти
+					+e('exit', {}, 'a')(href='#') Выйти
 		+Row
-			+e('catalog', {}, 'button') каталог
+			+e('catalog', {}, 'button')
+				include ../../layout/assets/images/header/catalog.svg
 			+e('right', {}, 'div')
 				+e('search', {}, 'input')(placeholder='Арматурный прокат или Гост') Арматурный прокат или Гост Поиск
-				+e('button', {},'button') Поиск
+				+e('button-search', {},'button')
+					include ../../layout/assets/images/header/search.svg
