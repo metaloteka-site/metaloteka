@@ -1,0 +1,16 @@
+mixin section-category-types(section)
+	//- проверка данных получаемых из section
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- верстка секции
+	+Container
+		+b('section-category-types', {}, 'section')
+			for item in S_DATA_ARR('category')
+				include ../../shared/helpers/pug/shortcut-check-store
+				+e('information', {}, 'div')
+					+e('title', {}, 'span') #{I_DATA('title')}
+					+e('line', {}, 'hr')
+					+e('text', {}, 'span') #{I_DATA('text')}
+					+e('catalog', {}, 'div')
+						+e('subtitle', {}, 'span') #{I_DATA('subtitle')}
+						+e('amount', {}, 'span') #{I_DATA('amount')}

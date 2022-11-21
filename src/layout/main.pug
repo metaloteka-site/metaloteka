@@ -14,9 +14,7 @@ include ../components/components
 block variables
 	//- переменная начала пути к картинкам
 	- const pathFile = '../../layout/assets/images';
-	+includeComponents(['ContactHeader'])
-	+includeComponents(['ContactHeaderWarning'])
-	+includeComponents(['ContactFooter'])
+	+includeComponents(['ContactHeader', 'ContactHeaderWarning', 'ContactFooter'])
 
 block store
 
@@ -32,14 +30,13 @@ block layout
 			meta(name='theme-color' content='#678c92')/
 
 		+b('body', {}, 'body')
-			+Container
-				//- подключение и вызов секции HEADER
-				block header
-					include ../sections/header/header
-					+header(main.header)
+			//- подключение и вызов секции HEADER
+			block header
+				include ../sections/header/header
+				+header(main.header)
 
-				+b('main', {}, 'main')
-					block main
+			+b('main', {m: noMargin}, 'main')
+				block main
 
 			+b('bg-footer', {}, 'div')
 				block pre-footer

@@ -1,5 +1,8 @@
 extends ../../layout/main
 
+append variables
+	- let noMargin = 'no-margin-bottom'
+
 block store
 	include store/index.store.pug
 
@@ -10,7 +13,17 @@ block main
 
 	//- подключение и вызов секции SECTION-SLIDER
 	include ../../sections/section-slider/section-slider
-	+section-slider
+	+section-slider()
+
+	//- подключение и вызов секции SECTION-CATEGORY_TYPES
+	include ../../sections/section-category-types/section-category-types
+	+section-category-types(index.sectionCategoryTypes)
+
+	//- подключение и вызов секции SECTION-INFORMATION-CATEGORY
+	include ../../sections/section-information-category/section-information-category
+	+section-information-category(index.sectionInformationCategory1)
+	+section-information-category(index.sectionInformationCategory2)
+	+section-information-category(index.sectionInformationCategory3)
 
 block pre-footer
 	//- подключение и вызов секции SECTION-METAL
