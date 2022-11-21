@@ -5,7 +5,6 @@ mixin section-information-category(section)
 	//- верстка секции
 	+b('section-information-category', {m: S_BEM('color')}, 'section')
 		for item in S_DATA_ARR('category')
-			- console.log(item)
 			include ../../shared/helpers/pug/shortcut-check-store
 			+e('information-wrapper', {}, 'div')
 				+e('information-left', {}, 'div')
