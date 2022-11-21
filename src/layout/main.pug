@@ -32,14 +32,13 @@ block layout
 			meta(name='theme-color' content='#678c92')/
 
 		+b('body', {}, 'body')
-			+Container
-				//- подключение и вызов секции HEADER
-				block header
-					include ../sections/header/header
-					+header(main.header)
+			//- подключение и вызов секции HEADER
+			block header
+				include ../sections/header/header
+				+header(main.header)
 
-				+b('main', {}, 'main')
-					block main
+			+b('main', {}, 'main')
+				block main
 
 			+b('bg-footer', {}, 'div')
 				block pre-footer
