@@ -14,9 +14,7 @@ include ../components/components
 block variables
 	//- переменная начала пути к картинкам
 	- const pathFile = '../../layout/assets/images';
-	+includeComponents(['ContactHeader'])
-	+includeComponents(['ContactHeaderWarning'])
-	+includeComponents(['ContactFooter'])
+	+includeComponents(['ContactHeader', 'ContactHeaderWarning', 'ContactFooter'])
 
 block store
 
@@ -37,7 +35,7 @@ block layout
 				include ../sections/header/header
 				+header(main.header)
 
-			+b('main', {}, 'main')
+			+b('main', {m: noMargin}, 'main')
 				block main
 
 			+b('bg-footer', {}, 'div')
