@@ -1,13 +1,10 @@
 .section-information-category {
 	margin-bottom: 42px;
-	padding: 49px 43px 194px 42px;
-
-	border-radius: 30px;
-	background: rgba(255, 0, 0, 0.096);
 
 	// Левый блок
-
 	&__information-left {
+		z-index: 1;
+
 		display: flex;
 		flex-direction: column;
 	}
@@ -88,28 +85,56 @@
 		display: none;
 	}
 
+	&__information-wrapper {
+		position: relative;
+
+		overflow: hidden;
+
+		padding: 49px 43px 194px 42px;
+
+		border-radius: 30px;
+		background: rgba(255, 0, 0, 0.096);
+	}
+
 	&__information-right-img {
-		display: none;
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		bottom: 0;
+		left: 0;
+
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__information-img {
+		height: 100%;
 	}
 
 	@include media(xs) {
+		margin-bottom: 0;
+
 		&__section-information-category {
 			background-image: linear-gradient(279deg, #8a8898, #6a6781 0%);
 		}
 
 		&__information-wrapper {
-			position: relative;
-
 			display: flex;
 			flex-wrap: wrap;
 
-			padding-top: 0;
+			padding: 0;
 
 			color: #000000;
+			border-radius: 0;
+			background: none;
 			gap: 55px;
 		}
 
 		// Левый блок
+		&__information-right-img {
+			z-index: 0;
+		}
 
 		&__information-left {
 			padding-top: 35px;
@@ -165,6 +190,8 @@
 		// Правый блок
 
 		&__information-right {
+			z-index: 1;
+
 			display: flex;
 
 			flex: 1 0 163px;
@@ -188,16 +215,6 @@
 			line-height: 0.83;
 		}
 
-		&__information-right-img {
-			position: absolute;
-			z-index: -1;
-
-			display: block;
-
-			width: 100%;
-			height: 100%;
-		}
-
 		&__information-right-text-wrapper {
 			display: flex;
 			flex-wrap: wrap;
@@ -211,15 +228,17 @@
 			line-height: 1;
 			gap: 8px;
 		}
-	}
-}
 
-@include media(xs) {
-	.section-information-category {
-		margin-bottom: -20px;
-		padding: 0;
-		
-		border-radius: 0;
-		background: none;
+		&_category1 {
+			background: linear-gradient(279deg, #8a8898, #6a6781 0%);
+		}
+
+		&_category2 {
+			background: linear-gradient(261deg, #678c92, #586e8b);
+		}
+
+		&_category3 {
+			background: linear-gradient(279deg, #484848 100%, #47474b 0%);
+		}
 	}
 }
