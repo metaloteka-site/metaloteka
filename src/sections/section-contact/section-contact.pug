@@ -4,23 +4,24 @@ mixin section-contact(section)
 
 	//- верстка секции
 	+b('section-contact', {}, 'section')
-		+Row(S_ELEM('Row'))
-			+e('left')
-				+e('circle', {}, 'div') MT
-				+e('appellation', {}, 'div') #{S_DATA('textMobile')}
-				+e('title', {}, 'div') Контакты
-				+e('map', {}, 'img')(src='../../layout/assets/images/map.jpg')
+		+Container
+			+Row(S_ELEM('Row'))
+				+e('left')
+					+e('circle', {}, 'div') MT
+					+e('appellation', {}, 'div') #{S_DATA('textMobile')}
+					+e('title', {}, 'div') Контакты
+					+e('map', {}, 'img')(src='../../layout/assets/images/map.jpg')
 
-				for item in S_ELEM_ARR('ContactInformation')
-					+ContactInformation(item)
+					for item in S_ELEM_ARR('ContactInformation')
+						+ContactInformation(item)
 
-				+Tabs(S_ELEM('Tabs'))
+					+Tabs(S_ELEM('Tabs'))
 
-				+e('button js-collapse', {}, 'button') Развернуть
-				+e('line', {}, 'hr')
-				+e('footer', {b: 'cg-20'}, 'div')
-					+e('qr', {}, 'img')(src=`${pathFile}${S_DATA('qr')}`)
-					for item in S_ELEM_ARR('ContactInformationFooter')
-						+ContactInformationFooter(item)
+					+e('button js-collapse', {}, 'button') Развернуть
+					+e('line', {}, 'hr')
+					+e('footer', {b: 'cg-20'}, 'div')
+						+e('qr', {}, 'img')(src=`${pathFile}${S_DATA('qr')}`)
+						for item in S_ELEM_ARR('ContactInformationFooter')
+							+ContactInformationFooter(item)
 
-			+e('right', {}, 'div') slider
+				+e('right', {}, 'div') slider

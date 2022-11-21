@@ -4,45 +4,48 @@ mixin header(section)
 
 	//- верстка секции
 	+b('header', {}, 'header')
-		+Row(S_ELEM('Row'))
-			+e('connection', {}, 'div')
-				//- логотип
-				+e('line', {}, 'div')
-				+e('logo', {}, 'img')(src=`${pathFile}${S_DATA('logo')}` alt='логотип metaloteka')
-				+e('line', {}, 'div')
-				//- контакты
-				for item in S_ELEM_ARR('ContactHeader')
-					+ContactHeader(item)
+		+Container
+			+Row(S_ELEM('Row'))
+				+e('connection', {}, 'div')
+					//- логотип
+					+e('line', {}, 'div')
+					+e('logo', {}, 'img')(src=`${pathFile}${S_DATA('logo')}` alt='логотип metaloteka')
+					+e('line', {}, 'div')
+					//- контакты
+					for item in S_ELEM_ARR('ContactHeader')
+						+ContactHeader(item)
 
 				//- отгружено тон
-			+e('shipped', {margin:'ml-xl-60'}, 'div')
-				+e('number-shipped', {}, 'span') 245 т
-				+e('divider-shipped', {}, 'div')
-				+Text({data: {text: 'отгружено за неделю'}})
+				+e('shipped', {margin:'ml-xl-60'}, 'div')
+					+e('number-shipped', {}, 'span') 245 т
+					+e('divider-shipped', {}, 'div')
+					+Text({data: {text: 'отгружено за неделю'}})
 
 				//- корзина
-			+e('wrap-basket', {}, 'div')
-				+e('basket', {m: 'full'}, 'a')(href='#')
-					+e('basket-num', {}, 'div') 120
-					+e('basket-icon', {}, 'div')
-						include ../../layout/assets/images/basket.svg
+				+e('wrap-basket', {}, 'div')
+					+e('basket', {m: 'full'}, 'a')(href='#')
+						+e('basket-num', {}, 'div') 120
+						+e('basket-icon', {}, 'div')
+							include ../../layout/assets/images/basket.svg
 
-		for item in S_ELEM_ARR('ContactHeaderWarning')
-			+ContactHeaderWarning(item)
+			for item in S_ELEM_ARR('ContactHeaderWarning')
+				+ContactHeaderWarning(item)
 
-		+e('nav', {}, 'div')
+			+e('nav', {}, 'div')
+				+Row
+					+e('nav-link', {} , 'div')
+						for item in S_DATA_ARR('key')
+							//- проверка данных получаемых из section
+							include ../../shared/helpers/pug/shortcut-check-store
+							+e('link', {}, 'a')(href=I_DATA('href')) #{I_DATA('link')}
+					+e('date', {}, 'div')
+						+e('name', {}, 'div') Иван Петров
+						+e('stick', {}, 'span') |
+						+e('exit', {}, 'a')(href='#') Выйти
 			+Row
-				+e('nav-link', {} , 'div')
-					for item in S_DATA_ARR('key')
-						//- проверка данных получаемых из section
-						include ../../shared/helpers/pug/shortcut-check-store
-						+e('link', {}, 'a')(href=I_DATA('href')) #{I_DATA('link')}
-				+e('date', {}, 'div')
-					+e('name', {}, 'div') Иван Петров
-					+e('stick', {}, 'span') |
-					+e('exit', {}, 'a') Выйти
-		+Row
-			+e('catalog', {}, 'button') каталог
-			+e('right', {}, 'div')
-				+e('search', {}, 'input')(placeholder='Арматурный прокат или Гост') Арматурный прокат или Гост Поиск
-				+e('button', {},'button') Поиск
+				+e('catalog', {}, 'button')
+					include ../../layout/assets/images/header/catalog.svg
+				+e('right', {}, 'div')
+					+e('search', {}, 'input')(placeholder='Арматурный прокат или Гост') Арматурный прокат или Гост Поиск
+					+e('button-search', {},'button')
+						include ../../layout/assets/images/header/search.svg
