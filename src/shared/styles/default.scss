@@ -42,9 +42,17 @@ a {
 	margin-top: 50px;
 	margin-bottom: 90px;
 
+	&_no-margin-bottom {
+		margin-bottom: 0;
+	}
+
 	@include media('xs') {
 		margin-top: 70px;
 		margin-bottom: 160px;
+
+		&_no-margin-bottom {
+			margin-bottom: 0;
+		}
 	}
 }
 

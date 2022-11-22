@@ -4,23 +4,25 @@ mixin section-information-category(section)
 
 	//- верстка секции
 	+b('section-information-category', {m: S_BEM('color')}, 'section')
-		for item in S_DATA_ARR('category')
-			- console.log(item)
-			include ../../shared/helpers/pug/shortcut-check-store
-			+e('information-wrapper', {}, 'div')
-				+e('information-left', {}, 'div')
-					+e('information-subtitle', {}, 'span') #{I_DATA('subtitle')}
-					+e('information-left-title', {}, 'span') #{I_DATA('title')}
-					+e('information-line', {}, 'span')
-					+e('information-left-text', {}, 'span') #{I_DATA('text')}
-					+e('information-left-img-wrapper', {}, 'div')
-						+e('information-left-img', {}, 'img')(src=`../../layout/assets/images/${I_DATA('logo')}` alt='Logo')
-						+e('information-left-info', {}, 'span') #{I_DATA('textLogo')}
-				+e('information-right', {}, 'div')
-					+e('information-right-title', {}, 'span') #{I_DATA('titleRight')}
-					+e('information-right-text-wrapper', {}, 'div')
-						for item in S_DATA_ARR('size')
-							//- проверка данных получаемых из item
-							include ../../shared/helpers/pug/shortcut-check-store
-							+e('', {}, 'a')(href='#') !{I_DATA('text')}
-				+e('information-right-img', {}, 'img')(src=`../../layout/assets/images/${I_DATA('img')}` alt='Logo')
+		+Container
+			for item in S_DATA_ARR('category')
+				include ../../shared/helpers/pug/shortcut-check-store
+				+e('information-wrapper', {}, 'div')
+					+e('information-left', {}, 'div')
+						+e('information-subtitle', {}, 'span') #{I_DATA('subtitle')}
+						+e('information-left-title', {}, 'span') #{I_DATA('title')}
+						+e('information-line', {}, 'span')
+						+e('information-left-text', {}, 'span') #{I_DATA('text')}
+						+e('information-left-img-wrapper', {}, 'div')
+							+e('information-left-img', {}, 'img')(src=`../../layout/assets/images/${I_DATA('logo')}` alt='Logo')
+							+e('information-left-info', {}, 'span') #{I_DATA('textLogo')}
+					+e('information-right', {}, 'div')
+						+e('information-right-title', {}, 'span') #{I_DATA('titleRight')}
+						+e('information-right-text-wrapper', {}, 'div')
+							for item in S_DATA_ARR('size')
+								//- проверка данных получаемых из item
+								include ../../shared/helpers/pug/shortcut-check-store
+								+e('', {}, 'a')(href='#') !{I_DATA('text')}
+					+e('information-right-img', {}, 'picture')
+						+e('', {}, 'source')(media='(max-width:414px)' srcset=`../../layout/assets/images/${I_DATA('minImg')}`)
+						+e('information-img', {}, 'img')(src=`../../layout/assets/images/${I_DATA('img')}` alt='background')
