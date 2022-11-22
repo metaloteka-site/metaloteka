@@ -9,4 +9,22 @@ mixin section-orders-list(section)
 				+e('left', {}, 'div')
 					for item in S_ELEM_ARR('Card')
 						+Card(item)
-				+e('right', {}, 'div') slider
+				+e('right', {}, 'div')
+					+e('title', {}, 'div') #{S_DATA('title')}
+					+e('line', {}, 'div')
+					+e('form', {}, 'form')
+						+e('field-item', {}, 'label')
+							+e('', {}, 'input')(required)
+							+e('', {}, 'span') #{S_DATA('placeholderName')}
+						+e('field-item', {}, 'label')
+							+e('', {}, 'input')(required)
+							+e('', {}, 'span') #{S_DATA('placeholderInn')}
+						+e('field-item', {}, 'label')
+							+e('', {}, 'input')(required)
+							+e('', {}, 'span') #{S_DATA('placeholderEmail')}
+						+e('field-item', {}, 'label')
+							+e('', {}, 'input')(required)
+							+e('', {}, 'span') #{S_DATA('placeholderTel')}
+						+e('button-password', {}, 'button') #{S_DATA('buttonPassword')}
+						+e('button-data', {}, 'button') #{S_DATA('buttonData')}
+					+e('subtitle', {}, 'div') #{S_DATA('subtitle')}
