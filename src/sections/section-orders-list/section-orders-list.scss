@@ -2,6 +2,13 @@
 	display: flex;
 	flex-direction: column;
 
+	&__inner {
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-box-pack: justify;
+	}
+
 	&__left {
 		width: 100%;
 		max-width: 896px;
@@ -26,9 +33,9 @@
 	}
 
 	&__title {
-		margin-bottom: 23px;
+		margin-bottom: 18px;
+		padding-left: 40px;
 
-		text-align: center;
 		letter-spacing: normal;
 
 		color: $wet-asphalt;
@@ -54,7 +61,7 @@
 
 		width: 100%;
 		max-width: 500px;
-		margin-bottom: 49px;
+		margin-bottom: 50px;
 		padding: 0 40px;
 
 		border-radius: 20px;
@@ -79,13 +86,20 @@
 
 		width: 100%;
 		height: 64px;
-		padding: 15px 15px 0 32px;
+		padding: 20px 15px 0 32px;
+
+		letter-spacing: normal;
+
+		opacity: 0.9;
+		color: #464646;
 
 		border: none;
 		outline: none;
 		background: transparent;
 
-		font-size: $fs-18;
+		font-size: $fs-big;
+		font-weight: 700;
+		line-height: 1;
 	}
 
 	&__field-item span {
@@ -115,9 +129,12 @@
 	}
 
 	&__button-password {
-		margin-top: 19px;
-		margin-bottom: 12px;
-		padding: 25px 10px;
+		width: 100%;
+		max-width: 284px;
+		height: 64px;
+		margin-top: 21px;
+		margin-bottom: 13px;
+		padding: 25px 12px;
 
 		cursor: pointer;
 		text-align: center;
@@ -135,7 +152,10 @@
 	}
 
 	&__button-data {
-		padding: 21px 10px 23px;
+		width: 100%;
+		max-width: 284px;
+		height: 64px;
+		padding: 23px 10px 23px;
 
 		cursor: pointer;
 		text-align: center;
@@ -155,8 +175,7 @@
 
 	&__subtitle {
 		max-width: 284px;
-		margin-bottom: 18px;
-		padding: 0 26px;
+		margin-bottom: 16px;
 
 		letter-spacing: normal;
 
@@ -189,8 +208,8 @@
 			text-align: left;
 		}
 
-		&__subtitle {
-			padding: 0;
+		&__form {
+			margin-bottom: 52px;
 		}
 	}
 }

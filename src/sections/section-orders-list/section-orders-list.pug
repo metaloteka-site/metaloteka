@@ -5,7 +5,7 @@ mixin section-orders-list(section)
 	//- верстка секции
 	+b('section-orders-list', {}, 'section')
 		+Container
-			+Row(S_ELEM('Row'))
+			+e('inner', {}, 'div')
 				+e('left', {}, 'div')
 					for item in S_ELEM_ARR('Card')
 						+Card(item)
