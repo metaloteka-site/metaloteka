@@ -1,0 +1,12 @@
+mixin section-order-reserve(section)
+	//- проверка данных получаемых из section
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- верстка секции
+	+b('section-order-reserve', {}, 'section')
+		+Container
+			+Row(S_ELEM('Row'))
+				//- +e('left', {}, 'div')
+				//- 	for item in S_ELEM_ARR('Card')
+				//- 		+Card(item)
+				//- +e('right', {}, 'div') slider
