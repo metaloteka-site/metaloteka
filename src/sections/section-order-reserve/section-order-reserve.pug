@@ -6,7 +6,34 @@ mixin section-order-reserve(section)
 	+b('section-order-reserve', {}, 'section')
 		+Container
 			+Row(S_ELEM('Row'))
-				//- +e('left', {}, 'div')
-				//- 	for item in S_ELEM_ARR('Card')
-				//- 		+Card(item)
-				//- +e('right', {}, 'div') slider
+				+e('left', {}, 'div')
+					+e('top', {}, 'div')
+						+e('title-inner', {}, 'div')
+							+e('title', {}, 'div') #{S_DATA('title')}
+							+e('line-big', {}, 'div')
+						+e('room', {}, 'div') #{S_DATA('room')}
+					+e('line-small', {}, 'div')
+					+e('subtitle', {}, 'div') #{S_DATA('reserve')}
+					+e('', {}, 'div')
+						+e('info-way', {}, 'div') #{S_DATA('itemWay')}
+						+e('info-period-inner', {}, 'div')
+							+e('info-period', {}, 'div') #{S_DATA('infoPeriodDays')}
+							+e('info-period-img', {}, 'img')(src=`../../layout/assets/images/${S_DATA('infoPeriodImg')}` alt=S_DATA('infoPeriodAlt'))
+							+e('info-period', {}, 'div') #{S_DATA('infoPeriodDate')}
+						+e('items', {}, 'div')
+							for item in S_DATA_ARR('reserve')
+								include ../../shared/helpers/pug/shortcut-check-store
+								+e('item', {}, 'div')
+									+e('item-title', {}, 'div') #{I_DATA('title')}
+									+e('item-text', {}, 'div') #{I_DATA('text')}
+									+e('item-sum', {}, 'div') #{I_DATA('sum')}
+									+e('item-add', {}, 'div') #{I_DATA('add')}
+						+e('item-btn', {}, 'div') #{S_DATA('itemBtn')}
+						+e('warning', {}, 'div')
+							for item in S_DATA_ARR('warning')
+								include ../../shared/helpers/pug/shortcut-check-store
+								+e('warning', {}, 'div')
+									+e('warning-img', {}, 'img')(src=`../../layout/assets/images/${I_DATA('img')}` alt=I_DATA('alt'))
+									+e('warning-text', {}, 'div') #{I_DATA('text')}
+				+e('right', {}, 'div') slider
+					//- +e('title', {}, 'span') #{S_DATA('subtitle')}
