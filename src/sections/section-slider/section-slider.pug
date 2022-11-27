@@ -1,4 +1,12 @@
 mixin section-slider
 	+b('section-slider', {}, 'section')
 		+Container
-			+Row({ bem: { rowCols: 'row-cols-3' } })
+			+Row
+				+Slider
+					+e('slides', {b: 'swiper-wrapper'}, 'div')
+						+e('slide', {b: 'swiper-slide'}, 'div')
+							+e('img', {}, 'img')(src=`${pathFile}/index/index-slide1.webp` alt='слайд1')
+						+e('slide', { b: 'swiper-slide' }, 'div')
+							+e('img', {}, 'img')(src=`${pathFile}/index/index-slide2.webp` alt='слайд2')
+					+e('pagination', {b: 'swiper-pagination'}, 'div')
+					+e('button-next', {b: 'swiper-button-next'}, 'div')
