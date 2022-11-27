@@ -60,9 +60,11 @@
 
 		&__line-big {
 			max-width: 160px;
-			// background-color: red;
 			height: 9px;
 			margin-bottom: 66px;
+
+			border: none;
+			background: var(--blue-gradient);
 		}
 
 		&__line-small {
@@ -160,7 +162,7 @@
 			color: #464646;
 
 			font-size: 18px;
-			font-weight: 400;
+			font-weight: 300;
 			line-height: 1.22;
 		}
 
@@ -191,20 +193,18 @@
 			line-height: 1;
 		}
 
-		&__warning{
+		&__warning {
 			display: flex;
 			justify-content: space-between;
-
-			margin-bottom: 42px;
 		}
 
-		&__warning-img{
+		&__warning-img {
 			width: 34px;
 			height: 34px;
 			margin-right: 16px;
 		}
 
-		&__warning-text{
+		&__warning-text {
 			max-width: 170px;
 
 			letter-spacing: normal;
@@ -214,6 +214,29 @@
 			font-size: 16px;
 			font-weight: 300;
 			line-height: 1;
+		}
+
+		&__reserve-condition-title{
+			margin-top: 42px;
+			margin-bottom: 15px;
+
+			letter-spacing: normal;
+
+			color: #464646;
+
+			font-size: 18px;
+			font-weight: 800;
+			line-height: 1.11;
+		}
+
+		&__reserve-condition-text{
+			letter-spacing: normal;
+
+			color: #464646;
+
+			font-size: 10px;
+			font-weight: 300;
+			line-height: 1.4;
 		}
 	}
 }
