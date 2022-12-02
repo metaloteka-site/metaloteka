@@ -1,5 +1,14 @@
-//- mixin BlockLayout(props)
+include BlockLayoutLeft
+include BlockLayoutRight
+
+mixin BlockLayout(props)
+	- console.log(props, 'gggg')
+
 	//- проверка данных получаемых из props
 	include ../../shared/helpers/pug/shortcut-check-store
 
 	//- верстка компонента
+	+b(BEM('classSection'), {b: 'block-layout'}, 'section')
+		+Container
+			+Row
+				block

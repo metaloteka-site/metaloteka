@@ -1,0 +1,42 @@
+:root {
+	--accordion-body-height: max-contant;
+}
+
+.accordion {
+	&__title {
+		display: flex;
+		justify-content: space-between;
+
+		cursor: pointer;
+
+		color: #000000;
+
+		&::after {
+			display: block;
+
+			content: 'A';
+			transition: all 0.3s;
+			transform: rotate(0deg);
+		}
+	}
+
+	&__body {
+		overflow: hidden;
+
+		height: var(--accordion-body-height);
+
+		transition: all 0.3s;
+	}
+}
+
+.js-active {
+	.accordion__title {
+		&::after {
+			transform: rotate(90deg);
+		}
+	}
+
+	.accordion__body {
+		height: var(--accordion-body-height);
+	}
+}
