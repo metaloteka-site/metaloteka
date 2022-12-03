@@ -1,6 +1,4 @@
-.popup-payment {
-	max-width: 368px;
-
+.popup-pay-entity {
 	&__title{
 		display: flex;
 		flex-wrap: wrap;
@@ -240,18 +238,9 @@
 		font-style: normal;
 		font-stretch: normal;
 		line-height: 1;
-
-		
-		&:disabled {
-			cursor: crosshair;
-
-			opacity: 0.26;
-		}
 	}
 
 	@include media('xs') {
-		max-width: 896px;
-		
 		&__title{
 			margin-bottom: 0;
 		}
@@ -348,8 +337,6 @@
 
 		&__pay{
 			width: 210px;
-
-			cursor: pointer;
 		}
 
 	}

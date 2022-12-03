@@ -5,7 +5,7 @@ mixin Popup(props)
 	- let parent = BEM('parent') ? BEM('parent') : 'body';
 
 	//- верстка компонента
-	+b('popup', {}, 'div')
+	+b('popup', {}, 'div')(data-popup=DATA('dataPopupName'))
 		+b(parent, {e: '&:body'}, 'div')
 			block
-			+e('close', {}, 'button') Закрыть
+			+e('close', {p: 'popup'}, 'button') Закрыть

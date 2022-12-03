@@ -1,5 +1,5 @@
-mixin popup-payment(section)
-	- console.log(section, 'sectionsection')
+mixin popup-pay-entity(section)
+
 	//- проверка данных получаемых из section
 	include ../../shared/helpers/pug/shortcut-check-store
 
@@ -16,7 +16,7 @@ mixin popup-payment(section)
 					+e('number', {m: 'summ'}, 'p') #{S_DATA('sumTotalNumber')}
 					+e('ruble', {}, 'p') #{S_DATA('sumTotalRuble')}
 				+e('trait', {}, 'div')
-				+e('total', {m: 'days'}, 'p') #{S_DATA('sumTotalDays')}
+				+e('total', {m: 'weight'}, 'p') #{S_DATA('sumTotalWeight')}
 			+e('summ', {m: 'center'}, 'div')
 				+e('total', {m: 'bold'}, 'p') #{S_DATA('sumTotalBold')}
 				+e('total', {m: 'small'}, 'p') #{S_DATA('sumTotalSmall')}
@@ -39,7 +39,7 @@ mixin popup-payment(section)
 			for item in S_DATA_ARR('buttonPay')
 				//- проверка данных получаемых из item
 				include ../../shared/helpers/pug/shortcut-check-store
-				+e('pay', {}, 'button')(disabled=I_OPT('disabled')) #{I_DATA('text')}
+				+e('pay', {}, 'button')(disabled=I_OPT('true')) #{I_DATA('text')}
 
 		+e('line', {m: 'button'}, 'hr')(noshade)
 		+e('inform', {}, 'div')

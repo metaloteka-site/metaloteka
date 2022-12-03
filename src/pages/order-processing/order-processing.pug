@@ -15,8 +15,11 @@ block main
 	include ../../sections/section-breadcrumbs/section-breadcrumbs
 	+section-breadcrumbs(orderProcessing.sectionBreadcrumbs)
 
-append footer
+block popup
 	//- подключение и вызов попапа POPUP-PAY
 	include ../../sections/popup-payment/popup-payment
-	+popup-payment()
-	//- orderProcessing.popupPayment
+	+popup-payment(orderProcessing.popupPayment)
+	+popup-payment(orderProcessing.popupPaymentEntity)
+
+	//- include ../../sections/popup-pay-entity/popup-pay-entity
+	//- +popup-payentity(orderProcessing.popupPayentity)
