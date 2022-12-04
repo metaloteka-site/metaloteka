@@ -16,10 +16,15 @@ block main
 	+section-breadcrumbs(orderProcessing.sectionBreadcrumbs)
 
 block popup
-	//- подключение и вызов попапа POPUP-PAY
+	//- подключение и вызов попапа POPUP-PAYMENT и POPUP-PAYENTITY
 	include ../../sections/popup-payment/popup-payment
 	+popup-payment(orderProcessing.popupPayment)
 	+popup-payment(orderProcessing.popupPaymentEntity)
 
-	//- include ../../sections/popup-pay-entity/popup-pay-entity
-	//- +popup-payentity(orderProcessing.popupPayentity)
+	//- подключение и вызов попапа POPUP-METHOD
+	include ../../sections/popup-pay-method/popup-pay-method
+	+popup-pay-method(orderProcessing.popupPayMethod)
+
+	//- подключение и вызов попапа POPUP-CHECK
+	include ../../sections/popup-pay-check/popup-pay-check
+	+popup-pay-check(orderProcessing.popupPayCheck)

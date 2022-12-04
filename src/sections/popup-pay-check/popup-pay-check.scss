@@ -1,0 +1,116 @@
+.popup-pay-check {
+	width: 368px;
+	padding: 51px 42px 44px;
+
+	&__title{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		margin-bottom: 32px;
+	}
+
+	&__method{
+		margin-bottom: 13px;
+
+		color: $wet-asphalt;
+
+		font-size: $fs-28;
+		font-weight: normal;
+		font-weight: 800;
+		line-height: 1.14;
+	}
+
+	&__order{
+		color: $wet-asphalt;
+
+		font-size: 20px;
+		line-height: 1.2;
+	}
+
+	&__summ{
+		color: $wet-asphalt;
+
+		font-size: 20px;
+		line-height: 1.2;
+	}
+
+	&__inform-docs {
+		margin-bottom: 4px;
+
+		text-decoration: underline;
+
+		color: $wet-asphalt;
+
+		font-size: $fs-32;
+		font-weight: bold;
+		line-height: 0.94;
+	}
+
+	&__email {
+		margin-bottom: 35px;
+
+		color: $wet-asphalt;
+
+		font-size: 20px;
+		font-weight: normal;
+		line-height: 1;
+	}
+
+	&__link {
+		display: flex;
+		flex-direction: column;
+
+		margin-bottom: 28px;
+		gap: 8px;
+	}
+
+	&__download {
+		color: $wet-asphalt;
+		
+		font-size: $fs-20;
+		font-weight: bold;
+		line-height: 1;
+
+		&:hover {
+			color: $wet-asphalt;
+		}
+	}
+
+	&__date{
+		letter-spacing: normal;
+
+		color: $wet-asphalt;
+
+		font-size: $fs-big;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: 1.25;
+	}
+
+	&__line{
+		display: block;
+		
+		height: 1px;
+		margin-right: -42px;
+		margin-bottom: 30px;
+		margin-left: -42px;
+		
+		border: 0;
+		background: #efefef;
+	}
+
+	&__mini {
+		width: 286px;
+		margin-top: 33px;
+		margin-bottom: 26px;
+
+		color: $wet-asphalt;
+
+		font-size: $fs-small;
+		font-weight: 300;
+		line-height: 1.33;
+	}
+}
+

@@ -1,0 +1,23 @@
+mixin popup-pay-check(section)
+
+	//- проверка данных получаемых из section
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- верстка секции
+	+Popup(S_ELEM('Popup'))
+		+e('title', {}, 'div')
+			+e('method', {}, 'h2') #{S_DATA('titleMethod')}
+			+e('order', {}, 'h2') #{S_DATA('titleOrder')}
+			+e('order', {}, 'h2') #{S_DATA('numberOrder')}
+			+e('order', {}, 'p') #{S_DATA('titleFirm')}
+			+e('summ', {}, 'p') #{S_DATA('sumTotalNumber')}
+		+e('line', {}, 'hr')(noshade)
+		+e('inform-docs', {}, 'p') #{S_DATA('docs')}
+		+e('email', {}, 'p') #{S_DATA('email')}
+		+e('link', {}, 'div')
+			+e('download', {}, 'a')(href='!#') #{S_DATA('sumTotalLinkDownload')}
+			+e('date', {}, 'span') #{S_DATA('sumTotalLinkDate')}
+		+e('link', {}, 'div')
+			+e('download', {}, 'a')(href='!#') #{S_DATA('sumTotalLinkDownload2')}
+			+e('date', {}, 'span') #{S_DATA('sumTotalLinkDate2')}
+		+e('mini', {}, 'p') #{S_DATA('informText')}
