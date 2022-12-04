@@ -5,11 +5,20 @@
 .accordion {
 	&__title {
 		display: flex;
+		align-items: center;
 		justify-content: space-between;
 
-		cursor: pointer;
+		padding-top: 30px;
+		padding-bottom: 30px;
 
-		color: #000000;
+		cursor: pointer;
+		letter-spacing: normal;
+
+		color: #464646;
+
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 1;
 
 		&::after {
 			display: block;

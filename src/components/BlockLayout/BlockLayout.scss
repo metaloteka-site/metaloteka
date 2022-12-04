@@ -3,6 +3,8 @@
 	flex-direction: column;
 
 	&__left {
+		position: relative;
+
 		width: 100%;
 		max-width: 896px;
 		margin-right: 0;
@@ -10,6 +12,8 @@
 		border-radius: 37px;
 		background-color: #fcfcfc;
 	}
+
+
 
 	&__right {
 		--wet-asphalt: #464646;

@@ -2,13 +2,17 @@
 	const sectionOrderReserve = {
 		data: {
 			title: 'Резерв',
+			orderTitle: 'Заказ №210522/1-MT',
+			CompletionReserveRoom: 'Заказ №210522/1-MT',
+			CompletionReserveName: 'ИП Петров Иван',
 			reserve: '1. Резерв товара на складе',
 			personalData: '2. Личные данные',
 			decor: '3. Заверешение оформления',
 			room: '№1605221-RSRV',
 			infoWay: 'Выберите удобный для вас способ резерва',
+			infoDetails: 'Заполните данные для оформления заказа',
 			infoPeriodDays: 'Резерв (3дня)',
-			infoPeriodImg: 'icon-warning.svg',
+			infoPeriodImg: 'icon-time.svg',
 			infoPeriodAlt: 'Time',
 			infoPeriodDate: '25.05.2022 - 28.05.2022',
 			itemBtn: 'Сохранить',
@@ -86,64 +90,7 @@
 						}
 					}
 				]
-			},
-			BlockLayout : {
-				elemArr: [
-					{
-						data: {
-						title: 'Metaloteka',
-						subtitle: 'Металлопрокат оптом и в розницу',
-						},
-						opt: {
-							heading: true,
-							subtitle: true
-						},
-						dataArr:{
-							reserve:[
-									{
-										data:{
-											title:"Резерв (1 день)",
-											text:"Резерв товаров из заказа на складе сроком на 24 часа, 1 календарный день.",
-											sum:"10 000 /р.",
-											add:"Добавить",
-										},
-									},
-									{
-										data:{
-										title:"Резерв (3 дня)",
-										text:"Резерв товаров из заказа на складе сроком на 72 часа, 3 календарных дня.",
-										sum:"15 000 /р.",
-										add:"Добавить",
-										},
-									},
-								],
-							warning:[
-									{
-										data:{
-											img: '/icon-warning.svg',
-											alt:"Warning",
-											text:"Заранее согласовывайте время самовывоза с менеджером",
-										},
-									},
-									{
-										data:{
-											img: '/icon-warning.svg',
-											alt:"Warning",
-											text:"Самовывоз осуществляется собственными силами",
-										},
-									},
-									{
-										data:{
-											img: '/icon-warning.svg',
-											alt:"Warning",
-											text:"На манипуляторы с «Катюшей» погрузка не осуществляется",
-										},
-									},
-								]
-							}
-					}
-				]
-			},
+			}
 		},
 		//- данные секции
 		dataArr:{
@@ -185,6 +132,69 @@
 								img: '/icon-warning.svg',
 								alt:"Warning",
 								text:"На манипуляторы с «Катюшей» погрузка не осуществляется",
+							},
+						},
+					],
+					compound:[
+						{
+							data:{
+								name: 'Круг алюминиевый 1,5 мм АМГ6',
+								thickness:"1,5",
+								size:"3000",
+								weight:"1,558 т.",
+								sum:"3 472 549 / р.",
+							},
+						},
+						{
+							data:{
+								name: 'Круг алюминиевый 1,5 мм АМГ6',
+								thickness:"1,5",
+								size:"3000",
+								weight:"0,958 т.",
+								sum:"2 472 549 / р.",
+							},
+						},
+						{
+							data:{
+								name: 'Круг алюминиевый 2 мм АМГ6',
+								thickness:"2",
+								size:"3000",
+								weight:"0,200 т.",
+								sum:"500 549 / р.",
+							},
+						},
+						{
+							data:{
+								name: 'Круг алюминиевый 6 мм АМГ6',
+								thickness:"6",
+								size:"3000",
+								weight:"2,200 т. / 320 м",
+								sum:"50 549 / р.",
+							},
+						},
+						{
+							data:{
+								name: 'Круг алюминиевый 8 мм АМГ6',
+								thickness:"8",
+								size:"3000",
+								weight:"0,065 т.",
+								sum:"18 549 / р.",
+							},
+						},
+						{
+							data:{
+								name: 'Просечно-вытяжной лист, 16 мм (изготавливается по технологии горячекатного листа)',
+								thickness:"10",
+								size:"1500 x 600",
+								weight:"1,200 т.",
+								sum:"32 549 / р.",
+							},
+						},
+						{
+							data:{
+								name: 'Доставка (Борт 10т, 10м, зона МКАД)',
+								amount:"2 шт.",
+								sum:"32 549 / р.",
 							},
 						},
 					]
