@@ -1,0 +1,18 @@
+mixin section-catalog(section)
+	//- проверка данных получаемых из section
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- верстка секции
+	+Container
+		+b('section-catalog', {}, 'section')
+			+e('catalog-wrapper', {}, 'div')
+				+e('left-aside', {}, 'div')
+					+e('logo', {}, 'div')
+					+e('navigation', {}, 'div')
+						for item in S_DATA_ARR('category')
+							include ../../shared/helpers/pug/shortcut-check-store
+							+e('category', {}, 'a')(href=I_DATA('href')) #{I_DATA('title')}
+				+e('right-aside', {}, 'div')
+					+e('main', {}, 'div')
+					+e('tags', {}, 'div')
+					+e('footer', {}, 'div')
