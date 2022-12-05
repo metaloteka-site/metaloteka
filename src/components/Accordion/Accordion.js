@@ -7,7 +7,6 @@ class AccordionControl {
 		this.body = this.block.querySelector(`${this.blockClass}__body`);
 
 		this.bodyHeight = ` ${this.body.offsetHeight}px`;
-		document.documentElement.style.setProperty('--accordion-body-height', '0');
 
 		this.init();
 	}
@@ -17,19 +16,19 @@ class AccordionControl {
 			this.block.classList.toggle('js-active');
 
 			if (this.body.offsetHeight === 0) {
-				document.documentElement.style.setProperty('--accordion-body-height', this.bodyHeight);
+				this.body.style.height = this.bodyHeight;
 			} else {
-				document.documentElement.style.setProperty('--accordion-body-height', '0');
+				this.body.style.height = 0;
 			}
 		});
 	}
 }
 
 export function Accordion() {
-	const elem = document.querySelectorAll('.accordion');
+	const elems = document.querySelectorAll('.accordion');
 
-	if (elem) {
-		elem.forEach((item) => {
+	if (elems) {
+		elems.forEach((item) => {
 			new AccordionControl(item);
 		});
 	}

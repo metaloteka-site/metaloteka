@@ -13,7 +13,7 @@ mixin section-order-reserve(section)
 					+e('line-big', {}, 'div')
 				+e('room', {}, 'div') #{S_DATA('room')}
 			+e('line-small', {}, 'div')
-			+Accordion(S_ELEM('AccordionTitle'))
+			+Accordion(S_ELEM('AccordionDeliveryMethod'))
 				+e('info-way', {}, 'div') #{S_DATA('infoWay')}
 				+e('', {}, 'div')
 					+e('info-way', {}, 'div') #{S_DATA('itemWay')}
@@ -39,16 +39,18 @@ mixin section-order-reserve(section)
 					+e('reserve-condition-title', {}, 'div') #{S_DATA('reserveConditionTitle')}
 					+e('reserve-condition-text', {}, 'div') #{S_DATA('reserveConditionText')}
 			+e('line-small', {}, 'div')
-			+Accordion
-				+e('testing-color', {}, 'div') Второй аккордион
+			+Accordion(S_ELEM('AccordionPersonalData'))
+				+e('ffff', {}, 'div')
+					+e('info-way', {}, 'div') Заполните данные для оформления заказа
+				+e('ffff', {}, 'div')
 			+e('line-small', {}, 'div')
-			+Accordion
+			+Accordion(S_ELEM('AccordionCompletionRegistration'))
 				+e('info-way', {}, 'div') #{S_DATA('infoDetails')}
 				+e('сompletion-reserve', {}, 'div')
 					+e('', {}, 'div') #{S_DATA('CompletionReserveRoom')}
 					+e('', {}, 'div') #{S_DATA('CompletionReserveName')}
 				+e('line-сompletion', {}, 'div')
-				+Accordion
+				+Accordion(S_ELEM('AccordionOrderList'))
 					for item in S_DATA_ARR('compound')
 						include ../../shared/helpers/pug/shortcut-check-store
 						+e('order-list', {}, 'div')
