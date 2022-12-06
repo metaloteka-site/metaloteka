@@ -13,13 +13,19 @@ mixin section-catalog(section)
 							include ../../shared/helpers/pug/shortcut-check-store
 							+e('category', {}, 'a')(href=I_DATA('href')) #{ I_DATA('title') }
 				+e('right-aside', {}, 'div')
-					+e('main', {}, 'div')
-					+e('tags', {}, 'div')
+					+b('product-main', {}, 'div')
+						+e('wrapper', {}, 'div')
+							+e('title', {}, 'span') #{S_ELEM('ProductInformation').data.title}
+							+e('range', {}, 'div')
+							+e('information-block', {}, 'div')
+								for item in S_ELEM_ARR('ProductInformation')
+									+ProductList(item)
+					+b('product-tags', {}, 'div')
 						+e('tags-wrapper', {}, 'div')
 							each item in S_DATA_ARR('tags')
 								include ../../shared/helpers/pug/shortcut-check-store
 								+e('tag', {}, 'a')(href=I_DATA('href')) #{ I_DATA('title') }
-					+e('footer', {}, 'div')
+					+b('product-footer', {}, 'div')
 						+e('footer-wrapper', {}, 'div')
 							+e('qr', {}, 'img')(src='../../layout/assets/images/icon-qr.svg')
 							for item in S_ELEM_ARR('ContactInformationFooter')

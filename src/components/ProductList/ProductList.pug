@@ -1,0 +1,22 @@
+mixin ProductList(props)
+	//- проверка данных получаемых из props
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- верстка компонента
+	+b('product-list', {}, 'div')
+		+e('', {}, 'ul')
+			+e('', {}, 'li')
+				+e('', {}, 'input')(type='checkbox' checked)
+				+e('', {}, 'i')
+				+e('title-accordion', {}, 'h2') #{props.data.title}
+				for item in DATA_ARR('texts')
+					//- проверка данных получаемых из item
+					include ../../shared/helpers/pug/shortcut-check-store
+					+e('text', {}, 'p') #{I_DATA('text')}
+		//+e('title-accordion', {}, 'span') #{props.data.title}
+		//+e('block-accordion', {}, 'div')
+		//	for item in DATA_ARR('texts')
+		//		//- проверка данных получаемых из item
+		//		include ../../shared/helpers/pug/shortcut-check-store
+		//
+		//		+e('text', {}, 'p') #{I_DATA('text')}
