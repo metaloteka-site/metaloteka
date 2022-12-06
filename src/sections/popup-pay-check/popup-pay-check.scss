@@ -48,6 +48,12 @@
 		line-height: 0.94;
 	}
 
+	&__inform-docs-thanks {
+		margin-bottom: 16px;
+
+		line-height: 0.94;
+	}
+
 	&__email {
 		margin-bottom: 35px;
 
@@ -56,6 +62,10 @@
 		font-size: 20px;
 		font-weight: normal;
 		line-height: 1;
+	}
+
+	&__email-thanks {
+		margin-bottom: 16px;
 	}
 
 	&__link {
@@ -101,15 +111,19 @@
 		background: #efefef;
 	}
 
-	&__mini {
+	&__text-inform {
 		width: 286px;
 		margin-top: 33px;
 		margin-bottom: 26px;
 
-		color: $wet-asphalt;
+		line-height: 1.33;
+	}
 
-		font-size: $fs-small;
-		font-weight: 300;
+	&__text-inform-thanks {
+		width: 286px;
+		margin-top: 16px;
+		margin-bottom: 28px;
+
 		line-height: 1.33;
 	}
 }
