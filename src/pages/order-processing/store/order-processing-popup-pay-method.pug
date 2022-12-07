@@ -1,0 +1,45 @@
+-
+	const popupPayMethod = {
+		data: {
+			titleMethod: 'Способы оплаты',
+			titleOrder: 'Оплата резерва',
+			numberOrder: '№210522/1-RSRV',
+			sumTotalNumber: '64 000.00 руб.',
+			bankCard: 'Банковская карта',
+			sistemPay: 'Система быстрых платежей',
+			sberPay: 'Сбербэй от Сбербанка',
+			informText: 'Выбирая способ оплаты вы соглашаетесь с условиями платежных систем и способов оплаты вашего заказа. После успешной оплаты с вами свяжеться наш менеджер для уточнения деталей.'
+		},
+		elem: {
+			Popup: {
+				data: {
+					dataPopupName: 'pay-method'
+				},
+				bem: {
+					parent: 'popup-pay-method'
+				},
+			},
+		},
+		dataArr: {
+			buttonPay: [
+				{
+					data: {
+						text: 'Оплатить по счету'
+					}
+				},
+				{
+					data: {
+						text: 'Оплатить онлайн'
+					},
+					opt: {
+						disabled: true
+					}
+				},
+				{
+					data: {
+						text: 'Оплатить в офисе'
+					}
+				}
+			]
+		}
+	};

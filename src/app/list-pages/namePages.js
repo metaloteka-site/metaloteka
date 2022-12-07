@@ -28,6 +28,9 @@ module.exports = {
 			case 'order-processing':
 				name = 'Оформление заказа';
 				break;
+			case 'order-reserve':
+				name = 'Оформление резерва';
+				break;
 			default:
 				name = 'name page';
 				break;

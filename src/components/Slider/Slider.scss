@@ -1,0 +1,13 @@
+.slider {
+	&__pagination {
+		text-align: right;
+
+		.swiper-pagination-bullet {
+			width: 10px;
+			height: 10px;
+
+			border-radius: 0;
+			background: $white;
+		}
+	}
+}
