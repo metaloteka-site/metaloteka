@@ -3,7 +3,7 @@ mixin Tabs(props)
 	include ../../shared/helpers/pug/shortcut-check-store
 
 	//- верстка компонента
-	+b('tabs', {}, 'div')
+	+b('tabs', {m: BEM('modifierTabs')}, 'div')
 		+e('buttons', {}, 'div')
 			for item, index in DATA_ARR('tabButtons')
 				//- проверка данных получаемых из item
