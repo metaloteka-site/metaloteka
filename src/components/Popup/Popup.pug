@@ -1,0 +1,11 @@
+mixin Popup(props)
+	//- проверка данных получаемых из props
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	- let parent = BEM('parent') ? BEM('parent') : 'body';
+
+	//- верстка компонента
+	+b('popup', {}, 'div')(data-popup=DATA('dataPopupName'))
+		+b(parent, {e: '&:body'}, 'div')
+			block
+			+e('close', {p: 'popup'}, 'button') Закрыть
