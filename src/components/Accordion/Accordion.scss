@@ -1,7 +1,3 @@
-//:root {
-//	--accordion-body-height: max-contant;
-//}
-
 .accordion {
 	&__title {
 		display: flex;
@@ -23,34 +19,25 @@
 		&::after {
 			display: block;
 
-			content: 'A';
-			// content:url('../../layout/assets/images/icons-accordion-arrow.svg');
-			// content: '';
-			// background-image: url('../../layout/assets/images/icons-accordion-arrow.svg');
-
+			content: url('../layout/assets/images/icons-accordion-arrow.svg');
 			transition: all 0.3s;
 			transform: rotate(0deg);
 		}
 	}
 
 	&__body {
-		overflow: hidden;
+		position: relative;
 
-		//height: var(--accordion-body-height);
-		//height: 0;
+		overflow: hidden;
 
 		transition: all 0.3s;
 	}
 }
 
 .js-active {
-	.accordion__title {
+	& > .accordion__title {
 		&::after {
 			transform: rotate(90deg);
 		}
 	}
-
-	//.accordion__body {
-	//	height: var(--accordion-body-height);
-	//}
 }

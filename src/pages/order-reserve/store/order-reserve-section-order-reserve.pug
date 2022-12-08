@@ -124,6 +124,9 @@
 				bem: {
 					modifierTabs: 'button'
 				},
+				opt: {
+					htmlContent: true
+				},
 				dataArr: {
 					tabButtons: [
 						{
@@ -139,22 +142,24 @@
 							}
 						}
 					],
-					tabContents: [
-						{
-							data: {
-								tabContent: 'Один',
-								dataTabContent: '1'
-							}
-						},
-						{
-							data: {
-								tabContent: 'Два',
-								dataTabContent: '2'
-							}
-						}
-					]
 				}
 			},
+			TabsContent1: {
+				data: {
+					dataTabContent: '1'
+				},
+				bem: {
+					field: 'field'
+				},
+				opt: {
+					active: true
+				}
+			},
+			TabsContent2: {
+				data: {
+					dataTabContent: '2'
+				}
+			}
 		},
 		//- данные секции
 		dataArr:{

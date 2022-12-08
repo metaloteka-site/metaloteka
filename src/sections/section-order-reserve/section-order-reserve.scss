@@ -4,37 +4,7 @@
 	display: flex;
 	flex-direction: column;
 
-	// &__left {
-	// 	width: 100%;
-	// 	max-width: 896px;
-	// 	margin-right: 0;
-
-	// 	border-radius: 37px;
-	// 	background-color: #fcfcfc;
-	// }
-
-	// &__right {
-	// 	--wet-asphalt: #464646;
-	// 	display: flex;
-	// 	align-items: center;
-	// 	justify-content: center;
-
-	// 	width: 368px;
-	// 	height: 1050px;
-
-	// 	color: $white;
-	// 	border-radius: 30px;
-	// 	background: $wet-asphalt;
-	// 	box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.03);
-	// }
 	@include media('xs') {
-		// &__left {
-		// 	position: relative;
-
-		// 	margin-right: 40px;
-		// 	padding: 62px 53px 69px;
-		// }
-
 		&__icon {
 			position: absolute;
 			top: -43px;
@@ -379,12 +349,7 @@
 
 			border-radius: 20px;
 
-			// &_input-inn{
-			// 	#{$self}__field-item{
-
-			// 		color:#fff;
-			// 	}
-			// }
+		
 		}
 
 		&__field-item {
@@ -402,11 +367,13 @@
 			// opacity: 0.38;
 			border-radius: 14px;
 			background-color: #fcfcfc;
-
 		}
 
-		// &__item-inn {
-		// 	width: 120px;
+		// &_field{
+		// 	#{$self}__field-item{
+
+		// 		color:red;
+		// 	}
 		// }
 
 		&__field-item input,
@@ -470,11 +437,11 @@
 			max-width: 800px;
 			margin: 0 auto;
 		}
-		
+
 		&__tab__nav {
 			display: flex;
 		}
-		
+
 		&__tab__nav-button {
 			padding: 15px 30px;
 
@@ -487,36 +454,49 @@
 
 			font-size: 20px;
 		}
-		
+
 		&__tab__nav-button:last-child {
 			border-right: none;
 		}
-		
+
 		&__tab__nav-button:hover {
 			background-color: #dddddd;
 		}
-		
+
 		&__tab__nav-button.active {
 			color: #ffffff;
 			border-right-color: #0b6ddd;
 			background-color: #3d89df;
 		}
-		
+
 		&__tab__content {
 			padding: 30px;
 
 			background-color: #ffffff;
 		}
-		
+
 		/* Important functional styles */
-		
+
 		&__tab__block {
 			display: none;
 		}
-		
+
 		&__tab__block.active {
 			display: block;
 		}
-		
+
+		&__accordion-btn {
+			position: absolute;
+			top: 0;
+			right: 0;
+
+			padding: 21px 57px 23px;
+
+			cursor: pointer;
+
+			border:none;
+			border-radius: 14px;
+			background-color: rgba(70, 70, 70, 0.03);
+		}
 	}
 }

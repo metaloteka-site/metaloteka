@@ -1,18 +1,24 @@
+include TabsContent
+
 mixin Tabs(props)
 	//- проверка данных получаемых из props
 	include ../../shared/helpers/pug/shortcut-check-store
 
 	//- верстка компонента
-	+b('tabs', {m: BEM('modifierTabs')}, 'div')
-		+e('buttons', {}, 'div')
+	+b('tabs', {p: false,m: BEM('modifierTabs')}, 'div')
+		+e('buttons', {p: 'tabs'}, 'div')
 			for item, index in DATA_ARR('tabButtons')
 				//- проверка данных получаемых из item
 				include ../../shared/helpers/pug/shortcut-check-store
 
-				+e('button', {b: `${index === 0 ? 'js-active' : ''}`}, 'button')(data-tab-button=`${I_DATA('dataTabButton')}`) #{I_DATA('tabButton')}
+				+e('button', {p: 'tabs', b: `${index === 0 ? 'js-active' : ''}`}, 'button')(data-tab-button=`${I_DATA('dataTabButton')}`) #{I_DATA('tabButton')}
 
-		+e('body', {}, 'div')
-			for item, index in DATA_ARR('tabContents')
-				//- проверка данных получаемых из item
-				include ../../shared/helpers/pug/shortcut-check-store
-				+e('content', {b: `${index === 0 ? 'js-active' : ''}`}, 'div')(data-tab-content=`${I_DATA('dataTabContent')}`) #{I_DATA('tabContent')}
+		+e('body', {p: 'tabs'}, 'div')
+			if OPT('htmlContent')
+				block
+
+			if !OPT('htmlContent')
+				for item, index in DATA_ARR('tabContents')
+					//- проверка данных получаемых из item
+					include ../../shared/helpers/pug/shortcut-check-store
+					+e('content', {p: 'tabs', b: `${index === 0 ? 'js-active' : ''}`}, 'div')(data-tab-content=`${I_DATA('dataTabContent')}`) #{I_DATA('tabContent')}
