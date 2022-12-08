@@ -1,0 +1,9 @@
+mixin Accordion(props)
+	//- проверка данных получаемых из section
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- верстка компонента
+	+b('accordion', {p: false}, 'div')
+		+e('title', {p: 'accordion'}, 'div') #{DATA('title')}
+		+e('body', {p: 'accordion'}, 'div')
+			block

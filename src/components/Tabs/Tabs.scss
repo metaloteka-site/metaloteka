@@ -1,4 +1,6 @@
 .tabs {
+	$self: &;
+
 	&__buttons {
 		display: flex;
 		overflow-x: scroll;
@@ -95,6 +97,38 @@
 		}
 	}
 
+	&_button {
+		#{$self}__button {
+			padding: 21px 39px 23px;
+
+			letter-spacing: normal;
+
+			color: #464646;
+			border: solid 1px #46464662;
+			border-radius: 14px;
+
+			font-size: 20px;
+			font-weight: 800;
+			line-height: 1;
+		}
+
+		.js-active {
+			display: block;
+
+			border: solid 1px linear-gradient(291deg, #b66060, #ce7f65);
+			border-width: 4px;
+			border-style: solid;
+			border-radius: 14px;
+
+			border-image-slice: 1;
+			// color:red;
+		}
+
+		.js-active::after {
+			display: none;
+		}
+	}
+
 	@include media('xs') {
 		&__content {
 			overflow-y: auto;
@@ -103,4 +137,3 @@
 		}
 	}
 }
-
