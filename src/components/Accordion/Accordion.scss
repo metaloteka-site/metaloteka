@@ -3,6 +3,8 @@
 //}
 
 .accordion {
+	$self: &;
+
 	&__title {
 		display: flex;
 		align-items: center;
@@ -40,6 +42,18 @@
 		//height: 0;
 
 		transition: all 0.3s;
+	}
+
+	&_fz-20 {
+		#{$self}__title {
+			font-size: 20px;
+		}
+	}
+
+	&_resetContent {
+		#{$self}__title::after {
+			content: '';
+		}
 	}
 }
 
