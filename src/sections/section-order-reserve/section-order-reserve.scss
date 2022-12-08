@@ -239,7 +239,7 @@
 
 			margin-top: 44px;
 
-			color: #464646;
+			color: $wet-asphalt;
 		}
 
 		&__qr {
@@ -341,15 +341,15 @@
 		&__form {
 			display: flex;
 			flex-wrap: wrap;
+			column-gap: 20px;
 
 			width: 100%;
-			max-width: 500px;
+			// width: 790px;
+			// max-width: 500px;
 			margin-bottom: 50px;
-			padding: 0 40px;
+			// padding: 0 40px;
 
 			border-radius: 20px;
-
-		
 		}
 
 		&__field-item {
@@ -367,14 +367,34 @@
 			// opacity: 0.38;
 			border-radius: 14px;
 			background-color: #fcfcfc;
+
+			&_field-s {
+				width: 100%;
+				max-width: 247px;
+
+				background:rgba(255, 0, 0, 0.813);
+			}
+
+			&_field-m {
+				width: 100%;
+				max-width: 383px;
+
+				background:rgba(0, 0, 0, 0.295);
+			}
+
+			&_field-x {
+				width: 100%;
+				max-width: 520px;
+
+				background:rgba(0, 255, 115, 0.404);
+			}
+
+			&_field-t {
+				width: 100%;
+
+				background:rgba(124, 88, 196, 0.267);
+			}
 		}
-
-		// &_field{
-		// 	#{$self}__field-item{
-
-		// 		color:red;
-		// 	}
-		// }
 
 		&__field-item input,
 		textarea {
@@ -498,5 +518,12 @@
 			border-radius: 14px;
 			background-color: rgba(70, 70, 70, 0.03);
 		}
+
+		//&_field {
+		//	#{$self}__field-item {
+		//		background:red;
+		//		width: 600px;
+		//	}
+		//}
 	}
 }
