@@ -12,6 +12,8 @@ class AccordionControl {
 	}
 
 	init() {
+		this.body.style.height = 0;
+
 		this.title.addEventListener('click', () => {
 			this.block.classList.toggle('js-active');
 

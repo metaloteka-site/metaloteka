@@ -1,5 +1,5 @@
 .accordion-list {
-	width: fit-content;
+	width: 100%;
 	height: fit-content;
 
 	&__list-wrapper {
@@ -18,5 +18,9 @@
 		&:hover {
 			color: var(--wet-asphalt);
 		}
+	}
+
+	@include media(xs) {
+		width: fit-content;
 	}
 }

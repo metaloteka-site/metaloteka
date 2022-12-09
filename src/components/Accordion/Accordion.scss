@@ -23,15 +23,16 @@
 		line-height: 1;
 
 		&::after {
-			display: block;
+			width: 12px;
+			height: 12px;
 
-			content: 'A';
-			// content:url('../../layout/assets/images/icons-accordion-arrow.svg');
-			// content: '';
-			// background-image: url('../../layout/assets/images/icons-accordion-arrow.svg');
-
+			content: '';
 			transition: all 0.3s;
-			transform: rotate(0deg);
+			transform: rotate(45deg);
+
+			opacity: 22%;
+			border-top: 3px solid #5f575f;
+			border-right: 3px solid #5f575f;
 		}
 	}
 
@@ -50,7 +51,7 @@
 		}
 	}
 
-	&_resetContent {
+	&_reset {
 		#{$self}__title::after {
 			content: '';
 		}
@@ -60,7 +61,7 @@
 .js-active {
 	.accordion__title {
 		&::after {
-			transform: rotate(90deg);
+			transform: rotate(135deg);
 		}
 	}
 
