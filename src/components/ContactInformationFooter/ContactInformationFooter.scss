@@ -47,7 +47,7 @@
 		border-width: 3px;
 		border-style: solid;
 		border-image-source: linear-gradient(271deg, #ce7f65, #b66060);
-		border-image-slice: 1;
+		border-image-slice: 1 fill;
 	}
 
 	&__number, &__mail {
