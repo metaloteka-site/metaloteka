@@ -1,13 +1,41 @@
 .slider {
+	&__img {
+		max-height: 410px;
+	}
+
 	&__pagination {
 		text-align: right;
 
-		.swiper-pagination-bullet {
-			width: 10px;
-			height: 10px;
+		&.swiper-pagination-bullets {
+			bottom: 70px;
 
-			border-radius: 0;
-			background: $white;
+			width: calc(100% - 97px);
+
+			.swiper-pagination-bullet {
+				width: 9px;
+				height: 8px;
+				margin: 0 11px;
+
+				border-radius: 0;
+				background: $white;
+			}
+		}
+	}
+
+	&__button-next {
+		position: absolute;
+		z-index: 10;
+		right: 10px;
+		bottom: 50px;
+		left: auto;
+
+		cursor: pointer;
+		transition: all 0.3s;
+
+		opacity: 0.3;
+
+		&:hover {
+			opacity: 1;
 		}
 	}
 }

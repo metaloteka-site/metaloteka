@@ -1,0 +1,41 @@
+mixin section-catalog(section)
+	//- проверка данных получаемых из section
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- верстка секции
+	+Container
+		+b('section-catalog', {}, 'section')
+			+e('catalog-wrapper', {}, 'div')
+				+e('left-aside', {}, 'div')
+					+e('logo', {}, 'div')
+						+e('img', {}, 'img')(src='../../layout/assets/images/icon-qr.svg')
+						+e('banner', {}, 'div')
+							+e('title', {}, 'span') #{S_ELEM('LogoBanner').data.title}
+							+e('subtitle', {}, 'span') #{S_ELEM('LogoBanner').data.subtitle}
+							+e('range', {}, 'div')
+					+e('navigation', {}, 'div')
+						each item in S_DATA_ARR('category')
+							include ../../shared/helpers/pug/shortcut-check-store
+							+e('category', {}, 'a')(href=I_DATA('href')) #{ I_DATA('title') }
+						+e('accordion-wrapper', {}, 'div')
+							each item in S_ELEM_ARR('AccordionListNavigation')
+								+AccordionList(item)
+					+e('mobile-description', {}, 'div') #{S_ELEM('MobileDescription').data.description}
+				+e('right-aside', {}, 'div')
+					+b('product-main', {}, 'div')
+						+e('wrapper', {}, 'div')
+							+e('title', {}, 'span') #{S_ELEM('ProductInformation').data.title}
+							+e('range', {}, 'div')
+							+e('information-block', {}, 'div')
+								each item in S_ELEM_ARR('AccordionList')
+									+AccordionList(item)
+					+b('product-tags', {}, 'div')
+						+e('tags-wrapper', {}, 'div')
+							each item in S_DATA_ARR('tags')
+								include ../../shared/helpers/pug/shortcut-check-store
+								+e('tag', {}, 'a')(href=I_DATA('href')) #{ I_DATA('title') }
+					+b('product-footer', {}, 'div')
+						+e('footer-wrapper', {}, 'div')
+							+e('qr', {}, 'img')(src='../../layout/assets/images/icon-qr.svg')
+							for item in S_ELEM_ARR('ContactInformationFooter')
+								+ContactInformationFooter(item)

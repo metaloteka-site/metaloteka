@@ -3,6 +3,16 @@
 	&_wet-asphalt {
 		color: $wet-asphalt;
 	}
+
+	&_wet-asphalt-70 {
+		--wet-asphalt: #464646b3;
+		color: $wet-asphalt;
+	}
+
+	&_wet-asphalt-80 {
+		--wet-asphalt: #464646cc;
+		color: $wet-asphalt;
+	}
 	
 	&_light-slate-gray {
 		color: $light-slate-gray;
@@ -40,6 +50,10 @@
 
 	&_big {
 		font-size: $fs-big;
+	}
+
+	&_fs-10 {
+		font-size: $fs-10;
 	}
 
 	&_fs-18 {

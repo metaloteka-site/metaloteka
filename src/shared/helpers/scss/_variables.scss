@@ -9,10 +9,15 @@
 	// - #f4f2f2 - дымчато белый №1
 	// - #efefef - дымчато белый №2
 	--white: #ffffff;
+	--dark-white: #fcfcfc;
+	--smoke-white-first: #f4f2f2;
+	--smoke-white-second: #efefef;
 	// <END
 
 	// Пременную '--wet-asphalt' цвета можно переопределить следующими цветами:
 	// - #46464692 - мокрый освальт с опасити 0.57
+	// - #464646b3 - мокрый освальт с опасити 0.70
+	// - #464646cc - мокрый освальт с опасити 0.80
 	// - #464646c6 - мокрый освальт с опасити 0.78
 	--wet-asphalt: #464646;
 	// <END
@@ -42,6 +47,7 @@
 	--fs-title3: 4.6rem;
 	--fs-title2: 5.4rem;
 	--fs-title1: 7.2rem;
+	--fs-10: 1rem;
 	--fs-18: 1.8rem;
 	--fs-20: 2rem;
 	--fs-22: 2.2rem;
@@ -88,6 +94,7 @@ $fs-title4: var(--fs-title4);
 $fs-title3: var(--fs-title3);
 $fs-title2: var(--fs-title2);
 $fs-title1: var(--fs-title1);
+$fs-10: var(--fs-10);
 $fs-18: var(--fs-18);
 $fs-20: var(--fs-20);
 $fs-22: var(--fs-22);

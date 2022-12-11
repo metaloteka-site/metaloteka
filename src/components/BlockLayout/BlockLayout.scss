@@ -8,6 +8,7 @@
 		width: 100%;
 		max-width: 896px;
 		margin-right: 0;
+		padding: 62px 42px 50px;
 
 		border-radius: 37px;
 		background-color: #fcfcfc;
@@ -16,23 +17,26 @@
 
 
 	&__right {
-		--wet-asphalt: #464646;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		width: 368px;
-		height: 1050px;
-
-		color: $white;
-		border-radius: 30px;
-		background: $wet-asphalt;
-		box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.03);
+		display: none;
 	}
 	@include media('xs') {
 		&__left {
 			margin-right: 40px;
 			padding: 62px 53px 69px;
+		}
+
+		&__right {
+			--wet-asphalt: #464646;
+
+			display: block;
+
+			width: 100%;
+			max-width: 368px;
+			padding: 51px 42px;
+	
+			border-radius: 30px;
+			background-color: #fcfcfc;
+			box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.03);
 		}
 	}
 }

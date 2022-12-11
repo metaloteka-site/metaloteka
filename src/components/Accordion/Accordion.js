@@ -12,7 +12,10 @@ class AccordionControl {
 	}
 
 	init() {
+		this.body.style.height = 0;
+
 		this.title.addEventListener('click', () => {
+			// e.stopPropagation();
 			this.block.classList.toggle('js-active');
 
 			if (this.body.offsetHeight === 0) {
