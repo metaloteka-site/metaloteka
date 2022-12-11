@@ -4,37 +4,7 @@
 	display: flex;
 	flex-direction: column;
 
-	// &__left {
-	// 	width: 100%;
-	// 	max-width: 896px;
-	// 	margin-right: 0;
-
-	// 	border-radius: 37px;
-	// 	background-color: #fcfcfc;
-	// }
-
-	// &__right {
-	// 	--wet-asphalt: #464646;
-	// 	display: flex;
-	// 	align-items: center;
-	// 	justify-content: center;
-
-	// 	width: 368px;
-	// 	height: 1050px;
-
-	// 	color: $white;
-	// 	border-radius: 30px;
-	// 	background: $wet-asphalt;
-	// 	box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.03);
-	// }
 	@include media('xs') {
-		// &__left {
-		// 	position: relative;
-
-		// 	margin-right: 40px;
-		// 	padding: 62px 53px 69px;
-		// }
-
 		&__icon {
 			position: absolute;
 			top: -43px;
@@ -63,22 +33,11 @@
 		&__title {
 			margin-bottom: 16px;
 
-			letter-spacing: normal;
-
-			color: #464646;
-
-			font-size: 54px;
-			font-weight: 900;
 			line-height: 1;
 		}
 
 		&__room {
-			letter-spacing: normal;
-
-			color: #464646;
-
-			font-size: 20px;
-			font-weight: 400;
+			// letter-spacing: normal;
 			line-height: 1.2;
 		}
 
@@ -112,16 +71,20 @@
 			line-height: 1;
 		}
 
-		&__info-way {
-			letter-spacing: normal;
+		// &__info-way {
+		// 	letter-spacing: normal;
 
-			opacity: 0.8;
-			color: #464646;
+		// 	opacity: 0.8;
+		// 	color: #464646;
 
-			font-size: 14px;
-			font-weight: 400;
-			line-height: 1.29;
-		}
+		// 	font-size: 14px;
+		// 	font-weight: 300;
+		// 	line-height: 1.29;
+
+		// &_info-way{
+		// margin-bottom: 30px;
+		// }
+		// }
 
 		&__info-period-inner {
 			display: flex;
@@ -135,11 +98,19 @@
 		&__info-period {
 			letter-spacing: normal;
 
-			color: #464646;
-
-			font-size: 18px;
-			font-weight: 700;
 			line-height: 1.22;
+
+			// color: #464646;
+
+			// font-size: 18px;
+			// font-weight: 700;
+		}
+
+		&__text-info-way {
+			// color: rgba(255, 0, 0, 0.596);
+			opacity: 0.8;
+
+			line-height: 1.29;
 		}
 
 		&__info-period-img {
@@ -192,10 +163,14 @@
 		}
 
 		&__item-add {
+			cursor: pointer;
 			text-align: right;
 			letter-spacing: normal;
 
 			color: #464646;
+			border: none;
+			outline: none;
+			background: none;
 
 			font-size: 18px;
 			font-weight: 300;
@@ -245,22 +220,13 @@
 			margin-top: 42px;
 			margin-bottom: 15px;
 
-			letter-spacing: normal;
-
-			color: #464646;
-
-			font-size: 18px;
-			font-weight: 800;
 			line-height: 1.11;
 		}
 
 		&__reserve-condition-text {
-			letter-spacing: normal;
-
-			color: #464646;
+			margin-bottom: 12px;
 
 			font-size: 10px;
-			font-weight: 300;
 			line-height: 1.4;
 		}
 
@@ -269,7 +235,7 @@
 
 			margin-top: 44px;
 
-			color: #464646;
+			color: $wet-asphalt;
 		}
 
 		&__qr {
@@ -371,20 +337,15 @@
 		&__form {
 			display: flex;
 			flex-wrap: wrap;
+			column-gap: 20px;
 
 			width: 100%;
-			max-width: 500px;
+			// width: 790px;
+			// max-width: 500px;
 			margin-bottom: 50px;
-			padding: 0 40px;
+			// padding: 0 40px;
 
 			border-radius: 20px;
-
-			// &_input-inn{
-			// 	#{$self}__field-item{
-
-			// 		color:#fff;
-			// 	}
-			// }
 		}
 
 		&__field-item {
@@ -403,11 +364,36 @@
 			border-radius: 14px;
 			background-color: #fcfcfc;
 
-		}
+			&_field-s {
+				width: 100%;
+				max-width: 247px;
 
-		// &__item-inn {
-		// 	width: 120px;
-		// }
+				background:rgba(255, 0, 0, 0.813);
+			}
+
+			&_field-m {
+				width: 100%;
+				max-width: 383px;
+
+				background:rgba(0, 0, 0, 0.295);
+			}
+
+			&_field-x {
+				width: 100%;
+				max-width: 520px;
+
+				background:rgba(0, 255, 115, 0.404);
+			}
+
+			&_field-t {
+				width: 100%;
+				// height: 120px;
+				height: 85px;
+
+				background:rgba(124, 88, 196, 0.267);
+				
+			}
+		}
 
 		&__field-item input,
 		textarea {
@@ -470,11 +456,11 @@
 			max-width: 800px;
 			margin: 0 auto;
 		}
-		
+
 		&__tab__nav {
 			display: flex;
 		}
-		
+
 		&__tab__nav-button {
 			padding: 15px 30px;
 
@@ -487,36 +473,56 @@
 
 			font-size: 20px;
 		}
-		
+
 		&__tab__nav-button:last-child {
 			border-right: none;
 		}
-		
+
 		&__tab__nav-button:hover {
 			background-color: #dddddd;
 		}
-		
+
 		&__tab__nav-button.active {
 			color: #ffffff;
 			border-right-color: #0b6ddd;
 			background-color: #3d89df;
 		}
-		
+
 		&__tab__content {
 			padding: 30px;
 
 			background-color: #ffffff;
 		}
-		
+
 		/* Important functional styles */
-		
+
 		&__tab__block {
 			display: none;
 		}
-		
+
 		&__tab__block.active {
 			display: block;
 		}
-		
+
+		&__accordion-btn {
+			position: absolute;
+			top: 55px;
+			right: 0;
+
+			padding: 21px 57px 23px;
+
+			cursor: pointer;
+
+			border:none;
+			border-radius: 14px;
+			background-color: rgba(70, 70, 70, 0.03);
+		}
+
+		//&_field {
+		//	#{$self}__field-item {
+		//		background:red;
+		//		width: 600px;
+		//	}
+		//}
 	}
 }
