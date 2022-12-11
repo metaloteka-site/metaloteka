@@ -33,22 +33,11 @@
 		&__title {
 			margin-bottom: 16px;
 
-			letter-spacing: normal;
-
-			color: #464646;
-
-			font-size: 54px;
-			font-weight: 900;
 			line-height: 1;
 		}
 
 		&__room {
-			letter-spacing: normal;
-
-			color: #464646;
-
-			font-size: 20px;
-			font-weight: 400;
+			// letter-spacing: normal;
 			line-height: 1.2;
 		}
 
@@ -82,20 +71,20 @@
 			line-height: 1;
 		}
 
-		&__info-way {
-			letter-spacing: normal;
+		// &__info-way {
+		// 	letter-spacing: normal;
 
-			opacity: 0.8;
-			color: #464646;
+		// 	opacity: 0.8;
+		// 	color: #464646;
 
-			font-size: 14px;
-			font-weight: 400;
-			line-height: 1.29;
+		// 	font-size: 14px;
+		// 	font-weight: 300;
+		// 	line-height: 1.29;
 
-			&_info-way{
-				margin-bottom: 30px;
-			}
-		}
+		// &_info-way{
+		// margin-bottom: 30px;
+		// }
+		// }
 
 		&__info-period-inner {
 			display: flex;
@@ -109,15 +98,19 @@
 		&__info-period {
 			letter-spacing: normal;
 
-			color: #464646;
-
-			font-size: 18px;
-			font-weight: 700;
 			line-height: 1.22;
+
+			// color: #464646;
+
+			// font-size: 18px;
+			// font-weight: 700;
 		}
 
 		&__text-info-way {
-			color: rgba(255, 0, 0, 0.596);
+			// color: rgba(255, 0, 0, 0.596);
+			opacity: 0.8;
+
+			line-height: 1.29;
 		}
 
 		&__info-period-img {
@@ -170,10 +163,14 @@
 		}
 
 		&__item-add {
+			cursor: pointer;
 			text-align: right;
 			letter-spacing: normal;
 
 			color: #464646;
+			border: none;
+			outline: none;
+			background: none;
 
 			font-size: 18px;
 			font-weight: 300;
@@ -223,22 +220,13 @@
 			margin-top: 42px;
 			margin-bottom: 15px;
 
-			letter-spacing: normal;
-
-			color: #464646;
-
-			font-size: 18px;
-			font-weight: 800;
 			line-height: 1.11;
 		}
 
 		&__reserve-condition-text {
-			letter-spacing: normal;
-
-			color: #464646;
+			margin-bottom: 12px;
 
 			font-size: 10px;
-			font-weight: 300;
 			line-height: 1.4;
 		}
 
