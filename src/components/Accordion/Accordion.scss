@@ -1,4 +1,6 @@
 .accordion {
+	$self: &;
+
 	&__title {
 		display: flex;
 		align-items: center;
@@ -17,11 +19,16 @@
 		line-height: 1;
 
 		&::after {
-			display: block;
+			width: 12px;
+			height: 12px;
 
-			content: url('../layout/assets/images/icons-accordion-arrow.svg');
+			content: '';
 			transition: all 0.3s;
-			transform: rotate(90deg);
+			transform: rotate(45deg);
+
+			opacity: 22%;
+			border-top: 3px solid $liverny-light;
+			border-right: 3px solid $liverny-light;
 		}
 	}
 
@@ -32,12 +39,24 @@
 
 		transition: all 0.3s;
 	}
+
+	&_fz-20 {
+		#{$self}__title {
+			font-size: 20px;
+		}
+	}
+
+	&_reset {
+		#{$self}__title::after {
+			content: '';
+		}
+	}
 }
 
 .js-active {
 	& > .accordion__title {
 		&::after {
-			transform: rotate(0deg);
+			transform: rotate(135deg);
 		}
 	}
 }

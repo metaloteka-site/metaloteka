@@ -1,0 +1,26 @@
+.accordion-list {
+	width: 100%;
+	height: fit-content;
+
+	&__list-wrapper {
+		display: flex;
+		flex-direction: column;
+		row-gap: 8px;
+	}
+
+	&__link {
+		text-decoration: none;
+
+		color: var(--wet-asphalt);
+
+		font-size: 16px;
+
+		&:hover {
+			color: var(--wet-asphalt);
+		}
+	}
+
+	@include media(xs) {
+		width: fit-content;
+	}
+}

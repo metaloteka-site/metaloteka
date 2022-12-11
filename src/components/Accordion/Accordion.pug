@@ -3,7 +3,7 @@ mixin Accordion(props)
 	include ../../shared/helpers/pug/shortcut-check-store
 
 	//- верстка компонента
-	+b('accordion', {p: false}, 'div')
+	+b('accordion', {p: false, m: `${BEM('size')}.${BEM('styleContent')}.${BEM('display')}`}, 'div')
 		+e('title', {p: 'accordion'}, 'div') #{DATA('title')}
 		+e('body', {p: 'accordion'}, 'div')
 			block
