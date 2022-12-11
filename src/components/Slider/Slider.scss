@@ -1,4 +1,8 @@
 .slider {
+	&__img {
+		max-height: 410px;
+	}
+
 	&__pagination {
 		text-align: right;
 
