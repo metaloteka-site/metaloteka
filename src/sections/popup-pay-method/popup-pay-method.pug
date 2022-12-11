@@ -1,0 +1,29 @@
+mixin popup-pay-method(section)
+
+	//- проверка данных получаемых из section
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- верстка секции
+	+Popup(S_ELEM('Popup'))
+		+e('title', {}, 'div')
+			+e('method', {}, 'h2') #{S_DATA('titleMethod')}
+			+e('order', {}, 'h2') #{S_DATA('titleOrder')}
+			+e('order', {}, 'h2') #{S_DATA('numberOrder')}
+			+e('summ', {}, 'p') #{S_DATA('sumTotalNumber')}
+		+e('line', {}, 'hr')(noshade)
+		+e('pay', {}, 'div')
+			+e('logo', {}, 'img')(src='../../layout/assets/images/logo-card-popup.svg')
+			+e('name', {}, 'p') #{S_DATA('bankCard')}
+			+e('arrow', {}, 'img')(src='../../layout/assets/images/arrow-popup-dark.svg')
+		+e('line', {}, 'hr')(noshade)
+		+e('pay', {}, 'div')
+			+e('logo', {}, 'img')(src='../../layout/assets/images/logo-sbp-popup.svg')
+			+e('name', {}, 'p') #{S_DATA('sistemPay')}
+			+e('arrow', {}, 'img')(src='../../layout/assets/images/arrow-popup-dark.svg')
+		+e('line', {}, 'hr')(noshade)
+		+e('pay', {}, 'div')
+			+e('logo', {}, 'img')(src='../../layout/assets/images/logo-sberbank-popup.svg')
+			+e('name', {}, 'p') #{S_DATA('sberPay')}
+			+e('arrow', {}, 'img')(src='../../layout/assets/images/arrow-popup-dark.svg')
+		+e('line', {}, 'hr')(noshade)
+		+e('mini', {}, 'p') #{S_DATA('informText')}

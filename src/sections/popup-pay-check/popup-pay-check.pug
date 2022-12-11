@@ -1,0 +1,28 @@
+mixin popup-pay-check(section)
+
+	//- проверка данных получаемых из section
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- верстка секции
+	+Popup(S_ELEM('Popup'))
+		if S_OPT('title')
+			+e('title', {}, 'div')
+				+e('method', {}, 'h2') #{S_DATA('titleMethod')}
+				+e('order', {}, 'h2') #{S_DATA('titleOrder')}
+				+e('order', {}, 'h2') #{S_DATA('numberOrder')}
+				+e('order', {}, 'p') #{S_DATA('titleFirm')}
+				+e('summ', {}, 'p') #{S_DATA('sumTotalNumber')}
+		if S_OPT('line')
+			+e('line', {}, 'hr')(noshade)
+		+Text(S_ELEM('TextInformDocs'))
+		+Text(S_ELEM('TextEmail'))
+
+		if S_OPT('links')
+			for item in S_DATA_ARR('links')
+				//- проверка данных получаемых из item
+				include ../../shared/helpers/pug/shortcut-check-store
+				+e('link', {}, 'div')
+					+e('download', {}, 'a')(href='!#') #{I_DATA('textLink')}
+					+e('date', {}, 'span') #{I_DATA('text')}
+
+		+Text(S_ELEM('TextInform'))
