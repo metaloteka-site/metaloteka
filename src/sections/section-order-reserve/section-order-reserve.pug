@@ -14,7 +14,10 @@ mixin section-order-reserve(section)
 				+e('room', {}, 'div') #{S_DATA('room')}
 			+e('line-small', {}, 'div')
 			+Accordion(S_ELEM('AccordionDeliveryMethod'))
-				+e('info-way', {}, 'div') #{S_DATA('infoWay')}
+				//- +e('info-way', {}, 'div') #{S_DATA('infoWay')}
+				+Text({data: {text: 'отгружено за неделю'}})
+				//- +Text({data: {S_DATA('infoWay')}})
+				+Text(S_ELEM('TextInfoWay'))
 				+e('', {}, 'div')
 					+e('info-way', {}, 'div') #{S_DATA('itemWay')}
 					+e('info-period-inner', {}, 'div')
@@ -41,10 +44,10 @@ mixin section-order-reserve(section)
 			+e('line-small', {}, 'div')
 			+Accordion(S_ELEM('AccordionPersonalData'))
 				+e('accordion-btn', {}, 'button') Войти
+				+e('info-way', {m: S_BEM('infoWay')}, 'div') Заполните данные для оформления заказа
 				+Tabs(S_ELEM('Tabs'))
 					+TabsContent(S_ELEM('TabsContent1'))
 						+e('ffff', {}, 'div')
-							+e('info-way', {}, 'div') Заполните данные для оформления заказа
 							+e('form', {}, 'form')
 								+e('field-item', {m: S_BEM('fieldItemM')}, 'label')
 									+e('item-inn', {}, 'input')(required)

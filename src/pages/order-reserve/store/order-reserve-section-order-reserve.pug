@@ -9,7 +9,7 @@
 			personalData: '2. Личные данные',
 			decor: '3. Заверешение оформления',
 			room: '№1605221-RSRV',
-			infoWay: 'Выберите удобный для вас способ резерва',
+			//- infoWay: 'Выберите удобный для вас способ резерва',
 			infoDetails: 'Заполните данные для оформления заказа',
 			infoPeriodDays: 'Резерв (3дня)',
 			infoPeriodImg: 'icon-time.svg',
@@ -35,7 +35,8 @@
 			fieldItemS: 'field-s',
 			fieldItemM: 'field-m',
 			fieldItemX: 'field-x',
-			fieldItemT: 'field-t'
+			fieldItemT: 'field-t',
+			infoWay: 'info-way'
 		},
 		elem: {
 			ContactInformationFooter : {
@@ -162,7 +163,21 @@
 				data: {
 					dataTabContent: '2'
 				}
-			}
+			},
+			TextInfoWay: {
+				data: {
+					text: 'Выберите удобный для вас способ резерва'
+				},
+				bem: {
+					color: 'wet-asphalt',
+					fw: 'fw-500',
+					elementClassIndividual: 'text-info-way'
+				},
+				opt: {
+					p: true,
+					isElementClass: true
+				}
+			},
 		},
 		dataArr:{
 				reserve:[

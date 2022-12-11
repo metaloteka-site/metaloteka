@@ -5,7 +5,7 @@
 		justify-content: space-between;
 
 		padding-top: 30px;
-		padding-bottom: 30px;
+		padding-bottom: 12px;
 
 		cursor: pointer;
 		letter-spacing: normal;
@@ -21,7 +21,7 @@
 
 			content: url('../layout/assets/images/icons-accordion-arrow.svg');
 			transition: all 0.3s;
-			transform: rotate(0deg);
+			transform: rotate(90deg);
 		}
 	}
 
@@ -37,7 +37,7 @@
 .js-active {
 	& > .accordion__title {
 		&::after {
-			transform: rotate(90deg);
+			transform: rotate(0deg);
 		}
 	}
 }
