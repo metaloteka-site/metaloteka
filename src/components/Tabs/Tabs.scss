@@ -1,4 +1,6 @@
 .tabs {
+	$self: &;
+
 	&__buttons {
 		display: flex;
 		overflow-x: scroll;
@@ -86,12 +88,47 @@
 
 		&.js-active {
 			width: 100%;
+			height: 800px;
 
 			opacity: 1;
 		}
 
 		&.opened {
 			display: block;
+		}
+	}
+
+	&_button {
+		#{$self}__button {
+			margin:5px;
+			padding: 21px 39px 23px;
+
+			letter-spacing: normal;
+
+			color: #464646;
+			border-radius: 14px;
+			outline: solid 1px #46464662;
+
+			font-size: 20px;
+			font-weight: 800;
+			line-height: 1;
+			
+		}
+
+		.js-active#{$self}__button{
+			outline: solid 4px #46464662;
+			// outline: solid 4px $red-gradient;
+
+		}
+
+		.js-active {
+			display: block;
+
+			border-radius: 14px;
+		}
+
+		.js-active::after {
+			display: none;
 		}
 	}
 
@@ -103,4 +140,3 @@
 		}
 	}
 }
-

@@ -1,5 +1,8 @@
 extends ../../layout/main
 
+append variables
+	+includeComponents(['Popup'])
+
 block store
 	include store/order-processing.store.pug
 
@@ -11,3 +14,18 @@ block main
 	//- подключение и вызов секции SECTION-BREADCRUMBS
 	include ../../sections/section-breadcrumbs/section-breadcrumbs
 	+section-breadcrumbs(orderProcessing.sectionBreadcrumbs)
+
+block popup
+	//- подключение и вызов попапа POPUP-PAYMENT и POPUP-PAYENTITY
+	include ../../sections/popup-payment/popup-payment
+	+popup-payment(orderProcessing.popupPayment)
+	+popup-payment(orderProcessing.popupPaymentEntity)
+
+	//- подключение и вызов попапа POPUP-METHOD
+	include ../../sections/popup-pay-method/popup-pay-method
+	+popup-pay-method(orderProcessing.popupPayMethod)
+
+	//- подключение и вызов попапа POPUP-CHECK
+	include ../../sections/popup-pay-check/popup-pay-check
+	+popup-pay-check(orderProcessing.popupPayCheck)
+	+popup-pay-check(orderProcessing.popupThanks)

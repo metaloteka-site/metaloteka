@@ -1,0 +1,385 @@
+-
+	const sectionOrderReserve = {
+		data: {
+			orderTitle: 'Заказ №210522/1-MT',
+			CompletionReserveRoom: 'Заказ №210522/1-MT',
+			CompletionReserveName: 'ИП Петров Иван',
+			room: '№1605221-RSRV',
+			infoDetails: 'Заполните данные для оформления заказа',
+			infoPeriodImg: 'icon-time.svg',
+			infoPeriodAlt: 'Time',
+			placeholderInn: 'ИНН*',
+			placeholderCompanyName: 'Название компании',
+			placeholderName: 'Имя*',
+			placeholderSurname: 'Фамилия*',
+			placeholderTel: 'Моб. телефон*',
+			placeholderDeliveryAddress: 'Адрес доставки',
+			placeholderEmail: 'E-mail',
+			itemBtn: 'Сохранить',
+			icon: '/basket.svg',
+			qr: '/icon-qr.svg',
+			iconAlt: 'Icon',
+			//- reserveConditionText: 'Резерв товаров из вашего списка товаров на складе сроком на 14 суток. Приобретая услугу Вы соглашаетесь с тем, что стоимость товара на момент окончания срока резерва может изменится. По окончанию срока резерва товара на складе мы не гарантируем его последующее наличие. Цены не являются публичной офертой, содержит ориентировочный уровень цен. Окончательную цену (и уровень скидок) - оговаривайте с менеджером. Приобретая услугу Вы соглашаетесь с тем, что стоимость товара на момент окончания срока резерва может изменится. Резерв товаров из вашего списка товаров на складе сроком на 14 суток. Приобретая услугу Вы соглашаетесь с тем, что стоимость товара на момент окончания срока резерва может изменится. По окончанию срока резерва товара на складе мы не гарантируем его последующее наличие.',
+			reservePersonalData: 'Конфеденциальность личных данных',
+			reservePersonalText: 'Резерв товаров из вашего списка товаров на складе сроком на 14 суток. Приобретая услугу Вы соглашаетесь с тем, что стоимость товара на момент окончания срока резерва может изменится. По окончанию срока резерва товара на складе мы не гарантируем его последующее наличие. Цены не являются публичной офертой, содержит ориентировочный уровень цен. Окончательную цену (и уровень скидок) - оговаривайте с менеджером. Приобретая услугу Вы соглашаетесь с тем, что стоимость товара на момент окончания срока резерва может изменится. Резерв товаров из вашего списка товаров на складе сроком на 14 суток. Приобретая услугу Вы соглашаетесь с тем, что стоимость товара на момент окончания срока резерва может изменится. По окончанию срока резерва товара на складе мы не гарантируем его последующее наличие.',
+			iconWarning: '/icon-warning.svg',
+			iconAltWarning:"Warning",
+		},
+		bem: {
+			fieldItemS: 'field-s',
+			fieldItemM: 'field-m',
+			fieldItemX: 'field-x',
+			fieldItemT: 'field-t'
+			//- infoWay: 'info-way'
+		},
+		elem: {
+			ContactInformationFooter : {
+				elemArr: [
+					{
+						data: {
+						title: 'Metaloteka',
+						subtitle: 'Металлопрокат оптом и в розницу',
+						},
+						opt: {
+							heading: true,
+							subtitle: true
+						},
+						dataArr: {
+							texts: [
+								{
+									data: {
+										text: 'QR-код для загрузки\n реквизитов в мобильное\n приложение банка'
+									},
+								}
+							]
+						}
+					},
+					{
+						data: {
+								link: '+7 495 545 64 20',
+								href: 'tel:+74955456420',
+						},
+						opt: {
+							link: true,
+						},
+						dataArr: {
+							texts: [
+								{
+									data: {
+										text: 'Телефон клиентской\n поддержки',
+									},
+
+								},
+								{
+									data: {
+										text: 'Онлайн заявки и заказы обрабатываем с 9:00-18:00',
+									},
+									bem: {
+										weihgt: 'bold'
+									}
+								}
+							]
+						}
+					},
+					{
+						data: {
+							link: 'info@metaloteka.ru',
+							href: 'mailto:info@metaloteka.ru'
+						},
+						opt: {
+							link: true,
+						},
+						dataArr: {
+							texts: [
+								{
+									data: {
+										text: 'Напишите нам\n и мы постараемся ответить на все\n ваши вопросы'
+									}
+								}
+							]
+						}
+					}
+				]
+			},
+			AccordionDeliveryMethod: {
+				data: {
+					title: '1. Резерв товара на складе',
+				}
+			},
+			AccordionPersonalData: {
+				data: {
+					title: '2. Личные данные',
+				}
+			},
+			AccordionCompletionRegistration: {
+				data: {
+					title: '3. Завершение оформления',
+				}
+			},
+			AccordionOrderList: {
+				data: {
+					title: 'Состав заказа',
+				}
+			},
+			Tabs: {
+				bem: {
+					modifierTabs: 'button',
+				},
+				opt: {
+					htmlContent: true
+				},
+				dataArr: {
+					tabButtons: [
+						{
+							data: {
+								tabButton: 'Юрид. лицо',
+								dataTabButton: '1'
+							}
+						},
+						{
+							data: {
+								tabButton: 'Физ. лицо',
+								dataTabButton: '2'
+							}
+						}
+					],
+				}
+			},
+			TabsContent1: {
+				data: {
+					dataTabContent: '1'
+				},
+				opt: {
+					active: true
+				}
+			},
+			TabsContent2: {
+				data: {
+					dataTabContent: '2'
+				}
+			},
+			TextInfoWay: {
+				data: {
+					text: 'Выберите удобный для вас способ резерва'
+				},
+				bem: {
+					color: 'wet-asphalt',
+					fw: 'fw-500',
+					elementClassIndividual: 'text-info-way'
+				},
+				opt: {
+					p: true,
+					isElementClass: true
+				}
+			},
+			TextTitle: {
+				data: {
+					text: 'Резерв'
+				},
+				bem: {
+					color: 'wet-asphalt',
+					size: 'fs-54',
+					fw: 'fw-900',
+					elementClassIndividual: 'title'
+				},
+				opt: {
+					p: true,
+					isElementClass: true
+				}
+			},
+			TextInfoPeriodDays: {
+				data: {
+					text: 'Резерв (3дня)'
+				},
+				bem: {
+					color: 'wet-asphalt',
+					size: 'fs-18',
+					fw: 'fw-900',
+					elementClassIndividual: 'info-period'
+				},
+				opt: {
+					p: true,
+					isElementClass: true
+				}
+			},
+			TextInfoPeriodDate: {
+				data: {
+					text: '25.05.2022 - 28.05.2022'
+				},
+				bem: {
+					color: 'wet-asphalt',
+					size: 'fs-18',
+					fw: 'fw-900',
+					elementClassIndividual: 'info-period'
+				},
+				opt: {
+					p: true,
+					isElementClass: true
+				}
+			},
+			TextRoom: {
+				data: {
+					text: '№1605221-RSRV'
+				},
+				bem: {
+					color: 'wet-asphalt',
+					size: 'fs-20',
+					elementClassIndividual: 'room'
+				},
+				opt: {
+					p: true,
+					isElementClass: true
+				}
+			},
+			TextReserveConditionTitle: {
+				data: {
+					text: 'Условия резерва'
+				},
+				bem: {
+					color: 'wet-asphalt',
+					size: 'fs-18',
+					fw: 'fw-800',
+					elementClassIndividual: 'reserve-condition-title'
+				},
+				opt: {
+					p: true,
+					isElementClass: true
+				}
+			},
+			TextReserveConditionText: {
+				data: {
+					text: 'Резерв товаров из вашего списка товаров на складе сроком на 14 суток. Приобретая услугу Вы соглашаетесь с тем, что стоимость товара на момент окончания срока резерва может изменится. По окончанию срока резерва товара на складе мы не гарантируем его последующее наличие. Цены не являются публичной офертой, содержит ориентировочный уровень цен. Окончательную цену (и уровень скидок) - оговаривайте с менеджером. Приобретая услугу Вы соглашаетесь с тем, что стоимость товара на момент окончания срока резерва может изменится. Резерв товаров из вашего списка товаров на складе сроком на 14 суток. Приобретая услугу Вы соглашаетесь с тем, что стоимость товара на момент окончания срока резерва может изменится. По окончанию срока резерва товара на складе мы не гарантируем его последующее наличие.'
+				},
+				bem: {
+					color: 'wet-asphalt',
+					//- size: 'small',
+					fw: 'fw-300',
+					elementClassIndividual: 'reserve-condition-text'
+				},
+				opt: {
+					p: true,
+					isElementClass: true
+				}
+			},
+			TextWarnings:{
+				elemArr: [
+					{
+						data:{
+							text:"Заранее согласовывайте время самовывоза с менеджером",
+						},
+						bem: {
+							color: 'wet-asphalt',
+							//- size: 'small',
+							fw: 'fw-300',
+							elementClassIndividual: 'reserve-condition-text'
+						},
+					},
+					{
+						data:{
+							text:"Самовывоз осуществляется собственными силами",
+						},
+						bem: {
+							color: 'wet-asphalt',
+							//- size: 'small',
+							fw: 'fw-300',
+							elementClassIndividual: 'reserve-condition-text'
+						},
+					},
+					{
+						data:{
+							text:"На манипуляторы с «Катюшей» погрузка не осуществляется",
+						},
+						bem: {
+							color: 'wet-asphalt',
+							//- size: 'small',
+							fw: 'fw-300',
+							elementClassIndividual: 'reserve-condition-text'
+						},
+					},
+				]
+			},
+		},
+		dataArr:{
+			reserve:[
+				{
+					data:{
+						title:"Резерв (1 день)",
+						text:"Резерв товаров из заказа на складе сроком на 24 часа, 1 календарный день.",
+						sum:"10 000 /р.",
+						add:"Добавить",
+					},
+				},
+				{
+					data:{
+					title:"Резерв (3 дня)",
+					text:"Резерв товаров из заказа на складе сроком на 72 часа, 3 календарных дня.",
+					sum:"15 000 /р.",
+					add:"Добавить",
+					},
+				},
+			],
+			compound:[
+				{
+					data:{
+						name: 'Круг алюминиевый 1,5 мм АМГ6',
+						thickness:"1,5",
+						size:"3000",
+						weight:"1,558 т.",
+						sum:"3 472 549 / р.",
+					},
+				},
+				{
+					data:{
+						name: 'Круг алюминиевый 1,5 мм АМГ6',
+						thickness:"1,5",
+						size:"3000",
+						weight:"0,958 т.",
+						sum:"2 472 549 / р.",
+					},
+				},
+				{
+					data:{
+						name: 'Круг алюминиевый 2 мм АМГ6',
+						thickness:"2",
+						size:"3000",
+						weight:"0,200 т.",
+						sum:"500 549 / р.",
+					},
+				},
+				{
+					data:{
+						name: 'Круг алюминиевый 6 мм АМГ6',
+						thickness:"6",
+						size:"3000",
+						weight:"2,200 т. / 320 м",
+						sum:"50 549 / р.",
+					},
+				},
+				{
+					data:{
+						name: 'Круг алюминиевый 8 мм АМГ6',
+						thickness:"8",
+						size:"3000",
+						weight:"0,065 т.",
+						sum:"18 549 / р.",
+					},
+				},
+				{
+					data:{
+						name: 'Просечно-вытяжной лист, 16 мм (изготавливается по технологии горячекатного листа)',
+						thickness:"10",
+						size:"1500 x 600",
+						weight:"1,200 т.",
+						sum:"32 549 / р.",
+					},
+				},
+				{
+					data:{
+						name: 'Доставка (Борт 10т, 10м, зона МКАД)',
+						amount:"2 шт.",
+						sum:"32 549 / р.",
+					},
+				},
+			]
+		}
+	};

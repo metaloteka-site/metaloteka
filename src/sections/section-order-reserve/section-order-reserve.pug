@@ -1,0 +1,131 @@
+mixin section-order-reserve(section)
+	//- проверка данных получаемых из section
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- верстка секции
+	+BlockLayout({bem: {classSection: 'section-order-reserve'}})
+		+BlockLayoutLeft
+			+e('icon', {}, 'div')
+				include ../../layout/assets/images/basket.svg
+			+e('top', {}, 'div')
+				+e('title-inner', {}, 'div')
+					+Text(S_ELEM('TextTitle'))
+					+e('line-big', {}, 'div')
+				+Text(S_ELEM('TextRoom'))
+			+e('line-small', {}, 'div')
+			+Accordion(S_ELEM('AccordionDeliveryMethod'))
+				+Text(S_ELEM('TextInfoWay'))
+				+e('', {}, 'div')
+					+e('info-period-inner', {}, 'div')
+						+Text(S_ELEM('TextInfoPeriodDays'))
+						+e('info-period-img', {}, 'img')(src=`../../layout/assets/images/${S_DATA('infoPeriodImg')}` alt=S_DATA('infoPeriodAlt'))
+						+Text(S_ELEM('TextInfoPeriodDate'))
+					+e('items', {}, 'div')
+						for item in S_DATA_ARR('reserve')
+							include ../../shared/helpers/pug/shortcut-check-store
+							+e('item', {}, 'div')
+								+e('item-title', {}, 'div') #{I_DATA('title')}
+								+e('item-text', {}, 'div') #{I_DATA('text')}
+								+e('item-sum', {}, 'div') #{I_DATA('sum')}
+								+e('item-add', {}, 'button') #{I_DATA('add')}
+					+e('item-btn', {}, 'div') #{S_DATA('itemBtn')}
+					+e('warning', {}, 'div')
+						for item in S_ELEM_ARR('TextWarnings')
+							+e('warning', {}, 'div')
+								+e('warning-img', {}, 'img')(src=`../../layout/assets/images/${S_DATA('iconWarning')}` alt=S_DATA('iconAltWarning'))
+								+Text(item)
+					+Text(S_ELEM('TextReserveConditionTitle'))
+					+Text(S_ELEM('TextReserveConditionText'))
+			+e('line-small', {}, 'div')
+			+Accordion(S_ELEM('AccordionPersonalData'))
+				+e('accordion-btn', {}, 'button') Войти
+				+e('info-way', {m: S_BEM('infoWay')}, 'div') Заполните данные для оформления заказа
+				+Tabs(S_ELEM('Tabs'))
+					+TabsContent(S_ELEM('TabsContent1'))
+						+e('ffff', {}, 'div')
+							+e('form', {}, 'form')
+								+e('field-item', {m: S_BEM('fieldItemM')}, 'label')
+									+e('item-inn', {}, 'input')(required)
+									+e('', {}, 'span') #{S_DATA('placeholderInn')}
+								+e('field-item', {m: S_BEM('fieldItemM')}, 'label')
+									+e('', {}, 'input')(required)
+									+e('', {}, 'span') #{S_DATA('placeholderCompanyName')}
+								+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+									+e('', {}, 'input')(required)
+									+e('', {}, 'span') #{S_DATA('placeholderName')}
+								+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+									+e('', {}, 'input')(required)
+									+e('', {}, 'span') #{S_DATA('placeholderSurname')}
+								+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+									+e('', {}, 'input')(required)
+									+e('', {}, 'span') #{S_DATA('placeholderTel')}
+								+e('field-item', {m: S_BEM('fieldItemX')}, 'label')
+									+e('', {}, 'input')(required)
+									+e('', {}, 'span') #{S_DATA('placeholderDeliveryAddress')}
+								+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+									+e('', {}, 'input')(required)
+									+e('', {}, 'span') #{S_DATA('placeholderEmail')}
+								+e('field-item', {m: S_BEM('fieldItemT')}, 'label')
+									+e('', {}, 'textarea')(required)
+									+e('', {}, 'span') Комментарий к заказу
+							+e('item-btn', {}, 'div') #{S_DATA('itemBtn')}
+							+e('reserve-condition-title', {}, 'div') #{S_DATA('reservePersonalData')}
+							+e('reserve-condition-text', {}, 'div') #{S_DATA('reservePersonalText')}
+					+TabsContent(S_ELEM('TabsContent2'))
+						+e('ffff', {}, 'div')
+							+e('info-way', {}, 'div') Заполните данные для офо454545мления заказа
+							+e('form', {}, 'form')
+								+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+									+e('', {}, 'input')(required)
+									+e('', {}, 'span') #{S_DATA('placeholderName')}
+								+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+									+e('', {}, 'input')(required)
+									+e('', {}, 'span') #{S_DATA('placeholderSurname')}
+								+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+									+e('', {}, 'input')(required)
+									+e('', {}, 'span') #{S_DATA('placeholderTel')}
+								+e('field-item', {m: S_BEM('fieldItemX')}, 'label')
+									+e('', {}, 'input')(required)
+									+e('', {}, 'span') #{S_DATA('placeholderDeliveryAddress')}
+								+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+									+e('', {}, 'input')(required)
+									+e('', {}, 'span') #{S_DATA('placeholderEmail')}
+								+e('field-item', {m: S_BEM('fieldItemT')}, 'label')
+									+e('', {}, 'textarea')(required)
+									+e('', {}, 'span') Комментарий к заказу
+							+e('item-btn', {}, 'div') #{S_DATA('itemBtn')}
+							+e('reserve-condition-title', {}, 'div') #{S_DATA('reservePersonalData')}
+							+e('reserve-condition-text', {}, 'div') #{S_DATA('reservePersonalText')}
+				+e('ffff', {}, 'div')
+			+e('line-small', {}, 'div')
+			+Accordion(S_ELEM('AccordionCompletionRegistration'))
+				+e('info-way', {}, 'div') #{S_DATA('infoDetails')}
+				+e('сompletion-reserve', {}, 'div')
+					+e('', {}, 'div') #{S_DATA('CompletionReserveRoom')}
+					+e('', {}, 'div') #{S_DATA('CompletionReserveName')}
+				+e('line-сompletion', {}, 'div')
+				+Accordion(S_ELEM('AccordionOrderList'))
+					for item in S_DATA_ARR('compound')
+						include ../../shared/helpers/pug/shortcut-check-store
+						+e('order-list', {}, 'div')
+							+e('order-list-name', {}, 'div') #{I_DATA('name')}
+							+e('order-list-thickness', {}, 'div') #{I_DATA('thickness')}
+							+e('order-list-size', {}, 'div') #{I_DATA('size')}
+							+e('order-list-weight', {}, 'div') #{I_DATA('weight')}
+							+e('order-list-weight', {}, 'div') #{I_DATA('amount')}
+							+e('order-list-sum', {}, 'div') #{I_DATA('sum')}
+						+e('line-order-list', {}, 'div')
+			+e('footer', {b: 'cg-20'}, 'div')
+				+e('qr', {}, 'img')(src=`${pathFile}${S_DATA('qr')}`)
+				for item in S_ELEM_ARR('ContactInformationFooter')
+					+ContactInformationFooter(item)
+			//- +e('accordion__item', {b: 'accordion'}, 'div')
+				+e('accordion__header', {}, 'div') #{S_DATA('decor')}
+				+e('accordion__body', {}, 'div')
+					+e('accordion__content', {}, 'div')
+						+e('footer', {b: 'cg-20'}, 'div')
+							+e('qr', {}, 'img')(src=`${pathFile}${S_DATA('qr')}`)
+							for item in S_ELEM_ARR('ContactInformationFooter')
+								+ContactInformationFooter(item)
+		+BlockLayoutRight
+			+e('ttttttt') slider

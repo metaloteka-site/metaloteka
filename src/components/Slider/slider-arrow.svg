@@ -1,0 +1,4 @@
+<svg class="slider__button-next" width="75" height="56" viewBox="0 0 75 56" xmlns="http://www.w3.org/2000/svg">
+		<path d="M0 32.086h58.75L40.832 50l5.836 5.836 27.914-27.918L46.668 0l-5.836 5.836L58.75 23.75H0z" fill="currentColor"
+					fill-rule="nonzero" />
+</svg>

@@ -1,0 +1,6 @@
+mixin TabsContent(props)
+	//- проверка данных получаемых из props
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	+e('content', {p: 'tabs', b: `${OPT('active') === true ? 'js-active' : ''}`}, 'div')(data-tab-content=`${DATA('dataTabContent')}`)
+		block

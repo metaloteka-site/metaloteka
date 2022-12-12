@@ -1,6 +1,10 @@
 @import "utilites/margin";
 @import "utilites/gap";
 
+.no-scroll {
+	overflow: hidden;
+}
+
 //// *** СТИЛИ ОТСТУПОВ PADDING ***
 //// ==> padding
 //.p {

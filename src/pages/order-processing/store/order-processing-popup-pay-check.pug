@@ -1,0 +1,84 @@
+-
+	const popupPayCheck = {
+		data: {
+			titleMethod: 'Оплата по счету',
+			titleOrder: 'Оплата заказа',
+			numberOrder: '№210522/1-MT',
+			titleFirm: 'ИП Петров Иван',
+			sumTotalNumber: '64 000.00 руб.',
+		},
+		opt: {
+			title: true,
+			line: true,
+			links: true
+		},
+		elem: {
+			Popup: {
+				data: {
+					dataPopupName: 'pay-check'
+				},
+				bem: {
+					parent: 'popup-pay-check'
+				},
+			},
+			TextInformDocs: {
+				data: {
+					text: 'Документы на оплату отправлены на ваш e-mail'
+				},
+				bem: {
+					size: 'fs-32',
+					color: 'wet-asphalt',
+					fw: 'fw-bold',
+					elementClassIndividual: 'inform-docs'
+				},
+				opt: {
+					p: true,
+					isElementClass: true
+				}
+			},
+			TextEmail: {
+				data: {
+					text: 'ivanov.ivan@yandex.ru'
+				},
+				bem: {
+					size: 'fs-20',
+					color: 'wet-asphalt',
+					elementClassIndividual: 'email'
+				},
+				opt: {
+					p: true,
+					isElementClass: true
+				}
+			},
+			TextInform: {
+				data: {
+					text: 'Копия документов на оплату отправлена на вашу электронную почту. В течении ближайшего времени с вами свяжеться менеджер, чтобы обсудить делали заказа.'
+				},
+				bem: {
+					size: 'small',
+					color: 'wet-asphalt',
+					elementClassIndividual: 'text-inform'
+				},
+				opt: {
+					p: true,
+					isElementClass: true
+				}
+			}
+		},
+		dataArr: {
+			links: [
+				{
+					data: {
+						textLink: 'Скачать счет PDF',
+						text: '(действителен до 21.05.2022)'
+					}
+				},
+				{
+					data: {
+						textLink: 'Бланк резерва PDF',
+						text: '(действителен до 21.05.2022)'
+					}
+				}
+			]
+		}
+	};

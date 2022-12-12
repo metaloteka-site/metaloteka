@@ -6,7 +6,7 @@ mixin section-breadcrumbs(section)
 	+Container
 		+b('section-breadcrumbs', {}, 'section')
 			+e('inner', {} , 'div')
-				+e('link', {}, 'a')(href=S_DATA('prevPageHref')) #{S_DATA('prevPage')}
+				+e('link', {}, 'a')(href=S_DATA('prevPageHref') data-popup-open='payment-entity') #{S_DATA('prevPage')}
 				+e('link', {}, 'span') #{S_DATA('separation')}
-				+e('link', {}, 'span') #{S_DATA('page')}
-			+e('back', {}, 'a')(href=S_DATA('backHref')) #{S_DATA('back')}
+				+e('link', {}, 'span')(data-popup-open='pay-check') #{S_DATA('page')}
+			+e('back', {}, 'a')(href=S_DATA('backHref') data-popup-open='payment') #{S_DATA('back')}
