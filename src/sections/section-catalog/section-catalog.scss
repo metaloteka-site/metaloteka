@@ -196,7 +196,7 @@
 			height: 100%;
 
 			.product-main {
-				height: 669px;
+				min-height: 490px;
 
 				border-bottom: solid 1px var(--smoke-white-second);
 
@@ -226,9 +226,125 @@
 
 				&__information-block {
 					display: flex;
+					overflow-y: scroll;
 					flex-wrap: wrap;
 					column-gap: 32px;
 					row-gap: 8px;
+
+					.accordion-list {
+						.accordion {
+							&__title {
+								line-height: 28px;
+								padding-block: 0;
+							}
+						}
+
+						&__list-wrapper {
+							padding-block: 20px;
+						}
+					}
+				}
+
+				&__information-block-details {
+					display: flex;
+					flex-direction: column;
+
+					color: var(--wet-asphalt);
+
+					.product-main__aboveTitle {
+						margin-bottom: 7px;
+
+						font-size: 20px;
+						line-height: 24px;
+					}
+
+					.product-main__title {
+						margin-bottom: 22px;
+
+						font-size: 36px;
+						font-weight: 800;
+						line-height: 32px;
+					}
+
+					.product-main__wrapper-description {
+						display: flex;
+						align-items: flex-end;
+						justify-content: space-between;
+
+						margin-bottom: 22px;
+
+						.product-main__description {
+							max-width: 443px;
+
+							font-size: 14px;
+							font-weight: 300;
+							line-height: 18px;
+						}
+
+						.product-main__search-count {
+							padding-bottom: 4px;
+
+							border-bottom: solid 1px var(--gray);
+
+							font-size: 20px;
+						}
+					}
+
+				}
+
+				.filter-group {
+					&__filters-wrapper {
+						display: flex;
+						align-items: flex-end;
+						justify-content: space-between;
+
+						margin-top: 20px;
+					}
+
+					&__filters {
+						display: flex;
+						column-gap: 32px;
+
+						a {
+							text-decoration: none;
+
+							color: var(--wet-asphalt);
+
+							font-size: 32px;
+							font-weight: 500;
+							line-height: 21.6px;
+
+							&:hover {
+								color: var(--chestnut);
+							}
+						}
+					}
+
+					&__diameters {
+						display: flex;
+						flex-wrap: wrap;
+
+						width: 443px;
+						column-gap: 12px;
+						row-gap: 12px;
+					}
+
+					&__diameter-value {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+
+						width: 79px;
+						height: 49px;
+
+						cursor: pointer;
+
+						color: var(--light-white);
+						background: var(--liverny-light);
+
+						font-size: 20px;
+						font-weight: 800;
+					}
 				}
 			}
 

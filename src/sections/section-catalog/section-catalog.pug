@@ -26,9 +26,26 @@ mixin section-catalog(section)
 						+e('wrapper', {}, 'div')
 							+e('title', {}, 'span') #{S_ELEM('ProductInformation').data.title}
 							+e('range', {}, 'div')
-							+e('information-block', {}, 'div')
-								each item in S_ELEM_ARR('AccordionList')
-									+AccordionList(item)
+							//+e('information-block', {}, 'div')
+								// each item in S_ELEM_ARR('AccordionList')
+								// 	+AccordionList(item)
+							+e('information-block-details', {}, 'div')
+								+e('aboveTitle', {}, 'span') #{S_ELEM('ProductInformationDetails').data.aboveTitle}
+								+e('title', {}, 'span') #{S_ELEM('ProductInformationDetails').data.title}
+								+e('wrapper-description', {}, 'div')
+									+e('description', {}, 'span') #{S_ELEM('ProductInformationDetails').data.description}
+									+e('search-count', {}, 'span') #{S_ELEM('ProductInformationDetails').data.searchCount}
+								+b('filter-group', {}, 'div')
+									+e('title', {}, 'span') #{S_ELEM('FilterTitle').data.title}
+									+e('filters-wrapper')
+										+e('diameters', {}, 'div')
+											each item in S_DATA_ARR('diameters')
+												include ../../shared/helpers/pug/shortcut-check-store
+												+e('diameter-value', {}, 'div') #{ I_DATA('title') }
+										+e('filters', {}, 'div')
+											each item in S_DATA_ARR('filters')
+												include ../../shared/helpers/pug/shortcut-check-store
+												+e('filter-value', {}, 'a')(href=I_DATA('href')) #{ I_DATA('title') }
 					+b('product-tags', {}, 'div')
 						+e('tags-wrapper', {}, 'div')
 							each item in S_DATA_ARR('tags')
