@@ -60,7 +60,7 @@
 		overflow: hidden;
 
 		width: 0;
-		height: max-content;
+		height: 0;
 
 		transition: opacity 0.3s;
 
@@ -88,7 +88,7 @@
 
 		&.js-active {
 			width: 100%;
-			height: 800px;
+			height: max-content;
 
 			opacity: 1;
 		}
@@ -115,16 +115,20 @@
 			
 		}
 
-		.js-active#{$self}__button{
-			outline: solid 4px #46464662;
-			// outline: solid 4px $red-gradient;
-
-		}
+		// .js-active {
+		// 	&#{$self}__button{
+		// 		outline: solid 4px #46464662;
+		// 	}
+		// }
 
 		.js-active {
 			display: block;
 
 			border-radius: 14px;
+
+			&#{$self}__button{
+				outline: solid 4px #46464662;
+			}
 		}
 
 		.js-active::after {
@@ -137,6 +141,14 @@
 			overflow-y: auto;
 
 			height: 210px;
+		}
+
+		&_button {
+			.js-active {
+				#{$self}__content {
+					height: 100%;
+				}
+			}
 		}
 	}
 }

@@ -115,4 +115,21 @@
 	&_fs-72 {
 		font-size: $fs-title1;
 	}
+
+	// модификатор line-heidht
+	&_lh-1 {
+		line-height: 1;
+	}
+
+	&_lh-1-2 {
+		line-height: 1.2;
+	}
+
+	&_lh-1-22 {
+		line-height: 1.22;
+	}
+	
+	&_lh-1-29 {
+		line-height: 1.29
+	}
 }
