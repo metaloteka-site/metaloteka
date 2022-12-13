@@ -112,9 +112,10 @@ mixin section-order-reserve(section)
 							+e('order-list-thickness', {}, 'div') #{I_DATA('thickness')}
 							+e('order-list-size', {}, 'div') #{I_DATA('size')}
 							+e('order-list-weight', {}, 'div') #{I_DATA('weight')}
-							+e('order-list-weight', {}, 'div') #{I_DATA('amount')}
+							//- +e('order-list-weight', {}, 'div') #{I_DATA('amount')}
 							+e('order-list-sum', {}, 'div') #{I_DATA('sum')}
 						+e('line-order-list', {}, 'div')
+			+e('line-small', {}, 'div')
 			+e('footer', {b: 'cg-20'}, 'div')
 				+e('qr', {}, 'img')(src=`${pathFile}${S_DATA('qr')}`)
 				for item in S_ELEM_ARR('ContactInformationFooter')

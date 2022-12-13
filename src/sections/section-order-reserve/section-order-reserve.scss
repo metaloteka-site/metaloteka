@@ -52,6 +52,7 @@
 
 		&__line-small {
 			height: 2px;
+			margin-top: 20px;
 			margin-right: -53px;
 			margin-left: -53px;
 
@@ -274,7 +275,8 @@
 		}
 
 		&__order-list-name {
-			max-width: 300px;
+			// max-width: 300px;
+			flex: 1 0 300px;
 
 			letter-spacing: normal;
 
@@ -286,7 +288,11 @@
 		}
 
 		&__order-list-thickness {
-			max-width: 23px;
+			// max-width: 23px;
+			flex: 1 0 60px;
+
+			text-align: center;
+
 
 			letter-spacing: normal;
 
@@ -298,9 +304,13 @@
 		}
 
 		&__order-list-size {
+			flex: 1 0 110px;
+
+			text-align: center;
 			letter-spacing: normal;
 
 			color: #464646;
+
 
 			font-size: 18px;
 			font-weight: 300;
@@ -308,6 +318,11 @@
 		}
 
 		&__order-list-weight {
+			flex: 1 0 200px;
+
+			text-align: center;
+
+
 			letter-spacing: normal;
 
 			color: #464646;
@@ -318,6 +333,8 @@
 		}
 
 		&__order-list-sum {
+			flex: 1 0 340px;
+
 			letter-spacing: normal;
 
 			color: #464646;
@@ -368,21 +385,21 @@
 				width: 100%;
 				max-width: 247px;
 
-				background:rgba(255, 0, 0, 0.813);
+				// background:rgba(255, 0, 0, 0.813);
 			}
 
 			&_field-m {
 				width: 100%;
 				max-width: 383px;
 
-				background:rgba(0, 0, 0, 0.295);
+				// background:rgba(0, 0, 0, 0.295);
 			}
 
 			&_field-x {
 				width: 100%;
 				max-width: 520px;
 
-				background:rgba(0, 255, 115, 0.404);
+				// background:rgba(0, 255, 115, 0.404);
 			}
 
 			&_field-t {
@@ -390,7 +407,7 @@
 				// height: 120px;
 				height: 85px;
 
-				background:rgba(124, 88, 196, 0.267);
+				// background:rgba(124, 88, 196, 0.267);
 				
 			}
 		}
@@ -506,7 +523,7 @@
 
 		&__accordion-btn {
 			position: absolute;
-			top: 55px;
+			top: 22px;
 			right: 0;
 
 			padding: 21px 57px 23px;
@@ -517,12 +534,5 @@
 			border-radius: 14px;
 			background-color: rgba(70, 70, 70, 0.03);
 		}
-
-		//&_field {
-		//	#{$self}__field-item {
-		//		background:red;
-		//		width: 600px;
-		//	}
-		//}
 	}
 }

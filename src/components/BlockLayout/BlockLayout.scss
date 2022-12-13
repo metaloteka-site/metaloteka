@@ -1,6 +1,7 @@
 .block-layout {
 	display: flex;
 	flex-direction: column;
+	row-gap: 24px;
 
 	&__left {
 		position: relative;
@@ -19,6 +20,7 @@
 	&__right {
 		display: none;
 	}
+
 	@include media('xs') {
 		&__left {
 			margin-right: 40px;

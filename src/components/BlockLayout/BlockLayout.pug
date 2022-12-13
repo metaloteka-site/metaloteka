@@ -10,5 +10,5 @@ mixin BlockLayout(props)
 	//- верстка компонента
 	+b(BEM('classSection'), {b: 'block-layout'}, 'section')
 		+Container
-			+Row
+			+Row({ bem: { gap: 'rg-30' } })
 				block
