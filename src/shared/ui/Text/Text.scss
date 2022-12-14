@@ -115,4 +115,104 @@
 	&_fs-72 {
 		font-size: $fs-title1;
 	}
+
+	// модификатор line-heidht
+	&_lh-1 {
+		line-height: 1;
+	}
+
+	&_lh-1-1 {
+		line-height: 1.11;
+	}
+
+	&_lh-1-2 {
+		line-height: 1.2;
+	}
+
+	&_lh-1-22 {
+		line-height: 1.22;
+	}
+	
+	&_lh-1-29 {
+		line-height: 1.29
+	}
+
+	&_lh-1-4 {
+		line-height: 1.4;
+	}
+
+	@include media('xs') {
+		// модификаторы размеров
+		&_small-xl {
+			font-size: $fs-small;
+		}
+
+		&_big-xl {
+			font-size: $fs-big;
+		}
+
+		&_fs-xl-10 {
+			font-size: $fs-10;
+		}
+
+		&_fs-xl-18 {
+			font-size: $fs-18;
+		}
+
+		&_fs-xl-20 {
+			font-size: $fs-20;
+		}
+
+		&_fs-xl-22 {
+			font-size: $fs-22;
+		}
+
+		&_fs-xl-24 {
+			font-size: $fs-24;
+		}
+
+		&_fs-xl-26 {
+			font-size: $fs-26;
+		}
+
+		&_fs-xl-28 {
+			font-size: $fs-28;
+		}
+
+		&_fs-xl-30 {
+			font-size: $fs-title5;
+		}
+
+		&_fs-xl-32 {
+			font-size: $fs-32;
+		}
+
+		&_fs-xl-36 {
+			font-size: $fs-36;
+		}
+
+		&_fs-xl-38 {
+			font-size: $fs-title4;
+		}
+
+		&_fs-xl-40 {
+			font-size: $fs-40;
+		}
+
+		&_fs-xl-46 {
+			font-size: $fs-title3;
+		}
+
+		&_fs-xl-50 {
+			font-size: $fs-50;
+		}
+
+		&_fs-xl-54 {
+			font-size: $fs-title2;
+		}
+
+		&_fs-xl-72 {
+			font-size: $fs-title1;
+		}
+	}
 }
