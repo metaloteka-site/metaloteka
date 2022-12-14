@@ -7,4 +7,4 @@ mixin Text(props)
 	- const tag = OPT('p') ? 'p' : 'span';
 
 	//- верстка компонента
-	+b('text', {e: `${isElementClass}:${BEM('elementClassIndividual')}`, m: `${BEM('size')}.${BEM('color')}.${BEM('fw')}.${BEM('lh')}`}, tag) #{DATA('text')}
+	+b('text', {e: `${isElementClass}:${BEM('elementClassIndividual')}`, m: `${BEM('size')}.${BEM('sizeDesctop')}.${BEM('color')}.${BEM('fw')}.${BEM('lh')}`}, tag) #{DATA('text')}

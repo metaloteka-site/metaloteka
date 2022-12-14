@@ -6,7 +6,7 @@
 		align-items: center;
 		justify-content: space-between;
 
-		padding-top: 30px;
+		padding-top: 24px;
 		padding-bottom: 12px;
 
 		cursor: pointer;
@@ -58,5 +58,10 @@
 		&::after {
 			transform: rotate(135deg);
 		}
+	}
+
+	&__title{
+		padding-top: 30px;
+
 	}
 }
