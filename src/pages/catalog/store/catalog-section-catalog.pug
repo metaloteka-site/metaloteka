@@ -102,7 +102,9 @@
 					data: {
 						title: 'Тонны',
 					},
-
+					bem: {
+						jsClass: 'active'
+					}
 				},
 				{
 					data: {
@@ -140,6 +142,9 @@
 					data: {
 						title: '8'
 					},
+					bem: {
+						jsClass: 'active'
+					}
 				},
 				{
 					data: {
@@ -161,9 +166,37 @@
 						title: '20'
 					},
 				},
-			]
+			],
 		},
 		elem: {
+			TableProductRow: {
+				elemArr: [
+					{
+						elem: {
+							Text: {
+								elemArr: [
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: 'Название'
+												},
+												{
+													text: 'Наименование товара'
+												}
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+								]
+							}
+						},
+					},
+				]
+			},
 			ProductInformation: {
 				data: {
 					title: 'Трубный прокат'

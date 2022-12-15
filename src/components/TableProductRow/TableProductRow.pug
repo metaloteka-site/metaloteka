@@ -1,13 +1,9 @@
-include BlockLayoutLeft
-include BlockLayoutRight
-
-mixin BlockLayout(props)
-
+mixin TableProductRow(props)
 	//- проверка данных получаемых из props
 	include ../../shared/helpers/pug/shortcut-check-store
 
 	//- верстка компонента
-	+b(BEM('classSection'), {b: 'block-layout'}, 'section')
-		+Container
-			+Row
-				block
+	+b('table-product-row', {}, 'div')
+		+e('column', {}, 'div')
+			for item in ELEM_ARR('Text')
+				+Text(item)

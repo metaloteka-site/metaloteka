@@ -8,13 +8,13 @@
 	// - #fcfcfc - темновато белый
 	// - #f4f2f2 - дымчато белый №1
 	// - #efefef - дымчато белый №2
+	// - #f8f7f7 - дымчато белый №3
 	--white: #ffffff;
-	--light-white: #f8f7f7;
+	// <END
+
 	--dark-white: #fcfcfc;
 	--smoke-white-first: #f4f2f2;
 	--smoke-white-second: #efefef;
-	--gray: #bbbbbb;
-	// <END
 
 	// Пременную '--wet-asphalt' цвета можно переопределить следующими цветами:
 	// - #46464692 - мокрый освальт с опасити 0.57
@@ -25,6 +25,7 @@
 	// <END
 
 	--chestnut: #bf6c62;
+	--light-gray: #bbbbbb;
 	--gainsborough: #e4e1e1;
 	--liverny-light: #5f575f;
 	--liverny-dark: #4d484d;
@@ -77,6 +78,7 @@ $liverny-light: var(--liverny-light);
 $liverny-dark: var(--liverny-dark);
 $transparent: var(--transparent);
 $light-slate-gray: var(--light-slate-gray);
+$light-gray: var(--light-gray);
 
 // +++ color gradient +++ //
 $blue-gradient: var(--blue-gradient);

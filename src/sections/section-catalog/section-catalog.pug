@@ -41,11 +41,16 @@ mixin section-catalog(section)
 										+e('diameters', {}, 'div')
 											each item in S_DATA_ARR('diameters')
 												include ../../shared/helpers/pug/shortcut-check-store
-												+e('diameter-value', {}, 'div') #{ I_DATA('title') }
+												+e('diameter-value', {b: I_BEM('jsClass')}, 'div') #{ I_DATA('title') }
 										+e('filters', {}, 'div')
 											each item in S_DATA_ARR('filters')
 												include ../../shared/helpers/pug/shortcut-check-store
-												+e('filter-value', {}, 'a')(href=I_DATA('href')) #{ I_DATA('title') }
+												+e('filter-value', {b: I_BEM('jsClass')}, 'a') #{ I_DATA('title') }
+								+e('range-filters', {}, 'div')
+								+b('product-list', {}, 'div')
+									+e('header', {}, 'div')
+										for item in S_ELEM_ARR('TableProductRow')
+											+TableProductRow(item)
 					+b('product-tags', {}, 'div')
 						+e('tags-wrapper', {}, 'div')
 							each item in S_DATA_ARR('tags')
