@@ -4,6 +4,5 @@ mixin TableProductRow(props)
 
 	//- верстка компонента
 	+b('table-product-row', {}, 'div')
-		+e('column', {}, 'div')
-			for item in ELEM_ARR('Text')
-				+Text(item)
+		for item in ELEM_ARR('Text')
+			+Text(item)

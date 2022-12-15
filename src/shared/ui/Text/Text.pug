@@ -8,10 +8,10 @@ mixin Text(props)
 
 	//- верстка компонента
 	if OPT('arrayData')
-		for item in DATA_ARR('arrText')
-			- console.log(item, 'qqqqq')
-			//- проверка данных получаемых из item
-			include ../../helpers/pug/shortcut-check-store
-			+b('text', {e: `${isElementClass}:${BEM('elementClassIndividual')}`, m: `${BEM('size')}.${BEM('color')}.${BEM('fw')}`}, tag) #{item.text}
+		+e('column', {}, 'div')
+			for item in DATA_ARR('arrText')
+				//- проверка данных получаемых из item
+				include ../../helpers/pug/shortcut-check-store
+				+b('text', {e: `${isElementClass}:${BEM('elementClassIndividual')}`, m: `${BEM('size')}.${BEM('color')}.${BEM('fw')}`}, tag) #{item.text}
 	else
 		+b('text', {e: `${isElementClass}:${BEM('elementClassIndividual')}`, m: `${BEM('size')}.${BEM('color')}.${BEM('fw')}`}, tag) #{DATA('text')}
