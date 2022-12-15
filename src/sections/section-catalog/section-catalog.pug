@@ -22,16 +22,20 @@ mixin section-catalog(section)
 								+AccordionList(item)
 					+e('mobile-description', {}, 'div') #{S_ELEM('MobileDescription').data.description}
 				+e('right-aside', {}, 'div')
-					+b('product-main', {}, 'div')
-						+e('wrapper', {}, 'div')
-							+e('title', {}, 'span') #{S_ELEM('ProductInformation').data.title}
-							+e('range', {}, 'div')
+					//+b('product-main', {}, 'div')
+					//	+e('wrapper', {}, 'div')
+					//		+e('title', {}, 'span') #{S_ELEM('ProductInformation').data.title}
+					//		+e('range', {}, 'div')
 							//+e('information-block', {}, 'div')
 								// each item in S_ELEM_ARR('AccordionList')
 								// 	+AccordionList(item)
+					+b('product-main-details', {}, 'div')
+						+e('wrapper', {}, 'div')
+							+e('title', {}, 'span') #{S_ELEM('ProductInformation').data.title}
+							+e('range', {}, 'div')
 							+e('information-block-details', {}, 'div')
 								+e('aboveTitle', {}, 'span') #{S_ELEM('ProductInformationDetails').data.aboveTitle}
-								+e('title', {}, 'span') #{S_ELEM('ProductInformationDetails').data.title}
+								+e('subtitle', {}, 'span') #{S_ELEM('ProductInformationDetails').data.title}
 								+e('wrapper-description', {}, 'div')
 									+e('description', {}, 'span') #{S_ELEM('ProductInformationDetails').data.description}
 									+e('search-count', {}, 'span') #{S_ELEM('ProductInformationDetails').data.searchCount}
