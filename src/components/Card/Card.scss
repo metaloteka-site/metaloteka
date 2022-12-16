@@ -4,9 +4,7 @@
 	margin-bottom: 27px;
 
 	border-radius: 37px;
-	
 	background: $white;
-	
 	box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.03);
 
 	&_hide {
@@ -23,7 +21,7 @@
 	justify-content: space-between;
 
 	padding: 51px 53px 48px 42px;
-	
+
 
 	&__order{
 		color: $wet-asphalt;
@@ -35,13 +33,13 @@
 
 	&__firm{
 		text-align: right;
-	
+
 		color: $wet-asphalt;
 
 		font-size: $fs-20;
 		font-weight: normal;
 		line-height: 1.2;
-		
+
 	}
 
 	&__text {
@@ -59,7 +57,7 @@
 		&__firm {
 			font-size: $fs-28;
 			font-weight: 800;
-			line-height: 0.86;	
+			line-height: 0.86;
 		}
 	}
 }
@@ -89,9 +87,9 @@
 		&__s{
 			display: none;
 		}
-		
+
 	}
-	
+
 }
 
 .call {
@@ -101,7 +99,7 @@
 
 	padding:0;
 	row-gap: 12px;
-	
+
 	@include media('xs') {
 		padding: 0 65px 74px 55px;
 		row-gap: 0;
@@ -149,7 +147,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 10px;
-		
+
 	}
 
 	&__download {
@@ -191,7 +189,7 @@
 			font-weight: 300;
 			line-height: 1.33;
 		}
-		
+
 		&_mini{
 			font-size: 12px;
 			font-weight: 300;
@@ -202,9 +200,6 @@
 			display: flex;
 			flex-direction: column;
 			row-gap: 26px;
-			// &:nth-child(2) {
-			// 	row-gap: 12px;
-			// }
 		}
 	}
 	@include media('xs') {

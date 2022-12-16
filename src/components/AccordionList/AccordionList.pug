@@ -1,0 +1,11 @@
+mixin AccordionList(props)
+
+	//- проверка данных получаемых из section
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- верстка компонента
+	+b('accordion-list', {}, 'div')
+		+Accordion(ELEM('Accordion'))
+			+e('list-wrapper', {}, 'div')
+				for item in DATA_ARR('links')
+					+e('link', {}, 'a')(href='') #{item.title}

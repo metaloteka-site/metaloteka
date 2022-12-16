@@ -1,0 +1,24 @@
+<svg width="34" height="34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="l1rylvxafb">
+            <stop stop-color="#588B75" offset="0%"/>
+            <stop stop-color="#5D6C77" offset="100%"/>
+        </linearGradient>
+        <linearGradient x1="78.121%" y1="0%" x2="21.879%" y2="100%" id="3y4sv40ynd">
+            <stop stop-color="#588B75" offset="0%"/>
+            <stop stop-color="#5D6C77" offset="100%"/>
+        </linearGradient>
+        <path d="M17 34c-4.509 0-8.832-1.79-12.022-4.978a17.004 17.004 0 0 1 0-24.044 17.004 17.004 0 0 1 24.044 0 17.004 17.004 0 0 1 0 24.044A17.004 17.004 0 0 1 17 34zm0-30.91a13.906 13.906 0 0 0-9.835 4.075 13.905 13.905 0 0 0 0 19.67 13.905 13.905 0 0 0 19.67 0 13.905 13.905 0 0 0 0-19.67A13.904 13.904 0 0 0 17 3.09z" id="y7562ae2ha"/>
+        <path d="M23.182 19.963H17a1.547 1.547 0 0 1-1.546-1.546V9.144a1.547 1.547 0 0 1 3.092 0v7.727h4.636a1.545 1.545 0 0 1 0 3.092z" id="1volma1duc"/>
+    </defs>
+    <g fill-rule="nonzero" fill="none">
+        <g>
+            <use fill="#464646" xlink:href="#y7562ae2ha"/>
+            <use fill="url(#l1rylvxafb)" xlink:href="#y7562ae2ha"/>
+        </g>
+        <g>
+            <use fill="#464646" xlink:href="#1volma1duc"/>
+            <use fill="url(#3y4sv40ynd)" xlink:href="#1volma1duc"/>
+        </g>
+    </g>
+</svg>

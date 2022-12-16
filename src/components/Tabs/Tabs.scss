@@ -1,8 +1,10 @@
 .tabs {
+	$self: &;
+
 	&__buttons {
 		display: flex;
 		overflow-x: scroll;
-		column-gap: 30px;
+		column-gap: 10px;
 
 		margin-bottom: 25px;
 
@@ -58,7 +60,7 @@
 		overflow: hidden;
 
 		width: 0;
-		height: max-content;
+		height: 0;
 
 		transition: opacity 0.3s;
 
@@ -86,6 +88,7 @@
 
 		&.js-active {
 			width: 100%;
+			height: max-content;
 
 			opacity: 1;
 		}
@@ -95,12 +98,65 @@
 		}
 	}
 
+	&_button {
+		#{$self}__button {
+			margin:5px;
+			// padding: 21px 39px 23px;
+			padding: 21px 9px 23px;
+
+			letter-spacing: normal;
+
+			color: #464646;
+			border-radius: 14px;
+			outline: solid 1px #46464662;
+
+			font-size: 20px;
+			font-weight: 800;
+			line-height: 1;
+			
+		}
+
+
+		.js-active {
+			display: block;
+
+			border-radius: 14px;
+
+			&#{$self}__button{
+				outline: solid 4px #46464662;
+			}
+		}
+
+		.js-active::after {
+			display: none;
+		}
+	}
+
 	@include media('xs') {
 		&__content {
 			overflow-y: auto;
 
 			height: 210px;
 		}
+
+		&_button {
+			.js-active {
+				#{$self}__content {
+					height: 100%;
+				}
+			}
+
+			#{$self}__button {
+				
+				// padding: 21px 9px 23px;
+				padding: 21px 39px 23px;
+
+			}
+		}
+
+		&__buttons {
+			column-gap: 30px;
+	
+		}
 	}
 }
-

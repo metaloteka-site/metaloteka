@@ -1,0 +1,73 @@
+.accordion {
+	$self: &;
+
+	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		padding-top: 24px;
+		padding-bottom: 12px;
+
+		cursor: pointer;
+		letter-spacing: normal;
+
+		color: #464646;
+
+		font-size: 22px;
+		font-weight: 700;
+		line-height: 1;
+
+		&::after {
+			width: 12px;
+			height: 12px;
+
+			content: '';
+			transition: all 0.3s;
+			transform: rotate(45deg);
+
+			opacity: 22%;
+			border-top: 3px solid $liverny-light;
+			border-right: 3px solid $liverny-light;
+		}
+	}
+
+	&__body {
+		position: relative;
+
+		overflow: hidden;
+
+		transition: all 0.3s;
+	}
+
+	&_fz-20 {
+		#{$self}__title {
+			font-size: 20px;
+		}
+	}
+
+	&_reset {
+		#{$self}__title::after {
+			content: '';
+		}
+	}
+
+	@include media('xs'){
+		&__title {
+			font-size: 30px;
+		}
+	}
+}
+
+.js-active {
+	& > .accordion__title {
+		&::after {
+			transform: rotate(135deg);
+		}
+	}
+
+	&__title{
+		padding-top: 30px;
+
+	}
+}

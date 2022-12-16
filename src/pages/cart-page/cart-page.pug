@@ -1,5 +1,8 @@
 extends ../../layout/main
 
+append variables
+	+includeComponents(['BlockLayout', 'Accordion', 'ContactInformationFooter'])
+
 block store
 	include store/cart-page.store.pug
 
@@ -11,3 +14,7 @@ block main
 	//- подключение и вызов секции SECTION-BREADCRUMBS
 	include ../../sections/section-breadcrumbs/section-breadcrumbs
 	+section-breadcrumbs(cartPage.sectionBreadcrumbs)
+
+	//- подключение и вызов секции SECTION-CART
+	include ../../sections/section-cart/section-cart
+	+section-cart(cartPage.sectionCart)

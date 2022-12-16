@@ -1,0 +1,69 @@
+mixin section-cart(section)
+	//- проверка данных получаемых из section
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- верстка секции
+	+BlockLayout({bem: {classSection: 'section-cart'}})
+		+BlockLayoutLeft
+			+e('icon', {}, 'div')
+				include ../../layout/assets/images/basket.svg
+			+e('top', {}, 'div')
+				+e('title-inner', {}, 'div')
+					+e('title', {}, 'div') #{S_DATA('title')}
+					+e('line-big', {}, 'div')
+				+e('room', {}, 'div') #{S_DATA('room')}
+			+e('order', {}, 'div')
+				+e('number', {}, 'div') #{S_DATA('number')}
+				+e('input', {}, 'button') #{S_DATA('inputButton')}
+			+e('line-small', {}, 'div')
+			//- +Accordion(S_ELEM('AccordionOrderList'))
+			//- 		for item in S_DATA_ARR('compound')
+			//- 			include ../../shared/helpers/pug/shortcut-check-store
+			//- 			+e('order-list', {}, 'div')
+			//- 				+e('order-list-name', {}, 'div') #{I_DATA('name')}
+			//- 				+e('order-list-thickness', {}, 'div') #{I_DATA('thickness')}
+			//- 				+e('order-list-size', {}, 'div') #{I_DATA('size')}
+			//- 				+e('order-list-weight', {}, 'div') #{I_DATA('weight')}
+			//- 				+e('order-list-weight', {}, 'div') #{I_DATA('amount')}
+			//- 				+e('order-list-sum', {}, 'div') #{I_DATA('sum')}
+			//- 			+e('line-order-list', {}, 'div')
+			+e('line-small', {m: 'top'}, 'div')
+			+e('call', {}, 'div')
+				+e('summ', {m: 'left'}, 'div')
+					+e('total', {}, 'p') #{S_DATA('summTotal')}
+					+e('total', {m: 'summ'}, 'div')
+						+e('number', {m: 'underline'}, 'p') #{S_DATA('sumTotalNumber')}
+						+e('rub', {}, 'p') #{S_DATA('sumTotalRub')}
+					+e('total', {m: 'days'}, 'p') #{S_DATA('sumTotalDays')}
+				+e('summ', {m: 'center'}, 'div')
+					+e('total', {m: 'bold'}, 'p') #{S_DATA('sumTotalBold')}
+					+e('total', {m: 'small'}, 'p') #{S_DATA('sumTotalSmall')}
+				+e('summ', {m: 'right'}, 'div')
+					+e('warning-img', {}, 'img')(src=`../../layout/assets/images/${S_DATA('img')}` alt=S_DATA('alt'))
+					+e('warning-text', {}, 'div') #{S_DATA('text')}
+			+e('btn-cart', {m: 'order'}, 'button') #{S_DATA('btnOrder')}
+			+e('btn-cart', {m: 'reserve'}, 'button') #{S_DATA('btnReserve')}
+			+e('line-small', {m: 'bottom'}, 'div')
+			+e('txt-onclick', {m: 'none'}, 'div') #{S_DATA('txtOnclick')}
+			+e('footer', {}, 'div')
+				+e('qr', {}, 'img')(src=`${pathFile}${S_DATA('qr')}`)
+				for item in S_ELEM_ARR('ContactInformationFooter')
+					+ContactInformationFooter(item)
+		+BlockLayoutRight
+			+e('order', {m: 'col'}, 'div')
+				+e('number', {}, 'div') #{S_DATA('titleRight')}
+				+e('room', {}, 'div') #{S_DATA('role')}
+			+e('line-small', {m: 'fat'}, 'div')
+			+e('call', {m: 'col'}, 'div')
+				+e('summ', {m: 'top'}, 'div')
+					+e('total', {}, 'p') #{S_DATA('summTotal')}
+					+e('total', {m: 'summ'}, 'div')
+						+e('number', {m: 'summ'}, 'p') #{S_DATA('sumTotalNumber')}
+						+e('rub', {m: 'fs-38'}, 'p') #{S_DATA('sumTotalRub')}
+					+e('total', {m: 'days'}, 'p') #{S_DATA('sumTotalDays')}
+				+e('summ', {m: 'center'}, 'div')
+					+e('total', {m: 'bold'}, 'p') #{S_DATA('sumTotalBold')}
+					+e('total', {m: 'small14px'}, 'p') #{S_DATA('sumTotalSmall')}
+			+e('btn-cart', {m: 'order'}, 'button') #{S_DATA('btnOrder')}
+			+e('btn-cart', {m: 'reserve'}, 'button') #{S_DATA('btnReserveSmall')}
+			+e('txt-onclick', {}, 'div') #{S_DATA('txtOnclick')}
