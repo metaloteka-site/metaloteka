@@ -14,7 +14,7 @@
 
 		color: #464646;
 
-		font-size: 30px;
+		font-size: 22px;
 		font-weight: 700;
 		line-height: 1;
 
@@ -49,6 +49,12 @@
 	&_reset {
 		#{$self}__title::after {
 			content: '';
+		}
+	}
+
+	@include media('xs'){
+		&__title {
+			font-size: 30px;
 		}
 	}
 }

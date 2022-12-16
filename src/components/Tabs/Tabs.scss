@@ -4,7 +4,7 @@
 	&__buttons {
 		display: flex;
 		overflow-x: scroll;
-		column-gap: 30px;
+		column-gap: 10px;
 
 		margin-bottom: 25px;
 
@@ -101,7 +101,8 @@
 	&_button {
 		#{$self}__button {
 			margin:5px;
-			padding: 21px 39px 23px;
+			// padding: 21px 39px 23px;
+			padding: 21px 9px 23px;
 
 			letter-spacing: normal;
 
@@ -115,11 +116,6 @@
 			
 		}
 
-		// .js-active {
-		// 	&#{$self}__button{
-		// 		outline: solid 4px #46464662;
-		// 	}
-		// }
 
 		.js-active {
 			display: block;
@@ -149,6 +145,18 @@
 					height: 100%;
 				}
 			}
+
+			#{$self}__button {
+				
+				// padding: 21px 9px 23px;
+				padding: 21px 39px 23px;
+
+			}
+		}
+
+		&__buttons {
+			column-gap: 30px;
+	
 		}
 	}
 }
