@@ -435,12 +435,136 @@
 			
 			margin-top: 44px;
 
-			color: #464646;
+			color: $wet-asphalt;
 		}
 
 		&__qr {
 			width: 110px;
 			height: 110px;
+		}
+
+
+		&__order-list {
+			display: flex;
+			justify-content: space-between;
+
+			margin-top: 60px;
+			margin-bottom: 21px;
+		}
+
+		&__order-list-name {
+			// max-width: 300px;
+			flex: 1 0 35%;
+
+			text-decoration: underline;
+			letter-spacing: normal;
+
+			color: $wet-asphalt;
+
+			font-size: 18px;
+			font-weight: 500;
+			line-height: 1.22;
+		}
+
+		// &__order-list-thickness {
+		// 	flex: 1 0 60px;
+
+		// 	text-align: center;
+
+
+		// 	letter-spacing: normal;
+
+		// 	color: #464646;
+
+		// 	font-size: 18px;
+		// 	font-weight: 700;
+		// 	line-height: 1.33;
+		// }
+
+		&__order-list-size {
+			flex: 1 0 13%;
+
+			text-align: center;
+			letter-spacing: normal;
+
+			color: $wet-asphalt;
+
+
+			font-size: 18px;
+			font-weight: 300;
+			line-height: 1.33;
+		}
+
+		&__order-list-weight {
+			flex: 1 0 21%;
+
+			text-align: center;
+			text-decoration: underline;
+
+			letter-spacing: normal;
+
+			color: $wet-asphalt;
+
+			font-size: 18px;
+			font-weight: bold;
+			line-height: 1.33;
+		}
+
+		&__order-list-changes {
+			flex: 1 0 8%;
+
+			text-align: center;
+			text-decoration: underline;
+
+			letter-spacing: normal;
+
+			color: $wet-asphalt;
+
+			font-size: 14px;
+			line-height: 1.14;
+		}
+
+		&__order-list-sum {
+			flex: 1 0 18%;
+
+			text-align: center;
+			letter-spacing: normal;
+
+			color: $wet-asphalt;
+
+			font-size: 18px;
+			font-weight: 700;
+			line-height: 1.33;
+		}
+
+		&__order-list-del {
+			flex: 1 0 4%;
+
+			color: $wet-asphalt;
+
+			// font-size: 18px;
+			// font-weight: 700;
+			// line-height: 1.33;
+
+			&::after {
+				width: 12px;
+				height: 12px;
+
+				content: "";
+				transition: all 0.3s;
+				transform: rotate(45deg);
+
+				opacity: 0.22;
+				border-top: 3px solid #5f575f;
+				border-right: 3px solid #5f575f;
+			}
+		}
+
+		&__line-order-list {
+			height: 2px;
+			margin-bottom: 21px;
+
+			background-color: #efefef;
 		}
 
 		// &__subtitle {
