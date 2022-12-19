@@ -16,6 +16,7 @@
 			placeholderDeliveryAddress: 'Адрес доставки',
 			placeholderEmail: 'E-mail',
 			itemBtn: 'Сохранить',
+			accordionBtn: 'Войти',
 			icon: '/basket.svg',
 			qr: '/icon-qr.svg',
 			iconAlt: 'Icon',
@@ -146,7 +147,7 @@
 					tabButtons: [
 						{
 							data: {
-								tabButton: 'Юрид. лицо',
+								tabButton: 'Юр. лицо',
 								dataTabButton: '1'
 							}
 						},
@@ -180,6 +181,7 @@
 					color: 'wet-asphalt-80',
 					fw: 'fw-500',
 					lh:'lh-1-29',
+					elementClassIndividual: 'text-info-period-days'
 				},
 				opt: {
 					p: true,
@@ -326,6 +328,36 @@
 					fw: 'fw-300',
 					lh:'lh-1-29',
 					elementClassIndividual: 'info-way'
+				},
+				opt: {
+					p: true,
+					isElementClass: true
+				}
+			},
+			TextDataRegistration1: {
+				data: {
+					text: 'Выберите юридическое лицо, если заказ будет оформляться на ИП или ООО'
+				},
+				bem: {
+					color: 'wet-asphalt-80',
+					fw: 'fw-300',
+					lh:'lh-1-14',
+					elementClassIndividual: 'text-data-registration'
+				},
+				opt: {
+					p: true,
+					isElementClass: true
+				}
+			},
+			TextDataRegistration2: {
+				data: {
+					text: 'Выберите физическое лицо, если заказ будет оформляться на частное лицо'
+				},
+				bem: {
+					color: 'wet-asphalt-80',
+					fw: 'fw-300',
+					lh:'lh-1-14',
+					elementClassIndividual: 'text-data-registration'
 				},
 				opt: {
 					p: true,
