@@ -193,6 +193,9 @@
 	}
 
 	&__wrapper-pagination {
+		display: flex;
+		justify-content: space-between;
+
 		padding-top: 27px;
 
 		.product-list__info-description {

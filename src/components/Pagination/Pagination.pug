@@ -1,0 +1,7 @@
+mixin Pagination(props)
+	//- проверка данных получаемых из props
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	+b('pagination', {}, 'div')
+		+b('list', {}, 'ul')
+		//- генерируются количество элементов из js
