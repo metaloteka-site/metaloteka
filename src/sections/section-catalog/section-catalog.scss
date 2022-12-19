@@ -153,6 +153,8 @@
 	}
 
 	&[data-type-section="details"] {
+		display: none;
+
 		.section-catalog__navigation {
 			display: none;
 		}
@@ -587,6 +589,8 @@
 		}
 
 		&[data-type-section="details"] {
+			display: none;
+
 			.section-catalog__navigation {
 				display: flex;
 			}

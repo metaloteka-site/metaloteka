@@ -24,6 +24,7 @@ mixin section-catalog(section)
 							each item in S_ELEM_ARR('AccordionListNavigation')
 								+AccordionList(item)
 					+e('mobile-description', {}, 'div') #{S_ELEM('MobileDescription').data.description}
+				// Правый десктопный блок
 				+e('right-aside', {}, 'div')
 					+b('product-main', {}, 'div')
 						+e('wrapper', {}, 'div')
