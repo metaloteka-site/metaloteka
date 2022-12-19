@@ -13,7 +13,6 @@
 
 	&__title {
 		margin-bottom: 16px;
-		// font-size: 20px;
 	}
 
 	&__line-big {
@@ -39,6 +38,7 @@
 	}
 
 	&__item {
+		margin-bottom: 24px;
 		padding: 30px 27px 27px;
 
 		border-radius: 14px;
@@ -54,7 +54,6 @@
 
 		font-size: $fs-28;
 		font-weight: 400;
-		// line-height: 1;
 	}
 
 	&__number {
@@ -91,7 +90,7 @@
 	}
 
 	&__summ {
-		&_left{
+		&_left {
 			width: 100%;
 		}
 
@@ -110,31 +109,31 @@
 		}
 	}
 
-	&__total{
+	&__total {
 		display: flex;
 		flex-direction: row;
 
 		margin-bottom: 12px;
-		
+
 		white-space: pre-line;
-		
+
 		color: $wet-asphalt;
-		
+
 		font-size: $fs-big;
 		line-height: 1.45;
 
 		&_summ {
 			padding-bottom: 0;
-			
+
 			font-size: $fs-28;
 			line-height: 0.86;
 		}
 
-		&_days{
+		&_days {
 			font-size: $fs-20;
 		}
 
-		&_bold{
+		&_bold {
 			width: 180px;
 
 			font-size: $fs-big;
@@ -143,7 +142,7 @@
 			line-height: 1.25;
 		}
 
-		&_small{
+		&_small {
 			width: 232px;
 
 			font-size: 12px;
@@ -163,6 +162,10 @@
 		&_wrap {
 			row-gap: 10px;
 		}
+	}
+
+	&__reserve-condition-title {
+		margin-bottom: 15px;
 	}
 
 	&__btn-cart {
@@ -193,7 +196,7 @@
 		text-align: center;
 
 		color: $wet-asphalt;
-		
+
 		font-family: $font-default;
 		line-height: 1.14;
 
@@ -202,8 +205,7 @@
 		}
 	}
 
-
-	&__footer{
+	&__footer {
 		display: none;
 	}
 
@@ -219,38 +221,24 @@
 
 		border: solid 1px #46464641;
 
-		// opacity: 0.38;
 		border-radius: 14px;
 		background-color: #fcfcfc;
 
 		&_field-s {
 			width: 100%;
-			// max-width: 247px;
-
-			// background:rgba(255, 0, 0, 0.813);
 		}
 
 		&_field-m {
 			width: 100%;
-			// max-width: 383px;
-
-			// background:rgba(0, 0, 0, 0.295);
 		}
 
 		&_field-x {
 			width: 100%;
-			// max-width: 520px;
-
-			// background:rgba(0, 255, 115, 0.404);
 		}
 
 		&_field-t {
 			width: 100%;
-			// height: 120px;
 			height: 85px;
-
-			// background:rgba(124, 88, 196, 0.267);
-				
 		}
 	}
 
@@ -357,7 +345,76 @@
 		display: none;
 	}
 
+	&__accordion-btn {
+		display: none;
+	}
 
+	&__info-way {
+		margin-bottom: 41px;
+	}
+
+	&__text-data-registration {
+		display: none;
+	}
+
+	&__text-info-period-days {
+		margin-bottom: 30px;
+	}
+
+	&__info-period-inner {
+		display: none;
+	}
+
+	&__item-title {
+		margin-bottom: 12px;
+
+		letter-spacing: normal;
+
+		color: #464646;
+
+		font-size: 22px;
+		font-weight: 700;
+		line-height: 1.09;
+	}
+
+	&__item-text {
+		max-width: 230px;
+		margin-bottom: 12px;
+
+		letter-spacing: normal;
+
+		color: #464646;
+
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 1.14;
+	}
+
+	&__item-sum {
+		margin-bottom: 23px;
+
+		letter-spacing: normal;
+
+		color: #464646;
+
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 1.22;
+	}
+
+	&__item-add {
+		cursor: pointer;
+		letter-spacing: normal;
+
+		color: #464646;
+		border: none;
+		outline: none;
+		background: none;
+
+		font-size: 18px;
+		font-weight: 300;
+		line-height: 1.22;
+	}
 
 	@include media('xs') {
 		&__icon {
@@ -422,7 +479,7 @@
 		&__info-period-inner {
 			display: flex;
 			align-items: center;
-			justify-content: end;
+			justify-content: flex-end;
 
 			margin-bottom: 31px;
 			padding-top: 10px;
@@ -435,6 +492,7 @@
 		&__items {
 			display: flex;
 			flex-direction: column;
+
 		}
 
 		&__item {
@@ -445,30 +503,14 @@
 			margin-bottom: 40px;
 			padding: 0;
 
-			border:none;
+			border: none;
 			background-color: initial;
-			box-shadow:none;
-		}
-
-		&__item-title {
-			letter-spacing: normal;
-
-			color: #464646;
-
-			font-size: 22px;
-			font-weight: 700;
-			line-height: 1.09;
+			box-shadow: none;
 		}
 
 		&__item-text {
 			max-width: 180px;
 
-			letter-spacing: normal;
-
-			color: #464646;
-
-			font-size: 14px;
-			font-weight: 300;
 			line-height: 1.14;
 		}
 
@@ -589,7 +631,6 @@
 		}
 
 		&__order-list-name {
-			// max-width: 300px;
 			flex: 1 0 300px;
 
 			letter-spacing: normal;
@@ -602,11 +643,9 @@
 		}
 
 		&__order-list-thickness {
-			// max-width: 23px;
 			flex: 1 0 60px;
 
 			text-align: center;
-
 
 			letter-spacing: normal;
 
@@ -625,7 +664,6 @@
 
 			color: #464646;
 
-
 			font-size: 18px;
 			font-weight: 300;
 			line-height: 1.33;
@@ -635,7 +673,6 @@
 			flex: 1 0 200px;
 
 			text-align: center;
-
 
 			letter-spacing: normal;
 
@@ -671,10 +708,7 @@
 			column-gap: 20px;
 
 			width: 100%;
-			// width: 790px;
-			// max-width: 500px;
 			margin-bottom: 50px;
-			// padding: 0 40px;
 
 			border-radius: 20px;
 		}
@@ -691,38 +725,27 @@
 
 			border: solid 1px #46464641;
 
-			// opacity: 0.38;
 			border-radius: 14px;
 			background-color: #fcfcfc;
 
 			&_field-s {
 				width: 100%;
 				max-width: 247px;
-
-				// background:rgba(255, 0, 0, 0.813);
 			}
 
 			&_field-m {
 				width: 100%;
 				max-width: 383px;
-
-				// background:rgba(0, 0, 0, 0.295);
 			}
 
 			&_field-x {
 				width: 100%;
 				max-width: 520px;
-
-				// background:rgba(0, 255, 115, 0.404);
 			}
 
 			&_field-t {
 				width: 100%;
-				// height: 120px;
 				height: 85px;
-
-				// background:rgba(124, 88, 196, 0.267);
-				
 			}
 		}
 
@@ -840,17 +863,16 @@
 			top: 56px;
 			right: 0;
 
+			display: block;
+
 			padding: 21px 57px 23px;
 
 			cursor: pointer;
 
-			border:none;
+			border: none;
 			border-radius: 14px;
 			background-color: rgba(70, 70, 70, 0.03);
 		}
-
-
-
 
 		&__order {
 			display: flex;
@@ -858,7 +880,7 @@
 			justify-content: space-between;
 
 			margin-bottom: 18px;
-			
+
 			color: $wet-asphalt;
 
 			&_col {
@@ -917,59 +939,59 @@
 			display: flex;
 			flex-direction: column;
 
-			&_left{
+			&_left {
 				width: 155px;
 				padding: 0;
 				gap: 6px;
 			}
-		
-			&_center{
+
+			&_center {
 				width: 252px;
 				margin-bottom: 0;
 				padding: 0;
 				gap: 12px;
 			}
-		
-			&_right{
+
+			&_right {
 				flex-direction: row;
 			}
 
-			&_top{
+			&_top {
 				width: 100%;
 				padding: 0;
 				gap: 12px;
 			}
 		}
 
-		&__total{
+		&__total {
 			margin-bottom: 0;
 
-			&_summ{
+			&_summ {
 				font-size: 38px;
 				font-weight: 800;
 				line-height: 0.63;
 			}
-	
-			&_days{
+
+			&_days {
 				font-size: $fs-big;
 			}
-	
+
 			&_small14px {
 				width: 95%;
 
 				font-size: 14px;
 				line-height: 1.14;
 			}
-			
-			&_mini{
+
+			&_mini {
 				margin-bottom: 10px;
-	
+
 				font-size: 12px;
 				font-weight: 300;
 				line-height: 1.33;
 			}
 
-			&_wrap{
+			&_wrap {
 				display: flex;
 				flex-direction: column;
 				row-gap: 26px;
@@ -980,6 +1002,12 @@
 			&_none {
 				display: none;
 			}
+		}
+
+		&__text-data-registration {
+			display: block;
+
+			margin-bottom: 47px;
 		}
 	}
 }
