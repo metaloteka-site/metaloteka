@@ -4,6 +4,7 @@ mixin section-catalog(section)
 
 	//- верстка секции
 	+Container
+		// Основная секция
 		+b('section-catalog', {}, 'section')(data-type-section='general')
 			+e('catalog-wrapper', {}, 'div')
 				+e('left-aside', {}, 'div')
@@ -14,9 +15,11 @@ mixin section-catalog(section)
 							+e('subtitle', {}, 'span') #{S_ELEM('LogoBanner').data.subtitle}
 							+e('range', {}, 'div')
 					+e('navigation', {}, 'div')
+						// Десктопная версия левого меню
 						each item in S_DATA_ARR('category')
 							include ../../shared/helpers/pug/shortcut-check-store
 							+e('category', {}, 'a')(href=I_DATA('href')) #{ I_DATA('title') }
+						// Мобильная версия левого меню
 						+e('accordion-wrapper', {}, 'div')
 							each item in S_ELEM_ARR('AccordionListNavigation')
 								+AccordionList(item)
@@ -39,6 +42,7 @@ mixin section-catalog(section)
 							+e('qr', {}, 'img')(src='../../layout/assets/images/icon-qr.svg')
 							for item in S_ELEM_ARR('ContactInformationFooter')
 								+ContactInformationFooter(item)
+		// Детальная секция
 		+b('section-catalog', {}, 'section')(data-type-section='details')
 			+e('catalog-wrapper', {}, 'div')
 				+e('left-aside', {}, 'div')
@@ -48,6 +52,7 @@ mixin section-catalog(section)
 							+e('title', {}, 'span') #{S_ELEM('LogoBanner').data.title}
 							+e('subtitle', {}, 'span') #{S_ELEM('LogoBanner').data.subtitle}
 							+e('range', {}, 'div')
+					// Десктопная версия левого меню
 					+e('navigation', {}, 'div')
 						+e('selected-title', {}, 'a')(href='#') #{S_DATA('selectedTitle')}
 						+e('details-navigation-wrapper')
@@ -66,6 +71,15 @@ mixin section-catalog(section)
 							each item in S_DATA_ARR('detailsNavigationAl')
 								include ../../shared/helpers/pug/shortcut-check-store
 								+e('details-item', {}, 'a')(href=I_DATA('href')) #{ I_DATA('title') }
+					// Мобильная версия левого меню
+					+e('navigation-mobile', {}, 'div')
+						+e('navigation-mobile-wrapper', {}, 'div')
+							+e('selected-title', {}, 'a')(href='#') #{ S_DATA('selectedTitleMobile') }
+							+e('btn-product-list-mobile', {}, 'button') #{ S_DATA('btnProductListMobile') }
+							+e('item-wrapper', {}, 'div')
+							+e('btn-product-list', {}, 'button') #{S_DATA('btnProductList')}
+						+e('mobile-description', {}, 'div') #{ S_ELEM('MobileDescription').data.description }
+				// Правый десктопный блок
 				+e('right-aside', {}, 'div')
 					+b('product-main-details', {}, 'div')
 						+e('wrapper', {}, 'div')

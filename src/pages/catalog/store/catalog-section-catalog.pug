@@ -3,8 +3,10 @@
 		data: {
 			text: 'Каталог',
 			btnProductList: 'Загрузить еще',
+			btnProductListMobile: 'Толщина, мм',
 			productListDescription: 'Всет товары в разделе имеют сертификаты качества и изготовлены по гостам. Вы можете запросить в офисе продаж всю необходимую документацию',
-			selectedTitle: 'Цветные металлы'
+			selectedTitle: 'Цветные металлы',
+			selectedTitleMobile: 'Лист горячекатный',
 		},
 		dataArr: {
 			category: [
@@ -1058,6 +1060,51 @@
 					},
 				]
 			},
+			ProductItemMobile: {
+				elemArr: [
+					{
+						data: {
+							title: 'Лист горячекатный, 60 мм',
+							subtitle: 'Просечно-вытяжной лист, 16 мм (изготавливается по технологии горячекатного листа)'
+						},
+						elem: {
+							Text: {
+								elemArr: [
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '60 мм'
+												},
+												{
+													text: '1500 x 600 мм'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '3000 мм'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+								]
+							}
+						},
+					},
+				]
+			},
 			ProductInformation: {
 				data: {
 					title: 'Трубный прокат'
@@ -1089,7 +1136,8 @@
 			LogoBanner: {
 				data: {
 					title: 'Металотека',
-					subtitle: 'Каталог'
+					subtitle: 'Каталог',
+					subtitleDetails: 'Листовой прокат',
 				}
 			},
 			ContactInformationFooter: {

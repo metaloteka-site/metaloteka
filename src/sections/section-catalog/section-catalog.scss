@@ -54,7 +54,7 @@
 
 				border-width: 5px;
 				border-style: solid;
-				border-image-source: var(--blue-gradient);
+				border-image-source: $blue-gradient;
 				border-image-slice: 1;
 			}
 		}
@@ -150,6 +150,106 @@
 
 	&__right-aside {
 		display: none;
+	}
+
+	&[data-type-section="details"] {
+		.section-catalog__navigation {
+			display: none;
+		}
+
+		.section-catalog__navigation-mobile {
+			display: flex;
+			flex-direction: column;
+
+			#{$self}__navigation-mobile-wrapper {
+				padding: 24px 41px 0 43px;
+			}
+
+			#{$self}__selected-title {
+				position: relative;
+
+				padding: 19px 22px 0 33px;
+
+				text-decoration: none;
+
+				color: $wet-asphalt;
+
+				font-size: 24px;
+				font-weight: 500;
+				line-height: 26px;
+
+				&::before {
+					position: absolute;
+					top: 66%;
+					left: 0;
+
+					width: 12px;
+					height: 12px;
+
+					content: "";
+					transform: rotate(225deg) translateY(50%);
+
+					opacity: 0.22;
+					border-top: 3px solid $liverny-light;
+					border-right: 3px solid $liverny-light;
+				}
+			}
+
+			#{$self}__btn-product-list-mobile {
+				position: relative;
+
+				width: 100%;
+				padding: 18px 100px 18px 56px;
+
+				color: $white;
+				border: none;
+				border-radius: 14px;
+				background: $blue-gradient;
+
+				font-family: 'BlissPro', sans-serif;
+				font-size: 22px;
+				font-weight: 800;
+				margin-block: 46px 45px;
+
+				&::after {
+					position: absolute;
+					top: 50%;
+					right: 28px;
+
+					width: 12px;
+					height: 12px;
+
+					content: "";
+					transform: rotate(45deg) translateY(-50%);
+
+					opacity: 0.22;
+					border-top: 3px solid $white;
+					border-right: 3px solid $white;
+				}
+			}
+
+			#{$self}__btn-product-list {
+				width: 100%;
+				margin-block: 18px 46px;
+
+				cursor: pointer;
+
+				color: $white;
+				border: none;
+				border-radius: 14px;
+				background: #5f575f;
+				background: $liverny-light;
+
+				font-family: 'BlissPro', sans-serif;
+				font-size: 22px;
+				font-weight: 300;
+				padding-block: 19px;
+			}
+
+			#{$self}__mobile-description {
+				border-top: 1px solid var(--smoke-white-second);
+			}
+		}
 	}
 
 	//Desktop
@@ -409,7 +509,7 @@
 							cursor: pointer;
 
 							color: $white;
-							background: var(--liverny-light);
+							background: $liverny-light;
 
 							font-size: 20px;
 							font-weight: 800;
@@ -481,6 +581,16 @@
 					padding: 41px 304px 70px 42px;
 					column-gap: 34px;
 				}
+			}
+		}
+
+		&[data-type-section="details"] {
+			.section-catalog__navigation {
+				display: flex;
+			}
+
+			.section-catalog__navigation-mobile {
+				display: none;
 			}
 		}
 	}
