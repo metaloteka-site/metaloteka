@@ -23,9 +23,12 @@ mixin section-cart(section)
 						+e('order-list-name', {}, 'div') #{I_DATA('name')}
 						+e('order-list-size', {}, 'div') #{I_DATA('size')}
 						+e('order-list-weight', {}, 'div') #{I_DATA('weight')}
-						+e('order-list-changes', {}, 'div') #{I_DATA('changes')}
+						+e('order-list-wrap', {}, 'div')
+							+e('order-list-changes', {}, 'div') #{I_DATA('changes')}
+							+e('order-list-changes', {m: 'delete'}, 'div') #{I_DATA('delete')}
 						+e('order-list-sum', {}, 'div') #{I_DATA('sum')}
-						+e('order-list-del', {}, 'button') gh
+						+e('order-list-btn', {}, 'div')
+							+e('order-list-del', {}, 'button') &#10006;
 					+e('line-order-list', {}, 'div')
 			+e('line-small', {m: 'top'}, 'div')
 			+e('call', {}, 'div')
