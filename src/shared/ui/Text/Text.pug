@@ -12,6 +12,10 @@ mixin Text(props)
 			for item in DATA_ARR('arrText')
 				//- проверка данных получаемых из item
 				include ../../helpers/pug/shortcut-check-store
-				+b('text', {e: `${isElementClass}:${BEM('elementClassIndividual')}`, m: `${BEM('size')}.${BEM('color')}.${BEM('fw')}`}, tag) #{item.text}
+				if item.img
+					+e('icon', {b: item.isAdded}, 'div')
+						include ../../../layout/assets/images/basket.svg
+				else
+					+b('text', {e: `${isElementClass}:${BEM('elementClassIndividual')}`, m: `${BEM('size')}.${BEM('color')}.${BEM('fw')}`}, tag) #{item.text}
 	else
 		+b('text', {e: `${isElementClass}:${BEM('elementClassIndividual')}`, m: `${BEM('size')}.${BEM('color')}.${BEM('fw')}`}, tag) #{DATA('text')}

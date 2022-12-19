@@ -58,6 +58,9 @@ mixin section-catalog(section)
 									+e('content', {}, 'div')
 										for item in S_ELEM_ARR('TableProductRowContent')
 											+TableProductRow(item)
+									+e('btn-product-list', {}, 'button') #{S_DATA('btnProductList')}
+									+e('wrapper-pagination', {}, 'div')
+										+e('info-description', {}, 'p') #{ S_DATA('productListDescription') }
 					+b('product-tags', {}, 'div')
 						+e('tags-wrapper', {}, 'div')
 							each item in S_DATA_ARR('tags')
