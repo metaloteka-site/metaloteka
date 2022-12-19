@@ -50,7 +50,7 @@ mixin section-catalog(section)
 						+e('img', {}, 'img')(src='../../layout/assets/images/icon-qr.svg')
 						+e('banner', {}, 'div')
 							+e('title', {}, 'span') #{S_ELEM('LogoBanner').data.title}
-							+e('subtitle', {}, 'span') #{S_ELEM('LogoBanner').data.subtitle}
+							+e('subtitle', {}, 'span') #{S_ELEM('LogoBanner').data.subtitleDetails}
 							+e('range', {}, 'div')
 					// Десктопная версия левого меню
 					+e('navigation', {}, 'div')
@@ -77,6 +77,8 @@ mixin section-catalog(section)
 							+e('selected-title', {}, 'a')(href='#') #{ S_DATA('selectedTitleMobile') }
 							+e('btn-product-list-mobile', {}, 'button') #{ S_DATA('btnProductListMobile') }
 							+e('item-wrapper', {}, 'div')
+								for item in S_ELEM_ARR('ProductItemMobile')
+									+ProductItem(item)
 							+e('btn-product-list', {}, 'button') #{S_DATA('btnProductList')}
 						+e('mobile-description', {}, 'div') #{ S_ELEM('MobileDescription').data.description }
 				// Правый десктопный блок
