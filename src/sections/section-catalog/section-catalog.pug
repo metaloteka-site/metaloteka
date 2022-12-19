@@ -4,7 +4,7 @@ mixin section-catalog(section)
 
 	//- верстка секции
 	+Container
-		+b('section-catalog', {}, 'section')
+		+b('section-catalog', {}, 'section')(data-type-section='general')
 			+e('catalog-wrapper', {}, 'div')
 				+e('left-aside', {}, 'div')
 					+e('logo', {}, 'div')
@@ -22,16 +22,54 @@ mixin section-catalog(section)
 								+AccordionList(item)
 					+e('mobile-description', {}, 'div') #{S_ELEM('MobileDescription').data.description}
 				+e('right-aside', {}, 'div')
-					//+b('product-main', {}, 'div')
-					//	+e('wrapper', {}, 'div')
-					//		+e('title', {}, 'span') #{S_ELEM('ProductInformation').data.title}
-					//		+e('range', {}, 'div')
-							//+e('information-block', {}, 'div')
-								// each item in S_ELEM_ARR('AccordionList')
-								// 	+AccordionList(item)
-					+b('product-main-details', {}, 'div')
+					+b('product-main', {}, 'div')
 						+e('wrapper', {}, 'div')
 							+e('title', {}, 'span') #{S_ELEM('ProductInformation').data.title}
+							+e('range', {}, 'div')
+							+e('information-block', {}, 'div')
+								each item in S_ELEM_ARR('AccordionList')
+									+AccordionList(item)
+					+b('product-tags', {}, 'div')
+						+e('tags-wrapper', {}, 'div')
+							each item in S_DATA_ARR('tags')
+								include ../../shared/helpers/pug/shortcut-check-store
+								+e('tag', {}, 'a')(href=I_DATA('href')) #{ I_DATA('title') }
+					+b('product-footer', {}, 'div')
+						+e('footer-wrapper', {}, 'div')
+							+e('qr', {}, 'img')(src='../../layout/assets/images/icon-qr.svg')
+							for item in S_ELEM_ARR('ContactInformationFooter')
+								+ContactInformationFooter(item)
+		+b('section-catalog', {}, 'section')(data-type-section='details')
+			+e('catalog-wrapper', {}, 'div')
+				+e('left-aside', {}, 'div')
+					+e('logo', {}, 'div')
+						+e('img', {}, 'img')(src='../../layout/assets/images/icon-qr.svg')
+						+e('banner', {}, 'div')
+							+e('title', {}, 'span') #{S_ELEM('LogoBanner').data.title}
+							+e('subtitle', {}, 'span') #{S_ELEM('LogoBanner').data.subtitle}
+							+e('range', {}, 'div')
+					+e('navigation', {}, 'div')
+						+e('selected-title', {}, 'a')(href='#') #{S_DATA('selectedTitle')}
+						+e('details-navigation-wrapper')
+							each item in S_DATA_ARR('detailsNavigationLa')
+								include ../../shared/helpers/pug/shortcut-check-store
+								+e('details-item', {}, 'a')(href=I_DATA('href')) #{ I_DATA('title') }
+						+e('details-navigation-wrapper')
+							each item in S_DATA_ARR('detailsNavigationTi')
+								include ../../shared/helpers/pug/shortcut-check-store
+								+e('details-item', {}, 'a')(href=I_DATA('href')) #{ I_DATA('title') }
+						+e('details-navigation-wrapper')
+							each item in S_DATA_ARR('detailsNavigationMe')
+								include ../../shared/helpers/pug/shortcut-check-store
+								+e('details-item', {}, 'a')(href=I_DATA('href')) #{ I_DATA('title') }
+						+e('details-navigation-wrapper')
+							each item in S_DATA_ARR('detailsNavigationAl')
+								include ../../shared/helpers/pug/shortcut-check-store
+								+e('details-item', {}, 'a')(href=I_DATA('href')) #{ I_DATA('title') }
+				+e('right-aside', {}, 'div')
+					+b('product-main-details', {}, 'div')
+						+e('wrapper', {}, 'div')
+							+e('title', {}, 'span') #{S_ELEM('ProductDetailsInformation').data.title}
 							+e('range', {}, 'div')
 							+e('information-block-details', {}, 'div')
 								+e('aboveTitle', {}, 'span') #{S_ELEM('ProductInformationDetails').data.aboveTitle}
