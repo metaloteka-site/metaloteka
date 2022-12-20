@@ -3,7 +3,7 @@ class SectionCatalogControl {
 		this.generalSection = elem;
 		this.detailsSection = document.querySelector('[data-type-section="details"]');
 		this.accordionWrapper = document.querySelectorAll('.accordion__body');
-		this.selectedProduct = this.detailsSection.querySelector('.section-catalog__selected-title');
+		this.selectedProduct = this.detailsSection.querySelectorAll('.section-catalog__selected-title');
 	}
 
 	init() {
@@ -19,9 +19,11 @@ class SectionCatalogControl {
 				}
 			});
 		});
-		this.selectedProduct.addEventListener('click', () => {
-			this.generalSection.style.display = 'flex';
-			this.detailsSection.style.display = 'none';
+		this.selectedProduct.forEach((item) => {
+			item.addEventListener('click', () => {
+				this.generalSection.style.display = 'flex';
+				this.detailsSection.style.display = 'none';
+			});
 		});
 	}
 }
