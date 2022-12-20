@@ -1,4 +1,4 @@
-mixin section-order-reserve(section)
+mixin section-order-processing(section)
 	//- проверка данных получаемых из section
 	include ../../shared/helpers/pug/shortcut-check-store
 
@@ -16,24 +16,24 @@ mixin section-order-reserve(section)
 			+Accordion(S_ELEM('AccordionDeliveryMethod'))
 				+Text(S_ELEM('TextInfoWay'))
 				+e('', {}, 'div')
-					+e('info-period-inner', {}, 'div')
-						+Text(S_ELEM('TextInfoPeriodDays'))
-						+e('info-period-img', {}, 'img')(src=`../../layout/assets/images/${S_DATA('infoPeriodImg')}` alt=S_DATA('infoPeriodAlt'))
-						+Text(S_ELEM('TextInfoPeriodDate'))
-					+e('items', {}, 'div')
-						for item in S_DATA_ARR('reserve')
-							include ../../shared/helpers/pug/shortcut-check-store
-							+e('item', {}, 'div')
-								+e('item-title', {}, 'div') #{I_DATA('title')}
-								+e('item-text', {}, 'div') #{I_DATA('text')}
-								+e('item-sum', {}, 'div') #{I_DATA('sum')}
-								+e('item-add', {}, 'button') #{I_DATA('add')}
-					+e('item-btn', {}, 'div') #{S_DATA('itemBtn')}
-					+e('warning', {}, 'div')
-						for item in S_ELEM_ARR('TextWarnings')
-							+e('warning', {}, 'div')
-								+e('warning-img', {}, 'img')(src=`../../layout/assets/images/${S_DATA('iconWarning')}` alt=S_DATA('iconAltWarning'))
-								+Text(item)
+					//- +e('info-period-inner', {}, 'div')
+					//- 	+Text(S_ELEM('TextInfoPeriodDays'))
+					//- 	+e('info-period-img', {}, 'img')(src=`../../layout/assets/images/${S_DATA('infoPeriodImg')}` alt=S_DATA('infoPeriodAlt'))
+					//- 	+Text(S_ELEM('TextInfoPeriodDate'))
+					//- +e('items', {}, 'div')
+					//- 	for item in S_DATA_ARR('reserve')
+					//- 		include ../../shared/helpers/pug/shortcut-check-store
+					//- 		+e('item', {}, 'div')
+					//- 			+e('item-title', {}, 'div') #{I_DATA('title')}
+					//- 			+e('item-text', {}, 'div') #{I_DATA('text')}
+					//- 			+e('item-sum', {}, 'div') #{I_DAT	A('sum')}
+					//- 			+e('item-add', {}, 'button') #{I_DATA('add')}
+					//- +e('item-btn', {}, 'div') #{S_DATA('itemBtn')}
+					//- +e('warning', {}, 'div')
+					//- 	for item in S_ELEM_ARR('TextWarnings')
+					//- 		+e('warning', {}, 'div')
+					//- 			+e('warning-img', {}, 'img')(src=`../../layout/assets/images/${S_DATA('iconWarning')}` alt=S_DATA('iconAltWarning'))
+					//- 			+Text(item)
 					+Text(S_ELEM('TextReserveConditionTitle'))
 					+Text(S_ELEM('TextReserveConditionText'))
 			+e('line-small', {}, 'div')
@@ -143,10 +143,9 @@ mixin section-order-reserve(section)
 								+ContactInformationFooter(item)
 		+BlockLayoutRight
 			+e('order', {m: 'col'}, 'div')
-				+e('number-right', {}, 'div') #{S_DATA('titleRight')}
-				+e('text-right', {}, 'div') #{S_DATA('textRight')}
-				+e('room-right', {}, 'div') #{S_DATA('role')}
-			+e('line-right-small', {m: 'fat'}, 'div')
+				+e('number', {}, 'div') #{S_DATA('titleRight')}
+				+e('room', {}, 'div') #{S_DATA('role')}
+			+e('line-small', {m: 'fat'}, 'div')
 			+e('call', {m: 'col'}, 'div')
 				+e('summ', {m: 'top'}, 'div')
 					+e('total', {}, 'p') #{S_DATA('summTotal')}
