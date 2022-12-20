@@ -1,12 +1,13 @@
 .product-item-details {
 	$self: &;
+	max-width: 368px;
+
 	color: $wet-asphalt;
 	border-radius: 30px;
 	background: $white;
 
 	&__title {
 		margin-bottom: 16px;
-		padding: 43px 42px 0;
 
 		font-size: 30px;
 		font-weight: 800;
@@ -15,17 +16,18 @@
 	&__subtitle {
 		max-width: 284px;
 		margin-bottom: 34px;
-		padding: 0 42px;
 	}
 
 	&__filters {
 		display: flex;
 		justify-content: space-between;
 
-		padding: 29px 43px 34px;
+		padding: 29px 42px 34px;
 
 		border-top: 1px solid var(--smoke-white-first);
 		border-bottom: 1px solid var(--smoke-white-first);
+
+		margin-inline: -42px;
 
 		#{$self}__filter-value {
 			cursor: pointer;
@@ -51,9 +53,9 @@
 		display: flex;
 		align-items: center;
 
-		width: 100%;
 
 		border-bottom: 1px solid var(--smoke-white-first);
+		margin-inline: -42px;
 	}
 
 	&__minus {
@@ -90,6 +92,8 @@
 
 		width: 92px;
 		height: 90px;
+
+		cursor: pointer;
 
 		border: none;
 		border-left: 1px solid var(--smoke-white-first);
@@ -136,7 +140,6 @@
 
 	&__total-wrapper {
 		margin-block: 17px 30px;
-		padding-inline: 40px;
 
 		#{$self}__total {
 			margin-bottom: 12px;
@@ -173,10 +176,11 @@
 		display: block;
 
 		max-width: 284px;
-		margin: 0 auto;
 		margin-top: 30px;
 		margin-bottom: 25px;
-		padding: 22px 92px;
+		padding: 22px 81px;
+
+		cursor: pointer;
 
 		color: $white;
 		border: none;
@@ -189,7 +193,7 @@
 	}
 
 	&__description {
-		padding: 0 42px 51px;
+		padding: 0 0 51px;
 
 		text-align: center;
 
@@ -198,6 +202,12 @@
 	}
 
 	@include media(xs) {
-		display: none;
+		&__counter-wrapper {
+			margin-inline: -52px;
+		}
+
+		&__filters {
+			margin-inline: -52px;
+		}
 	}
 }

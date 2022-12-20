@@ -3,22 +3,21 @@ mixin ProductItemDetails(props)
 	include ../../shared/helpers/pug/shortcut-check-store
 
 	//- верстка компонента
-	+b('product-item-details', {}, 'div')
-		+e('title', {}, 'p') #{DATA('title')}
-		+e('subtitle', {}, 'p') #{DATA('subtitle')}
-		+e('filters', {}, 'div')
-			each item in props.elemArr
-				include ../../shared/helpers/pug/shortcut-check-store
-				+e('filter-value', {b: I_BEM('jsClass')}, 'a')(data-filter-categories=I_DATA('title')) #{ I_DATA('title') }
-		+e('counter-wrapper', {}, 'div')
-			+e('minus', {}, 'button')
-			+e('count', {}, 'p') #{DATA('count')}
-			+e('plus', {}, 'button')
-		+e('total-wrapper')
-			+e('total', {}, 'p') #{DATA('total')}
-			+e('price-wrapper', {}, 'div')
-				+e('total-price', {}, 'p') #{DATA('totalPrice')}
-				+e('value', {}, 'p') #{DATA('totalPriceValue')}
-			+e('measure', {}, 'p') #{DATA('measure')}
-		+e('basket-btn', {}, 'button') #{DATA('button')}
-		+e('description', {}, 'p') #{DATA('description')}
+	+e('title', {}, 'p') #{DATA('title')}
+	+e('subtitle', {}, 'p') #{DATA('subtitle')}
+	+e('filters', {}, 'div')
+		each item in props.elemArr
+			include ../../shared/helpers/pug/shortcut-check-store
+			+e('filter-value', {b: I_BEM('jsClass')}, 'a')(data-filter-categories=I_DATA('title')) #{ I_DATA('title') }
+	+e('counter-wrapper', {}, 'div')
+		+e('minus', {}, 'button')
+		+e('count', {}, 'p') #{DATA('count')}
+		+e('plus', {}, 'button')
+	+e('total-wrapper')
+		+e('total', {}, 'p') #{DATA('total')}
+		+e('price-wrapper', {}, 'div')
+			+e('total-price', {}, 'p') #{DATA('totalPrice')}
+			+e('value', {}, 'p') #{DATA('totalPriceValue')}
+		+e('measure', {}, 'p') #{DATA('measure')}
+	+e('basket-btn', {}, 'button') #{DATA('button')}
+	+e('description', {}, 'p') #{DATA('description')}
