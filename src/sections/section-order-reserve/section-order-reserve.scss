@@ -12,13 +12,12 @@
 	}
 
 	&__title {
-		margin-bottom: 16px;
+		margin-bottom: 14px;
 	}
 
 	&__line-big {
-		max-width: 280px;
 		height: 9px;
-		margin-bottom: 25px;
+		margin-bottom: 11px;
 
 		border: none;
 		background: var(--blue-gradient);
@@ -42,7 +41,7 @@
 		padding: 30px 27px 27px;
 
 		border-radius: 14px;
-		background-color: #ffffff;
+		background-color: $white;
 		box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.06);
 	}
 
@@ -54,6 +53,25 @@
 
 		font-size: $fs-28;
 		font-weight: 400;
+	}
+
+	&__room-right {
+		color: $wet-asphalt;
+
+		font-size: 20px;
+		font-weight: 300;
+		line-height: 1.2;
+	}
+
+	&__text-right {
+		max-width: 232px;
+		margin-bottom: 33px;
+
+		color: $wet-asphalt;
+
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 1.25;
 	}
 
 	&__number {
@@ -75,6 +93,17 @@
 			font-weight: 800;
 			line-height: 0.63;
 		}
+	}
+
+	&__number-right {
+		max-width: 232px;
+		margin-bottom: 26px;
+
+		color: $wet-asphalt;
+
+		font-size: 38px;
+		font-weight: 800;
+		line-height: 0.89;
 	}
 
 	&__rub {
@@ -254,7 +283,7 @@
 		letter-spacing: normal;
 
 		opacity: 0.9;
-		color: #464646;
+		color: $wet-asphalt;
 
 		border: none;
 		outline: none;
@@ -330,7 +359,7 @@
 	}
 
 	&__tab__nav-button.active {
-		color: #ffffff;
+		color: $white;
 		border-right-color: #0b6ddd;
 		background-color: #3d89df;
 	}
@@ -338,7 +367,7 @@
 	&__tab__content {
 		padding: 30px;
 
-		background-color: #ffffff;
+		background-color: $white;
 	}
 
 	&__warning {
@@ -358,7 +387,8 @@
 	}
 
 	&__text-info-period-days {
-		margin-bottom: 30px;
+		max-width: 217px;
+		margin-bottom: 42px;
 	}
 
 	&__info-period-inner {
@@ -370,7 +400,7 @@
 
 		letter-spacing: normal;
 
-		color: #464646;
+		color: $wet-asphalt;
 
 		font-size: 22px;
 		font-weight: 700;
@@ -379,11 +409,11 @@
 
 	&__item-text {
 		max-width: 230px;
-		margin-bottom: 12px;
+		margin-bottom: 30px;
 
 		letter-spacing: normal;
 
-		color: #464646;
+		color: $wet-asphalt;
 
 		font-size: 14px;
 		font-weight: 300;
@@ -395,7 +425,7 @@
 
 		letter-spacing: normal;
 
-		color: #464646;
+		color: $wet-asphalt;
 
 		font-size: 18px;
 		font-weight: 700;
@@ -403,17 +433,25 @@
 	}
 
 	&__item-add {
+		padding: 19px 75px;
+
 		cursor: pointer;
 		letter-spacing: normal;
 
-		color: #464646;
+		color: $white;
 		border: none;
+		border-radius: 10px;
 		outline: none;
 		background: none;
+		background-color: #5f575f;
 
 		font-size: 18px;
 		font-weight: 300;
 		line-height: 1.22;
+	}
+
+	&__text-room {
+		margin-top: 10px;
 	}
 
 	@include media('xs') {
@@ -431,10 +469,12 @@
 		}
 
 		&__icon svg {
+			display: block;
+
 			width: 39px;
 			height: 28px;
 
-			color: #ffffff;
+			color: $white;
 		}
 
 		&__top {
@@ -442,20 +482,31 @@
 			flex-direction: row;
 			justify-content: space-between;
 
-			margin-bottom: 66px;
+			margin-bottom: 61px;
 		}
 
 		&__line-big {
-			max-width: 284px;
+			width: 160px;
 			margin-bottom: 0;
 		}
 
 		&__line-small {
 			height: 2px;
 			margin-top: 20px;
+			margin-right: -53px;
+			margin-left: -53px;
+
+			background-color: #efefef;
+		}
+
+		&__line-right-small {
+			height: 9px;
+			margin-top: 20px;
 			margin-right: -42px;
+			margin-bottom: 29px;
 			margin-left: -42px;
 
+			opacity: 0.35;
 			background-color: #efefef;
 		}
 
@@ -465,7 +516,7 @@
 
 			letter-spacing: normal;
 
-			color: #464646;
+			color: $wet-asphalt;
 
 			font-size: 30px;
 			font-weight: 700;
@@ -486,18 +537,18 @@
 		}
 
 		&__info-period-img {
-			margin: 0 16px;
+			margin: 0 11px;
 		}
 
 		&__items {
 			display: flex;
 			flex-direction: column;
 
+			margin-bottom: 23px;
 		}
 
 		&__item {
 			display: flex;
-			align-items: center;
 			justify-content: space-between;
 
 			margin-bottom: 40px;
@@ -509,7 +560,9 @@
 		}
 
 		&__item-text {
-			max-width: 180px;
+			width: 166px;
+			margin-bottom: 0;
+			margin-left: -33px;
 
 			line-height: 1.14;
 		}
@@ -517,7 +570,7 @@
 		&__item-sum {
 			letter-spacing: normal;
 
-			color: #464646;
+			color: $wet-asphalt;
 
 			font-size: 18px;
 			font-weight: 300;
@@ -529,7 +582,7 @@
 			text-align: right;
 			letter-spacing: normal;
 
-			color: #464646;
+			color: $wet-asphalt;
 			border: none;
 			outline: none;
 			background: none;
@@ -557,20 +610,27 @@
 
 		&__warning {
 			display: flex;
-			justify-content: space-between;
-			column-gap: 10px;
+			column-gap: 12px;
+		}
+
+		&__text-info-period-days {
+			margin-bottom: -7px;
+		}
+
+		&__text-warning {
+			max-width: 185px;
 		}
 
 		&__warning-img {
 			width: 34px;
 			height: 34px;
-			margin-right: 16px;
+			margin-right: 7px;
 		}
 
 		&__warning-text {
 			max-width: 333px;
 
-			color: #464646;
+			
 
 			font-size: 10px;
 			font-weight: 300;
@@ -608,7 +668,7 @@
 
 			letter-spacing: normal;
 
-			color: #464646;
+			color: $wet-asphalt;
 
 			font-size: 28px;
 			font-weight: 800;
@@ -635,7 +695,7 @@
 
 			letter-spacing: normal;
 
-			color: #464646;
+			color: $wet-asphalt;
 
 			font-size: 18px;
 			font-weight: 300;
@@ -649,7 +709,7 @@
 
 			letter-spacing: normal;
 
-			color: #464646;
+			color: $wet-asphalt;
 
 			font-size: 18px;
 			font-weight: 700;
@@ -662,7 +722,7 @@
 			text-align: center;
 			letter-spacing: normal;
 
-			color: #464646;
+			color: $wet-asphalt;
 
 			font-size: 18px;
 			font-weight: 300;
@@ -676,7 +736,7 @@
 
 			letter-spacing: normal;
 
-			color: #464646;
+			color: $wet-asphalt;
 
 			font-size: 18px;
 			font-weight: 700;
@@ -688,7 +748,7 @@
 
 			letter-spacing: normal;
 
-			color: #464646;
+			color: $wet-asphalt;
 
 			font-size: 18px;
 			font-weight: 700;
@@ -761,7 +821,7 @@
 			letter-spacing: normal;
 
 			opacity: 0.9;
-			color: #464646;
+			color: $wet-asphalt;
 
 			border: none;
 			outline: none;
@@ -837,7 +897,7 @@
 		}
 
 		&__tab__nav-button.active {
-			color: #ffffff;
+			color: $white;
 			border-right-color: #0b6ddd;
 			background-color: #3d89df;
 		}
@@ -845,7 +905,7 @@
 		&__tab__content {
 			padding: 30px;
 
-			background-color: #ffffff;
+			background-color: $white;
 		}
 
 		/* Important functional styles */
@@ -949,7 +1009,7 @@
 				width: 252px;
 				margin-bottom: 0;
 				padding: 0;
-				gap: 12px;
+				gap: 15px;
 			}
 
 			&_right {

@@ -6,13 +6,13 @@
 		align-items: center;
 		justify-content: space-between;
 
-		padding-top: 24px;
+		padding-top: 23px;
 		padding-bottom: 12px;
 
 		cursor: pointer;
 		letter-spacing: normal;
 
-		color: #464646;
+		color: $wet-asphalt;
 
 		font-size: 22px;
 		font-weight: 700;
@@ -54,7 +54,7 @@
 
 	@include media('xs'){
 		&__title {
-			font-size: 30px;
+			font-size: 29px;
 		}
 	}
 }
