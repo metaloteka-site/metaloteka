@@ -20,12 +20,12 @@ mixin section-cart(section)
 				for item in S_DATA_ARR('compound')
 					include ../../shared/helpers/pug/shortcut-check-store
 					+e('order-list', {}, 'div')
-						+e('order-list-name', {}, 'div') #{I_DATA('name')}
+						+e('order-list-name', {}, 'a')(href='#') #{I_DATA('name')}
 						+e('order-list-size', {}, 'div') #{I_DATA('size')}
 						+e('order-list-weight', {}, 'div') #{I_DATA('weight')}
 						+e('order-list-wrap', {}, 'div')
-							+e('order-list-changes', {}, 'div') #{I_DATA('changes')}
-							+e('order-list-changes', {m: 'delete'}, 'div') #{I_DATA('delete')}
+							+e('order-list-changes', {}, 'button') #{I_DATA('changes')}
+							+e('order-list-changes', {m: 'delete'}, 'button') #{I_DATA('delete')}
 						+e('order-list-sum', {}, 'div') #{I_DATA('sum')}
 						+e('order-list-btn', {}, 'div')
 							+e('order-list-del', {}, 'button') &#10006;

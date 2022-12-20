@@ -240,6 +240,10 @@
 
 		font-size: $fs-20;
 		line-height: 1.1;
+
+		&:hover {
+			color: $wet-asphalt;
+		}
 	}
 
 	&__order-list-size {
@@ -293,6 +297,8 @@
 		letter-spacing: normal;
 
 		color: $wet-asphalt;
+		border: 0;
+		background: none;
 
 		font-size: $fs-20;
 		font-weight: bold;
@@ -557,9 +563,6 @@
 			order: 1;
 
 			margin: 0;
-
-			text-decoration: underline;
-			letter-spacing: normal;
 
 			font-size: 18px;
 			font-weight: 500;
