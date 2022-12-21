@@ -17,6 +17,6 @@ mixin Text(props)
 					+e('icon', {b: item.isAdded}, 'div')(data-popup-open=dataPopup)
 						include ../../../layout/assets/images/basket.svg
 				else
-					+b('text', {e: `${isElementClass}:${BEM('elementClassIndividual')}`, m: `${BEM('size')}.${BEM('color')}.${BEM('fw')}`}, tag) #{item.text}
+					+b('text', {e: `${isElementClass}:${BEM('elementClassIndividual')}`, m: `${BEM('size')}.${BEM('sizeDesctop')}.${BEM('color')}.${BEM('fw')}.${BEM('lh')}`}, tag) #{item.text}
 	else
-		+b('text', {e: `${isElementClass}:${BEM('elementClassIndividual')}`, m: `${BEM('size')}.${BEM('color')}.${BEM('fw')}`}, tag) #{DATA('text')}
+		+b('text', {e: `${isElementClass}:${BEM('elementClassIndividual')}`, m: `${BEM('size')}.${BEM('sizeDesctop')}.${BEM('color')}.${BEM('fw')}.${BEM('lh')}`}, tag) #{DATA('text')}

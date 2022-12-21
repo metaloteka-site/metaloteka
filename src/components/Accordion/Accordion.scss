@@ -6,7 +6,7 @@
 		align-items: center;
 		justify-content: space-between;
 
-		padding-top: 30px;
+		padding-top: 24px;
 		padding-bottom: 12px;
 
 		cursor: pointer;
@@ -14,7 +14,7 @@
 
 		color: #464646;
 
-		font-size: 30px;
+		font-size: 22px;
 		font-weight: 700;
 		line-height: 1;
 
@@ -42,13 +42,26 @@
 
 	&_fz-20 {
 		#{$self}__title {
-			font-size: 20px;
+			font-size: $fs-20;
+		}
+	}
+
+	&_fz-24 {
+		#{$self}__title {
+			font-size: $fs-24;
+			font-weight: 300;
 		}
 	}
 
 	&_reset {
 		#{$self}__title::after {
 			display: none;
+		}
+	}
+
+	@include media('xs'){
+		&__title {
+			font-size: 30px;
 		}
 	}
 }
@@ -58,5 +71,10 @@
 		&::after {
 			transform: rotate(135deg);
 		}
+	}
+
+	&__title{
+		padding-top: 30px;
+
 	}
 }
