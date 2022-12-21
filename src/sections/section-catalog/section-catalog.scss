@@ -359,7 +359,7 @@
 		&__right-aside {
 			display: block;
 
-			width: 100%;
+			max-width: 1040px;
 			height: 100%;
 
 			.product-main, .product-main-details {
@@ -543,7 +543,7 @@
 				}
 
 				&__wrapper {
-					padding: 70px 67px 60px 58px;
+					padding: 70px 67px 60px 42px;
 				}
 			}
 
