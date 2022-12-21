@@ -76,7 +76,7 @@ mixin section-catalog(section)
 					+e('navigation-mobile', {}, 'div')
 						+e('navigation-mobile-wrapper', {}, 'div')
 							+e('selected-title', {}, 'a')(href='#') #{ S_DATA('selectedTitleMobile') }
-							+e('btn-product-list-mobile', {}, 'button') #{ S_DATA('btnProductListMobile') }
+							+Select(S_ELEM('Select'))
 							+e('item-wrapper', {}, 'div')
 								for item in S_ELEM_ARR('ProductItemMobile')
 									+ProductItem(item)
