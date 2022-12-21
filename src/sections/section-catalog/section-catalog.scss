@@ -367,10 +367,26 @@
 
 				&__information-block {
 					display: flex;
-					overflow-y: scroll;
+					overflow: auto;
 					flex-wrap: wrap;
+
+					max-height: 450px;
 					column-gap: 32px;
 					row-gap: 8px;
+
+					//&::-webkit-scrollbar-track {
+					//  width: 6px;
+					//  height: 6px;
+					//}
+
+					&::-webkit-scrollbar {
+						width: 10px;
+					}
+
+					&::-webkit-scrollbar-thumb {
+						border-radius: 4px;
+						background: $liverny-light;
+					}
 
 					.accordion-list {
 						.accordion {
