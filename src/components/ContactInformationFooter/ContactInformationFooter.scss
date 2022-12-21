@@ -1,7 +1,21 @@
 .contact-information-footer {
-	&__name{
+	margin-right: 32px;
+
+	&:nth-child(2) {
 		width: 176px;
 	}
+
+	&:nth-child(3) {
+		width: 149px;
+	}
+
+	&:nth-child(4) {
+		width: 162px;
+	}
+
+	// &__name{
+	// 	width: 176px;
+	// }
 
 	&__title {
 		font-size: $fs-32;
@@ -9,6 +23,13 @@
 	}
 
 	&__sub-title {
+		margin-bottom: 10px;
+		padding-bottom: 7px;
+
+		border-bottom: 7px solid;
+		border-image: linear-gradient(271deg, #ce7f65, #b66060);
+		border-image-slice: 1;
+
 		font-size: $fs-small;
 		line-height: 1;
 	}
@@ -27,9 +48,17 @@
 	}
 
 	&__link {
+		display: inline-block;
+
+		margin-bottom: 10px;
+		padding-bottom: 9px;
+
 		text-decoration: none;
 
 		color: $wet-asphalt;
+		border-bottom: 7px solid;
+		border-image: linear-gradient(271deg, #ce7f65, #b66060);
+		border-image-slice: 1;
 
 		font-size: $fs-20;
 		line-height: $fs-20;
