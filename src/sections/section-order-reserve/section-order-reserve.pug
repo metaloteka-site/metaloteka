@@ -133,14 +133,6 @@ mixin section-order-reserve(section)
 				+e('qr', {}, 'img')(src=`${pathFile}${S_DATA('qr')}`)
 				for item in S_ELEM_ARR('ContactInformationFooter')
 					+ContactInformationFooter(item)
-			//- +e('accordion__item', {b: 'accordion'}, 'div')
-				+e('accordion__header', {}, 'div') #{S_DATA('decor')}
-				+e('accordion__body', {}, 'div')
-					+e('accordion__content', {}, 'div')
-						+e('footer', {b: 'cg-20'}, 'div')
-							+e('qr', {}, 'img')(src=`${pathFile}${S_DATA('qr')}`)
-							for item in S_ELEM_ARR('ContactInformationFooter')
-								+ContactInformationFooter(item)
 		+BlockLayoutRight
 			+e('order', {m: 'col'}, 'div')
 				+e('number-right', {}, 'div') #{S_DATA('titleRight')}
@@ -157,6 +149,9 @@ mixin section-order-reserve(section)
 				+e('summ', {m: 'center'}, 'div')
 					+e('total', {m: 'bold'}, 'p') #{S_DATA('sumTotalBold')}
 					+e('total', {m: 'small14px'}, 'p') #{S_DATA('sumTotalSmall')}
-			+e('btn-cart', {m: 'order'}, 'button') #{S_DATA('btnOrder')}
-			+e('btn-cart', {m: 'reserve'}, 'button') #{S_DATA('btnReserveSmall')}
+			for item in S_DATA_ARR('btnOrder')
+				//- проверка данных получаемых из item
+				include ../../shared/helpers/pug/shortcut-check-store
+				+e('btn-cart', {m: 'order'}, 'button')(disabled=I_OPT('disabled')) #{I_DATA('text')}
+				+e('btn-cart', {m: 'reserve'}, 'button')(disabled=I_OPT('disabled')) #{I_DATA('text')}
 			+e('txt-onclick', {}, 'div') #{S_DATA('txtOnclick')}

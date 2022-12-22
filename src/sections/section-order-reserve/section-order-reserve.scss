@@ -217,6 +217,10 @@
 		&_reserve {
 			background-image: linear-gradient(275deg, #678c92, #586e8b);
 		}
+
+		&:disabled{
+			opacity: 0.36;
+		}
 	}
 
 	&__txt-onclick {
@@ -393,9 +397,12 @@
 
 	&__info-period-inner {
 		display: none;
+
+		padding-top: 10px;
 	}
 
 	&__item-title {
+		width: 225px;
 		margin-bottom: 12px;
 
 		letter-spacing: normal;
@@ -452,6 +459,13 @@
 
 	&__text-room {
 		margin-top: 10px;
+	}
+
+	&__items {
+		display: flex;
+		flex-direction: column;
+
+		margin-bottom: 23px;
 	}
 
 	@include media('xs') {
@@ -533,7 +547,7 @@
 			justify-content: end;
 
 			margin-bottom: 31px;
-			padding-top: 10px;
+			padding-top: 0;
 		}
 
 		&__info-period-img {
@@ -541,17 +555,14 @@
 		}
 
 		&__items {
-			display: flex;
-			flex-direction: column;
-
-			margin-bottom: 23px;
+			margin-bottom: 0;
 		}
 
 		&__item {
 			display: flex;
 			justify-content: space-between;
 
-			margin-bottom: 40px;
+			margin-bottom: 27px;
 			padding: 0;
 
 			border: none;
@@ -560,7 +571,7 @@
 		}
 
 		&__item-text {
-			width: 166px;
+			width: 207px;
 			margin-bottom: 0;
 			margin-left: -33px;
 
@@ -568,6 +579,11 @@
 		}
 
 		&__item-sum {
+			display: flex;
+			align-items: center;
+
+			margin-bottom: 0;
+
 			letter-spacing: normal;
 
 			color: $wet-asphalt;
@@ -578,6 +594,8 @@
 		}
 
 		&__item-add {
+			width: 166px;
+
 			cursor: pointer;
 			text-align: right;
 			letter-spacing: normal;
@@ -593,6 +611,7 @@
 		}
 
 		&__item-btn {
+			margin-top: 20px;
 			margin-bottom: 42px;
 			padding: 19px 15px 19px 15px;
 
