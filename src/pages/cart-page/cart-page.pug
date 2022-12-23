@@ -1,7 +1,7 @@
 extends ../../layout/main
 
 append variables
-	+includeComponents(['BlockLayout', 'Accordion', 'ContactInformationFooter'])
+	+includeComponents(['BlockLayout', 'ContactInformationFooter', 'Accordion', 'AccordionList', 'TableProductRow', 'Pagination', 'ProductItem', 'ProductItemDetails', 'Popup', 'Select'])
 
 block store
 	include store/cart-page.store.pug
@@ -18,3 +18,7 @@ block main
 	//- подключение и вызов секции SECTION-CART
 	include ../../sections/section-cart/section-cart
 	+section-cart(cartPage.sectionCart)
+
+	//- подключение и вызов секции SECTION-CATALOG
+	include ../../sections/section-catalog/section-catalog
+	+section-catalog(cartPage.sectionCatalog)
