@@ -9,10 +9,10 @@ import { SectionCatalog } from '../sections/section-catalog/section-catalog';
 // Вызов js после загрузки DOM дерева
 window.addEventListener('DOMContentLoaded', () => {
 	Tabs();
+	SectionCatalog();
 	Accordion();
 	Slider();
 	Popup();
 	Pagination();
-	SectionCatalog();
 	Select();
 });
