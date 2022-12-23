@@ -1,12 +1,12 @@
 .select {
-	overflow: hidden;
+	position: relative;
 	margin-block: 46px 45px;
 
 	&__button {
 		position: relative;
 
 		width: 100%;
-		padding: 22px;
+		padding: 18px 75px 18px 22px;
 
 		color: $white;
 		border: none;
@@ -45,6 +45,11 @@
 	}
 
 	&__option-wrapper {
+		position: absolute;
+
+		overflow: hidden;
+
+		width: 100%;
 		height: 0;
 
 		cursor: pointer;

@@ -1,7 +1,7 @@
 extends ../../layout/main
 
 append variables
-	+includeComponents(['BlockLayout', 'ContactInformationFooter', 'Accordion', 'Tabs'])
+	+includeComponents(['BlockLayout', 'ContactInformationFooter', 'Accordion', 'Tabs', 'AccordionList', 'TableProductRow', 'Pagination', 'ProductItem', 'ProductItemDetails', 'Popup', 'Select'])
 
 block store
 	include store/order-reserve.store.pug
@@ -18,3 +18,7 @@ block main
 	//- подключение и вызов секции SECTION-ORDER-RESERVE
 	include ../../sections/section-order-reserve/section-order-reserve
 	+section-order-reserve(orderReserve.sectionOrderReserve)
+
+	//- подключение и вызов секции SECTION-CATALOG
+	include ../../sections/section-catalog/section-catalog
+	+section-catalog(orderReserve.sectionCatalog)

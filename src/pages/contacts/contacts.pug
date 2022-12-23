@@ -1,7 +1,7 @@
 extends ../../layout/main
 
 append variables
-	+includeComponents(['ContactInformation', 'ContactInformationFooter', 'Tabs'])
+	+includeComponents(['ContactInformation', 'ContactInformationFooter', 'Tabs', 'Accordion', 'AccordionList', 'TableProductRow', 'Pagination', 'ProductItem', 'ProductItemDetails', 'Popup', 'Select'])
 
 block store
 	include store/contacts.store.pug
@@ -15,3 +15,7 @@ block main
 	//- подключение и вызов секции SECTION-CONTACT
 	include ../../sections/section-contact/section-contact
 	+section-contact(contacts.sectionContact)
+
+	//- подключение и вызов секции SECTION-CATALOG
+	include ../../sections/section-catalog/section-catalog
+	+section-catalog(contacts.sectionCatalog)

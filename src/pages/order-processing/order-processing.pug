@@ -1,7 +1,7 @@
 extends ../../layout/main
 
 append variables
-	+includeComponents(['Popup', 'BlockLayout', 'ContactInformationFooter', 'Accordion', 'Tabs'])
+	+includeComponents(['Popup', 'ContactInformationFooter', 'Accordion', 'AccordionList', 'TableProductRow', 'Pagination', 'ProductItem', 'ProductItemDetails', 'Popup', 'Select', 'Tabs', 'BlockLayout'])
 
 block store
 	include store/order-processing.store.pug
@@ -33,3 +33,7 @@ block popup
 	include ../../sections/popup-pay-check/popup-pay-check
 	+popup-pay-check(orderProcessing.popupPayCheck)
 	+popup-pay-check(orderProcessing.popupThanks)
+
+	//- подключение и вызов секции SECTION-CATALOG
+	include ../../sections/section-catalog/section-catalog
+	+section-catalog(orderProcessing.sectionCatalog)
