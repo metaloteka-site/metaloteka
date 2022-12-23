@@ -62,11 +62,12 @@ class SectionCatalogControl {
 
 	modalSection() {
 		this.button.addEventListener('click', () => {
-			if (this.generalSection.style.height !== 'max-content') {
+			if (this.generalSection.style.height !== 'max-content' && this.detailsSection.style.height !== 'max-content') {
 				this.generalSection.style.height = 'max-content';
 				this.changeActiveSection();
 			} else {
 				this.generalSection.style.height = 0;
+				this.detailsSection.style.height = 0;
 			}
 		});
 	}
