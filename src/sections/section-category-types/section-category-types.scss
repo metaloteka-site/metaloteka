@@ -3,7 +3,6 @@
 	overflow-x: scroll;
 	flex-wrap: nowrap;
 
-	padding-top: 30px;
 	column-gap: 34px;
 
 	&::-webkit-scrollbar {
@@ -68,7 +67,7 @@
 
 		&__information {
 			max-width: 206px;
-			margin-bottom: 30px;
+			margin-bottom: 90px;
 		}
 	}
 }
