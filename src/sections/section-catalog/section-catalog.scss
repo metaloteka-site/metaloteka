@@ -99,6 +99,7 @@
 				color: var(--wet-asphalt);
 				border-bottom: solid 1px var(--smoke-white-second);
 
+				font-family: 'BlissPro', sans-serif;
 				font-size: 24px;
 				font-weight: 300;
 				line-height: 1.08;
@@ -458,7 +459,7 @@
 
 						&__filters {
 							display: flex;
-							column-gap: 32px;
+							column-gap: 23px;
 
 							.filter-group__filter-value {
 								cursor: pointer;
@@ -536,6 +537,8 @@
 			}
 
 			.product-tags {
+				position: relative;
+
 				border-bottom: solid 1px var(--smoke-white-second);
 
 				&__tags-wrapper {
@@ -545,6 +548,12 @@
 					padding: 33px 253px 33px 59px;
 					column-gap: 14px;
 					row-gap: 16px;
+				}
+
+				&__img-bg {
+					position: absolute;
+					top: 0;
+					right: 0;
 				}
 
 				&__tag {

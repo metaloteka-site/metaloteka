@@ -5,6 +5,8 @@ class SectionCatalogControl {
 		this.accordionWrapper = document.querySelectorAll('.accordion__body');
 		this.selectedProduct = this.detailsSection.querySelectorAll('.section-catalog__selected-title');
 		this.button = document.querySelector('.header__catalog');
+
+		this.init();
 	}
 
 	init() {
@@ -74,6 +76,6 @@ export function SectionCatalog() {
 	const elem = document.querySelector('[data-type-section="general"]');
 
 	if (elem) {
-		new SectionCatalogControl(elem).init();
+		new SectionCatalogControl(elem);
 	}
 }

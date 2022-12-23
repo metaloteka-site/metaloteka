@@ -37,6 +37,7 @@ mixin section-catalog(section)
 								each item in S_DATA_ARR('tags')
 									include ../../shared/helpers/pug/shortcut-check-store
 									+e('tag', {}, 'a')(href=I_DATA('href')) #{ I_DATA('title') }
+							+e('img-bg', {}, 'img')(src='../../layout/assets/images/catalog-bg.png')
 						+b('product-footer', {}, 'div')
 							+e('footer-wrapper', {}, 'div')
 								+e('qr', {}, 'img')(src='../../layout/assets/images/icon-qr.svg')
@@ -122,6 +123,7 @@ mixin section-catalog(section)
 								each item in S_DATA_ARR('tags')
 									include ../../shared/helpers/pug/shortcut-check-store
 									+e('tag', {}, 'a')(href=I_DATA('href')) #{ I_DATA('title') }
+							+e('img-bg', {}, 'img')(src='../../layout/assets/images/catalog-bg.png')
 						+b('product-footer', {}, 'div')
 							+e('footer-wrapper', {}, 'div')
 								+e('qr', {}, 'img')(src='../../layout/assets/images/icon-qr.svg')
