@@ -9,7 +9,6 @@ class SectionCatalogControl {
 
 	init() {
 		this.isCatalogPage();
-		this.changeActiveSection();
 		this.modalSection();
 	}
 
@@ -17,15 +16,15 @@ class SectionCatalogControl {
 		this.accordionWrapper.forEach((item) => {
 			item.addEventListener('click', (e) => {
 				if (e.target.classList.contains('accordion-list__link')) {
-					this.generalSection.style.display = 'none';
-					this.detailsSection.style.display = 'flex';
+					this.generalSection.style.height = 0;
+					this.detailsSection.style.height = 'max-content';
 				}
 			});
 		});
 		this.selectedProduct.forEach((item) => {
 			item.addEventListener('click', () => {
-				this.generalSection.style.display = 'flex';
-				this.detailsSection.style.display = 'none';
+				this.generalSection.style.height = 'max-content';
+				this.detailsSection.style.height = 0;
 			});
 		});
 	}
@@ -41,6 +40,21 @@ class SectionCatalogControl {
 			copySectionGeneral.insertAdjacentElement('afterend', copySectionDetails);
 			this.generalSection.remove();
 			this.detailsSection.remove();
+			const accordionLinks = document.querySelectorAll('.accordion-list__link');
+			const selectedProduct = document.querySelectorAll('.section-catalog__selected-title');
+			accordionLinks.forEach((item) => {
+				item.addEventListener('click', () => {
+					copySectionGeneral.style.height = 0;
+					copySectionDetails.style.height = 'max-content';
+					copySectionDetails.classList.add('static');
+				});
+			});
+			selectedProduct.forEach((item) => {
+				item.addEventListener('click', () => {
+					copySectionGeneral.style.height = 'max-content';
+					copySectionDetails.style.height = 0;
+				});
+			});
 		}
 	}
 
