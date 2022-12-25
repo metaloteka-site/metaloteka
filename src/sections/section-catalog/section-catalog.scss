@@ -255,7 +255,7 @@
 				position: relative;
 
 				margin-bottom: 32px;
-				padding: 19px 22px 22px 59px;
+				padding: 19px 22px 20px 59px;
 
 				text-decoration: none;
 
@@ -289,19 +289,19 @@
 				padding: 0 0 20px 59px;
 
 				#{$self}__details-item {
-					margin-bottom: 10px;
-
 					text-decoration: none;
 
 					color: $wet-asphalt;
 
 					font-size: 16px;
+					line-height: 26px;
 
 					&:first-child {
 						margin-bottom: 20px;
 
 						font-size: 20px;
 						font-weight: bold;
+						line-height: 28px;
 					}
 
 					&:not(:first-child) {
@@ -373,7 +373,7 @@
 					width: 100%;
 
 					border-image-source: var(--red-gradient);
-					margin-block: 37px 0;
+					margin-block: 32px 0;
 				}
 
 				&__information-block {
@@ -532,7 +532,7 @@
 				}
 
 				&__wrapper {
-					padding: 70px 67px 60px 42px;
+					padding: 62px 67px 60px 42px;
 				}
 			}
 
