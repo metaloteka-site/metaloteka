@@ -136,11 +136,9 @@
 
 	&__line{
 		width: 169px;
+		height: 4px;
 
-		border-width: 2px;
-		border-style: solid;
-		border-image-source: linear-gradient(271deg, #ce7f65, #b66060);
-		border-image-slice: 1;
+		background: linear-gradient(271deg, #ce7f65, #b66060);
 	}
 
 	&__link {
