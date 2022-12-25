@@ -1,0 +1,14 @@
+mixin ProductItem(props)
+	//- проверка данных получаемых из props
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- верстка компонента
+	+b('product-item', {}, 'div')
+		+e('title', {}, 'p') #{DATA('title')}
+		+e('subtitle', {}, 'p') #{DATA('subtitle')}
+		for item in ELEM_ARR('Text')
+			+Text(item)
+		+e('basket-wrapper', {}, 'div')
+			+e('basket-description', {}, 'p') #{DATA('basketDescription')}
+			+e('basket-img', {}, 'div')(data-popup-open='product-item-details')
+				include ../../layout/assets/images/basket.svg

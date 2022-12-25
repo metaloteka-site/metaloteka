@@ -205,6 +205,10 @@
 				--white: #ffffffcc;
 				background-color: $white;
 			}
+
+			&.notEvents {
+				pointer-events: none;
+			}
 		}
 
 		&__right {

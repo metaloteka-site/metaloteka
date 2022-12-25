@@ -1,7 +1,7 @@
 extends ../../layout/main
 
 append variables
-	+includeComponents(['Card'])
+	+includeComponents(['Card', 'ContactInformationFooter', 'Accordion', 'AccordionList', 'TableProductRow', 'Pagination', 'ProductItem', 'ProductItemDetails', 'Popup', 'Select'])
 
 block store
 	include store/personal-area.store.pug
@@ -18,3 +18,7 @@ block main
 	//- подключение и вызов секции SECTION-ORDERS-LIST
 	include ../../sections/section-orders-list/section-orders-list
 	+section-orders-list(personalArea.sectionOrdersList)
+
+	//- подключение и вызов секции SECTION-CATALOG
+	include ../../sections/section-catalog/section-catalog
+	+section-catalog(personalArea.sectionCatalog)
