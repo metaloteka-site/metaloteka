@@ -1,0 +1,72 @@
+.select {
+	position: relative;
+	margin-block: 46px 45px;
+
+	&__button {
+		position: relative;
+
+		width: 100%;
+		padding: 18px 75px 18px 22px;
+
+		color: $white;
+		border: none;
+		border-radius: 14px;
+		background: $blue-gradient;
+
+		font-family: 'BlissPro', sans-serif;
+		font-size: 20px;
+		font-weight: 800;
+
+		&::after {
+			position: absolute;
+			top: 50%;
+			right: 28px;
+
+			width: 12px;
+			height: 12px;
+
+			content: "";
+			transform: rotate(45deg) translateY(-50%);
+
+			opacity: 0.22;
+			border-top: 3px solid $white;
+			border-right: 3px solid $white;
+		}
+
+		&.active {
+			margin-bottom: 18px;
+
+			&::after {
+				top: auto;
+
+				transform: rotate(135deg) translateY(-50%);
+			}
+		}
+	}
+
+	&__option-wrapper {
+		position: absolute;
+
+		overflow: hidden;
+
+		width: 100%;
+		height: 0;
+
+		cursor: pointer;
+		text-decoration: underline;
+
+		border-radius: 14px;
+		background: $blue-gradient;
+
+		font-size: 20px;
+		font-weight: 300;
+		line-height: 40px;
+
+		&.is-open {
+			height: fit-content !important; /* stylelint-disable-line declaration-no-important */
+			padding: 23px 39px 27px;
+
+			transition: height 2s ease-in-out;
+		}
+	}
+}

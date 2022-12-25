@@ -1,0 +1,11 @@
+mixin Select(props)
+	//- проверка данных получаемых из props
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- верстка компонента
+	+b('select', {}, 'div')
+		+e('button', {}, 'button') #{DATA('title')}
+		+e('option-wrapper', {}, 'div')
+			each item in props.elemArr
+				include ../../shared/helpers/pug/shortcut-check-store
+				+e('option', {}, 'p')(value=I_DATA('title')) #{I_DATA('title')}

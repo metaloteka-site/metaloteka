@@ -11,7 +11,7 @@ mixin ContactInformationFooter(props)
 				+e('link', {}, 'a')(href=DATA('href')) #{DATA('link')}
 			if OPT('subtitle')
 				+e('sub-title') #{DATA('subtitle')}
-			+e('range', {}, 'div')
+			//- +e('range', {}, 'div')
 			for item in DATA_ARR('texts')
 				//- проверка данных получаемых из item
 				include ../../shared/helpers/pug/shortcut-check-store

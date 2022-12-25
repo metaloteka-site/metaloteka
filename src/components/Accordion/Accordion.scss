@@ -42,13 +42,20 @@
 
 	&_fz-20 {
 		#{$self}__title {
-			font-size: 20px;
+			font-size: $fs-20;
+		}
+	}
+
+	&_fz-24 {
+		#{$self}__title {
+			font-size: $fs-24;
+			font-weight: 300;
 		}
 	}
 
 	&_reset {
 		#{$self}__title::after {
-			content: '';
+			display: none;
 		}
 	}
 
