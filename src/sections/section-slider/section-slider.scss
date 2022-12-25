@@ -1,3 +1,8 @@
 .section-slider {
 	//background: url("#{$path-file}/logo.svg") no-repeat;
+	display: none;
+	
+	@include media(xs) {
+		display: block;
+	}
 }
