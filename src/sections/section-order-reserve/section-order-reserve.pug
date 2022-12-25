@@ -38,11 +38,12 @@ mixin section-order-reserve(section)
 					+Text(S_ELEM('TextReserveConditionText'))
 			+e('line-small', {}, 'div')
 			+Accordion(S_ELEM('AccordionPersonalData'))
-				+e('accordion-btn', {}, 'button') Войти
-				+e('info-way', {m: S_BEM('infoWay')}, 'div') Заполните данные для оформления заказа
+				+e('accordion-btn', {}, 'button') #{S_DATA('accordionBtn')}
+				+Text(S_ELEM('TextFillingData'))
 				+Tabs(S_ELEM('Tabs'))
 					+TabsContent(S_ELEM('TabsContent1'))
 						+e('ffff', {}, 'div')
+							+Text(S_ELEM('TextDataRegistration1'))
 							+e('form', {}, 'form')
 								+e('field-item', {m: S_BEM('fieldItemM')}, 'label')
 									+e('item-inn', {}, 'input')(required)
@@ -73,7 +74,7 @@ mixin section-order-reserve(section)
 							+e('reserve-condition-text', {}, 'div') #{S_DATA('reservePersonalText')}
 					+TabsContent(S_ELEM('TabsContent2'))
 						+e('ffff', {}, 'div')
-							+e('info-way', {}, 'div') Заполните данные для офо454545мления заказа
+							+Text(S_ELEM('TextDataRegistration2'))
 							+e('form', {}, 'form')
 								+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
 									+e('', {}, 'input')(required)
@@ -112,20 +113,45 @@ mixin section-order-reserve(section)
 							+e('order-list-thickness', {}, 'div') #{I_DATA('thickness')}
 							+e('order-list-size', {}, 'div') #{I_DATA('size')}
 							+e('order-list-weight', {}, 'div') #{I_DATA('weight')}
-							+e('order-list-weight', {}, 'div') #{I_DATA('amount')}
 							+e('order-list-sum', {}, 'div') #{I_DATA('sum')}
 						+e('line-order-list', {}, 'div')
+				+e('call', {}, 'div')
+					+e('summ', {m: 'left'}, 'div')
+						+e('total', {}, 'p') #{S_DATA('summTotal')}
+						+e('total', {m: 'summ'}, 'div')
+							+e('number', {m: 'underline'}, 'p') #{S_DATA('sumTotalNumber')}
+							+e('rub', {}, 'p') #{S_DATA('sumTotalRub')}
+						+e('total', {m: 'days'}, 'p') #{S_DATA('sumTotalDays')}
+					+e('summ', {m: 'center'}, 'div')
+						+e('total', {m: 'bold'}, 'p') #{S_DATA('sumTotalBold')}
+						+e('total', {m: 'small'}, 'p') #{S_DATA('sumTotalSmall')}
+					+e('summ', {m: 'right'}, 'div')
+						//- +e('warning-img', {}, 'img')(src=`../../layout/assets/images/${S_DATA('img')}` alt=S_DATA('alt'))
+						+e('warning-text', {}, 'div') #{S_DATA('text')}
+			+e('line-small', {}, 'div')
 			+e('footer', {b: 'cg-20'}, 'div')
 				+e('qr', {}, 'img')(src=`${pathFile}${S_DATA('qr')}`)
 				for item in S_ELEM_ARR('ContactInformationFooter')
 					+ContactInformationFooter(item)
-			//- +e('accordion__item', {b: 'accordion'}, 'div')
-				+e('accordion__header', {}, 'div') #{S_DATA('decor')}
-				+e('accordion__body', {}, 'div')
-					+e('accordion__content', {}, 'div')
-						+e('footer', {b: 'cg-20'}, 'div')
-							+e('qr', {}, 'img')(src=`${pathFile}${S_DATA('qr')}`)
-							for item in S_ELEM_ARR('ContactInformationFooter')
-								+ContactInformationFooter(item)
 		+BlockLayoutRight
-			+e('ttttttt') slider
+			+e('order', {m: 'col'}, 'div')
+				+e('number-right', {}, 'div') #{S_DATA('titleRight')}
+				+e('text-right', {}, 'div') #{S_DATA('textRight')}
+				+e('room-right', {}, 'div') #{S_DATA('role')}
+			+e('line-right-small', {m: 'fat'}, 'div')
+			+e('call', {m: 'col'}, 'div')
+				+e('summ', {m: 'top'}, 'div')
+					+e('total', {}, 'p') #{S_DATA('summTotal')}
+					+e('total', {m: 'summ'}, 'div')
+						+e('number', {m: 'summ'}, 'p') #{S_DATA('sumTotalNumber')}
+						+e('rub', {m: 'fs-38'}, 'p') #{S_DATA('sumTotalRub')}
+					+e('total', {m: 'days'}, 'p') #{S_DATA('sumTotalDays')}
+				+e('summ', {m: 'center'}, 'div')
+					+e('total', {m: 'bold'}, 'p') #{S_DATA('sumTotalBold')}
+					+e('total', {m: 'small14px'}, 'p') #{S_DATA('sumTotalSmall')}
+			for item in S_DATA_ARR('btnOrder')
+				//- проверка данных получаемых из item
+				include ../../shared/helpers/pug/shortcut-check-store
+				+e('btn-cart', {m: 'order'}, 'button')(disabled=I_OPT('disabled')) #{I_DATA('text')}
+				+e('btn-cart', {m: 'reserve'}, 'button')(disabled=I_OPT('disabled')) #{I_DATA('text')}
+			+e('txt-onclick', {}, 'div') #{S_DATA('txtOnclick')}

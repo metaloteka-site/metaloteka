@@ -6,15 +6,15 @@
 		align-items: center;
 		justify-content: space-between;
 
-		padding-top: 30px;
+		padding-top: 23px;
 		padding-bottom: 12px;
 
 		cursor: pointer;
 		letter-spacing: normal;
 
-		color: #464646;
+		color: $wet-asphalt;
 
-		font-size: 30px;
+		font-size: 22px;
 		font-weight: 700;
 		line-height: 1;
 
@@ -42,13 +42,26 @@
 
 	&_fz-20 {
 		#{$self}__title {
-			font-size: 20px;
+			font-size: $fs-20;
+		}
+	}
+
+	&_fz-24 {
+		#{$self}__title {
+			font-size: $fs-24;
+			font-weight: 300;
 		}
 	}
 
 	&_reset {
 		#{$self}__title::after {
-			content: '';
+			display: none;
+		}
+	}
+
+	@include media('xs'){
+		&__title {
+			font-size: 29px;
 		}
 	}
 }
@@ -58,5 +71,10 @@
 		&::after {
 			transform: rotate(135deg);
 		}
+	}
+
+	&__title{
+		padding-top: 30px;
+
 	}
 }

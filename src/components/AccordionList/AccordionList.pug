@@ -8,4 +8,4 @@ mixin AccordionList(props)
 		+Accordion(ELEM('Accordion'))
 			+e('list-wrapper', {}, 'div')
 				for item in DATA_ARR('links')
-					+e('link', {}, 'a')(href='') #{item.title}
+					+e('link', {}, 'a')(href='#') #{item.title}

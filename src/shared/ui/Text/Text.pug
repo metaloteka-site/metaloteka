@@ -7,4 +7,16 @@ mixin Text(props)
 	- const tag = OPT('p') ? 'p' : 'span';
 
 	//- верстка компонента
-	+b('text', {e: `${isElementClass}:${BEM('elementClassIndividual')}`, m: `${BEM('size')}.${BEM('color')}.${BEM('fw')}`}, tag) #{DATA('text')}
+	if OPT('arrayData')
+		+e('column', {}, 'div')
+			for item in DATA_ARR('arrText')
+				//- проверка данных получаемых из item
+				include ../../helpers/pug/shortcut-check-store
+				if item.img
+					- const dataPopup = item.popup ? item.popup : false;
+					+e('icon', {b: item.isAdded}, 'div')(data-popup-open=dataPopup)
+						include ../../../layout/assets/images/basket.svg
+				else
+					+b('text', {e: `${isElementClass}:${BEM('elementClassIndividual')}`, m: `${BEM('size')}.${BEM('sizeDesctop')}.${BEM('color')}.${BEM('fw')}.${BEM('lh')}`}, tag) #{item.text}
+	else
+		+b('text', {e: `${isElementClass}:${BEM('elementClassIndividual')}`, m: `${BEM('size')}.${BEM('sizeDesctop')}.${BEM('color')}.${BEM('fw')}.${BEM('lh')}`}, tag) #{DATA('text')}

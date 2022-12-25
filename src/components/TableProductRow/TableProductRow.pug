@@ -1,0 +1,8 @@
+mixin TableProductRow(props)
+	//- проверка данных получаемых из props
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- верстка компонента
+	+b('table-product-row', {}, 'div')
+		for item in ELEM_ARR('Text')
+			+Text(item)
