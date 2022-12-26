@@ -1,0 +1,36 @@
+mixin section-product-details(section)
+	//- проверка данных получаемых из section
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- верстка секции
+	+BlockLayout({bem: {classSection: 'section-product-details'}})
+		+BlockLayoutLeft
+			+e('header', {}, 'div')
+				+e('category', {}, 'a')(href='#') #{S_DATA('category')}
+				+e('articule', {}, 'p') #{S_DATA('articule')}
+			+e('product-title', {} ,'h2') #{S_DATA('title')}
+			+e('categories', {}, 'div')
+				each item in S_DATA_ARR('categories')
+					include ../../shared/helpers/pug/shortcut-check-store
+					+e('category-value', {}, 'a')(href='#') #{ I_DATA('title') }
+			+e('main', {}, 'div')
+				+e('product-slider', {}, 'div')
+				+e('product-information', {}, 'div')
+					+e('product-information-wrapper', {}, 'div')
+						+Select(S_ELEM('Select'))
+						+e('item-wrapper', {}, 'div')
+							for item in S_ELEM_ARR('ProductItem')
+								+ProductItem(item)
+			+e('line', {}, 'hr')
+			+e('cart', {}, 'div')
+				+e('cart-title', {}, 'div') #{S_DATA('cartTitle')}
+				+e('content', {}, 'div')
+					for item in S_ELEM_ARR('TableProductRowContent')
+						+TableProductRow(item)
+			+e('line', {}, 'hr')
+			+e('footer', {}, 'div')
+				+Tabs(S_ELEM('Tabs'))
+
+					+e('button js-collapse', {}, 'button') Развернуть
+		+BlockLayoutRight
+			+ProductItemDetails(S_ELEM('ProductItemDetails'))
