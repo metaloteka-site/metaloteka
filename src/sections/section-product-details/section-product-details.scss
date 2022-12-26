@@ -83,20 +83,41 @@
 					margin-block: 0;
 
 					&__button {
+						display: flex;
+
 						padding: 0;
 						padding-bottom: 12px;
 
-						text-align: start;
+						cursor: pointer;
 
 						color: $wet-asphalt;
 						border-bottom: solid 1px var(--smoke-white-second);
+						border-radius: 0;
 						background: transparent;
+
+						line-height: 32px;
 
 						&::after {
 							top: 35%;
+							right: 18px;
 
 							border-top: 3px solid $liverny-light;
 							border-right: 3px solid $liverny-light;
+						}
+
+						&.active {
+							&::after {
+								top: 0;
+							}
+						}
+					}
+
+					&__option-wrapper {
+						color: $wet-asphalt;
+						background: $white;
+
+						&.is-open {
+							box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
 						}
 					}
 				}
