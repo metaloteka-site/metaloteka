@@ -73,11 +73,11 @@
 
 			#{$self}__product-slider {
 				width: 426px;
-				margin-right: auto;
+				margin-right: 56px;
 			}
 
 			#{$self}__product-information-wrapper {
-				max-width: 285px;
+				width: 285px;
 
 				.select {
 					margin-block: 0;
