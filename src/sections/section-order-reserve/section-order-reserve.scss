@@ -218,7 +218,7 @@
 			background-image: linear-gradient(275deg, #678c92, #586e8b);
 		}
 
-		&:disabled{
+		&:disabled {
 			opacity: 0.36;
 		}
 	}
@@ -633,7 +633,8 @@
 		}
 
 		&__text-info-period-days {
-			margin-bottom: -7px;
+			max-width: 272px;
+			margin-bottom: 8px;
 		}
 
 		&__text-warning {
@@ -648,8 +649,6 @@
 
 		&__warning-text {
 			max-width: 333px;
-
-			
 
 			font-size: 10px;
 			font-weight: 300;
@@ -683,7 +682,7 @@
 			justify-content: space-between;
 
 			margin-bottom: 18px;
-			padding-top: 48px;
+			padding-top: 20px;
 
 			letter-spacing: normal;
 
@@ -705,8 +704,8 @@
 			display: flex;
 			justify-content: space-between;
 
-			margin-top: 60px;
-			margin-bottom: 21px;
+			margin-top: 21px;
+			margin-bottom: 19px;
 		}
 
 		&__order-list-name {
@@ -972,7 +971,7 @@
 		&__number {
 			color: $wet-asphalt;
 
-			font-size: $fs-title4;
+			font-size: $fs-title5;
 			font-weight: 800;
 			line-height: 0.86;
 
@@ -1019,7 +1018,8 @@
 			flex-direction: column;
 
 			&_left {
-				width: 155px;
+				// width: 155px;
+				width: 205px;
 				padding: 0;
 				gap: 6px;
 			}
