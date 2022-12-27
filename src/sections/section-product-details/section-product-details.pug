@@ -15,6 +15,7 @@ mixin section-product-details(section)
 					+e('category-value', {}, 'a')(href='#') #{ I_DATA('title') }
 			+e('main', {}, 'div')
 				+e('product-slider', {}, 'div')
+					+ProductSlider
 				+e('product-information', {}, 'div')
 					+e('product-information-wrapper', {}, 'div')
 						+Select(S_ELEM('Select'))
