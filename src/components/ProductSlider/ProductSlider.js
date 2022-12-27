@@ -19,9 +19,9 @@ class ProductSliderControl {
 			loop: true,
 			loopedSlides: 3,
 		});
-		const galleryThumbs = new Swiper('.gallery-thumbs', {
-			spaceBetween: 10,
-			slidesPerView: 'auto',
+		new Swiper('.gallery-thumbs', {
+			spaceBetween: 18,
+			slidesPerView: 3,
 			touchRatio: 0.2,
 			slideToClickedSlide: true,
 			loop: true,
@@ -30,8 +30,6 @@ class ProductSliderControl {
 				swiper: galleryTop,
 			},
 		});
-		galleryTop.controller.control = galleryThumbs;
-		galleryThumbs.controller.control = galleryTop;
 	}
 }
 

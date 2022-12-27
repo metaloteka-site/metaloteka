@@ -23,9 +23,49 @@
 	.swiper-slide img {
 		display: block;
 
-		width: 100%;
-		height: 100%;
+		width: 324px;
+		height: 259px;
 		object-fit: cover;
+	}
+
+	.swiper-button-next {
+		&::after {
+			right: 0;
+
+			width: 12px;
+			height: 12px;
+
+			content: '';
+			transform: rotate(45deg);
+
+			opacity: 0.22;
+			border-top: 3px solid var(--liverny-light);
+			border-right: 3px solid var(--liverny-light);
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	.swiper-button-prev {
+		&::after {
+			left: 0;
+
+			width: 12px;
+			height: 12px;
+
+			content: '';
+			transform: rotate(225deg);
+
+			opacity:	0.22;
+			border-top: 3px solid var(--liverny-light);
+			border-right: 3px solid var(--liverny-light);
+
+			&:hover {
+				opacity: 1;
+			}
+		}
 	}
 }
 
@@ -36,8 +76,9 @@
 
 .gallery-thumbs {
 	box-sizing: border-box;
+	width: 200px;
 	height: 20%;
-	padding: 10px 0;
+	margin: 0 auto;
 }
 
 .gallery-thumbs .swiper-slide {
@@ -45,8 +86,13 @@
 	height: 100%;
 
 	opacity: 0.4;
+
+	img {
+		width: 51px;
+		height: 43px;
+	}
 }
 
-.mySwiper .swiper-slide-thumb-active {
+.gallery-thumbs .swiper-slide-active {
 	opacity: 1;
 }

@@ -67,10 +67,12 @@
 
 		#{$self}__main {
 			display: flex;
+
+			max-height: 416px;
 			padding-block: 33px 40px;
 
 			#{$self}__product-slider {
-				width: 402px;
+				width: 426px;
 				margin-right: auto;
 			}
 
@@ -189,6 +191,8 @@
 
 						&:nth-child(4) {
 							margin-right: 38px;
+
+							cursor: pointer;
 
 							text-decoration: underline;
 
