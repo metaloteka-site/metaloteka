@@ -1,4 +1,5 @@
-import Swiper from 'swiper';
+import { Swiper, EffectFade, Navigation, Pagination, Thumbs } from 'swiper';
+Swiper.use([EffectFade, Navigation, Pagination, Thumbs]);
 
 class ProductSliderControl {
 	constructor(elem) {
@@ -25,6 +26,9 @@ class ProductSliderControl {
 			slideToClickedSlide: true,
 			loop: true,
 			loopedSlides: 3,
+			thumbs: {
+				swiper: galleryTop,
+			},
 		});
 		galleryTop.controller.control = galleryThumbs;
 		galleryThumbs.controller.control = galleryTop;
