@@ -9,6 +9,10 @@ mixin section-product-details(section)
 				+e('category', {}, 'a')(href='#') #{S_DATA('category')}
 				+e('articule', {}, 'p') #{S_DATA('articule')}
 			+e('product-title', {} ,'h2') #{S_DATA('title')}
+			+e('product-subtitle', {} ,'h2') #{S_DATA('subtitle')}
+			+e('information-block', {}, 'div')
+				each item in S_ELEM_ARR('AccordionList')
+					+AccordionList(item)
 			+e('categories', {}, 'div')
 				each item in S_DATA_ARR('categories')
 					include ../../shared/helpers/pug/shortcut-check-store

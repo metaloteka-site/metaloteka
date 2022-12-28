@@ -3,7 +3,7 @@
 
 	.block-layout__left {
 		#{$self}__header {
-			display: flex;
+			display: none;
 			justify-content: space-between;
 
 			#{$self}__category {
@@ -30,13 +30,53 @@
 
 			color: $wet-asphalt;
 
-			font-size: 36px;
+			font-size: 30px;
 			font-weight: 800;
 			line-height: 32px;
 		}
 
+		#{$self}__product-subtitle {
+			display: block;
+
+			margin-top: 16px;
+
+			color: $wet-asphalt;
+
+			font-size: 18px;
+			font-weight: 300;
+			line-height: 22px;
+		}
+
+		#{$self}__information-block {
+			display: block;
+
+			.accordion {
+				.accordion__title {
+					padding-bottom: 0;
+
+					text-decoration: underline;
+
+					font-size: 18px;
+					line-height: 20px;
+				}
+
+				.accordion-list__link {
+					opacity: 0.9;
+
+					font-size: 18px;
+					line-height: 20px;
+				}
+
+				&.js-active {
+					.accordion__title {
+						padding-bottom: 30px;
+					}
+				}
+			}
+		}
+
 		#{$self}__categories {
-			display: flex;
+			display: none;
 
 			margin-top: 28px;
 			margin-right: -53px;
@@ -69,11 +109,28 @@
 			display: flex;
 
 			max-height: 416px;
-			padding-block: 33px 40px;
+			padding-block: 30px 28px;
 
 			#{$self}__product-slider {
-				width: 426px;
+				width: 100%;
+				height: 100%;
 				margin-right: 56px;
+
+				.swiper-button-next {
+					right: -5px;
+				}
+
+				.swiper-button-prev {
+					left: -5px;
+				}
+			}
+
+			#{$self}__product-information {
+				display: none;
+			}
+
+			.gallery-thumbs {
+				display: none;
 			}
 
 			#{$self}__product-information-wrapper {
@@ -133,6 +190,7 @@
 		}
 
 		#{$self}__cart {
+			display: none;
 			padding-block: 32px 17px;
 
 			#{$self}__cart-title {
@@ -432,6 +490,7 @@
 			font-weight: 300;
 		}
 
+		//Desktop
 		@include media(xs) {
 			&__counter-wrapper {
 				margin-inline: -52px;
@@ -439,6 +498,48 @@
 
 			&__filters {
 				margin-inline: -52px;
+			}
+		}
+	}
+
+	@include media(xs) {
+		.block-layout__left {
+			#{$self}__product-title {
+				font-size: 36px;
+			}
+
+			#{$self}__product-subtitle {
+				display: none;
+			}
+
+			#{$self}__categories {
+				display: flex;
+			}
+
+			#{$self}__header {
+				display: flex;
+			}
+
+			#{$self}__main {
+				padding-block: 30px 40px;
+
+				#{$self}__product-information {
+					display: block;
+				}
+
+				#{$self}__product-slider {
+					width: 426px;
+					height: inherit;
+					margin-right: 56px;
+				}
+
+				.gallery-thumbs {
+					display: block;
+				}
+			}
+
+			#{$self}__cart {
+				display: block;
 			}
 		}
 	}

@@ -23,8 +23,8 @@
 	.swiper-slide img {
 		display: block;
 
-		width: 324px;
-		height: 259px;
+		width: 227px;
+		height: 168px;
 		object-fit: cover;
 	}
 
@@ -65,6 +65,16 @@
 			&:hover {
 				opacity: 1;
 			}
+		}
+	}
+
+	@include media(xs) {
+		.swiper-slide img {
+			display: block;
+
+			width: 324px;
+			height: 259px;
+			object-fit: cover;
 		}
 	}
 }
