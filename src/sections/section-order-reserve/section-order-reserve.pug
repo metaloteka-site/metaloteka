@@ -102,8 +102,8 @@ mixin section-order-reserve(section)
 			+Accordion(S_ELEM('AccordionCompletionRegistration'))
 				+e('info-way', {}, 'div') #{S_DATA('infoDetails')}
 				+e('сompletion-reserve', {}, 'div')
-					+e('', {}, 'div') #{S_DATA('CompletionReserveRoom')}
-					+e('', {}, 'div') #{S_DATA('CompletionReserveName')}
+					+e('сompletion-reserve-room', {}, 'div') #{S_DATA('CompletionReserveRoom')}
+					+e('сompletion-reserve-name', {}, 'div') #{S_DATA('CompletionReserveName')}
 				+e('line-сompletion', {}, 'div')
 				+Accordion(S_ELEM('AccordionOrderList'))
 					for item in S_DATA_ARR('compound')
