@@ -288,8 +288,6 @@
 		height: 64px;
 		padding: 20px 15px 0 32px;
 
-		letter-spacing: normal;
-
 		opacity: 0.9;
 		color: $wet-asphalt;
 
@@ -309,7 +307,6 @@
 
 		cursor: text;
 		transition: 0.2s;
-		letter-spacing: normal;
 
 		opacity: 0.78;
 		color: $wet-asphalt;
@@ -409,8 +406,6 @@
 		width: 225px;
 		margin-bottom: 12px;
 
-		letter-spacing: normal;
-
 		color: $wet-asphalt;
 
 		font-size: 22px;
@@ -422,8 +417,6 @@
 		max-width: 230px;
 		margin-bottom: 30px;
 
-		letter-spacing: normal;
-
 		color: $wet-asphalt;
 
 		font-size: 14px;
@@ -433,8 +426,6 @@
 
 	&__item-sum {
 		margin-bottom: 23px;
-
-		letter-spacing: normal;
 
 		color: $wet-asphalt;
 
@@ -447,7 +438,6 @@
 		padding: 19px 75px;
 
 		cursor: pointer;
-		letter-spacing: normal;
 
 		color: $white;
 		border: none;
@@ -479,8 +469,6 @@
 		margin-bottom: 18px;
 		padding-top: 20px;
 
-		letter-spacing: normal;
-
 		color: $wet-asphalt;
 
 		font-size: 28px;
@@ -488,11 +476,11 @@
 		line-height: 0.86;
 	}
 
-	&__сompletion-reserve-name{
+	&__сompletion-reserve-name {
 		display: none;
 	}
 
-	&__сompletion-reserve-room{
+	&__сompletion-reserve-room {
 		color: $wet-asphalt;
 
 		font-size: 20px;
@@ -501,17 +489,13 @@
 	}
 
 	&__order-list {
-		display: flex;
-		justify-content: space-between;
-
-		margin-top: 21px;
-		margin-bottom: 19px;
+		flex-direction: column;
 	}
 
 	&__order-list-name {
 		flex: 1 0 300px;
 
-		letter-spacing: normal;
+		margin-bottom: 21px;
 
 		color: $wet-asphalt;
 
@@ -521,58 +505,40 @@
 	}
 
 	&__order-list-thickness {
-		flex: 1 0 60px;
-
-		text-align: center;
-
-		letter-spacing: normal;
-
-		color: $wet-asphalt;
-
-		font-size: 18px;
-		font-weight: 700;
-		line-height: 1.33;
+		display: none;
 	}
 
 	&__order-list-size {
-		flex: 1 0 135px;
-
-		text-align: center;
-		letter-spacing: normal;
-
-		color: $wet-asphalt;
-
-		font-size: 18px;
-		font-weight: 300;
-		line-height: 1.33;
+		display: none;
 	}
 
 	&__order-list-weight {
 		flex: 1 0 151px;
 
-		text-align: center;
+		margin-bottom: 22px;
 
-		letter-spacing: normal;
+		text-align: left;
+		text-decoration: underline;
 
 		color: $wet-asphalt;
 
-		font-size: 18px;
-		font-weight: 700;
-		line-height: 1.33;
+		font-size: 26px;
+		font-weight: 300;
+		line-height: 1.08;
 	}
 
 	&__order-list-sum {
 		flex: 1 0 173px;
 
-		text-align: center;
+		margin-bottom: 41px;
 
-		letter-spacing: normal;
+		text-align: left;
 
 		color: $wet-asphalt;
 
-		font-size: 18px;
-		font-weight: 700;
-		line-height: 1.33;
+		font-size: 32px;
+		font-weight: 800;
+		line-height: 0.88;
 	}
 
 	&__line-order-list {
@@ -583,6 +549,66 @@
 	}
 
 	@include media('xs') {
+		&__order-list-name {
+			margin-bottom: 0;
+		}
+
+		&__order-list-thickness {
+			display: block;
+			flex: 1 0 60px;
+
+			text-align: center;
+
+			color: $wet-asphalt;
+
+			font-size: 18px;
+			font-weight: 700;
+			line-height: 1.33;
+		}
+
+		&__order-list-size {
+			display: block;
+			flex: 1 0 135px;
+
+			text-align: center;
+
+			color: $wet-asphalt;
+
+			font-size: 18px;
+			font-weight: 300;
+			line-height: 1.33;
+		}
+
+		&__order-list-weight {
+			margin-bottom: 0;
+
+			text-align: center;
+			text-decoration: none;
+
+			font-size: 18px;
+			font-weight: 700;
+			line-height: 1.33;
+		}
+
+		&__order-list-sum {
+			margin-bottom: 0;
+
+			text-align: center;
+
+			font-size: 18px;
+			font-weight: 700;
+			line-height: 1.33;
+		}
+
+		&__order-list {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+
+			margin-top: 21px;
+			margin-bottom: 19px;
+		}
+
 		&__icon {
 			position: absolute;
 			top: -43px;
@@ -606,7 +632,6 @@
 		}
 
 		&__top {
-			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
 
@@ -619,12 +644,8 @@
 		}
 
 		&__line-small {
-			height: 2px;
-			margin-top: 20px;
 			margin-right: -53px;
 			margin-left: -53px;
-
-			background-color: #efefef;
 		}
 
 		&__line-right-small {
@@ -641,8 +662,6 @@
 		&__subtitle {
 			margin-top: 30px;
 			margin-bottom: 12px;
-
-			letter-spacing: normal;
 
 			color: $wet-asphalt;
 
@@ -688,8 +707,6 @@
 			width: 207px;
 			margin-bottom: 0;
 			margin-left: -33px;
-
-			line-height: 1.14;
 		}
 
 		&__item-sum {
@@ -698,21 +715,13 @@
 
 			margin-bottom: 0;
 
-			letter-spacing: normal;
-
-			color: $wet-asphalt;
-
-			font-size: 18px;
 			font-weight: 300;
-			line-height: 1.22;
 		}
 
 		&__item-add {
 			width: 166px;
 
-			cursor: pointer;
 			text-align: right;
-			letter-spacing: normal;
 
 			color: $wet-asphalt;
 			border: none;
@@ -720,8 +729,6 @@
 			background: none;
 
 			font-size: 16px;
-			font-weight: 300;
-			line-height: 1.22;
 		}
 
 		&__item-btn {
@@ -731,7 +738,6 @@
 
 			cursor: pointer;
 			text-align: center;
-			letter-spacing: normal;
 
 			border-radius: 14px;
 			background-color: #5f575f;
@@ -771,12 +777,13 @@
 			line-height: 1;
 		}
 
-		&__pdf-inner{
+		&__pdf-inner {
 			display: flex;
 		}
 
 		&__pdf-text {
 			max-width: 333px;
+			margin-right: 10px;
 
 			color: $wet-asphalt;
 
@@ -797,7 +804,6 @@
 
 		&__reserve-condition-title {
 			margin-top: 42px;
-			margin-bottom: 15px;
 		}
 
 		&__reserve-condition-text {
@@ -817,11 +823,11 @@
 			height: 123px;
 		}
 
-		&__сompletion-reserve-name{
+		&__сompletion-reserve-name {
 			display: block;
 		}
 
-		&__сompletion-reserve-room{
+		&__сompletion-reserve-room {
 			font-size: 28px;
 			font-weight: 800;
 			line-height: 0.86;
@@ -846,38 +852,16 @@
 		}
 
 		&__field-item {
-			position: relative;
-
-			display: block;
-
-			width: 200px;
-
-			height: 64px;
-			margin-bottom: 21px;
-
-			border: solid 1px #46464641;
-
-			border-radius: 14px;
-			background-color: #fcfcfc;
-
 			&_field-s {
-				width: 100%;
 				max-width: 247px;
 			}
 
 			&_field-m {
-				width: 100%;
 				max-width: 383px;
 			}
 
 			&_field-x {
-				width: 100%;
 				max-width: 520px;
-			}
-
-			&_field-t {
-				width: 100%;
-				height: 85px;
 			}
 		}
 
@@ -889,8 +873,6 @@
 			width: 100%;
 			height: 64px;
 			padding: 20px 15px 0 32px;
-
-			letter-spacing: normal;
 
 			opacity: 0.9;
 			color: $wet-asphalt;
@@ -911,7 +893,6 @@
 
 			cursor: text;
 			transition: 0.2s;
-			letter-spacing: normal;
 
 			opacity: 0.78;
 			color: $wet-asphalt;
@@ -941,43 +922,6 @@
 		&__tab {
 			max-width: 800px;
 			margin: 0 auto;
-		}
-
-		&__tab__nav {
-			display: flex;
-		}
-
-		&__tab__nav-button {
-			padding: 15px 30px;
-
-			cursor: pointer;
-			text-overflow: ellipsis;
-
-			border: 0;
-			border-right: 1px solid #dddddd;
-			background-color: #f5f5f5;
-
-			font-size: 20px;
-		}
-
-		&__tab__nav-button:last-child {
-			border-right: none;
-		}
-
-		&__tab__nav-button:hover {
-			background-color: #dddddd;
-		}
-
-		&__tab__nav-button.active {
-			color: $white;
-			border-right-color: #0b6ddd;
-			background-color: #3d89df;
-		}
-
-		&__tab__content {
-			padding: 30px;
-
-			background-color: $white;
 		}
 
 		/* Important functional styles */
@@ -1023,10 +967,7 @@
 		}
 
 		&__number {
-			color: $wet-asphalt;
-
 			font-size: $fs-title5;
-			font-weight: 800;
 			line-height: 0.86;
 
 			&_summ {
@@ -1084,7 +1025,6 @@
 				padding: 0;
 				gap: 15px;
 			}
-
 
 			&_top {
 				width: 100%;
