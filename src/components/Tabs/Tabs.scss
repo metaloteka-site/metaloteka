@@ -67,7 +67,7 @@
 		text-overflow: ellipsis;
 
 		opacity: 0;
-		-webkit-line-clamp: 20;
+		-webkit-line-clamp: 5;
 		-webkit-box-orient: vertical;
 
 		&::-webkit-scrollbar {
@@ -134,6 +134,7 @@
 			overflow-y: auto;
 
 			height: 210px;
+			-webkit-line-clamp: 20;
 		}
 
 		&_button {
