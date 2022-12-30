@@ -564,5 +564,14 @@
 				display: none;
 			}
 		}
+
+		.block-layout__right {
+			#{$self}__product-item-details {
+				padding: 51px 42px;
+
+				border-radius: 30px;
+				background: $white;
+			}
+		}
 	}
 }

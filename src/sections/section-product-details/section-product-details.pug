@@ -3,7 +3,7 @@ mixin section-product-details(section)
 	include ../../shared/helpers/pug/shortcut-check-store
 
 	//- верстка секции
-	+BlockLayout({bem: {classSection: 'section-product-details'}})
+	+BlockLayout({bem: {classSection: 'section-product-details', isRight: 'block-layout_none-right'}})
 		+BlockLayoutLeft
 			+e('header', {}, 'div')
 				+e('category', {}, 'a')(href='#') #{S_DATA('category')}
@@ -58,4 +58,4 @@ mixin section-product-details(section)
 		+BlockLayoutRight
 			+e('product-item-details', {}, 'div')
 				+ProductItemDetails(S_ELEM('ProductItemDetails'))
-				+CalculationOrder(S_ELEM('CalculationOrder'))
+			+CalculationOrder(S_ELEM('CalculationOrder'))

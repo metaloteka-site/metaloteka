@@ -1,5 +1,8 @@
 .calculation-order {
+	padding: 51px 42px;
+
 	color: $white;
+	border-radius: 30px;
 	background: $violet-gradient;
 
 	&__title {
@@ -59,11 +62,13 @@
 		font-size: 20px;
 		font-weight: 800;
 		margin-block: 38px 25.5px;
+
+		&:hover {
+			background: #4d484d;
+		}
 	}
 
 	&__description {
-		padding-bottom: 51.5px;
-
 		text-align: center;
 
 		font-size: 14px;
