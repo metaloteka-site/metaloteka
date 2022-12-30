@@ -56,4 +56,6 @@ mixin section-product-details(section)
 				+e('basket-btn', {}, 'button') #{S_DATA('button')}
 				+e('description', {}, 'p') #{S_DATA('description')}
 		+BlockLayoutRight
-			+ProductItemDetails(S_ELEM('ProductItemDetails'))
+			+e('product-item-details', {}, 'div')
+				+ProductItemDetails(S_ELEM('ProductItemDetails'))
+				+CalculationOrder(S_ELEM('CalculationOrder'))
