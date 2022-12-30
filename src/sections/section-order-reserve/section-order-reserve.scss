@@ -790,6 +790,12 @@
 			font-size: 16px;
 			font-weight: 700;
 			line-height: 1.25;
+
+			&:hover{
+				cursor: pointer;
+
+				color: $wet-asphalt;
+			}
 		}
 
 		&__active-until-text {
