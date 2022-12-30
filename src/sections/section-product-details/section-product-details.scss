@@ -271,8 +271,10 @@
 							margin-left: auto;
 
 							svg {
-								width: 16px;
-								height: 16px;
+								width: 13px;
+								height: 13px;
+
+								cursor: pointer;
 							}
 						}
 					}
@@ -506,6 +508,17 @@
 
 		font-size: 14px;
 		font-weight: 300;
+	}
+
+	#{$self}__button {
+		display: block;
+
+		color: $wet-asphalt;
+		border: none;
+		background-color: $white;
+
+		font-size: 1.4rem;
+		line-height: 1.14;
 	}
 
 	@include media(xs) {
