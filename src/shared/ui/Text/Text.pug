@@ -14,8 +14,12 @@ mixin Text(props)
 				include ../../helpers/pug/shortcut-check-store
 				if item.img
 					- const dataPopup = item.popup ? item.popup : false;
-					+e('icon', {b: item.isAdded}, 'div')(data-popup-open=dataPopup)
-						include ../../../layout/assets/images/basket.svg
+					if (item.text === '/basket.svg')
+						+e('icon', {b: item.isAdded}, 'div')(data-popup-open=dataPopup)
+							include ../../../layout/assets/images/basket.svg
+					else if (item.text === '/icon-close.svg')
+						+e('icon', {}, 'div')
+							include ../../../layout/assets/images/icon-close.svg
 				else
 					+b('text', {e: `${isElementClass}:${BEM('elementClassIndividual')}`, m: `${BEM('size')}.${BEM('sizeDesctop')}.${BEM('color')}.${BEM('fw')}.${BEM('lh')}`}, tag) #{item.text}
 	else

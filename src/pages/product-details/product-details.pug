@@ -1,7 +1,7 @@
 extends ../../layout/main
 
 append variables
-	+includeComponents(['ContactInformationFooter', 'Accordion', 'AccordionList', 'TableProductRow', 'Pagination', 'ProductItem', 'ProductItemDetails', 'Popup', 'Select'])
+	+includeComponents(['BlockLayout', 'ContactInformationFooter', 'Accordion', 'AccordionList', 'TableProductRow', 'Pagination', 'ProductItem', 'ProductItemDetails', 'Popup', 'Select', 'Tabs', 'ProductSlider', 'CalculationOrder'])
 
 block store
 	include store/product-details.store.pug
@@ -14,6 +14,10 @@ block main
 	//- подключение и вызов секции SECTION-BREADCRUMBS
 	include ../../sections/section-breadcrumbs/section-breadcrumbs
 	+section-breadcrumbs(productDetails.sectionBreadcrumbs)
+
+	//- подключение и вызов секции SECTION-PRODUCT-DETAILS
+	include ../../sections/section-product-details/section-product-details
+	+section-product-details(productDetails.sectionProductDetails)
 
 	//- подключение и вызов секции SECTION-CATALOG
 	include ../../sections/section-catalog/section-catalog
