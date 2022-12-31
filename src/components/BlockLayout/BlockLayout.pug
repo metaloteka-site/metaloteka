@@ -7,7 +7,7 @@ mixin BlockLayout(props)
 	include ../../shared/helpers/pug/shortcut-check-store
 
 	//- верстка компонента
-	+b(BEM('classSection'), { b: 'block-layout'}, 'section')
+	+b(BEM('classSection'), { b: 'block-layout', m: BEM('modifier')}, 'section')
 		+Container
 			+Row({ bem: { gap: 'rg-30', alignItems: 'align-items-start'} })
 				block

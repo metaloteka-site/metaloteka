@@ -548,6 +548,31 @@
 		background-color: #efefef;
 	}
 
+	&_processing {
+		#{$self}__line-big {
+			width: 284px;
+		}
+		
+		#{$self}__form {
+			display: flex;
+			flex-wrap: nowrap;
+		}
+
+		#{$self}__carta {
+			position: absolute;
+			top: 20px;
+			right: 26px;
+
+			cursor: pointer;
+
+			color: $wet-asphalt;
+
+			font-size: 14px;
+			font-weight: 700;
+			line-height: 1.71;
+		}
+	}
+
 	@include media('xs') {
 		&__order-list-name {
 			margin-bottom: 0;
@@ -791,7 +816,7 @@
 			font-weight: 700;
 			line-height: 1.25;
 
-			&:hover{
+			&:hover {
 				cursor: pointer;
 
 				color: $wet-asphalt;
@@ -1084,6 +1109,12 @@
 			display: block;
 
 			margin-bottom: 47px;
+		}
+
+		&_processing {
+			#{$self}__line-big {
+				width: 330px;
+			}
 		}
 	}
 }
