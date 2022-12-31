@@ -1,5 +1,5 @@
 -
-	const testingPug = {
+	const sectionOrderProcessing = {
 		data: {
 			orderTitle: 'Заказ №210522/1-MT',
 			CompletionReserveRoom: 'Заказ №210522/1-MT',
@@ -15,37 +15,38 @@
 			placeholderTel: 'Моб. телефон*',
 			placeholderDeliveryAddress: 'Адрес доставки',
 			placeholderEmail: 'E-mail',
+			placeholderContactPerson: 'Контактное лицо',
 			itemBtn: 'Сохранить',
 			accordionBtn: 'Войти',
+			reserveСompletionBtn: 'Завершить оформление',
 			icon: '/basket.svg',
 			qr: '/icon-qr.svg',
 			iconAlt: 'Icon',
 			titleRight: 'Завершите оформление',
-			role: 'Гость',
+			textRight: 'Завершите оформление, выбрав варианты резерва, заполнив контакты и выбрав способ оплаты (онлайн/счет/в офисе)',
+			role: 'ИП Петров Иван',
 			txtOnclick: 'Нажимая вы соглашаетесь с условиями и политикой конфеденциальности',
 			summTotal: 'Итого:',
 			sumTotalNumber: '6 233 944',
 			sumTotalRub: 'р.',
 			sumTotalDays: '≈ 4,548 т',
-			sumTotalBold: 'Всего наимнований (7) на сумму 6 233 944 руб. (в том числе НДС 20%)',
+			sumTotalBold: 'Всего наимнований (7) на сумму 6 233 944 руб.(в том числе НДС 20%)',
 			sumTotalSmall: 'Сто пятьдесят восемь миллионов двести тридцать три тысячи девятьсот сорок четыре руб. 00 копеек',
 			sumTotalMini: 'Копия документов на оплату отправлена на вашу электронную почту. В течении ближайшего времени с вами свяжеться менеджер, чтобы обсудить делали заказа.',
-			btnOrder: 'Оформить заказ',
 			btnReserve: 'Оплатить резерв (1-3 дня)',
-			btnReserveSmall: 'Оплатить резерв',
-			//- reserveConditionText: 'Резерв товаров из вашего списка товаров на складе сроком на 14 суток. Приобретая услугу Вы соглашаетесь с тем, что стоимость товара на момент окончания срока резерва может изменится. По окончанию срока резерва товара на складе мы не гарантируем его последующее наличие. Цены не являются публичной офертой, содержит ориентировочный уровень цен. Окончательную цену (и уровень скидок) - оговаривайте с менеджером. Приобретая услугу Вы соглашаетесь с тем, что стоимость товара на момент окончания срока резерва может изменится. Резерв товаров из вашего списка товаров на складе сроком на 14 суток. Приобретая услугу Вы соглашаетесь с тем, что стоимость товара на момент окончания срока резерва может изменится. По окончанию срока резерва товара на складе мы не гарантируем его последующее наличие.',
 			reservePersonalData: 'Конфеденциальность личных данных',
 			reservePersonalText: 'Резерв товаров из вашего списка товаров на складе сроком на 14 суток. Приобретая услугу Вы соглашаетесь с тем, что стоимость товара на момент окончания срока резерва может изменится. По окончанию срока резерва товара на складе мы не гарантируем его последующее наличие. Цены не являются публичной офертой, содержит ориентировочный уровень цен. Окончательную цену (и уровень скидок) - оговаривайте с менеджером. Приобретая услугу Вы соглашаетесь с тем, что стоимость товара на момент окончания срока резерва может изменится. Резерв товаров из вашего списка товаров на складе сроком на 14 суток. Приобретая услугу Вы соглашаетесь с тем, что стоимость товара на момент окончания срока резерва может изменится. По окончанию срока резерва товара на складе мы не гарантируем его последующее наличие.',
 			iconWarning: '/icon-warning.svg',
 			iconAltWarning:"Warning",
+			pdf:"Бланк заказа PDF",
+			activeUntil:"(действителен до 21.05.2022)",
 			text:"Копия документов на оплату отправлена на вашу электронную почту. В течении ближайшего времени с вами свяжеться менеджер, чтобы обсудить делали заказа.",
 		},
 		bem: {
 			fieldItemS: 'field-s',
 			fieldItemM: 'field-m',
 			fieldItemX: 'field-x',
-			fieldItemT: 'field-t'
-			//- infoWay: 'info-way'
+			fieldItemT: 'field-t',
 		},
 		elem: {
 			ContactInformationFooter : {
@@ -118,7 +119,7 @@
 			},
 			AccordionDeliveryMethod: {
 				data: {
-					title: '1. Способ доставки',
+					title: '1. Резерв товара',
 				}
 			},
 			AccordionPersonalData: {
@@ -134,6 +135,9 @@
 			AccordionOrderList: {
 				data: {
 					title: 'Состав заказа',
+				},
+				bem: {
+					size: 'fz-25',
 				}
 			},
 			Tabs: {
@@ -147,13 +151,13 @@
 					tabButtons: [
 						{
 							data: {
-								tabButton: 'Юр. лицо',
+								tabButton: 'Самовывоз',
 								dataTabButton: '1'
 							}
 						},
 						{
 							data: {
-								tabButton: 'Физ. лицо',
+								tabButton: 'Доставка',
 								dataTabButton: '2'
 							}
 						}
@@ -175,7 +179,7 @@
 			},
 			TextInfoWay: {
 				data: {
-					text: 'Выберите удобный для вас способ резерва'
+					text: 'Выберите удобный для вас способ доставки'
 				},
 				bem: {
 					color: 'wet-asphalt-80',
@@ -244,6 +248,7 @@
 					fw: 'fw-300',
 					size: 'fs-20',
 					lh:'lh-1-2',
+					elementClassIndividual: 'text-room'
 				},
 				opt: {
 					p: true,
@@ -282,6 +287,38 @@
 					isElementClass: true
 				}
 			},
+			TextReservePersonalData: {
+				data: {
+					text: 'Конфеденциальность личных данных'
+				},
+				bem: {
+					color: 'wet-asphalt',
+					size: 'fs-18',
+					fw: 'fw-800',
+					lh:'lh-1-1',
+					elementClassIndividual: 'reserve-condition-title'
+				},
+				opt: {
+					p: true,
+					isElementClass: true
+				}
+			},
+			TextReservePersonalText: {
+				data: {
+					text: 'Резерв товаров из вашего списка товаров на складе сроком на 14 суток. Приобретая услугу Вы соглашаетесь с тем, что стоимость товара на момент окончания срока резерва может изменится. По окончанию срока резерва товара на складе мы не гарантируем его последующее наличие. Цены не являются публичной офертой, содержит ориентировочный уровень цен. Окончательную цену (и уровень скидок) - оговаривайте с менеджером. Приобретая услугу Вы соглашаетесь с тем, что стоимость товара на момент окончания срока резерва может изменится. Резерв товаров из вашего списка товаров на складе сроком на 14 суток. Приобретая услугу Вы соглашаетесь с тем, что стоимость товара на момент окончания срока резерва может изменится. По окончанию срока резерва товара на складе мы не гарантируем его последующее наличие.'
+				},
+				bem: {
+					color: 'wet-asphalt-70 ',
+					size: 'fs-10',
+					fw: 'fw-300',
+					lh:'lh-1-4',
+					elementClassIndividual: 'reserve-condition-text'
+				},
+				opt: {
+					p: true,
+					isElementClass: true
+				}
+			},
 			TextWarnings:{
 				elemArr: [
 					{
@@ -293,7 +330,12 @@
 							size: 'big',
 							fw: 'fw-300',
 							lh:'lh-1',
+							elementClassIndividual: 'text-warning'
 						},
+						opt: {
+						p: true,
+						isElementClass: true
+						}
 					},
 					{
 						data:{
@@ -304,7 +346,12 @@
 							size: 'big',
 							fw: 'fw-300',
 							lh:'lh-1',
+							elementClassIndividual: 'text-warning'
 						},
+						opt: {
+						p: true,
+						isElementClass: true
+						}
 					},
 					{
 						data:{
@@ -315,7 +362,12 @@
 							size: 'big',
 							fw: 'fw-300',
 							lh:'lh-1',
+							elementClassIndividual: 'text-warning'
 						},
+						opt: {
+						p: true,
+						isElementClass: true
+						}
 					},
 				]
 			},
@@ -334,36 +386,6 @@
 					isElementClass: true
 				}
 			},
-			TextDataRegistration1: {
-				data: {
-					text: 'Выберите юридическое лицо, если заказ будет оформляться на ИП или ООО'
-				},
-				bem: {
-					color: 'wet-asphalt-80',
-					fw: 'fw-300',
-					lh:'lh-1-14',
-					elementClassIndividual: 'text-data-registration'
-				},
-				opt: {
-					p: true,
-					isElementClass: true
-				}
-			},
-			TextDataRegistration2: {
-				data: {
-					text: 'Выберите физическое лицо, если заказ будет оформляться на частное лицо'
-				},
-				bem: {
-					color: 'wet-asphalt-80',
-					fw: 'fw-300',
-					lh:'lh-1-14',
-					elementClassIndividual: 'text-data-registration'
-				},
-				opt: {
-					p: true,
-					isElementClass: true
-				}
-			},
 			TextReserve:{
 				elemArr: [
 					{
@@ -372,7 +394,6 @@
 						},
 						bem: {
 							color: 'wet-asphalt',
-							//- size: 'small',
 							fw: 'fw-300',
 							elementClassIndividual: 'reserve-condition-text'
 						},
@@ -383,7 +404,6 @@
 						},
 						bem: {
 							color: 'wet-asphalt',
-							//- size: 'small',
 							fw: 'fw-300',
 							elementClassIndividual: 'reserve-condition-text'
 						},
@@ -394,7 +414,6 @@
 						},
 						bem: {
 							color: 'wet-asphalt',
-							//- size: 'small',
 							fw: 'fw-300',
 							elementClassIndividual: 'reserve-condition-text'
 						},
@@ -483,6 +502,26 @@
 						sum:"32 549 / р.",
 					},
 				},
+			],
+			btnOrder: [
+				{
+					data: {
+						text: 'Оформить заказ'
+					},
+					opt: {
+						disabled: true
+					}
+				}
+			],
+			btnReserveSmall: [
+				{
+					data: {
+						text: 'Оплатить резерв'
+					},
+					opt: {
+						disabled: true
+					}
+				}
 			]
 		}
 	};

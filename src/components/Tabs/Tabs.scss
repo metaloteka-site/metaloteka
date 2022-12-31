@@ -120,7 +120,9 @@
 			border-radius: 14px;
 
 			&#{$self}__button {
-				outline: solid 4px #46464662;
+				outline: solid 4px;
+				outline-color:linear-gradient(291deg, #b66060, #ce7f65);
+				// outline: solid 4px #46464662;
 			}
 		}
 
