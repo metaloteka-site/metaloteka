@@ -53,6 +53,15 @@
 		}
 	}
 
+	&_fz-25 {
+		#{$self}__title {
+			margin-bottom: 20px;
+
+			font-size: $fs-24;
+			font-weight: 300;
+		}
+	}
+
 	&_reset {
 		#{$self}__title::after {
 			display: none;

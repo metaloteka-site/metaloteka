@@ -1,0 +1,14 @@
+mixin CalculationOrder(props)
+	//- проверка данных получаемых из props
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- верстка компонента
+	+b('calculation-order', {}, 'div')
+		+e('title', {}, 'p') #{DATA('title')}
+		+e('range', {}, 'div')
+		+e('subtitle', {}, 'p') #{DATA('subtitle')}
+		+e('presentation-wrapper', {}, 'div')
+			+e('presentation-img', {}, 'img')(src=`${pathFile}/logo.svg` alt=S_DATA('LogoMetaloteka'))
+			+e('presentation-info', {}, 'p') #{DATA('presentationInfo')}
+		+e('btn', {}, 'button') #{DATA('button')}
+		+e('description', {}, 'p') #{DATA('description')}
