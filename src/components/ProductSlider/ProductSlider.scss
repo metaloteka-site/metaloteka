@@ -81,25 +81,29 @@
 
 .gallery-top {
 	width: 100%;
-	height: 80%;
+	height: 259px;
+
+	cursor: pointer;
 }
 
 .gallery-thumbs {
 	box-sizing: border-box;
 	width: 200px;
-	height: 20%;
+	height: inherit;
 	margin: 0 auto;
+
+	cursor: pointer;
 }
 
 .gallery-thumbs .swiper-slide {
 	width: 25%;
-	height: 100%;
+	height: 43px;
 
 	opacity: 0.4;
 
 	img {
 		width: 51px;
-		height: 43px;
+		height: 100%;
 	}
 }
 
