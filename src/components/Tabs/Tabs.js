@@ -40,9 +40,11 @@ class TabsControl {
 }
 
 export function Tabs() {
-	const elem = document.querySelector('.tabs');
+	const elems = document.querySelectorAll('.tabs');
 
-	if (elem) {
-		new TabsControl(elem).init();
+	if (elems.length) {
+		elems.forEach((elem) => {
+			new TabsControl(elem).init();
+		});
 	}
 }
