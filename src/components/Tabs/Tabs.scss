@@ -100,7 +100,7 @@
 
 	&_button {
 		#{$self}__button {
-			width: 170px;
+			width: 134px;
 			margin: 5px;
 			padding: 21px 9px 23px;
 
@@ -145,14 +145,11 @@
 			}
 
 			#{$self}__button {
+				width: 170px;
 				margin-bottom: 33px;
 				padding: 21px 20px 23px;
 
 				color: #464646;
-
-				font-size: 20px;
-				font-weight: 800;
-				line-height: 1;
 
 			}
 		}
