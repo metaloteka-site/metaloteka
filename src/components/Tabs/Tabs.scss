@@ -100,6 +100,7 @@
 
 	&_button {
 		#{$self}__button {
+			width: 170px;
 			margin: 5px;
 			padding: 21px 9px 23px;
 
@@ -144,12 +145,20 @@
 			}
 
 			#{$self}__button {
-				padding: 21px 39px 23px;
+				margin-bottom: 33px;
+				padding: 21px 20px 23px;
+
+				color: #464646;
+
+				font-size: 20px;
+				font-weight: 800;
+				line-height: 1;
+
 			}
 		}
 
 		&__buttons {
-			column-gap: 30px;
+			column-gap: 8px;
 		}
 	}
 }

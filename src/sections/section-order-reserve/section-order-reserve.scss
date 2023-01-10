@@ -666,7 +666,7 @@
 			flex-direction: row;
 			justify-content: space-between;
 
-			margin-bottom: 61px;
+			margin-bottom: 67px;
 		}
 
 		&__line-big {
@@ -785,7 +785,7 @@
 
 		&__text-info-period-days {
 			max-width: 272px;
-			margin-bottom: 14px;
+			margin-bottom: 25px;
 		}
 
 		&__text-warning {
@@ -982,9 +982,15 @@
 
 			cursor: pointer;
 
+			color: $wet-asphalt;
+
 			border: none;
 			border-radius: 14px;
 			background-color: rgba(70, 70, 70, 0.03);
+
+			font-size: 20px;
+			font-weight: 800;
+			line-height: 1;
 		}
 
 		&__order {
