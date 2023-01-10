@@ -1,0 +1,20 @@
+extends ../../layout/main
+
+append variables
+	+includeComponents(['ContactInformationFooter', 'Accordion', 'AccordionList', 'TableProductRow', 'Pagination', 'ProductItem', 'ProductItemDetails', 'Popup', 'Select'])
+
+block store
+	include store/categories.store.pug
+
+append head
+	title Категории
+
+block main
+
+	//- подключение и вызов секции SECTION-BREADCRUMBS
+	include ../../sections/section-breadcrumbs/section-breadcrumbs
+	+section-breadcrumbs(categories.sectionBreadcrumbs)
+
+	//- подключение и вызов секции SECTION-BREADCRUMBS
+	include ../../sections/categories/categories
+	+section-categories(categories.sectionCategories)

@@ -1,0 +1,2035 @@
+-
+	const sectionCategories = {
+		data: {
+			text: 'Каталог',
+			btnProductList: 'Загрузить еще',
+			btnProductListMobile: 'Толщина, мм',
+			productListDescription: 'Всет товары в разделе имеют сертификаты качества и изготовлены по гостам. Вы можете запросить в офисе продаж всю необходимую документацию',
+			selectedTitle: 'Цветные металлы',
+			selectedTitleMobile: 'Лист горячекатный',
+		},
+		dataArr: {
+			category: [
+				{
+					data: {
+						title: "Трубный прокат",
+						href: "#"
+					}
+				},
+				{
+					data: {
+						title: "Арматурный прокат",
+						href: "#"
+					}
+				},
+				{
+					data: {
+						title: "Метизная продукция",
+						href: "#"
+					}
+				},
+				{
+					data: {
+						title: "Листовой прокат",
+						href: "#"
+					}
+				},
+				{
+					data: {
+						title: "Нержавеющая сталь",
+						href: "#"
+					}
+				},
+				{
+					data: {
+						title: "Цветные металлы",
+						href: "#"
+					}
+				},
+				{
+					data: {
+						title: "Сортовой прокат",
+						href: "#"
+					}
+				},
+			],
+			tags: [
+				{
+					data: {
+						title: "Труба профильная",
+						href: "#"
+					}
+				},
+				{
+					data: {
+						title: "Профильная",
+						href: "#"
+					}
+				},
+				{
+					data: {
+						title: "Труба 8мм",
+						href: "#"
+					}
+				},
+				{
+					data: {
+						title: "Труба 8мм",
+						href: "#"
+					}
+				},
+				{
+					data: {
+						title: "уголок",
+						href: "#"
+					}
+				},
+				{
+					data: {
+						title: "лента",
+						href: "#"
+					}
+				},
+				{
+					data: {
+						title: "плита",
+						href: "#"
+					}
+				},{
+					data: {
+						title: "шестигранник",
+						href: "#"
+					}
+				},
+			],
+			filters: [
+				{
+					data: {
+						title: 'Тонны',
+					},
+					bem: {
+						jsClass: 'active'
+					}
+				},
+				{
+					data: {
+						title: 'М2',
+					},
+				},
+				{
+					data: {
+						title: 'Шт.',
+					},
+				},
+			],
+			diameters: [
+				{
+					data: {
+						title: '1.5'
+					},
+				},
+				{
+					data: {
+						title: '2'
+					},
+				},
+				{
+					data: {
+						title: '4'
+					},
+				},
+				{
+					data: {
+						title: '6'
+					},
+				},
+				{
+					data: {
+						title: '8'
+					},
+					bem: {
+						jsClass: 'active'
+					}
+				},
+				{
+					data: {
+						title: '10'
+					},
+				},
+				{
+					data: {
+						title: '12'
+					},
+				},
+				{
+					data: {
+						title: '16'
+					},
+				},
+				{
+					data: {
+						title: '20'
+					},
+				},
+			],
+			detailsNavigationLa: [
+					{
+						data: {
+							title: 'Латунь (72)'
+						}
+					},
+					{
+						data: {
+							title: 'Круг латунный'
+						}
+					},
+					{
+						data: {
+							title: 'Латунная лента'
+						}
+					},
+					{
+						data: {
+							title: 'Латунный лист'
+						}
+					},
+					{
+						data: {
+							title: 'Латунная труба'
+						}
+					},
+					{
+						data: {
+							title: 'Латунная проволока'
+						}
+					},
+					{
+						data: {
+							title: 'Латунный шестигранник'
+						}
+					},
+					{
+						data: {
+							title: 'Латунный квадрат'
+						}
+					}
+				],
+			detailsNavigationTi: [
+					{
+						data: {
+							title: 'Титан (124)'
+						}
+					},
+					{
+						data: {
+							title: 'Титановая проволока'
+						}
+					},
+					{
+						data: {
+							title: 'Титановый лист'
+						}
+					},
+				],
+			detailsNavigationMe: [
+				{
+					data: {
+						title: 'Медь (268)'
+					}
+				},
+				{
+					data: {
+						title: 'Медный круг'
+					}
+				},
+				{
+					data: {
+						title: 'Медная лента'
+					}
+				},
+				{
+					data: {
+						title: 'Медный лист'
+					}
+				},
+				{
+					data: {
+						title: 'Медная труба'
+					}
+				},
+				{
+					data: {
+						title: 'Медная шина'
+					}
+				},
+				{
+					data: {
+						title: 'Медная плита'
+					}
+				},
+				{
+					data: {
+						title: 'Медная проволока'
+					}
+				}
+			],
+			detailsNavigationAl: [
+				{
+					data: {
+						title: 'Аллюминий (158)'
+					}
+				},
+				{
+					data: {
+						title: 'Алюминиевый круг'
+					}
+				},
+				{
+					data: {
+						title: 'Алюминиевая плита'
+					}
+				},
+				{
+					data: {
+						title: 'Алюминиевая труба'
+					}
+				},
+				{
+					data: {
+						title: 'Алюминиевый лист'
+					}
+				},
+				{
+					data: {
+						title: 'Алюминиевый уголок'
+					}
+				},
+				{
+					data: {
+						title: 'Алюминиевая проволока'
+					}
+				},
+				{
+					data: {
+						title: 'Алюминиевый швеллер'
+					}
+				},
+				{
+					data: {
+						title: 'Алюминиевая профильная труба'
+					}
+				},
+				{
+					data: {
+						title: 'Лист алюминиевый'
+					}
+				},
+				{
+					data: {
+						title: 'Алюминиевый лист'
+					}
+				},
+				{
+					data: {
+						title: 'Алюминиевый уголок'
+					}
+				},
+			],
+		},
+		elem: {
+			TableProductRowHeader: {
+				elemArr: [
+					{
+						elem: {
+							Text: {
+								elemArr: [
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: 'Название'
+												},
+												{
+													text: 'Наименование товара'
+												}
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: 'D'
+												},
+												{
+													text: 'мм'
+												}
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: 'Размер'
+												},
+												{
+													text: 'мм'
+												}
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: 'Стандарт'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: 'Стоимость'
+												},
+												{
+													text: 'руб.'
+												}
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+								]
+							}
+						},
+					},
+				]
+			},
+			TableProductRowContent: {
+				elemArr: [
+					{
+						elem: {
+							Text: {
+								elemArr: [
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: 'Круг алюминиевый 1,5 мм АМГ6'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '8 мм'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '3000 мм'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: 'ГОСТ 19425-74'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '22 472 549 / т.'
+												},
+												{
+													text: 'за тонну'
+												}
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '/basket.svg',
+													img: true,
+													popup: 'product-item-details'
+												},
+											],
+										},
+										opt: {
+											arrayData: true
+										}
+									},
+								]
+							}
+						},
+					},
+					{
+						elem: {
+							Text: {
+								elemArr: [
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: 'Круг алюминиевый 1,5 мм АМГ6'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '8 мм'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '3000 мм'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: ''
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '870 549 / т.'
+												},
+												{
+													text: 'за тонну'
+												}
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '/basket.svg',
+													img: true,
+													popup: 'product-item-details'
+												},
+											],
+										},
+										opt: {
+											arrayData: true
+										}
+									},
+								]
+							}
+						},
+					},
+					{
+						elem: {
+							Text: {
+								elemArr: [
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: 'Круг алюминиевый 2 мм АМГ6'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '8 мм'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '3000 мм'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: 'ГОСТ 19425-74'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '650 549 / т.'
+												},
+												{
+													text: 'за тонну'
+												}
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '/basket.svg',
+													img: true,
+													isAdded: 'added',
+													popup: 'product-item-details'
+												},
+											],
+										},
+										opt: {
+											arrayData: true
+										}
+									},
+								]
+							}
+						},
+					},
+					{
+						elem: {
+							Text: {
+								elemArr: [
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: 'Круг алюминиевый 6 мм АМГ6'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '8 мм'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '3000 мм'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: ''
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '855 549 / т.'
+												},
+												{
+													text: 'за тонну'
+												}
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '/basket.svg',
+													img: true,
+													popup: 'product-item-details'
+												},
+											],
+										},
+										opt: {
+											arrayData: true
+										}
+									},
+								]
+							}
+						},
+					},
+					{
+						elem: {
+							Text: {
+								elemArr: [
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: 'Круг алюминиевый 8 мм АМГ6'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '8 мм'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '3000 мм'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: 'ГОСТ 19425-74'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '49 / м.'
+												},
+												{
+													text: 'за метр'
+												}
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '/basket.svg',
+													img: true,
+													popup: 'product-item-details'
+												},
+											],
+										},
+										opt: {
+											arrayData: true
+										}
+									},
+								]
+							}
+						},
+					},
+					{
+						elem: {
+							Text: {
+								elemArr: [
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: 'Круг алюминиевый 8 мм АМГ6'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '8 мм'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '1500 x 600  мм'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: 'ГОСТ 19425-74'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '115 / м.'
+												},
+												{
+													text: 'за метр'
+												}
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '/basket.svg',
+													img: true,
+													popup: 'product-item-details'
+												},
+											],
+										},
+										opt: {
+											arrayData: true
+										}
+									},
+								]
+							}
+						},
+					},
+					{
+						elem: {
+							Text: {
+								elemArr: [
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: 'Просечно-вытяжной лист, 16 мм (изготавливается по технологии горячекатного листа)'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '20 мм'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '1500 x 1500 мм'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: 'ГОСТ 4405-75'
+												},
+												{
+													text: 'ГОСТ 103-2006'
+												},
+												{
+													text: 'ГОСТ 19425-74'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '125 549 / т.'
+												},
+												{
+													text: 'за тонну'
+												}
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '/basket.svg',
+													img: true,
+													popup: 'product-item-details'
+												},
+											],
+										},
+										opt: {
+											arrayData: true
+										}
+									},
+								]
+							}
+						},
+					},
+				]
+			},
+			ProductItemMobile: {
+				elemArr: [
+					{
+						data: {
+							title: 'Лист горячекатный, 60 мм',
+							subtitle: 'Просечно-вытяжной лист, 16 мм (изготавливается по технологии горячекатного листа)',
+							basketDescription: 'Добавьте в корзину и рассчитайте точный необходимий обьем',
+						},
+						elem: {
+							Text: {
+								elemArr: [
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '60 мм'
+												},
+												{
+													text: '1500 x 600 мм'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: 'за 1 тонну'
+												},
+												{
+													text: '115 400 р.'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: 'за 1 м2'
+												},
+												{
+													text: '12 400 р.'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: 'за 1 лист'
+												},
+												{
+													text: '35 800 р.'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+								]
+							}
+						},
+					},
+					{
+						data: {
+							title: 'Лист горячекатный, 60 мм',
+							subtitle: 'Просечно-вытяжной лист, 16 мм (изготавливается по технологии горячекатного листа)',
+							basketDescription: 'Добавьте в корзину и рассчитайте точный необходимий обьем',
+						},
+						elem: {
+							Text: {
+								elemArr: [
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '60 мм'
+												},
+												{
+													text: '1500 x 600 мм'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: 'за 1 тонну'
+												},
+												{
+													text: '115 400 р.'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: 'за 1 м2'
+												},
+												{
+													text: '12 400 р.'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: 'за 1 лист'
+												},
+												{
+													text: '35 800 р.'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+								]
+							}
+						},
+					},
+					{
+						data: {
+							title: 'Лист горячекатный, 60 мм',
+							subtitle: 'Просечно-вытяжной лист, 16 мм (изготавливается по технологии горячекатного листа)',
+							basketDescription: 'Добавьте в корзину и рассчитайте точный необходимий обьем',
+						},
+						elem: {
+							Text: {
+								elemArr: [
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: '60 мм'
+												},
+												{
+													text: '1500 x 600 мм'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: 'за 1 тонну'
+												},
+												{
+													text: '115 400 р.'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: 'за 1 м2'
+												},
+												{
+													text: '-'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+									{
+										dataArr: {
+											arrText: [
+												{
+													text: 'за 1 лист'
+												},
+												{
+													text: '-'
+												},
+											],
+										},
+										opt: {
+											arrayData: true,
+											p: true
+										}
+									},
+								]
+							}
+						},
+					},
+				]
+			},
+			ProductItemDetails: {
+				data: {
+					title: 'Труба профильная, 5 мм, 3000х60',
+					subtitle: 'Просечно-вытяжной лист, 16 мм (изготавливается по технологии горячекатного листа)',
+					count: '0,015 т',
+					total: 'Итого:',
+					totalPrice: '840',
+					totalPriceValue: ' p.',
+					measure: '≈ 0,015 т / 3 м',
+					button: 'В корзину',
+					description: 'Нажимая вы соглашаетесь с условиями и политикой конфеденциальности'
+				},
+				elemArr: [
+					{
+						data: {
+							title: 'Тонны'
+						},
+						bem: {
+							jsClass: 'active'
+						}
+					},
+					{
+						data: {
+							title: 'М2'
+						}
+					},
+					{
+						data: {
+							title: 'Шт.'
+						}
+					}
+				]
+			},
+			Select: {
+				data: {
+					title: 'Толщина, мм',
+				},
+				elemArr: [
+					{
+						data: {
+							title: "Толщина, 10 мм",
+						}
+					},
+					{
+						data: {
+							title: "Толщина, 20 мм",
+						}
+					},
+					{
+						data: {
+							title: "Толщина, 30 мм",
+						}
+					},
+					{
+						data: {
+							title: "Толщина, 40 мм",
+						}
+					},
+					{
+						data: {
+							title: "Толщина, 50 мм",
+						}
+					},
+				]
+			},
+			ProductInformation: {
+				data: {
+					title: 'Трубный прокат'
+				},
+			},
+			ProductDetailsInformation: {
+				data: {
+					title: 'Цветные металлы'
+				},
+			},
+			FilterTitle: {
+				data: {
+					title: 'Диаметр (D) / мм'
+				}
+			},
+			ProductInformationDetails: {
+				data: {
+					aboveTitle: 'Алюминий',
+					title: 'Алюминиевый круг',
+					description: '* Алюминиевый круг – вид плоского металлопроката, получаемый путем поперечной резки горячекатаных рулонов после их прокатки на полунепрерывных либо непрерывных станах.',
+					searchCount: 'Найдено товаров (24)'
+				},
+			},
+			MobileDescription: {
+				data: {
+					description: 'Металлопрокат оптом и в розницу с доставкой по Москве и московской области'
+				},
+			},
+			LogoBanner: {
+				data: {
+					title: 'Металотека',
+					subtitle: 'Каталог',
+					subtitleDetails: 'Листовой прокат',
+				}
+			},
+			ContactInformationFooter: {
+				elemArr: [
+					{
+						data: {
+							title: 'Metaloteka',
+							subtitle: 'Металлопрокат оптом и в розницу',
+						},
+						opt: {
+							heading: true,
+							subtitle: true
+						},
+						dataArr: {
+							texts: [
+								{
+									data: {
+										text: 'QR-код для загрузки\n реквизитов в мобильное\n приложение банка'
+									},
+								}
+							]
+						}
+					},
+					{
+						data: {
+							link: '+7 495 545 64 20',
+							href: 'tel:+74955456420',
+						},
+						opt: {
+							link: true,
+						},
+						dataArr: {
+							texts: [
+								{
+									data: {
+										text: 'Телефон клиентской\n поддержки',
+									},
+
+								},
+								{
+									data: {
+										text: 'Онлайн заявки и заказы обрабатываем с 9:00-18:00',
+									},
+									bem: {
+										weihgt: 'bold'
+									}
+								}
+							]
+						}
+					},
+					{
+						data: {
+							link: 'info@metaloteka.ru',
+							href: 'mailto:info@metaloteka.ru'
+						},
+						opt: {
+							link: true,
+						},
+						dataArr: {
+							texts: [
+								{
+									data: {
+										text: 'Напишите нам\n и мы постараемся ответить на все\n ваши вопросы'
+									}
+								}
+							]
+						}
+					}
+				]
+			},
+			AccordionList: {
+				elemArr: [
+					{
+						elem: {
+							Accordion: {
+								data: {
+									title: 'Труба профильная (158)',
+								},
+								bem: {
+									size: 'fz-20',
+									styleContent: 'reset'
+								},
+							},
+						},
+						dataArr: {
+							links: [
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+							]
+						}
+					},
+					{
+						elem: {
+							Accordion: {
+								data: {
+									title: 'Труба профильная (158)',
+								},
+								bem: {
+									size: 'fz-20',
+									styleContent: 'reset'
+								},
+							},
+						},
+						dataArr: {
+							links: [
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+							]
+						}
+					},
+					{
+						elem: {
+							Accordion: {
+								data: {
+									title: 'Труба профильная (158)',
+								},
+								bem: {
+									size: 'fz-20',
+									styleContent: 'reset'
+								},
+							},
+						},
+						dataArr: {
+							links: [
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+							]
+						}
+					},
+					{
+						elem: {
+							Accordion: {
+								data: {
+									title: 'Труба профильная (158)',
+								},
+								bem: {
+									size: 'fz-20',
+									styleContent: 'reset'
+								},
+							},
+						},
+						dataArr: {
+							links: [
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+							]
+						}
+					},
+					{
+						elem: {
+							Accordion: {
+								data: {
+									title: 'Труба профильная (158)',
+								},
+								bem: {
+									size: 'fz-20',
+									styleContent: 'reset'
+								},
+							},
+						},
+						dataArr: {
+							links: [
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+							]
+						}
+					},
+					{
+						elem: {
+							Accordion: {
+								data: {
+									title: 'Труба профильная (158)',
+								},
+								bem: {
+									size: 'fz-20',
+									styleContent: 'reset'
+								},
+							},
+						},
+						dataArr: {
+							links: [
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+							]
+						}
+					},
+					{
+						elem: {
+							Accordion: {
+								data: {
+									title: 'Труба профильная (158)',
+								},
+								bem: {
+									size: 'fz-20',
+									styleContent: 'reset'
+								},
+							},
+						},
+						dataArr: {
+							links: [
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+								{
+									title: 'Труба профильная прямоугольная',
+								},
+							]
+						}
+					},
+				]
+			},
+			AccordionListNavigation: {
+				elemArr: [
+					{
+						elem: {
+							Accordion: {
+								data: {
+									title: 'Листовой прокат',
+								},
+								bem: {
+									size: 'fz-20',
+									styleContent: 'arrow'
+								},
+							},
+						},
+						dataArr: {
+							links: [
+								{
+									title: 'Труба профильная',
+								},
+								{
+									title: 'Трубы в изоляции',
+								},
+								{
+									title: 'Труба водогазопроводная оцинкованная',
+								},
+								{
+									title: 'Трубы в изоляции',
+								},
+								{
+									title: 'Труба магистральная',
+								},
+								{
+									title: 'Труба Овальная',
+								},
+								{
+									title: 'Труба профильная',
+								},
+								{
+									title: 'Труба профильная',
+								},
+							]
+						}
+					},
+					{
+						elem: {
+							Accordion: {
+								data: {
+									title: 'Арматурный прокат',
+								},
+								bem: {
+									size: 'fz-20',
+									styleContent: 'arrow'
+								},
+							},
+						},
+						dataArr: {
+							links: [
+								{
+									title: 'Труба профильная',
+								},
+								{
+									title: 'Трубы в изоляции',
+								},
+								{
+									title: 'Труба водогазопроводная оцинкованная',
+								},
+								{
+									title: 'Трубы в изоляции',
+								},
+								{
+									title: 'Труба магистральная',
+								},
+								{
+									title: 'Труба Овальная',
+								},
+								{
+									title: 'Труба профильная',
+								},
+								{
+									title: 'Труба профильная',
+								},
+							]
+						}
+					},
+					{
+						elem: {
+							Accordion: {
+								data: {
+									title: 'Метизная продукция',
+								},
+								bem: {
+									size: 'fz-20',
+									styleContent: 'arrow'
+								},
+							},
+						},
+						dataArr: {
+							links: [
+								{
+									title: 'Труба профильная',
+								},
+								{
+									title: 'Трубы в изоляции',
+								},
+								{
+									title: 'Труба водогазопроводная оцинкованная',
+								},
+								{
+									title: 'Трубы в изоляции',
+								},
+								{
+									title: 'Труба магистральная',
+								},
+								{
+									title: 'Труба Овальная',
+								},
+								{
+									title: 'Труба профильная',
+								},
+								{
+									title: 'Труба профильная',
+								},
+							]
+						}
+					},
+					{
+						elem: {
+							Accordion: {
+								data: {
+									title: 'Трубный прокат',
+								},
+								bem: {
+									size: 'fz-20',
+									styleContent: 'arrow'
+								},
+							},
+						},
+						dataArr: {
+							links: [
+								{
+									title: 'Труба профильная',
+								},
+								{
+									title: 'Трубы в изоляции',
+								},
+								{
+									title: 'Труба водогазопроводная оцинкованная',
+								},
+								{
+									title: 'Трубы в изоляции',
+								},
+								{
+									title: 'Труба магистральная',
+								},
+								{
+									title: 'Труба Овальная',
+								},
+								{
+									title: 'Труба профильная',
+								},
+								{
+									title: 'Труба профильная',
+								},
+							]
+						}
+					},
+					{
+						elem: {
+							Accordion: {
+								data: {
+									title: 'Нержавеющая сталь',
+								},
+								bem: {
+									size: 'fz-20',
+									styleContent: 'arrow'
+								},
+							},
+						},
+						dataArr: {
+							links: [
+								{
+									title: 'Труба профильная',
+								},
+								{
+									title: 'Трубы в изоляции',
+								},
+								{
+									title: 'Труба водогазопроводная оцинкованная',
+								},
+								{
+									title: 'Трубы в изоляции',
+								},
+								{
+									title: 'Труба магистральная',
+								},
+								{
+									title: 'Труба Овальная',
+								},
+								{
+									title: 'Труба профильная',
+								},
+								{
+									title: 'Труба профильная',
+								},
+							]
+						}
+					},
+					{
+						elem: {
+							Accordion: {
+								data: {
+									title: 'Цветные металлы',
+								},
+								bem: {
+									size: 'fz-20',
+									styleContent: 'arrow'
+								},
+							},
+						},
+						dataArr: {
+							links: [
+								{
+									title: 'Труба профильная',
+								},
+								{
+									title: 'Трубы в изоляции',
+								},
+								{
+									title: 'Труба водогазопроводная оцинкованная',
+								},
+								{
+									title: 'Трубы в изоляции',
+								},
+								{
+									title: 'Труба магистральная',
+								},
+								{
+									title: 'Труба Овальная',
+								},
+								{
+									title: 'Труба профильная',
+								},
+								{
+									title: 'Труба профильная',
+								},
+							]
+						}
+					},
+					{
+						elem: {
+							Accordion: {
+								data: {
+									title: 'Сортовой прокат',
+								},
+								bem: {
+									size: 'fz-20',
+									styleContent: 'arrow'
+								},
+							},
+						},
+						dataArr: {
+							links: [
+								{
+									title: 'Труба профильная',
+								},
+								{
+									title: 'Трубы в изоляции',
+								},
+								{
+									title: 'Труба водогазопроводная оцинкованная',
+								},
+								{
+									title: 'Трубы в изоляции',
+								},
+								{
+									title: 'Труба магистральная',
+								},
+								{
+									title: 'Труба Овальная',
+								},
+								{
+									title: 'Труба профильная',
+								},
+								{
+									title: 'Труба профильная',
+								},
+							]
+						}
+					},
+				]
+			},
+		}
+	}
