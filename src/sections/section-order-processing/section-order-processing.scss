@@ -1,22 +1,15 @@
-.icon{
-	color:#ffffff;
-}
-
 .section-order-processing {
-	&__form-accordion-top{
+	&__form-accordion-top {
 		display: flex;
 	}
-	
-	&__line-big-order{
+
+	&__line-big-order {
 		width: 360px;
-		// margin-bottom: 0;
-		
-		
+
 		height: 9px;
 		margin-bottom: 11px;
-		
+
 		border: none;
 		background: var(--blue-gradient);
 	}
-	
 }
