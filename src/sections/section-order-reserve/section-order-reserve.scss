@@ -12,7 +12,7 @@
 	}
 
 	&__title {
-		margin-bottom: 14px;
+		margin-bottom: 8px;
 	}
 
 	&__line-big {
@@ -397,7 +397,7 @@
 
 	&__text-info-period-days {
 		max-width: 217px;
-		margin-bottom: 42px;
+		margin-bottom: 31px;
 	}
 
 	&__info-period-inner {
@@ -556,30 +556,44 @@
 		#{$self}__line-big {
 			width: 284px;
 		}
-		
+
 		#{$self}__form-processing {
 			display: flex;
-			flex-wrap: nowrap;
+			flex-wrap: wrap;
 			justify-content: space-between;
-
-		}
-
-		#{$self}__carta {
-			position: absolute;
-			top: 20px;
-			right: 26px;
-
-			cursor: pointer;
-
-			color: $wet-asphalt;
-
-			font-size: 14px;
-			font-weight: 700;
-			line-height: 1.71;
+			column-gap: 10px;
 		}
 	}
 
 	@include media('xs') {
+		&__title {
+			margin-bottom: 14px;
+		}
+
+		&_processing {
+			#{$self}__line-big {
+				width: 330px;
+			}
+
+			#{$self}__form-processing {
+				flex-wrap: nowrap;
+			}
+
+			#{$self}__carta {
+				position: absolute;
+				top: 20px;
+				right: 26px;
+
+				cursor: pointer;
+
+				color: $wet-asphalt;
+
+				font-size: 14px;
+				font-weight: 700;
+				line-height: 1.71;
+			}
+		}
+
 		&__order-list-name {
 			margin-bottom: 0;
 		}
@@ -666,7 +680,7 @@
 			flex-direction: row;
 			justify-content: space-between;
 
-			margin-bottom: 61px;
+			margin-bottom: 67px;
 		}
 
 		&__line-big {
@@ -785,7 +799,7 @@
 
 		&__text-info-period-days {
 			max-width: 272px;
-			margin-bottom: 14px;
+			margin-bottom: 25px;
 		}
 
 		&__text-warning {
@@ -982,9 +996,15 @@
 
 			cursor: pointer;
 
+			color: $wet-asphalt;
+
 			border: none;
 			border-radius: 14px;
 			background-color: rgba(70, 70, 70, 0.03);
+
+			font-size: 20px;
+			font-weight: 800;
+			line-height: 1;
 		}
 
 		&__order {
@@ -1036,7 +1056,6 @@
 
 			margin-bottom: 61px;
 			padding: 0;
-			padding-top: 18px;
 			row-gap: 12px;
 
 			&_col {
@@ -1115,12 +1134,6 @@
 			display: block;
 
 			margin-bottom: 47px;
-		}
-
-		&_processing {
-			#{$self}__line-big {
-				width: 330px;
-			}
 		}
 	}
 }

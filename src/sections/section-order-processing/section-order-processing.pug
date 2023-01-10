@@ -16,25 +16,21 @@ mixin section-order-processing(section)
 			+Accordion(S_ELEM('AccordionDeliveryMethod'))
 				+Text(S_ELEM('TextInfoWay'))
 				+e('', {}, 'div')
-					+Tabs(S_ELEM('Tabs'))
-						+TabsContent(S_ELEM('TabsContent3'))
+					+Tabs(S_ELEM('TabsDeliveryMethod'))
+						+TabsContent(S_ELEM('TabsContentDeliveryMethod2'))
 							+e('form-processing', {}, 'form')
 								+e('field-item', {m: S_BEM('fieldItemAcc')}, 'label')
 									+e('', {}, 'input')(required)
 									+e('', {}, 'span') #{S_DATA('placeholderDeliveryAddress')}
-									+e('carta', {}, 'a') указать на карте
+									+e('carta', {}, 'a') #{S_DATA('theMap')}
 								+e('field-item', {m: S_BEM('fieldItemM')}, 'label')
 									+e('', {}, 'input')(required)
 									+e('', {}, 'span') #{S_DATA('placeholderContactPerson')}
-						+TabsContent(S_ELEM('TabsContent4'))
+						+TabsContent(S_ELEM('TabsContentDeliveryMethod1'))
 							+e('form-processing', {}, 'form')
 								+e('field-item', {m: S_BEM('fieldItemAcc')}, 'label')
 									+e('', {}, 'input')(required)
-									+e('', {}, 'span') #{S_DATA('placeholderDeliveryAddress')}
-									+e('carta', {}, 'a') указать на карте
-								+e('field-item', {m: S_BEM('fieldItemM')}, 'label')
-									+e('', {}, 'input')(required)
-									+e('', {}, 'span') #{S_DATA('placeholderContactPerson')}
+									+e('', {}, 'span') #{S_DATA('placeholderDeliveryStock')}
 					+Text(S_ELEM('TextReserveConditionTitle'))
 					+Text(S_ELEM('TextReserveConditionText'))
 			+e('line-small', {}, 'div')
