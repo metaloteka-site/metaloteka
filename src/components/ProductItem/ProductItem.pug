@@ -4,8 +4,10 @@ mixin ProductItem(props)
 
 	//- верстка компонента
 	+b('product-item', {}, 'div')
-		+e('title', {}, 'p') #{DATA('title')}
-		+e('subtitle', {}, 'p') #{DATA('subtitle')}
+		if DATA('title', false)
+			+e('title', {}, 'p') #{DATA('title')}
+		if DATA('subtitle', false)
+			+e('subtitle', {}, 'p') #{DATA('subtitle')}
 		for item in ELEM_ARR('Text')
 			+Text(item)
 		+e('basket-wrapper', {}, 'div')

@@ -1,0 +1,61 @@
+mixin section-product-details(section)
+	//- проверка данных получаемых из section
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- верстка секции
+	+BlockLayout({bem: {classSection: 'section-product-details', isRight: 'block-layout_none-right'}})
+		+BlockLayoutLeft
+			+e('header', {}, 'div')
+				+e('category', {}, 'a')(href='#') #{S_DATA('category')}
+				+e('articule', {}, 'p') #{S_DATA('articule')}
+			+e('product-title', {} ,'h2') #{S_DATA('title')}
+			+e('product-subtitle', {} ,'h2') #{S_DATA('subtitle')}
+			+e('information-block', {}, 'div')
+				each item in S_ELEM_ARR('AccordionList')
+					+AccordionList(item)
+			+e('categories', {}, 'div')
+				each item in S_DATA_ARR('categories')
+					include ../../shared/helpers/pug/shortcut-check-store
+					+e('category-value', {}, 'a')(href='#') #{ I_DATA('title') }
+			+e('main', {}, 'div')
+				+e('product-slider', {}, 'div')
+					+ProductSlider
+				+e('product-information', {}, 'div')
+					+e('product-information-wrapper', {}, 'div')
+						+Select(S_ELEM('Select'))
+						+e('item-wrapper', {}, 'div')
+							for item in S_ELEM_ARR('ProductItem')
+								+ProductItem(item)
+			+e('line', {}, 'hr')
+			+e('cart', {}, 'div')
+				+e('cart-title', {}, 'div') #{S_DATA('cartTitle')}
+				+e('content', {}, 'div')
+					for item in S_ELEM_ARR('TableProductRowContent')
+						+TableProductRow(item)
+			+e('line', {}, 'hr')
+			+e('footer', {}, 'div')
+				+Tabs(S_ELEM('Tabs'))
+
+				+e('button js-collapse', {}, 'button') Развернуть
+			// Мобильная версия +
+			+e('footer-mobile', {}, 'div')
+				+e('filters', {}, 'div')
+					each item in S_DATA_ARR('filters')
+						include ../../shared/helpers/pug/shortcut-check-store
+						+e('filter-value', { b: I_BEM('jsClass') }, 'a')(data-filter-categories=I_DATA('title')) #{ I_DATA('title') }
+				+e('counter-wrapper', {}, 'div')
+					+e('minus', {}, 'button')
+					+e('count', {}, 'p') #{S_DATA('count')}
+					+e('plus', {}, 'button')
+				+e('total-wrapper')
+					+e('total', {}, 'p') #{S_DATA('total')}
+					+e('price-wrapper', {}, 'div')
+						+e('total-price', {}, 'p') #{S_DATA('totalPrice')}
+						+e('value', {}, 'p') #{S_DATA('totalPriceValue')}
+					+e('measure', {}, 'p') #{S_DATA('measure')}
+				+e('basket-btn', {}, 'button') #{S_DATA('button')}
+				+e('description', {}, 'p') #{S_DATA('description')}
+		+BlockLayoutRight
+			+e('product-item-details', {}, 'div')
+				+ProductItemDetails(S_ELEM('ProductItemDetails'))
+			+CalculationOrder(S_ELEM('CalculationOrder'))

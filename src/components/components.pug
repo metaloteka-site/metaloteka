@@ -31,6 +31,9 @@ mixin includeComponents(components)
 			when 'Slider'
 				include Slider/Slider
 		case component
+			when 'ProductSlider'
+				include ProductSlider/ProductSlider
+		case component
 			when 'Popup'
 				include Popup/Popup
 		case component
@@ -48,3 +51,6 @@ mixin includeComponents(components)
 		case component
 			when 'Select'
 				include Select/Select
+		case component
+			when 'CalculationOrder'
+				include CalculationOrder/CalculationOrder

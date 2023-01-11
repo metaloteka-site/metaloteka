@@ -125,7 +125,7 @@ mixin section-order-reserve(section)
 					+e('summ', {m: 'right'}, 'div')
 						+e('warning-text', {}, 'div') #{S_DATA('text')}
 						+e('pdf-inner', {}, 'div')
-							+e('pdf-text', {}, 'div') #{S_DATA('pdf')}
+							+e('pdf-text', {}, 'a') #{S_DATA('pdf')}
 							+e('active-until-text', {}, 'div') #{S_DATA('activeUntil')}
 				+e('btn-cart', {m: 'reserve-completion'}, 'button')(disabled=I_OPT('disabled')) #{S_DATA('reserveСompletionBtn')}
 			+e('line-small', {}, 'div')
