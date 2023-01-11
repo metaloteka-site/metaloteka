@@ -41,7 +41,7 @@ mixin header(section)
 					+e('date', {}, 'div')
 						+e('name', {}, 'div') Иван Петров
 						+e('stick', {}, 'span') |
-						+e('exit', {}, 'a')(href='#') Выйти
+						+e('exit', {}, 'a')(href='#' data-popup-open='authorization') Выйти
 			+Row(S_ELEM('RowBottom'))
 				+e('catalog', {}, 'button')
 					include ../../layout/assets/images/header/catalog.svg
