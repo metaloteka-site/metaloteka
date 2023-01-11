@@ -67,7 +67,7 @@
 		text-overflow: ellipsis;
 
 		opacity: 0;
-		-webkit-line-clamp: 20;
+		-webkit-line-clamp: 5;
 		-webkit-box-orient: vertical;
 
 		&::-webkit-scrollbar {
@@ -100,29 +100,26 @@
 
 	&_button {
 		#{$self}__button {
-			margin:5px;
-			// padding: 21px 39px 23px;
+			margin: 5px;
 			padding: 21px 9px 23px;
 
 			letter-spacing: normal;
 
-			color: #464646;
+			color: $wet-asphalt;
 			border-radius: 14px;
 			outline: solid 1px #46464662;
 
 			font-size: 20px;
 			font-weight: 800;
 			line-height: 1;
-			
 		}
-
 
 		.js-active {
 			display: block;
 
 			border-radius: 14px;
 
-			&#{$self}__button{
+			&#{$self}__button {
 				outline: solid 4px #46464662;
 			}
 		}
@@ -137,6 +134,7 @@
 			overflow-y: auto;
 
 			height: 210px;
+			-webkit-line-clamp: 20;
 		}
 
 		&_button {
@@ -147,16 +145,12 @@
 			}
 
 			#{$self}__button {
-				
-				// padding: 21px 9px 23px;
 				padding: 21px 39px 23px;
-
 			}
 		}
 
 		&__buttons {
 			column-gap: 30px;
-	
 		}
 	}
 }

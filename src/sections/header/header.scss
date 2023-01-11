@@ -205,6 +205,10 @@
 				--white: #ffffffcc;
 				background-color: $white;
 			}
+
+			&.notEvents {
+				pointer-events: none;
+			}
 		}
 
 		&__right {
@@ -228,7 +232,7 @@
 			border: none;
 			border-radius: 10px 0 0 10px;
 			outline: none;
-			background-color: #ffffff;
+			background-color: $white;
 
 			font-size: 24px;
 			font-weight: 300;
@@ -242,7 +246,7 @@
 			color:$wet-asphalt;
 			border: none;
 			border-radius: 0 10px 10px 0;
-			background-color: #ffffff;
+			background-color: $white;
 
 			&:hover {
 				cursor: pointer;

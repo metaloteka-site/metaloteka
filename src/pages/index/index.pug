@@ -2,7 +2,7 @@ extends ../../layout/main
 
 append variables
 	- let noMargin = 'no-margin-bottom'
-	+includeComponents(['Slider'])
+	+includeComponents(['ContactInformationFooter', 'Slider', 'Accordion', 'AccordionList', 'TableProductRow', 'Pagination', 'ProductItem', 'ProductItemDetails', 'Popup', 'Select'])
 
 block store
 	include store/index.store.pug
@@ -25,6 +25,10 @@ block main
 	+section-information-category(index.sectionInformationCategory1)
 	+section-information-category(index.sectionInformationCategory2)
 	+section-information-category(index.sectionInformationCategory3)
+
+	//- подключение и вызов секции SECTION-CATALOG
+	include ../../sections/section-catalog/section-catalog
+	+section-catalog(index.sectionCatalog)
 
 block pre-footer
 	//- подключение и вызов секции SECTION-METAL
