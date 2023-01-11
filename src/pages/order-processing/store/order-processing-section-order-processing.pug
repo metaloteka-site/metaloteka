@@ -4,7 +4,7 @@
 			orderTitle: 'Заказ №210522/1-MT',
 			CompletionReserveRoom: 'Заказ №210522/1-MT',
 			CompletionReserveName: 'ИП Петров Иван',
-			room: '№1605221-RSRV',
+			room: '№1605221MT',
 			infoDetails: 'Заполните данные для оформления заказа',
 			infoPeriodImg: 'icon-time.svg',
 			infoPeriodAlt: 'Time',
@@ -14,8 +14,12 @@
 			placeholderSurname: 'Фамилия*',
 			placeholderTel: 'Моб. телефон*',
 			placeholderDeliveryAddress: 'Адрес доставки',
+			placeholderDeliveryStock: 'Адрес склада',
 			placeholderEmail: 'E-mail',
+			placeholderContactPerson: 'Контактное лицо',
 			itemBtn: 'Сохранить',
+			theMap: 'указать на карте',
+			orderComment: 'Комментарий к заказу',
 			accordionBtn: 'Войти',
 			reserveСompletionBtn: 'Завершить оформление',
 			icon: '/basket.svg',
@@ -45,7 +49,8 @@
 			fieldItemS: 'field-s',
 			fieldItemM: 'field-m',
 			fieldItemX: 'field-x',
-			fieldItemT: 'field-t'
+			fieldItemT: 'field-t',
+			fieldItemAcc: 'field-acc',
 		},
 		elem: {
 			ContactInformationFooter : {
@@ -118,7 +123,7 @@
 			},
 			AccordionDeliveryMethod: {
 				data: {
-					title: '1. Резерв товара',
+					title: '1. Способ доставки',
 				}
 			},
 			AccordionPersonalData: {
@@ -139,7 +144,7 @@
 					size: 'fz-25',
 				}
 			},
-			Tabs: {
+			TabsDeliveryMethod:{
 				bem: {
 					modifierTabs: 'button',
 				},
@@ -151,12 +156,36 @@
 						{
 							data: {
 								tabButton: 'Самовывоз',
-								dataTabButton: '1'
+								dataTabButton: '11'
 							}
 						},
 						{
 							data: {
 								tabButton: 'Доставка',
+								dataTabButton: '12'
+							}
+						}
+					],
+				}
+			},
+			Tabs: {
+				bem: {
+					modifierTabs: 'button-dev',
+				},
+				opt: {
+					htmlContent: true
+				},
+				dataArr: {
+					tabButtons: [
+						{
+							data: {
+								tabButton: 'Юрид. лицо',
+								dataTabButton: '1'
+							}
+						},
+						{
+							data: {
+								tabButton: 'Физ. лицо',
 								dataTabButton: '2'
 							}
 						}
@@ -176,6 +205,19 @@
 					dataTabContent: '2'
 				}
 			},
+			TabsContentDeliveryMethod1: {
+				data: {
+					dataTabContent: '11'
+				},
+				opt: {
+					active: true
+				}
+			},
+			TabsContentDeliveryMethod2: {
+				data: {
+					dataTabContent: '12'
+				}
+			},
 			TextInfoWay: {
 				data: {
 					text: 'Выберите удобный для вас способ доставки'
@@ -193,7 +235,7 @@
 			},
 			TextTitle: {
 				data: {
-					text: 'Резерв'
+					text: 'Оформление заказа'
 				},
 				bem: {
 					color: 'wet-asphalt',
@@ -256,7 +298,7 @@
 			},
 			TextReserveConditionTitle: {
 				data: {
-					text: 'Условия резерва'
+					text: 'Условия доставки'
 				},
 				bem: {
 					color: 'wet-asphalt',
