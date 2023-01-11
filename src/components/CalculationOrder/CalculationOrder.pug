@@ -6,9 +6,30 @@ mixin CalculationOrder(props)
 	+b('calculation-order', {}, 'div')
 		+e('title', {}, 'p') #{DATA('title')}
 		+e('range', {}, 'div')
-		+e('subtitle', {}, 'p') #{DATA('subtitle')}
-		+e('presentation-wrapper', {}, 'div')
-			+e('presentation-img', {}, 'img')(src=`${pathFile}/logo.svg` alt=S_DATA('LogoMetaloteka'))
-			+e('presentation-info', {}, 'p') #{DATA('presentationInfo')}
-		+e('btn', {}, 'button') #{DATA('button')}
+		+e('description-wrapper', {}, 'div')
+			+e('subtitle', {}, 'p') #{DATA('subtitle')}
+			+e('presentation-wrapper', {}, 'div')
+				+e('presentation-img', {}, 'img')(src=`${pathFile}/logo.svg` alt=S_DATA('LogoMetaloteka'))
+				+e('presentation-info', {}, 'p') #{DATA('presentationInfo')}
+			+e('btn', {b: 'btn-start'}, 'button') #{DATA('button')}
+		+e('form-wrapper', {}, 'div')
+			+e('form', {}, 'form')
+				+e('files-wrapper', {}, 'div')
+					+e('file-form', {}, 'a')(href='#') #{DATA('fileName')}
+					+e('file-form', {}, 'a')(href='#') #{DATA('fileNameTwo')}
+				+e('field-item', {}, 'label')
+					+e('', {}, 'input')(name='name' required)
+					+e('', {}, 'span') #{DATA('placeholderName')}
+				+e('field-item', {}, 'label')
+					+e('', {}, 'input')(name='email' required)
+					+e('', {}, 'span') #{DATA('placeholderMail')}
+				+e('field-item', {}, 'label')
+					+e('', {}, 'input')(name='phone' required)
+					+e('', {}, 'span') #{DATA('placeholderPhone')}
+				+e('field-item', {}, 'label')
+					+e('', {}, 'textarea')(name='comment' required)
+					+e('', {}, 'span') #{DATA('placeholderComment')}
+			+e('form-description', {}, 'p') #{DATA('formDescription')}
+			+e('btn-form', {}, 'input')(type='submit') #{DATA('buttonForm')}
+		+e('btn', {b: 'btn-end'}, 'button') #{DATA('buttonEnd')}
 		+e('description', {}, 'p') #{DATA('description')}

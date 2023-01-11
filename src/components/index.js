@@ -5,3 +5,4 @@ export * from './Slider/Slider';
 export * from './ProductSlider/ProductSlider';
 export * from './Popup/Popup';
 export * from './Select/Select';
+export * from './CalculationOrder/CalculationOrder';

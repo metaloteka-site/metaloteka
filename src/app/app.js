@@ -1,7 +1,7 @@
 import './app.scss';
 
 // подключение js компонентов
-import { Tabs, Slider, ProductSlider, Popup, Accordion, Pagination, Select } from '../components';
+import { Tabs, Slider, ProductSlider, Popup, Accordion, Pagination, Select, CalculationOrder } from '../components';
 
 // подключение js секций
 import { SectionCatalog } from '../sections/section-catalog/section-catalog';
@@ -16,4 +16,5 @@ window.addEventListener('DOMContentLoaded', () => {
 	Popup();
 	Pagination();
 	Select();
+	CalculationOrder();
 });
