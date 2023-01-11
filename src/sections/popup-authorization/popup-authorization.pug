@@ -1,0 +1,28 @@
+mixin popup-authorization(section)
+	//- проверка данных получаемых из section
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- верстка секции
+	+Popup(S_ELEM('Popup'))
+		+e('title', {}, 'div') #{S_DATA('title')}
+		+e('line', {}, 'div')
+		+e('form', {}, 'form')
+			+e('field-item', {}, 'label')
+				+e('', {}, 'input')(required type='text')
+				+e('', {}, 'span') #{S_DATA('placeholderName')}
+			+e('field-item', {}, 'label')
+				+e('', {}, 'input')(required type='number')
+				+e('', {}, 'span') #{S_DATA('placeholderInn')}
+			+e('field-item', {}, 'label')
+				+e('', {}, 'input')(required type='email')
+				+e('', {}, 'span') #{S_DATA('placeholderEmail')}
+			+e('field-item', {}, 'label')
+				+e('', {}, 'input')(required type='password')
+				+e('', {}, 'span') #{S_DATA('placeholderPassword')}
+			+e('field-item', {}, 'label')
+				+e('', {}, 'input')(required type='tel')
+				+e('', {}, 'span') #{S_DATA('placeholderTel')}
+			+e('button-password', {}, 'button') #{S_DATA('buttonPassword')}
+			//- +e('button-data', {}, 'button') #{S_DATA('buttonData')}
+		//- +e('subtitle', {}, 'div') #{S_DATA('subtitle')}
+		//- +e('text', {}, 'div') #{S_DATA('text')}

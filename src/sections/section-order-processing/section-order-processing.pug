@@ -3,7 +3,7 @@ mixin section-order-processing(section)
 	include ../../shared/helpers/pug/shortcut-check-store
 
 	//- верстка секции
-	+BlockLayout({bem: {classSection: 'section-order-reserve'}})
+	+BlockLayout({bem: {classSection: 'section-order-reserve',  modifier: 'processing'}})
 		+BlockLayoutLeft
 			+e('icon', {}, 'div')
 				include ../../layout/assets/images/basket.svg
@@ -16,61 +16,21 @@ mixin section-order-processing(section)
 			+Accordion(S_ELEM('AccordionDeliveryMethod'))
 				+Text(S_ELEM('TextInfoWay'))
 				+e('', {}, 'div')
-					+Tabs(S_ELEM('Tabs'))
-					+TabsContent(S_ELEM('TabsContent1'))
-						+e('ffff', {}, 'div')
-							//- +e('form', {}, 'form')
-							//- 	+e('field-item', {m: S_BEM('fieldItemM')}, 'label')
-							//- 		+e('item-inn', {}, 'input')(required)
-							//- 		+e('', {}, 'span') #{S_DATA('placeholderInn')}
-							//- 	+e('field-item', {m: S_BEM('fieldItemM')}, 'label')
-							//- 		+e('', {}, 'input')(required)
-							//- 		+e('', {}, 'span') #{S_DATA('placeholderCompanyName')}
-							//- 	+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
-							//- 		+e('', {}, 'input')(required)
-							//- 		+e('', {}, 'span') #{S_DATA('placeholderName')}
-							//- 	+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
-							//- 		+e('', {}, 'input')(required)
-							//- 		+e('', {}, 'span') #{S_DATA('placeholderSurname')}
-							//- 	+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
-							//- 		+e('', {}, 'input')(required)
-							//- 		+e('', {}, 'span') #{S_DATA('placeholderTel')}
-							//- 	+e('field-item', {m: S_BEM('fieldItemX')}, 'label')
-							//- 		+e('', {}, 'input')(required)
-							//- 		+e('', {}, 'span') #{S_DATA('placeholderDeliveryAddress')}
-							//- 	+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
-							//- 		+e('', {}, 'input')(required)
-							//- 		+e('', {}, 'span') #{S_DATA('placeholderEmail')}
-							//- 	+e('field-item', {m: S_BEM('fieldItemT')}, 'label')
-							//- 		+e('', {}, 'textarea')(required)
-							//- 		+e('', {}, 'span') Комментарий к заказу
-							//- +e('item-btn', {}, 'div') #{S_DATA('itemBtn')}
-							//- +Text(S_ELEM('TextReservePersonalData'))
-							//- +Text(S_ELEM('TextReservePersonalText'))
-					+TabsContent(S_ELEM('TabsContent2'))
-						+e('ffff', {}, 'div')
-							//- +e('form', {}, 'form')
-							//- 	+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
-							//- 		+e('', {}, 'input')(required)
-							//- 		+e('', {}, 'span') #{S_DATA('placeholderName')}
-							//- 	+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
-							//- 		+e('', {}, 'input')(required)
-							//- 		+e('', {}, 'span') #{S_DATA('placeholderSurname')}
-							//- 	+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
-							//- 		+e('', {}, 'input')(required)
-							//- 		+e('', {}, 'span') #{S_DATA('placeholderTel')}
-							//- 	+e('field-item', {m: S_BEM('fieldItemX')}, 'label')
-							//- 		+e('', {}, 'input')(required)
-							//- 		+e('', {}, 'span') #{S_DATA('placeholderDeliveryAddress')}
-							//- 	+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
-							//- 		+e('', {}, 'input')(required)
-							//- 		+e('', {}, 'span') #{S_DATA('placeholderEmail')}
-							//- 	+e('field-item', {m: S_BEM('fieldItemT')}, 'label')
-							//- 		+e('', {}, 'textarea')(required)
-							//- 		+e('', {}, 'span') Комментарий к заказу
-							//- +e('item-btn', {}, 'div') #{S_DATA('itemBtn')}
-							//- +e('reserve-condition-title', {}, 'div') #{S_DATA('reservePersonalData')}
-							//- +e('reserve-condition-text', {}, 'div') #{S_DATA('reservePersonalText')}
+					+Tabs(S_ELEM('TabsDeliveryMethod'))
+						+TabsContent(S_ELEM('TabsContentDeliveryMethod2'))
+							+e('form-processing', {}, 'form')
+								+e('field-item', {m: S_BEM('fieldItemAcc')}, 'label')
+									+e('', {}, 'input')(required)
+									+e('', {}, 'span') #{S_DATA('placeholderDeliveryAddress')}
+									+e('carta', {}, 'a') #{S_DATA('theMap')}
+								+e('field-item', {m: S_BEM('fieldItemM')}, 'label')
+									+e('', {}, 'input')(required)
+									+e('', {}, 'span') #{S_DATA('placeholderContactPerson')}
+						+TabsContent(S_ELEM('TabsContentDeliveryMethod1'))
+							+e('form-processing', {}, 'form')
+								+e('field-item', {m: S_BEM('fieldItemAcc')}, 'label')
+									+e('', {}, 'input')(required)
+									+e('', {}, 'span') #{S_DATA('placeholderDeliveryStock')}
 					+Text(S_ELEM('TextReserveConditionTitle'))
 					+Text(S_ELEM('TextReserveConditionText'))
 			+e('line-small', {}, 'div')
@@ -79,62 +39,59 @@ mixin section-order-processing(section)
 				+Text(S_ELEM('TextFillingData'))
 				+Tabs(S_ELEM('Tabs'))
 					+TabsContent(S_ELEM('TabsContent1'))
-						+e('ffff', {}, 'div')
-							+Text(S_ELEM('TextDataRegistration1'))
-							+e('form', {}, 'form')
-								+e('field-item', {m: S_BEM('fieldItemM')}, 'label')
-									+e('item-inn', {}, 'input')(required)
-									+e('', {}, 'span') #{S_DATA('placeholderInn')}
-								+e('field-item', {m: S_BEM('fieldItemM')}, 'label')
-									+e('', {}, 'input')(required)
-									+e('', {}, 'span') #{S_DATA('placeholderCompanyName')}
-								+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
-									+e('', {}, 'input')(required)
-									+e('', {}, 'span') #{S_DATA('placeholderName')}
-								+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
-									+e('', {}, 'input')(required)
-									+e('', {}, 'span') #{S_DATA('placeholderSurname')}
-								+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
-									+e('', {}, 'input')(required)
-									+e('', {}, 'span') #{S_DATA('placeholderTel')}
-								+e('field-item', {m: S_BEM('fieldItemX')}, 'label')
-									+e('', {}, 'input')(required)
-									+e('', {}, 'span') #{S_DATA('placeholderDeliveryAddress')}
-								+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
-									+e('', {}, 'input')(required)
-									+e('', {}, 'span') #{S_DATA('placeholderEmail')}
-								+e('field-item', {m: S_BEM('fieldItemT')}, 'label')
-									+e('', {}, 'textarea')(required)
-									+e('', {}, 'span') Комментарий к заказу
-							+e('item-btn', {}, 'div') #{S_DATA('itemBtn')}
-							+Text(S_ELEM('TextReservePersonalData'))
-							+Text(S_ELEM('TextReservePersonalText'))
+						+Text(S_ELEM('TextDataRegistration1'))
+						+e('form', {}, 'form')
+							+e('field-item', {m: S_BEM('fieldItemM')}, 'label')
+								+e('item-inn', {}, 'input')(required)
+								+e('', {}, 'span') #{S_DATA('placeholderInn')}
+							+e('field-item', {m: S_BEM('fieldItemM')}, 'label')
+								+e('', {}, 'input')(required)
+								+e('', {}, 'span') #{S_DATA('placeholderCompanyName')}
+							+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+								+e('', {}, 'input')(required)
+								+e('', {}, 'span') #{S_DATA('placeholderName')}
+							+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+								+e('', {}, 'input')(required)
+								+e('', {}, 'span') #{S_DATA('placeholderSurname')}
+							+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+								+e('', {}, 'input')(required)
+								+e('', {}, 'span') #{S_DATA('placeholderTel')}
+							+e('field-item', {m: S_BEM('fieldItemX')}, 'label')
+								+e('', {}, 'input')(required)
+								+e('', {}, 'span') #{S_DATA('placeholderDeliveryAddress')}
+							+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+								+e('', {}, 'input')(required)
+								+e('', {}, 'span') #{S_DATA('placeholderEmail')}
+							+e('field-item', {m: S_BEM('fieldItemT')}, 'label')
+								+e('', {}, 'textarea')(required)
+								+e('', {}, 'span') Комментарий к заказу
+						+e('item-btn', {}, 'div') #{S_DATA('itemBtn')}
+						+Text(S_ELEM('TextReservePersonalData'))
+						+Text(S_ELEM('TextReservePersonalText'))
 					+TabsContent(S_ELEM('TabsContent2'))
-						+e('ffff', {}, 'div')
-							+Text(S_ELEM('TextDataRegistration2'))
-							+e('form', {}, 'form')
-								+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
-									+e('', {}, 'input')(required)
-									+e('', {}, 'span') #{S_DATA('placeholderName')}
-								+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
-									+e('', {}, 'input')(required)
-									+e('', {}, 'span') #{S_DATA('placeholderSurname')}
-								+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
-									+e('', {}, 'input')(required)
-									+e('', {}, 'span') #{S_DATA('placeholderTel')}
-								+e('field-item', {m: S_BEM('fieldItemX')}, 'label')
-									+e('', {}, 'input')(required)
-									+e('', {}, 'span') #{S_DATA('placeholderDeliveryAddress')}
-								+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
-									+e('', {}, 'input')(required)
-									+e('', {}, 'span') #{S_DATA('placeholderEmail')}
-								+e('field-item', {m: S_BEM('fieldItemT')}, 'label')
-									+e('', {}, 'textarea')(required)
-									+e('', {}, 'span') Комментарий к заказу
-							+e('item-btn', {}, 'div') #{S_DATA('itemBtn')}
-							+e('reserve-condition-title', {}, 'div') #{S_DATA('reservePersonalData')}
-							+e('reserve-condition-text', {}, 'div') #{S_DATA('reservePersonalText')}
-				+e('ffff', {}, 'div')
+						+Text(S_ELEM('TextDataRegistration2'))
+						+e('form', {}, 'form')
+							+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+								+e('', {}, 'input')(required)
+								+e('', {}, 'span') #{S_DATA('placeholderName')}
+							+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+								+e('', {}, 'input')(required)
+								+e('', {}, 'span') #{S_DATA('placeholderSurname')}
+							+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+								+e('', {}, 'input')(required)
+								+e('', {}, 'span') #{S_DATA('placeholderTel')}
+							+e('field-item', {m: S_BEM('fieldItemX')}, 'label')
+								+e('', {}, 'input')(required)
+								+e('', {}, 'span') #{S_DATA('placeholderDeliveryAddress')}
+							+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+								+e('', {}, 'input')(required)
+								+e('', {}, 'span') #{S_DATA('placeholderEmail')}
+							+e('field-item', {m: S_BEM('fieldItemT')}, 'label')
+								+e('', {}, 'textarea')(required)
+								+e('', {}, 'span') #{S_DATA('orderComment')}
+						+e('item-btn', {}, 'div') #{S_DATA('itemBtn')}
+						+e('reserve-condition-title', {}, 'div') #{S_DATA('reservePersonalData')}
+						+e('reserve-condition-text', {}, 'div') #{S_DATA('reservePersonalText')}
 			+e('line-small', {}, 'div')
 			+Accordion(S_ELEM('AccordionCompletionRegistration'))
 				+e('info-way', {}, 'div') #{S_DATA('infoDetails')}
