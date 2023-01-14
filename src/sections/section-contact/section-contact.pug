@@ -24,4 +24,36 @@ mixin section-contact(section)
 						for item in S_ELEM_ARR('ContactInformationFooter')
 							+ContactInformationFooter(item)
 
-				+e('right', {}, 'div') slider
+				+e('right', {}, 'div')
+					+Slider
+						+e('slides', {b: 'swiper-wrapper'}, 'div')
+							+e('slide', {b: 'swiper-slide'}, 'div')
+								+e('information-left', {}, 'div')
+									+e('information-subtitle', {}, 'span') Металлотека
+									+e('information-left-title', {}, 'span') Листовой прокат
+									+e('information-line', {}, 'span')
+									+e('information-left-text', {}, 'span') Лист горячекатный, лист холоднойкатный
+									+e('information-left-img-wrapper', {}, 'div')
+										+e('information-left-img', {}, 'img')(src=`../../layout/assets/images/min-category3.png` alt='Logo')
+										+e('information-left-info', {}, 'span') Металлопрокат оптом и в розницу с доставкой по Москве и московской области
+								//- +e('img', {}, 'img')(src=`${pathFile}/index/index-slide1.webp` alt='слайд1')
+							+e('slide', { b: 'swiper-slide' }, 'div')
+								+e('information-left', {}, 'div')
+									+e('information-subtitle', {}, 'span') Металлотека
+									+e('information-left-title', {}, 'span') Арматурный прокат
+									+e('information-line', {}, 'span')
+									+e('information-left-text', {}, 'span') Арматура, профиль, трубный прокат и другие товары
+									+e('information-left-img-wrapper', {}, 'div')
+										+e('information-left-img', {}, 'img')(src=`../../layout/assets/images/min-category2.png` alt='Logo')
+										+e('information-left-info', {}, 'span') Металлопрокат оптом и в розницу с доставкой по Москве и московской области
+								//- +e('img', {}, 'img')(src=`${pathFile}/index/index-slide2.webp` alt='слайд2')
+							+e('slide', { b: 'swiper-slide' }, 'div')
+								+e('information-left', {}, 'div')
+									+e('information-subtitle', {}, 'span') Металлотека
+									+e('information-left-title', {}, 'span') Металопрокат с доставкой
+									+e('information-line', {}, 'span')
+									+e('information-left-text', {}, 'span') Арматура, профиль, трубный прокат и другие товары
+									+e('information-left-img-wrapper', {}, 'div')
+										+e('information-left-img', {}, 'img')(src=`../../layout/assets/images/min-category1.png` alt='Logo')
+										+e('information-left-info', {}, 'span') Металлопрокат оптом и в розницу с доставкой по Москве и московской области
+								//- +e('img', {}, 'img')(src=`${pathFile}/index/index-slide2.webp` alt='слайд2')

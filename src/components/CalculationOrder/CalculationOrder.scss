@@ -1,0 +1,179 @@
+.calculation-order {
+	padding: 51px 42px;
+
+	color: $white;
+	border-radius: 30px;
+	background: $violet-gradient;
+
+	&__title {
+		font-family: 'BlissPro', sans-serif;
+		font-size: 40px;
+		font-weight: 900;
+		line-height: 36px;
+	}
+
+	&__range {
+		width: 100%;
+		height: 5px;
+
+		border-width: 5px;
+		border-style: solid;
+		border-image-source: $red-gradient;
+		border-image-slice: 1;
+		margin-block: 25px 20px;
+	}
+
+	&__subtitle {
+		margin-bottom: 35px;
+
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 18px;
+	}
+
+	&__presentation-img {
+		width: 100%;
+		margin-bottom: 16px;
+	}
+
+	&__presentation-info {
+		max-width: 182px;
+
+		opacity: 0.75;
+
+		font-size: 12px;
+		line-height: 12px;
+	}
+
+	&__form-wrapper {
+		display: none;
+	}
+
+	&__btn, &__btn-form {
+		display: block;
+
+		width: 100%;
+		max-width: 284px;
+		padding: 22px 59px;
+
+		cursor: pointer;
+
+		color: $white;
+		border: none;
+		border-radius: 14px;
+		background: $liverny-light;
+
+		font-family: "BlissPro", sans-serif;
+		font-size: 20px;
+		font-weight: 800;
+		margin-block: 38px 25.5px;
+
+		&:hover {
+			background: #4d484d;
+		}
+	}
+
+	.btn-end {
+		display: none;
+	}
+
+	&__field-item {
+		position: relative;
+
+		display: block;
+
+		width: 100%;
+
+		height: 64px;
+		margin-bottom: 21px;
+
+		border-radius: 14px;
+		background-color: #6e6a7c;
+	}
+
+	&__field-item input,
+	textarea {
+		position: absolute;
+		bottom: 0;
+
+		width: 100%;
+		height: 64px;
+		padding: 20px 15px 0 32px;
+
+		letter-spacing: normal;
+
+		color: $white;
+
+		border: none;
+		outline: none;
+		background: transparent;
+
+		font-size: $fs-big;
+		font-weight: 700;
+		line-height: 1;
+	}
+
+	&__field-item span {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		cursor: text;
+		transition: 0.2s;
+		transform: translate(-50%, -50%);
+		letter-spacing: normal;
+
+		color: $white;
+
+		font-size: 20px;
+		font-weight: 800;
+		line-height: 1;
+	}
+
+	&__field-item input:focus + span,
+	&__field-item input:valid + span {
+		top: 24.5px;
+		left: 56px;
+
+		font-size: $fs-small;
+		font-weight: 300;
+	}
+
+	&__field-item textarea:focus + span,
+	&__field-item textarea:valid + span {
+		display: none;
+	}
+
+	&__files-wrapper {
+		display: flex;
+		flex-direction: column;
+		row-gap: 10px;
+
+		margin-bottom: 32px;
+	}
+
+	&__file-form {
+		cursor: pointer;
+		text-decoration: underline;
+
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 18px;
+	}
+
+	&__form-description {
+		margin-top: -11px;
+
+		text-align: center;
+
+		font-size: 12px;
+		line-height: 16px;
+	}
+
+	&__description {
+		text-align: center;
+
+		font-size: 14px;
+		line-height: 16px;
+	}
+}

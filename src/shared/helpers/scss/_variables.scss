@@ -34,6 +34,7 @@
 
 	// +++ color gradient +++ //
 	--blue-gradient: linear-gradient(225deg, #678c92, #586e8b);
+	--violet-gradient: linear-gradient(225deg, #6a6781, #8a8898);
 	--red-gradient: linear-gradient(315deg, #ce7f65, #b66060);
 	--turquoise-blue-gradient: linear-gradient(225deg, #588b75, #5d6c77);
 	--gray-gradient: linear-gradient(171deg, #636267 0%, #47474b 100%), linear-gradient(351deg, #504750 100%, #5f575f 0%);
@@ -82,6 +83,7 @@ $light-gray: var(--light-gray);
 
 // +++ color gradient +++ //
 $blue-gradient: var(--blue-gradient);
+$violet-gradient: var(--violet-gradient);
 $red-gradient: var(--red-gradient);
 $turquoise-blue-gradient: var(--turquoise-blue-gradient);
 $gray-gradient: var(--gray-gradient);

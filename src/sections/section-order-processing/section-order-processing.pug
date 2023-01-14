@@ -3,7 +3,7 @@ mixin section-order-processing(section)
 	include ../../shared/helpers/pug/shortcut-check-store
 
 	//- верстка секции
-	+BlockLayout({bem: {classSection: 'section-order-reserve'}})
+	+BlockLayout({bem: {classSection: 'section-order-reserve',  modifier: 'processing'}})
 		+BlockLayoutLeft
 			+e('icon', {}, 'div')
 				include ../../layout/assets/images/basket.svg
@@ -16,24 +16,21 @@ mixin section-order-processing(section)
 			+Accordion(S_ELEM('AccordionDeliveryMethod'))
 				+Text(S_ELEM('TextInfoWay'))
 				+e('', {}, 'div')
-					//- +e('info-period-inner', {}, 'div')
-					//- 	+Text(S_ELEM('TextInfoPeriodDays'))
-					//- 	+e('info-period-img', {}, 'img')(src=`../../layout/assets/images/${S_DATA('infoPeriodImg')}` alt=S_DATA('infoPeriodAlt'))
-					//- 	+Text(S_ELEM('TextInfoPeriodDate'))
-					//- +e('items', {}, 'div')
-					//- 	for item in S_DATA_ARR('reserve')
-					//- 		include ../../shared/helpers/pug/shortcut-check-store
-					//- 		+e('item', {}, 'div')
-					//- 			+e('item-title', {}, 'div') #{I_DATA('title')}
-					//- 			+e('item-text', {}, 'div') #{I_DATA('text')}
-					//- 			+e('item-sum', {}, 'div') #{I_DAT	A('sum')}
-					//- 			+e('item-add', {}, 'button') #{I_DATA('add')}
-					//- +e('item-btn', {}, 'div') #{S_DATA('itemBtn')}
-					//- +e('warning', {}, 'div')
-					//- 	for item in S_ELEM_ARR('TextWarnings')
-					//- 		+e('warning', {}, 'div')
-					//- 			+e('warning-img', {}, 'img')(src=`../../layout/assets/images/${S_DATA('iconWarning')}` alt=S_DATA('iconAltWarning'))
-					//- 			+Text(item)
+					+Tabs(S_ELEM('TabsDeliveryMethod'))
+						+TabsContent(S_ELEM('TabsContentDeliveryMethod2'))
+							+e('form-processing', {}, 'form')
+								+e('field-item', {m: S_BEM('fieldItemAcc')}, 'label')
+									+e('', {}, 'input')(required)
+									+e('', {}, 'span') #{S_DATA('placeholderDeliveryAddress')}
+									+e('carta', {}, 'a') #{S_DATA('theMap')}
+								+e('field-item', {m: S_BEM('fieldItemM')}, 'label')
+									+e('', {}, 'input')(required)
+									+e('', {}, 'span') #{S_DATA('placeholderContactPerson')}
+						+TabsContent(S_ELEM('TabsContentDeliveryMethod1'))
+							+e('form-processing', {}, 'form')
+								+e('field-item', {m: S_BEM('fieldItemAcc')}, 'label')
+									+e('', {}, 'input')(required)
+									+e('', {}, 'span') #{S_DATA('placeholderDeliveryStock')}
 					+Text(S_ELEM('TextReserveConditionTitle'))
 					+Text(S_ELEM('TextReserveConditionText'))
 			+e('line-small', {}, 'div')
@@ -102,8 +99,8 @@ mixin section-order-processing(section)
 			+Accordion(S_ELEM('AccordionCompletionRegistration'))
 				+e('info-way', {}, 'div') #{S_DATA('infoDetails')}
 				+e('сompletion-reserve', {}, 'div')
-					+e('', {}, 'div') #{S_DATA('CompletionReserveRoom')}
-					+e('', {}, 'div') #{S_DATA('CompletionReserveName')}
+					+e('сompletion-reserve-room', {}, 'div') #{S_DATA('CompletionReserveRoom')}
+					+e('сompletion-reserve-name', {}, 'div') #{S_DATA('CompletionReserveName')}
 				+e('line-сompletion', {}, 'div')
 				+Accordion(S_ELEM('AccordionOrderList'))
 					for item in S_DATA_ARR('compound')
@@ -126,7 +123,6 @@ mixin section-order-processing(section)
 						+e('total', {m: 'bold'}, 'p') #{S_DATA('sumTotalBold')}
 						+e('total', {m: 'small'}, 'p') #{S_DATA('sumTotalSmall')}
 					+e('summ', {m: 'right'}, 'div')
-						//- +e('warning-img', {}, 'img')(src=`../../layout/assets/images/${S_DATA('img')}` alt=S_DATA('alt'))
 						+e('warning-text', {}, 'div') #{S_DATA('text')}
 						+e('pdf-inner', {}, 'div')
 							+e('pdf-text', {}, 'a') #{S_DATA('pdf')}
@@ -137,19 +133,12 @@ mixin section-order-processing(section)
 				+e('qr', {}, 'img')(src=`${pathFile}${S_DATA('qr')}`)
 				for item in S_ELEM_ARR('ContactInformationFooter')
 					+ContactInformationFooter(item)
-			//- +e('accordion__item', {b: 'accordion'}, 'div')
-				+e('accordion__header', {}, 'div') #{S_DATA('decor')}
-				+e('accordion__body', {}, 'div')
-					+e('accordion__content', {}, 'div')
-						+e('footer', {b: 'cg-20'}, 'div')
-							+e('qr', {}, 'img')(src=`${pathFile}${S_DATA('qr')}`)
-							for item in S_ELEM_ARR('ContactInformationFooter')
-								+ContactInformationFooter(item)
 		+BlockLayoutRight
 			+e('order', {m: 'col'}, 'div')
-				+e('number', {}, 'div') #{S_DATA('titleRight')}
-				+e('room', {}, 'div') #{S_DATA('role')}
-			+e('line-small', {m: 'fat'}, 'div')
+				+e('number-right', {}, 'div') #{S_DATA('titleRight')}
+				+e('text-right', {}, 'div') #{S_DATA('textRight')}
+				+e('room-right', {}, 'div') #{S_DATA('role')}
+			+e('line-right-small', {m: 'fat'}, 'div')
 			+e('call', {m: 'col'}, 'div')
 				+e('summ', {m: 'top'}, 'div')
 					+e('total', {}, 'p') #{S_DATA('summTotal')}
@@ -160,6 +149,9 @@ mixin section-order-processing(section)
 				+e('summ', {m: 'center'}, 'div')
 					+e('total', {m: 'bold'}, 'p') #{S_DATA('sumTotalBold')}
 					+e('total', {m: 'small14px'}, 'p') #{S_DATA('sumTotalSmall')}
-			+e('btn-cart', {m: 'order'}, 'button') #{S_DATA('btnOrder')}
-			+e('btn-cart', {m: 'reserve'}, 'button') #{S_DATA('btnReserveSmall')}
+			for item in S_DATA_ARR('btnOrder')
+				//- проверка данных получаемых из item
+				include ../../shared/helpers/pug/shortcut-check-store
+				+e('btn-cart', {m: 'order'}, 'button')(disabled=I_OPT('disabled')) #{I_DATA('text')}
+				+e('btn-cart', {m: 'reserve'}, 'button')(disabled=I_OPT('disabled')) #{I_DATA('text')}
 			+e('txt-onclick', {}, 'div') #{S_DATA('txtOnclick')}

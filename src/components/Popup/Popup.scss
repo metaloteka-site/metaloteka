@@ -4,7 +4,7 @@
 	z-index: 10;
 	top: 0;
 	left: 0;
-	
+
 	display: flex;
 	overflow: hidden;
 
@@ -17,7 +17,7 @@
 	&__body {
 		margin: auto;
 		padding: 51px 42px 48px;
-		
+
 		transition: transform 0.3s;
 		transform: scale(0.3);
 
@@ -31,11 +31,11 @@
 
 	&__close{
 		display: block;
-		
+
 		margin-left: auto;
-		
+
 		cursor: pointer;
-		
+
 		text-decoration: underline;
 		letter-spacing: normal;
 
