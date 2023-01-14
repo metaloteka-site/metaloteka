@@ -784,12 +784,15 @@
 		&__pdf-text {
 			max-width: 333px;
 			margin-right: 10px;
+			
+			text-decoration: underline;
 
 			color: $wet-asphalt;
 
 			font-size: 16px;
 			font-weight: 700;
 			line-height: 1.25;
+
 
 			&:hover{
 				cursor: pointer;

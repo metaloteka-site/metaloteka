@@ -70,8 +70,8 @@ mixin section-order-processing(section)
 									+e('', {}, 'textarea')(required)
 									+e('', {}, 'span') Комментарий к заказу
 							+e('item-btn', {}, 'div') #{S_DATA('itemBtn')}
-							+e('reserve-condition-title', {}, 'div') #{S_DATA('reservePersonalData')}
-							+e('reserve-condition-text', {}, 'div') #{S_DATA('reservePersonalText')}
+							+Text(S_ELEM('TextConfidentialTitle'))
+							+Text(S_ELEM('TextConfidentialText'))
 					+TabsContent(S_ELEM('TabsContent2'))
 						+e('ffff', {}, 'div')
 							+Text(S_ELEM('TextDataRegistration2'))
@@ -95,8 +95,8 @@ mixin section-order-processing(section)
 									+e('', {}, 'textarea')(required)
 									+e('', {}, 'span') Комментарий к заказу
 							+e('item-btn', {}, 'div') #{S_DATA('itemBtn')}
-							+e('reserve-condition-title', {}, 'div') #{S_DATA('reservePersonalData')}
-							+e('reserve-condition-text', {}, 'div') #{S_DATA('reservePersonalText')}
+							+Text(S_ELEM('TextConfidentialTitle'))
+							+Text(S_ELEM('TextConfidentialText'))
 				+e('ffff', {}, 'div')
 			+e('line-small', {}, 'div')
 			+Accordion(S_ELEM('AccordionCompletionRegistration'))
@@ -128,6 +128,10 @@ mixin section-order-processing(section)
 					+e('summ', {m: 'right'}, 'div')
 						//- +e('warning-img', {}, 'img')(src=`../../layout/assets/images/${S_DATA('img')}` alt=S_DATA('alt'))
 						+e('warning-text', {}, 'div') #{S_DATA('text')}
+						+e('pdf-inner', {}, 'div')
+							+e('pdf-text', {}, 'a') #{S_DATA('pdf')}
+							+e('active-until-text', {}, 'div') #{S_DATA('activeUntil')}
+				+e('btn-cart', {m: 'reserve-completion'}, 'button')(disabled=I_OPT('disabled')) #{S_DATA('reserveСompletionBtn')}
 			+e('line-small', {}, 'div')
 			+e('footer', {b: 'cg-20'}, 'div')
 				+e('qr', {}, 'img')(src=`${pathFile}${S_DATA('qr')}`)
