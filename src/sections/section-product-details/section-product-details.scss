@@ -351,13 +351,16 @@
 	#{$self}__subtitle {
 		max-width: 284px;
 		margin-bottom: 34px;
+
+		font-size: 18px;
+		line-height: 1.22;
 	}
 
 	#{$self}__filters {
 		display: flex;
 		justify-content: space-between;
 
-		padding: 29px 42px 34px;
+		padding: 29px 68px 34px;
 
 		border-top: 1px solid var(--smoke-white-first);
 		border-bottom: 1px solid var(--smoke-white-first);
@@ -509,7 +512,7 @@
 	#{$self}__basket-btn {
 		display: block;
 
-		max-width: 284px;
+		width: 100%;
 		margin-top: 30px;
 		margin-bottom: 25px;
 		padding: 22px 81px;
@@ -522,7 +525,7 @@
 		background: $red-gradient;
 
 		font-family: "BlissPro", sans-serif;
-		font-size: 22px;
+		font-size: 20px;
 		font-weight: 800;
 	}
 
@@ -540,6 +543,7 @@
 		border: none;
 		background-color: $white;
 
+		font-family: var(--font-default);
 		font-size: 1.4rem;
 		line-height: 1.14;
 	}
