@@ -37,6 +37,6 @@ mixin section-contact(section)
 										+e('information-left-title', {}, 'span') #{I_DATA('informationLeftTitle')}
 										+e('information-line', {}, 'span')
 										+e('information-left-text', {}, 'span') #{I_DATA('informationLeftText')}
-										+e('information-left-img-wrapper', {}, 'div')
-											+e('information-left-img', {}, 'img')(src=`${pathFile}${I_DATA('informationLeftImg')}` alt='Logo')
-											+e('information-left-info', {}, 'span') #{I_DATA('informationLeftInfo')}
+										+e('information-img', {}, 'img')(src=`${pathFile}${I_DATA('informationImg')}` alt='Logo')
+										+e('information-left-img', {}, 'img')(src=`${pathFile}${I_DATA('informationLeftImg')}` alt='Logo')
+										+e('information-left-info', {}, 'span') #{I_DATA('informationLeftInfo')}

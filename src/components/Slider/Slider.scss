@@ -101,15 +101,14 @@
 		line-height: 1.09;
 	}
 
-	&__information-left-img-wrapper {
-		display: flex;
-		flex-direction: column;
-		gap: 15px;
+	&__information-img {
+		margin-bottom: 15px;
 	}
 
 	&__information-left-img {
 		position: absolute;
 
+		z-index: -1;
 		right: 0;
 		bottom: 0;
 		left: 0;
