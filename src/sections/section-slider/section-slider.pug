@@ -1,8 +1,11 @@
-mixin section-slider
+mixin section-slider(section)
+	//- проверка данных получаемых из section
+	include ../../shared/helpers/pug/shortcut-check-store
+
 	+b('section-slider', {}, 'section')
 		+Container
 			+Row
-				+Slider
+				+Slider(S_ELEM('Slider'))
 					+e('slides', {b: 'swiper-wrapper'}, 'div')
 						+e('slide', {b: 'swiper-slide'}, 'div')
 							+e('img', {}, 'img')(src=`${pathFile}/index/index-slide1.webp` alt='слайд1')

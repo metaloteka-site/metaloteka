@@ -1,5 +1,9 @@
 mixin Slider(props)
-	+b('slider', { b: 'swiper' }, 'div')
+	//- проверка данных получаемых из props
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	+b('slider', { b: 'swiper', m: BEM('modifier') }, 'div')
 		block
-		+e('pagination', { b: 'swiper-pagination' }, 'div')
-		include slider-arrow.svg
+		if OPT('control')
+			+e('pagination', { b: 'swiper-pagination' }, 'div')
+			include slider-arrow.svg
