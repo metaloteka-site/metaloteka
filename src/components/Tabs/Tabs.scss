@@ -25,6 +25,7 @@
 		border: 0;
 		background: none;
 
+		font-family: $font-default;
 		font-size: $fs-18;
 		font-weight: 800;
 		line-height: 1.1;
@@ -120,7 +121,7 @@
 		.js-active {
 			display: block;
 
-			border-radius: 14px;
+			// border-radius: 14px;
 
 			&#{$self}__button {
 				outline: solid 4px #ce7f65;
