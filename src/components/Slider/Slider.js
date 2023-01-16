@@ -1,13 +1,17 @@
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 
 class SliderControl {
 	constructor(elem) {
 		this.component = elem;
+		this.isModContact = this.component.classList.contains('slider_contact');
 	}
 
 	// Инициализация класса Slider
 	init() {
 		new Swiper(this.component, {
+			autoplay: this.isModContact,
+			loop: this.isModContact,
+
 			pagination: {
 				el: '.slider__pagination',
 			},
@@ -15,7 +19,7 @@ class SliderControl {
 			navigation: {
 				nextEl: '.slider__button-next',
 			},
-			modules: [Navigation, Pagination],
+			modules: [Navigation, Pagination, Autoplay],
 		});
 	}
 }

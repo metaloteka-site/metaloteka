@@ -15,16 +15,14 @@
 		background-color: $white;
 	}
 
-	&__right {
-		display: flex;
-		align-items: center;
-		justify-content: center;
+	&__right {	
+		overflow: hidden;
 
 		width: 370px;
 		height: 620px;
 
 		border-radius: 30px;
-		background-color: $wet-asphalt;
+		background: linear-gradient(211deg, #678c92, #586e8b);
 	}
 
 	&__circle {
