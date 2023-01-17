@@ -34,6 +34,19 @@ export function Pagination() {
 	let currentPage = 3;
 	let totalPage = 9;
 	searchTotalCount.innerHTML = `Найдено товаров (${blockItems.children.length})`;
+	//TODO пагинацию поправить, не должна генерится js. Ее нужно добавить в верстку ссылками
+
+	/*
+		*  <div class="list">
+						<a href="/link/" class="btn-start" ><span><i class="fas fa-angle-left"></i>в начало</span></a>
+						<a href="/link/" class="first numb" ><span>1</span></a>
+						<a href="/link/" class="numb active"><span>2</span></a>
+						<a href="/link/" class="dots"><span>.....</span></a>
+						<a href="/link/" class="numb"><span>5</span></a>
+						<a href="/link/" class='btn-next'><span><i class='fas fa-angle-right'>следующая</i></span></a>
+				</div>
+		*
+		* */
 
 	window.createPagination = function (totalPages, page) {
 		let liTag = '';
@@ -94,7 +107,7 @@ export function Pagination() {
 			})'><span><i class='fas fa-angle-right'>следующая</i></span></li>`;
 		}
 		if (element) {
-			element.innerHTML = liTag;
+			//element.innerHTML = liTag;
 			// метод paginationClick позволяет отрисовать карточки из полученного массива данных
 			// paginationClick(cardsData, currentPage);
 			return liTag;
