@@ -3,5 +3,18 @@ mixin Pagination(props)
 	include ../../shared/helpers/pug/shortcut-check-store
 
 	+b('pagination', {}, 'div')
-		+b('list', {}, 'ul')
-		//- генерируются количество элементов из js
+		+b('list', {}, 'div')
+			+b('btn-start', {}, 'a')(href='')
+				+b('', {}, 'span') в начало
+					+b('fas fa-angel-left', {}, 'i')
+			+b('first numb', {}, 'a')(href='')
+				+b('', {}, 'span') 1
+			+b('numb active', {}, 'a')(href='')
+				+b('', {}, 'span') 2
+			+b('dots', {}, 'a')(href='')
+				+b('', {}, 'span') .....
+			+b('numb', {}, 'a')(href='')
+				+b('', {}, 'span') 5
+			+b('btn-next', {}, 'a')(href='')
+				+b('', {}, 'span') следующая
+					+b('fas fa-angel-right', {}, 'i')

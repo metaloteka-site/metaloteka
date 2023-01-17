@@ -177,10 +177,15 @@
 	}
 
 	&__btn-product-list {
+		display: block;
+
 		width: 100%;
 		margin-top: 37px;
 
 		cursor: pointer;
+		text-align: center;
+
+		text-decoration: none;
 
 		color: $white;
 		border: none;
