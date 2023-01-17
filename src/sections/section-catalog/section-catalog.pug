@@ -81,7 +81,7 @@ mixin section-catalog(section)
 								+e('item-wrapper', {}, 'div')
 									for item in S_ELEM_ARR('ProductItemMobile')
 										+ProductItem(item)
-								+e('btn-product-list', {}, 'button') #{S_DATA('btnProductList')}
+								+e('btn-product-list', {}, 'a')(href='') #{S_DATA('btnProductList')}
 							+e('mobile-description', {}, 'div') #{ S_ELEM('MobileDescription').data.description }
 					// Правый десктопный блок
 					+e('right-aside', {}, 'div')
@@ -114,7 +114,7 @@ mixin section-catalog(section)
 										+e('content', {}, 'div')
 											for item in S_ELEM_ARR('TableProductRowContent')
 												+TableProductRow(item)
-										+e('btn-product-list', {}, 'button') #{S_DATA('btnProductList')}
+										+e('btn-product-list', {}, 'a')(href='') #{S_DATA('btnProductList')}
 										+e('wrapper-pagination', {}, 'div')
 											+e('info-description', {}, 'p') #{ S_DATA('productListDescription') }
 											+Pagination()

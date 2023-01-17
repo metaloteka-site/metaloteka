@@ -211,9 +211,13 @@
 			}
 
 			#{$self}__btn-product-list {
+				display: block;
+
 				width: 100%;
 
 				cursor: pointer;
+				text-align: center;
+				text-decoration: none;
 
 				color: $white;
 				border: none;
