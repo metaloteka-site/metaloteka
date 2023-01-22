@@ -28,6 +28,9 @@ class PopupControl {
 	}
 
 	close() {
+			if(!this.buttonClose){
+					return false
+			}
 		this.buttonClose.addEventListener('click', () => {
 			this.block.classList.remove('js-popup-open');
 			this.body.classList.remove('no-scroll');
