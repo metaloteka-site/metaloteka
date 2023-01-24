@@ -1,29 +1,30 @@
 export class AccordionControl {
-		block;
-		constructor(block) {
-				this.block = block;
-				this.blockClass = '.accordion';
+	block;
 
-				this.title = this.block.querySelector(`${this.blockClass}__title`);
-				this.body = this.block.querySelector(`${this.blockClass}__body`);
+	constructor(block) {
+		this.block = block;
+		this.blockClass = '.accordion';
 
-				this.bodyHeight = ` ${this.body.offsetHeight}px`;
+		this.title = this.block.querySelector(`${this.blockClass}__title`);
+		this.body = this.block.querySelector(`${this.blockClass}__body`);
 
-				this.init();
-		}
+		this.bodyHeight = `${this.body.offsetHeight}px`;
 
-		init() {
-				this.body.style.height = 0;
+		this.init();
+	}
 
-				this.title.addEventListener('click', () => {
-						// e.stopPropagation();
-						this.block.classList.toggle('js-active');
+	init() {
+		this.body.style.maxHeight = 0;
 
-						if (this.body.offsetHeight === 0) {
-								this.body.style.height = this.bodyHeight;
-						} else {
-								this.body.style.height = 0;
-						}
-				});
-		}
+		this.title.addEventListener('click', () => {
+			// e.stopPropagation();
+			this.block.classList.toggle('js-active');
+
+			if (this.body.offsetHeight === 0) {
+				this.body.style.maxHeight = 'max-content';
+			} else {
+				this.body.style.maxHeight = 0;
+			}
+		});
+	}
 }
