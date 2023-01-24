@@ -70,7 +70,7 @@
 
 	@include media('xs'){
 		&__title {
-			font-size: 29px;
+			font-size: $fs-28;
 		}
 	}
 }
@@ -80,10 +80,5 @@
 		&::after {
 			transform: rotate(135deg);
 		}
-	}
-
-	&__title{
-		padding-top: 30px;
-
 	}
 }
