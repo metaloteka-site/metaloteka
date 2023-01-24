@@ -21,7 +21,7 @@ export class AccordionControl {
 			this.block.classList.toggle('js-active');
 
 			if (this.body.offsetHeight === 0) {
-				this.body.style.maxHeight = this.bodyHeight;
+				this.body.style.maxHeight = 'max-content';
 			} else {
 				this.body.style.maxHeight = 0;
 			}
