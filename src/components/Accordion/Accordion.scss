@@ -38,6 +38,10 @@
 		overflow: hidden;
 
 		transition: all 0.3s;
+
+		//#{$self}__body {
+		//	height: 0;
+		//}
 	}
 
 	&_fz-20 {
@@ -70,7 +74,7 @@
 
 	@include media('xs'){
 		&__title {
-			font-size: 29px;
+			font-size: $fs-28;
 		}
 	}
 }
@@ -82,8 +86,9 @@
 		}
 	}
 
-	&__title{
-		padding-top: 30px;
-
-	}
+	//.accordion__body {
+	//	.accordion__body {
+	//		height: max-content;
+	//	}
+	//}
 }
