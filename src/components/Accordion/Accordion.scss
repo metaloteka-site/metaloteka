@@ -38,10 +38,6 @@
 		overflow: hidden;
 
 		transition: all 0.3s;
-
-		//#{$self}__body {
-		//	height: 0;
-		//}
 	}
 
 	&_fz-20 {
@@ -85,10 +81,4 @@
 			transform: rotate(135deg);
 		}
 	}
-
-	//.accordion__body {
-	//	.accordion__body {
-	//		height: max-content;
-	//	}
-	//}
 }
