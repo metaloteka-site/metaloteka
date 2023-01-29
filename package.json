@@ -7,7 +7,8 @@
     "start": "npx webpack serve --mode=development",
     "build": "npx webpack --mode=production",
     "dev": "npx http-server -o build",
-    "install": "npx husky install"
+    "install": "npx husky install",
+    "prepare": "husky install"
   },
   "author": "",
   "license": "ISC",
