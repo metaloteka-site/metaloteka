@@ -71,8 +71,9 @@
 	}
 
 	&__option {
-		color: $wet-asphalt;
 		display: block;
+
+		color: $wet-asphalt;
 
 		&:hover {
 			--wet-asphalt: #464646cc;
