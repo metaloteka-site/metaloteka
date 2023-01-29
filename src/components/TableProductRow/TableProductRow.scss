@@ -95,6 +95,10 @@
 
 			border-bottom: solid 1px #efefef;
 
+			&__link {
+				color: $wet-asphalt;
+			}
+
 			&__column { /* stylelint-disable-line no-descending-specificity */
 				display: flex;
 				flex-direction: column;
