@@ -8,4 +8,4 @@ mixin Select(props)
 		+e('option-wrapper', {}, 'div')
 			each item in props.elemArr
 				include ../../shared/helpers/pug/shortcut-check-store
-				+e('option', {}, 'p')(value=I_DATA('title')) #{I_DATA('title')}
+				+e('option', {}, 'a')(value=I_DATA('title') href='#') #{I_DATA('title')}

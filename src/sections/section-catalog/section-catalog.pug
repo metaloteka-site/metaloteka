@@ -101,7 +101,8 @@ mixin section-catalog(section)
 											+e('diameters', {}, 'div')
 												each item, index in S_DATA_ARR('diameters')
 													include ../../shared/helpers/pug/shortcut-check-store
-													+e('diameter-value', {b: I_BEM('jsClass')}, 'div')(data-filter-diameters=I_DATA('title')) #{ I_DATA('title') }
+													+e('diameter-value', {b: I_BEM('jsClass')}, 'label')(for= index data-filter-diameters=I_DATA('title')) #{ I_DATA('title') }
+													+e('input', {}, 'input')(id= index type='checkbox')
 											+e('filters', {}, 'div')
 												each item in S_DATA_ARR('filters')
 													include ../../shared/helpers/pug/shortcut-check-store

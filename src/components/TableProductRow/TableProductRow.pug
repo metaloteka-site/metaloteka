@@ -5,4 +5,5 @@ mixin TableProductRow(props)
 	//- верстка компонента
 	+b('table-product-row', {}, 'div')
 		for item in ELEM_ARR('Text')
-			+Text(item)
+			+e('link', {}, 'a')(href='#')
+				+Text(item)
