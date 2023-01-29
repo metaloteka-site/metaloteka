@@ -69,4 +69,14 @@
 			transition: height 2s ease-in-out;
 		}
 	}
+
+	&__option {
+		color: $wet-asphalt;
+		display: block;
+
+		&:hover {
+			--wet-asphalt: #464646cc;
+			color: $wet-asphalt;
+		}
+	}
 }
