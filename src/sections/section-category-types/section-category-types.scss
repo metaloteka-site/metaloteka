@@ -12,6 +12,7 @@
 	&__information {
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
 
 		min-width: 206px;
 		margin-bottom: 30px;
