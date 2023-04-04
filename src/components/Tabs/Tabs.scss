@@ -3,8 +3,8 @@
 
 	&__buttons {
 		display: flex;
-		overflow-x: scroll;
-		column-gap: 10px;
+		overflow: hidden;
+		column-gap: 24px;
 
 		margin-bottom: 25px;
 

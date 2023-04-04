@@ -46,6 +46,7 @@
 
 	&__option-wrapper {
 		position: absolute;
+		z-index: 1;
 
 		overflow: hidden;
 
@@ -72,6 +73,7 @@
 
 	&__option {
 		display: block;
+
 		color: $wet-asphalt;
 
 		&:hover {
