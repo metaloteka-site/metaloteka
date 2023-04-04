@@ -1,5 +1,5 @@
 .contact-information-footer {
-	margin-right: 32px;
+	margin-right: 0;
 
 	&:nth-child(2) {
 		width: 176px;
@@ -50,6 +50,8 @@
 	&__link {
 		display: inline-block;
 
+		width: 100%;
+
 		margin-bottom: 10px;
 		padding-bottom: 9px;
 
@@ -85,6 +87,6 @@
 			color: $wet-asphalt;
 		}
 	}
-	
-		
+
+
 }

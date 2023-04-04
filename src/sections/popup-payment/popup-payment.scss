@@ -29,13 +29,13 @@
 
 	&__line{
 		display: block;
-		
+
 		height: 1px;
 		margin-top: 32px;
 		margin-right: -42px;
 		margin-bottom: 29px;
 		margin-left: -42px;
-		
+
 		border: 0;
 		background: #efefef;
 
@@ -49,7 +49,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		
+
 		margin-bottom: 31px;
 		padding: 0;
 		row-gap: 12px;
@@ -58,19 +58,19 @@
 	&__summ {
 		display: flex;
 		flex-direction: column;
-	
+
 		&_left{
 			width: 155px;
 			padding: 0;
 			gap: 6px;
 		}
-	
+
 		&_center{
 			width: 232px;
 			padding: 0;
 			gap: 9px;
 		}
-	
+
 		&_right{
 			flex-direction: column-reverse;
 
@@ -85,11 +85,11 @@
 	&__total{
 		display: flex;
 		flex-direction: row;
-		
+
 		white-space: pre-line;
-		
+
 		color: $wet-asphalt;
-		
+
 		font-size: $fs-big;
 		line-height: 1.45;
 
@@ -115,7 +115,7 @@
 			font-weight: 300;
 			line-height: 1.33;
 		}
-		
+
 		&_mini{
 			margin-top: 20px;
 			margin-bottom: 10px;
@@ -140,11 +140,11 @@
 
 	&__subtitle{
 		margin-bottom: 15px;
-		
+
 		letter-spacing: normal;
-		
+
 		color: $wet-asphalt;
-		
+
 		font-family: $font-default;
 		font-size: 18px;
 		font-weight: 800;
@@ -155,12 +155,12 @@
 
 	&__text{
 		margin-bottom: 12px;
-		
+
 		letter-spacing: normal;
-		
+
 		opacity: 0.7;
 		color: $wet-asphalt;
-		
+
 		font-family: $font-default;
 		font-size: 10px;
 		font-weight: 300;
@@ -171,9 +171,9 @@
 
 	&__scroll{
 		letter-spacing: normal;
-		
+
 		color: $wet-asphalt;
-		
+
 		font-family: $font-default;
 		font-size: 14px;
 		font-weight: normal;
@@ -184,7 +184,7 @@
 
 	&__download {
 		color: $wet-asphalt;
-		
+
 		font-size: $fs-20;
 		font-weight: bold;
 		line-height: 1;
@@ -241,7 +241,10 @@
 		font-stretch: normal;
 		line-height: 1;
 
-		
+		&.js-active{
+			outline: solid 4px #ce7f65;
+		}
+
 		&:disabled {
 			cursor: no-drop;
 
@@ -251,16 +254,16 @@
 
 	@include media('xs') {
 		max-width: 896px;
-		
+
 		&__title{
 			margin-bottom: 0;
 		}
 
 		&__firm{
 			font-size: $fs-28;
-			
+
 			font-weight: 800;
-			line-height: 0.86;	
+			line-height: 0.86;
 		}
 
 		&__order{
@@ -301,7 +304,7 @@
 		&__total{
 			&_summ {
 				padding-bottom: 0;
-				
+
 				font-size: $fs-28;
 				line-height: 0.86;
 			}
