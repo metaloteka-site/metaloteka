@@ -133,6 +133,12 @@
 	}
 
 	&__count {
+		width: 50%;
+		padding-right: 0;
+		padding-left: 0;
+
+		text-align: center;
+
 		font-size: 32px;
 		font-weight: 500;
 		padding-inline: 40px;

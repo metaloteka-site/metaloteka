@@ -9,6 +9,7 @@
 		.table-product-row {
 			display: flex;
 			align-items: flex-start;
+			gap: 8px;
 
 			width: 100%;
 
@@ -38,7 +39,7 @@
 
 					width: 93px;
 
-					margin-right: 54px;
+					margin-right: 40px;
 
 					.text {
 						color: #464646;
@@ -53,7 +54,7 @@
 
 					width: 320px;
 
-					margin-right: 10px;
+					margin-right: 20px;
 
 					.text:first-child {
 						color: #464646;
@@ -68,17 +69,18 @@
 
 					width: 47px;
 
-					margin-right: 34px;
+					margin-right: 32px;
 				}
 
 				&:nth-child(3) {
 					align-items: center;
 
 					width: 115px;
-					margin-right: 35px;
+					margin-right: 32px;
 				}
 
 				&:last-child {
+					align-items: center;
 					justify-content: flex-start;
 
 					margin-right: auto;
@@ -91,6 +93,7 @@
 		.table-product-row {
 			display: flex;
 			align-items: center;
+			gap: 8px;
 			padding-block: 17px;
 
 			border-bottom: solid 1px #efefef;
@@ -107,7 +110,10 @@
 				font-weight: bold;
 
 				&:nth-child(5) {
-					width: max-content;
+					width: 150px;
+					margin-right: 12px;
+
+					text-align: center;
 
 					.text { /* stylelint-disable-line no-descending-specificity */
 						&:last-child {
@@ -119,7 +125,7 @@
 
 				&:first-child {
 					width: 320px;
-					margin-right: 10px;
+					margin-right: 20px;
 				}
 
 				&:nth-child(2) {
@@ -133,8 +139,8 @@
 				&:nth-child(3) {
 					align-items: center;
 
-					width: 115px;
-					margin-right: 35px;
+					width: 150px;
+					margin-right: 12px;
 
 					font-weight: 300;
 				}
@@ -142,9 +148,9 @@
 				&:nth-child(4) {
 					align-items: center;
 
-					width: 93px;
+					width: 150px;
 
-					margin-right: 54px;
+					margin-right: 12px;
 
 					font-size: 12px;
 					font-weight: 300;
