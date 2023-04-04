@@ -74,11 +74,15 @@
 	&__line-small {
 		height: 2px;
 		margin-top: 19px;
-		margin-right: -42px;
+		margin-right: 0;
 		margin-bottom: 10px;
-		margin-left: -42px;
+		margin-left: 0;
 
 		background-color: #efefef;
+
+		&_top {
+			margin-top: 0;
+		}
 
 		&_bottom {
 			display: none;
@@ -116,17 +120,17 @@
 		flex-direction: row;
 
 		margin-bottom: 12px;
-		
+
 		white-space: pre-line;
-		
+
 		color: $wet-asphalt;
-		
+
 		font-size: $fs-big;
 		line-height: 1.45;
 
 		&_summ {
 			padding-bottom: 0;
-			
+
 			font-size: $fs-28;
 			line-height: 0.86;
 		}
@@ -209,7 +213,7 @@
 		text-align: center;
 
 		color: $wet-asphalt;
-		
+
 		font-family: $font-default;
 		line-height: 1.14;
 
@@ -352,7 +356,7 @@
 		&__room {
 			margin-top: 12px;
 			margin-bottom: 0;
-	
+
 			font-size: 20px;
 			line-height: 1.2;
 		}
@@ -468,14 +472,14 @@
 				padding: 0;
 				gap: 6px;
 			}
-		
+
 			&_center{
 				width: 252px;
 				margin-bottom: 0;
 				padding: 0;
 				gap: 12px;
 			}
-		
+
 			&_right{
 				flex-direction: row;
 			}
@@ -495,21 +499,21 @@
 				font-weight: 800;
 				line-height: 0.63;
 			}
-	
+
 			&_days{
 				font-size: $fs-big;
 			}
-	
+
 			&_small14px {
 				width: 95%;
 
 				font-size: 14px;
 				line-height: 1.14;
 			}
-			
+
 			&_mini{
 				margin-bottom: 10px;
-	
+
 				font-size: 12px;
 				font-weight: 300;
 				line-height: 1.33;
@@ -533,7 +537,7 @@
 
 			// width: 77%;
 			// column-gap: 32px;
-			
+
 			margin-top: 44px;
 
 			color: $wet-asphalt;
@@ -605,7 +609,7 @@
 			font-size: 14px;
 			line-height: 1.14;
 		}
-		
+
 		&__order-list-changes_delete {
 			display: none;
 		}
@@ -651,16 +655,16 @@
 		}
 
 
-		
+
 		/* Important functional styles */
-		
+
 		&__tab__block {
 			display: none;
 		}
-		
+
 		&__tab__block.active {
 			display: block;
 		}
-		
+
 	}
 }
