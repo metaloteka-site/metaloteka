@@ -104,6 +104,7 @@
 			margin-left: -53px;
 
 			opacity: 0.1;
+			border-bottom: none;
 			background: var(--smoke-white-second);
 			margin-block: 0;
 		}
@@ -237,9 +238,10 @@
 					&__column {
 						padding-block: 21px;
 
+						margin-right: 0;
+
 						&:first-child {
-							width: 294px;
-							margin-right: 16px;
+							flex: 1 0 34%;
 
 							text-decoration: underline;
 
@@ -248,14 +250,18 @@
 						}
 
 						&:nth-child(2) {
-							margin-right: 82px;
+							flex: 1 0 11%;
+
+							text-align: center;
 
 							font-weight: 300;
 							line-height: 24px;
 						}
 
 						&:nth-child(3) {
-							margin-right: 55px;
+							flex: 1 0 14%;
+
+							text-align: center;
 
 							text-decoration: underline;
 
@@ -264,8 +270,6 @@
 						}
 
 						&:nth-child(4) {
-							margin-right: 38px;
-
 							cursor: pointer;
 
 							text-decoration: underline;
@@ -276,12 +280,18 @@
 						}
 
 						&:nth-child(5) {
+							flex: 1 0 17%;
+
+							margin-right: 0;
+
+							text-align: right;
+
 							font-weight: 800;
 							line-height: 24px;
 						}
 
 						&:last-child {
-							margin-left: auto;
+							margin-left: 15px;
 
 							svg {
 								width: 13px;
@@ -360,7 +370,7 @@
 		display: flex;
 		justify-content: space-between;
 
-		padding: 29px 68px 34px;
+		padding: 29px 42px 34px;
 
 		border-top: 1px solid var(--smoke-white-first);
 		border-bottom: 1px solid var(--smoke-white-first);
@@ -471,6 +481,12 @@
 	}
 
 	#{$self}__count {
+		width: 50%;
+		padding-right: 0;
+		padding-left: 0;
+
+		text-align: center;
+
 		font-size: 32px;
 		font-weight: 500;
 		padding-inline: 40px;
