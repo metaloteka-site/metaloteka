@@ -19,12 +19,18 @@
 	}
 
 	@include media('xs') {
+		&__inner {
+			float: left;
+		}
+
 		&__back {
 			display: block;
 
+			float: right;
+
 			text-decoration: none;
 
-			font-size:$fs-28;
+			font-size: $fs-28;
 		}
 	}
 }

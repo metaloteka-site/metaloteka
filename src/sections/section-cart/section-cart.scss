@@ -316,8 +316,6 @@
 
 	&__line-order-list {
 		height: 2px;
-		// margin-right: -42px;
-		// margin-left: -42px;
 
 		background-color: #efefef;
 
@@ -536,9 +534,6 @@
 		&__footer {
 			display: flex;
 
-			// width: 77%;
-			// column-gap: 32px;
-
 			margin-top: 44px;
 
 			color: $wet-asphalt;
@@ -553,6 +548,7 @@
 		&__order-list {
 			flex-direction: row;
 			justify-content: space-between;
+			gap: 15px;
 
 			margin-top: 19px;
 			margin-bottom: 19px;
@@ -564,7 +560,7 @@
 
 		&__order-list-name {
 			align-items: center;
-			flex: 1 0 36%;
+			flex: 1 0 34%;
 			order: 1;
 
 			margin: 0;
@@ -577,9 +573,11 @@
 		&__order-list-size {
 			display: flex;
 			align-items: center;
-			flex: 1 0 12%;
+			flex: 1 0 11%;
 			justify-content: center;
 			order: 2;
+
+			text-align: center;
 
 			color: $wet-asphalt;
 
@@ -590,12 +588,13 @@
 
 		&__order-list-weight {
 			align-items: center;
-			flex: 1 0 21%;
+			flex: 1 0 14%;
 			justify-content: center;
 			order: 3;
 
 			margin: 0;
 
+			text-align: center;
 			text-decoration: underline;
 		}
 
@@ -617,8 +616,8 @@
 
 		&__order-list-sum {
 			align-items: center;
-			flex: 1 0 20%;
-			justify-content: center;
+			flex: 1 0 17%;
+			justify-content: right;
 			order: 5;
 
 			margin: 0;

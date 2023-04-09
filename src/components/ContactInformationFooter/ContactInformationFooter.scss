@@ -1,6 +1,4 @@
 .contact-information-footer {
-	margin-right: 0;
-
 	&:nth-child(2) {
 		width: 176px;
 	}
@@ -12,10 +10,6 @@
 	&:nth-child(4) {
 		width: 162px;
 	}
-
-	// &__name{
-	// 	width: 176px;
-	// }
 
 	&__title {
 		font-size: $fs-32;
@@ -87,6 +81,4 @@
 			color: $wet-asphalt;
 		}
 	}
-
-
 }
