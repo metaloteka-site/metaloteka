@@ -238,6 +238,11 @@
 		}
 	}
 
+	.accordion__body {
+		// stylelint-disable-next-line declaration-no-important
+		max-height: max-content !important;
+	}
+
 	//Desktop
 	@include media(xs) {
 		&__left-aside {
