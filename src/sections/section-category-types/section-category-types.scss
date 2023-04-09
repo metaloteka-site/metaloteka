@@ -12,6 +12,7 @@
 	&__information {
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
 
 		min-width: 206px;
 		margin-bottom: 30px;
@@ -60,10 +61,23 @@
 
 	@include media(xs) {
 		overflow-x: auto;
-		flex-wrap: wrap;
+		flex-wrap: nowrap;
 
 		padding-top: 56px;
 		column-gap: 68px;
+
+		&::-webkit-scrollbar {
+			height: 10px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			border-radius: 4px;
+			background: var(--liverny-light);
+		}
+
+		&::-webkit-scrollbar-thumb:hover {
+			background: var(--liverny-dark);
+		}
 
 		&__information {
 			max-width: 206px;

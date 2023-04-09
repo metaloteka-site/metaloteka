@@ -61,3 +61,11 @@ a {
 .bg-footer {
 	background: linear-gradient(306deg, #636267, #47474b 0%);
 }
+
+html, section, .bg-footer {
+	min-width: 390px;
+
+	@include media('xs') {
+		min-width: 1406px;
+	}
+}
