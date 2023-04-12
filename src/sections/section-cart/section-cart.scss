@@ -324,6 +324,11 @@
 		}
 	}
 
+	.accordion__body {
+		// stylelint-disable-next-line declaration-no-important
+		max-height: max-content !important;
+	}
+
 	@include media('xs') {
 		&__icon {
 			position: absolute;
