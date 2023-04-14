@@ -108,7 +108,6 @@
 			display: flex;
 			flex-direction: row;
 
-			width: 333px;
 			margin-top: 0;
 			padding: 0;
 			gap: 16px;
@@ -486,6 +485,8 @@
 
 			&_right{
 				flex-direction: row;
+
+				width: 333px;
 			}
 
 			&_top{

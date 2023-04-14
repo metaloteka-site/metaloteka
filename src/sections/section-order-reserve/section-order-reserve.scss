@@ -600,6 +600,10 @@
 		}
 	}
 
+	&__reserve-condition-text {
+		margin-bottom: 42px;
+	}
+
 	@include media('xs') {
 		&__title {
 			margin-bottom: 14px;
@@ -787,6 +791,10 @@
 			width: 207px;
 			margin-bottom: 0;
 			margin-left: -33px;
+
+			&:active {
+				font-weight: bold;
+			}
 		}
 
 		&__item-sum {
@@ -796,6 +804,12 @@
 			margin-bottom: 0;
 
 			font-weight: 300;
+
+			&:active {
+				text-decoration: underline;
+
+				font-weight: bold;
+			}
 		}
 
 		&__item-add {
@@ -809,6 +823,10 @@
 			background: none;
 
 			font-size: 16px;
+
+			&:active {
+				font-weight: bold;
+			}
 		}
 
 		&__warning {
