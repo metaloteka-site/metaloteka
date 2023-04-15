@@ -1,6 +1,10 @@
 .tabs {
 	$self: &;
 
+	&_mb-14 {
+		margin-bottom: 14px;
+	}
+
 	&__buttons {
 		display: flex;
 		overflow: hidden;
@@ -62,6 +66,7 @@
 
 		width: 0;
 		height: 0;
+		padding-bottom: 40px;
 
 		transition: opacity 0.3s;
 
@@ -136,7 +141,7 @@
 	&_button {
 		#{$self}__button {
 			width: 134px;
-			margin: 5px;
+			margin: 4px;
 			padding: 21px 9px 23px;
 
 			letter-spacing: normal;
@@ -208,7 +213,7 @@
 		}
 
 		&__buttons {
-			column-gap: 8px;
+			column-gap: 10px;
 		}
 	}
 }
