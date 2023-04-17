@@ -121,6 +121,7 @@ $path-file: '../layout/assets/images';
 // ==> переменные экранов отображения
 $breakpoints: (
 	xs: 414,
+	lg: 1405,
 	xl: 1406,
 ) !default;
 
@@ -129,5 +130,6 @@ $media-direction: 'min' !default;
 // ==> переменные для контайнера
 $container: (
 	xs: 414,
+	lg: 1228,
 	xl: 1406,
 ) !default;

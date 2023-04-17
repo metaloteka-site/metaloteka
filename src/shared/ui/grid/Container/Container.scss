@@ -5,7 +5,10 @@
 	padding-inline: 23px;
 
 	@include media(xs) {
-		min-width: 1406px;
+		max-width: container-width(lg);
+	}
+
+	@include media(lg) {
 		max-width: container-width(xl);
 	}
 }
