@@ -569,6 +569,12 @@
 			border-bottom: 0.5px solid #d9d8d8;
 		}
 	}
+
+	@include media('lg', 'within') {
+		&__metaloteka-icons {
+			display: none;
+		}
+	}
 }
 
 .section-metal + .footer {

@@ -89,6 +89,14 @@
 		line-height: 1;
 	}
 
+	&__field-item--radio label{
+		color: #464646;
+
+		font-size: 1.6rem;;
+		font-weight: 500;
+		line-height: 1;
+	}
+
 	&__field-item input:focus + span,
 	&__field-item input:valid + span {
 		top: 16px;

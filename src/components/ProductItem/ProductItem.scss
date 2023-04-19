@@ -8,10 +8,19 @@
 		margin-bottom: 12px;
 
 		cursor: pointer;
-		text-decoration: underline;
 
 		font-size: 22px;
 		font-weight: 800;
+	}
+
+	&__link {
+		color: $wet-asphalt;
+
+		&:hover {
+			text-decoration: underline;
+
+			color: $wet-asphalt;
+		}
 	}
 
 	&__subtitle {

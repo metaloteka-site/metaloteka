@@ -39,7 +39,7 @@ a {
 }
 
 .main {
-	margin-top: 50px;
+	margin-top: 7px;
 	margin-bottom: 90px;
 
 	&_no-margin-bottom {
@@ -60,4 +60,12 @@ a {
 
 .bg-footer {
 	background: linear-gradient(306deg, #636267, #47474b 0%);
+}
+
+html, section, .bg-footer {
+	min-width: 390px;
+
+	@include media('xs') {
+		min-width: 1228px;
+	}
 }

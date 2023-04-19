@@ -5,7 +5,8 @@ mixin ProductItem(props)
 	//- верстка компонента
 	+b('product-item', {}, 'div')
 		if DATA('title', false)
-			+e('title', {}, 'p') #{DATA('title')}
+			+e('title', {}, 'p')
+				+e('link', {}, 'a') #{DATA('title')}
 		if DATA('subtitle', false)
 			+e('subtitle', {}, 'p') #{DATA('subtitle')}
 		for item in ELEM_ARR('Text')

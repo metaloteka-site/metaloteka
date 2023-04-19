@@ -26,6 +26,11 @@
 		gap: 30px;
 	}
 
+	&-35 {
+		--column-gap: 35px;
+		gap: 35px;
+	}
+
 	&-40 {
 		--column-gap: 40px;
 		gap: 40px;
@@ -114,6 +119,11 @@
 	&-30 {
 		--column-gap: 30px;
 		column-gap: 30px;
+	}
+
+	&-35 {
+		--column-gap: 35px;
+		column-gap: 35px;
 	}
 
 	&-40 {

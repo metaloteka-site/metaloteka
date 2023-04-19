@@ -25,7 +25,7 @@
 
 	&__line-small {
 		height: 2px;
-		margin-top: 20px;
+		margin-top: 0;
 		margin-right: -42px;
 		margin-left: -42px;
 
@@ -567,11 +567,11 @@
 	}
 
 	&__order-list-sum {
-		flex: 1 0 173px;
+		flex: 1 0 143px;
 
 		margin-bottom: 41px;
 
-		text-align: left;
+		text-align: right;
 
 		color: $wet-asphalt;
 
@@ -598,6 +598,10 @@
 			justify-content: space-between;
 			column-gap: 10px;
 		}
+	}
+
+	&__reserve-condition-text {
+		margin-bottom: 42px;
 	}
 
 	@include media('xs') {
@@ -724,8 +728,8 @@
 		}
 
 		&__line-small {
-			margin-right: -42px;
-			margin-left: -42px;
+			margin-right: -53px;
+			margin-left: -53px;
 		}
 
 		&__line-right-small {
@@ -787,6 +791,10 @@
 			width: 207px;
 			margin-bottom: 0;
 			margin-left: -33px;
+
+			&:active {
+				font-weight: bold;
+			}
 		}
 
 		&__item-sum {
@@ -796,6 +804,12 @@
 			margin-bottom: 0;
 
 			font-weight: 300;
+
+			&:active {
+				text-decoration: underline;
+
+				font-weight: bold;
+			}
 		}
 
 		&__item-add {
@@ -809,6 +823,10 @@
 			background: none;
 
 			font-size: 16px;
+
+			&:active {
+				font-weight: bold;
+			}
 		}
 
 		&__warning {

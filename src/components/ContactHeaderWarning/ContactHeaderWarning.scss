@@ -1,4 +1,4 @@
-.contact-header-warning { 
+.contact-header-warning {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -8,7 +8,7 @@
 	padding-left: 24px;
 
 	border-bottom: none;
-	
+
 	&__title {
 		padding-bottom: 33px;
 
@@ -53,6 +53,7 @@
 		font-size: 16px;
 		line-height: 1.13;
 	}
+
 	@include media('xs') {
 		padding-top: 17px;
 		padding-bottom: 20px;
@@ -81,6 +82,14 @@
 
 		&__warning {
 			white-space: inherit;
+		}
+	}
+
+	@include media('lg', 'within') {
+		flex-wrap: nowrap;
+
+		&__warning {
+			max-width: 300px;
 		}
 	}
 }

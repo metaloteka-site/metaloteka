@@ -33,7 +33,7 @@
 	}
 
 	&__wrap-basket {
-		margin-left: 28px;
+		margin-left: 0;
 		padding: 50px 27px 30px;
 
 		border-bottom: none;
@@ -41,6 +41,8 @@
 
 	&__basket {
 		position: relative;
+
+		display: block;
 
 		cursor: pointer;
 
@@ -101,6 +103,8 @@
 	&__date {
 		display: flex;
 		column-gap: 5px;
+
+		margin-left: auto;
 	}
 
 	&__name {
@@ -131,7 +135,7 @@
 			display: flex;
 			flex-wrap: wrap;
 
-			padding-bottom: 25px;
+			padding-bottom: 20px;
 
 			border-bottom: 2px solid rgba($color: #ffffff, $alpha: 0.21);
 		}
@@ -147,7 +151,7 @@
 		}
 
 		&__wrap-basket {
-			padding: 10px 27px 30px;
+			padding: 10px 27px 29px;
 
 			border-bottom: 2px solid rgba($color: #ffffff, $alpha: 0.21);
 		}
@@ -217,6 +221,7 @@
 			width: 100%;
 			max-width: 1035px;
 			height: 85px;
+			margin-left: 28px;
 		}
 
 		&__search {
@@ -251,6 +256,16 @@
 			&:hover {
 				cursor: pointer;
 			}
+		}
+
+		.noWrap {
+			flex-wrap: nowrap;
+		}
+	}
+
+	@include media('lg', 'within') {
+		&__shipped {
+			display: none;
 		}
 	}
 }
