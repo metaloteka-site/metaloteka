@@ -221,6 +221,7 @@
 			width: 100%;
 			max-width: 1035px;
 			height: 85px;
+			margin-left: 28px;
 		}
 
 		&__search {
@@ -255,6 +256,16 @@
 			&:hover {
 				cursor: pointer;
 			}
+		}
+
+		.noWrap {
+			flex-wrap: nowrap;
+		}
+	}
+
+	@include media('lg', 'within') {
+		&__shipped {
+			display: none;
 		}
 	}
 }

@@ -16,7 +16,7 @@ mixin header(section)
 						+ContactHeader(item)
 
 				//- отгружено тон
-				+e('shipped', {margin:'ml-xl-60'}, 'div')
+				+e('shipped', {margin:'ml-lg-60'}, 'div')
 					+e('number-shipped', {}, 'span') 245 т
 					+e('divider-shipped', {}, 'div')
 					+Text({data: {text: 'отгружено за неделю'}})
@@ -42,6 +42,7 @@ mixin header(section)
 						+e('name', {}, 'div') Иван Петровичев
 						+e('stick', {}, 'span') |
 						+e('exit', {}, 'a')(href='#' data-popup-open='authorization') Выйти
+
 			+Row(S_ELEM('RowBottom'))
 				+e('catalog', {}, 'button')
 					include ../../layout/assets/images/header/catalog.svg
