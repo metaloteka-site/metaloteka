@@ -589,11 +589,21 @@
 					padding: 62px 67px 60px 25px;
 				}
 			}
-		}
 
-		//&__right-aside {
-		//
-		//}
+			.product-tags {
+				&__tags-wrapper {
+					position: relative;
+					z-index: 1;
+				}
+			}
+
+			.product-footer {
+				&__footer-wrapper {
+					position: relative;
+					z-index: 1;
+				}
+			}
+		}
 	}
 }
 
