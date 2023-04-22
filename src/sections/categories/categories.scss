@@ -579,4 +579,31 @@
 			display: none;
 		}
 	}
+
+	@include media('lg', 'within') {
+		&__right-aside {
+			max-width: 840px;
+
+			.product-main-details {
+				&__wrapper {
+					padding: 62px 67px 60px 25px;
+				}
+			}
+
+			.product-tags {
+				&__tags-wrapper {
+					position: relative;
+					z-index: 1;
+				}
+			}
+
+			.product-footer {
+				&__footer-wrapper {
+					position: relative;
+					z-index: 1;
+				}
+			}
+		}
+	}
 }
+
