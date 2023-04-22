@@ -102,6 +102,10 @@
 				text-decoration: none;
 
 				color: $wet-asphalt;
+
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 
 			&__column { /* stylelint-disable-line no-descending-specificity */
