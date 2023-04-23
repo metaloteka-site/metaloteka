@@ -35,7 +35,7 @@ block layout
 				include ../sections/header/header
 				+header(main.header)
 
-			+b('main', {m: noMargin}, 'main')
+			+b('main', {m: noMargin, b: isCatalog}, 'main')
 				block main
 
 			+b('bg-footer', {}, 'div')
