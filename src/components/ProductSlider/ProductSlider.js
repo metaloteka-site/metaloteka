@@ -10,20 +10,21 @@ class ProductSliderControl {
 
 	// Инициализация класса Slider
 	init() {
-		const galleryTop = new Swiper('.gallery-top', {
+		const galleryTop = new Swiper('.gallery-thumbs', {
+			spaceBetween: 18,
+			slidesPerView: 3,
+			touchRatio: 0.2,
+			slideToClickedSlide: true,
+			loop: true,
+			loopedSlides: 3,
+		});
+
+		new Swiper('.gallery-top', {
 			spaceBetween: 10,
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev',
 			},
-			loop: true,
-			loopedSlides: 3,
-		});
-		new Swiper('.gallery-thumbs', {
-			spaceBetween: 18,
-			slidesPerView: 3,
-			touchRatio: 0.2,
-			slideToClickedSlide: true,
 			loop: true,
 			loopedSlides: 3,
 			thumbs: {
