@@ -1,13 +1,13 @@
 .section-catalog {
 	$self: &;
-	position: absolute;
+	position: static;
 	z-index: 10;
 	top: 459px;
 
 	overflow: hidden;
 
 	width: 100%;
-	height: 0;
+	height: 100%;
 
 	&.static {
 		position: static;
@@ -245,6 +245,10 @@
 
 	//Desktop
 	@include media(xs) {
+		position: absolute;
+
+		height: 0;
+
 		&__left-aside {
 			width: 320px;
 
@@ -393,6 +397,9 @@
 					max-height: 450px;
 					column-gap: 32px;
 					row-gap: 8px;
+
+					scrollbar-color: $liverny-light transparent;
+					scrollbar-width: thin;
 
 					&::-webkit-scrollbar {
 						width: 10px;
