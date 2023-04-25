@@ -5,5 +5,10 @@ mixin TableProductRow(props)
 	//- верстка компонента
 	+b('table-product-row', {}, 'div')
 		for item in ELEM_ARR('Text')
-			//+e('link', {}, 'a')(href='#')
-			+Text(item)
+			//- проверка данных получаемых из props
+			include ../../shared/helpers/pug/shortcut-check-store
+			if item.dataArr.arrText[0].linkWrap
+				+e('link', {}, 'a')(href='#')
+					+Text(item)
+			else
+				+Text(item)

@@ -32,14 +32,13 @@ class SectionCatalogControl {
 	}
 
 	isCatalogPage() {
-		if (window.location.pathname.slice(1) === 'catalog.html') {
+		if (document.querySelector('.main').classList.contains('catalog')) {
 			this.button.classList.add('notEvents');
-			const beforeSection = document.querySelector('.section-breadcrumbs').parentNode;
 			const copySectionGeneral = this.generalSection.cloneNode(true);
 			copySectionGeneral.classList.add('static');
 			const copySectionDetails = this.detailsSection.cloneNode(true);
-			beforeSection.insertAdjacentElement('afterend', copySectionGeneral);
-			copySectionGeneral.insertAdjacentElement('afterend', copySectionDetails);
+			document.querySelector('.main').appendChild(copySectionGeneral);
+			document.querySelector('.main').appendChild(copySectionDetails);
 			this.generalSection.remove();
 			this.detailsSection.remove();
 			const accordionLinks = document.querySelectorAll('.accordion-list__link');

@@ -54,7 +54,7 @@
 		height: 0;
 
 		cursor: pointer;
-		text-decoration: underline;
+		text-decoration: none;
 
 		border-radius: 14px;
 		background: $blue-gradient;
@@ -74,7 +74,9 @@
 	&__option {
 		display: block;
 
-		color: $wet-asphalt;
+		text-decoration: none;
+
+		color: $white;
 
 		&:hover {
 			--wet-asphalt: #464646cc;
