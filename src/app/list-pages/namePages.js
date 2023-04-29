@@ -34,6 +34,9 @@ module.exports = {
 			case 'order-reserve':
 				name = 'Оформление резерва';
 				break;
+			case 'popups':
+				name = 'Попапы';
+				break;
 			default:
 				name = 'name page';
 				break;
