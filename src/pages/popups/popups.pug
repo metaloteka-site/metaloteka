@@ -1,0 +1,40 @@
+extends ../../layout/main
+
+append variables
+	+includeComponents(['ContactInformationFooter', 'Accordion', 'AccordionList', 'TableProductRow', 'Pagination', 'ProductItem', 'ProductItemDetails', 'Select', 'BlockLayout', 'Tabs'])
+
+block store
+	include store/popups.store.pug
+
+append head
+	title Оформление заказа
+
+block main
+
+	//- подключение и вызов секции SECTION-BREADCRUMBS
+	include ../../sections/section-breadcrumbs/section-breadcrumbs
+	+section-breadcrumbs(popups.sectionBreadcrumbs)
+
+	//- подключение и вызов секции SECTION-BREADCRUMBS
+	include ../../sections/section-popup-list/section-popup-list
+	+section-popup-list(popups.sectionPopupList)
+
+append popup
+	//- подключение и вызов попапа POPUP-PAYMENT и POPUP-PAYENTITY
+	include ../../sections/popup-payment/popup-payment
+	+popup-payment(popups.popupPayment)
+	+popup-payment(popups.popupPaymentEntity)
+	+popup-payment(popups.popupPaymentIndividual)
+
+	//- подключение и вызов попапа POPUP-METHOD
+	include ../../sections/popup-pay-method/popup-pay-method
+	+popup-pay-method(popups.popupPayMethod)
+
+	//- подключение и вызов попапа POPUP-CHECK
+	include ../../sections/popup-pay-check/popup-pay-check
+	+popup-pay-check(popups.popupPayCheck)
+	+popup-pay-check(popups.popupThanks)
+
+	//- подключение и вызов секции SECTION-CATALOG
+	include ../../sections/section-catalog/section-catalog
+	+section-catalog(popups.sectionCatalog)
