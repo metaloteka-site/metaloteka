@@ -30,6 +30,10 @@
 		margin-left: -42px;
 
 		background-color: #efefef;
+
+		&_none {
+			display: none;
+		}
 	}
 
 	&__icon svg {
@@ -734,6 +738,10 @@
 		&__line-small {
 			margin-right: -53px;
 			margin-left: -53px;
+
+			&_none {
+				display: block;
+			}
 		}
 
 		&__line-right-small {

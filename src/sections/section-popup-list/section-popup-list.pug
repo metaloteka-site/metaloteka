@@ -1,0 +1,15 @@
+mixin section-popup-list(section)
+	//- проверка данных получаемых из section
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- верстка секции
+	+b('section-popup-list', {}, 'section')
+		+Container
+			+e('list', {}, 'ul')
+				+e('item', {}, 'li')(data-popup-open='payment') #{S_DATA('popupPayment')}
+				+e('item', {}, 'li')(data-popup-open='payment-entity') #{S_DATA('popupPaymentEntity')}
+				+e('item', {}, 'li')(data-popup-open='payment-individual') #{S_DATA('popupPaymentIndividual')}
+				+e('item', {}, 'li')(data-popup-open='pay-method') #{S_DATA('popupPayMethod')}
+				+e('item', {}, 'li')(data-popup-open='pay-check') #{S_DATA('popupPayCheck')}
+				+e('item', {}, 'li')(data-popup-open='pay-thanks') #{S_DATA('popupThanks')}
+				+e('item', {}, 'li')(data-popup-open='authorization') #{S_DATA('authorization')}

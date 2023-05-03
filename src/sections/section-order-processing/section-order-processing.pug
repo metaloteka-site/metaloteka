@@ -132,7 +132,7 @@ mixin section-order-processing(section)
 						+e('warning-text', {}, 'p') #{S_DATA('textWeight')}
 				+e('btn-cart', {m: 'reserve-completion'}, 'button')(disabled=I_OPT('disabled')) #{S_DATA('reserveСompletionBtn')}
 				+e('txt-onclick', {m: 'mobile'}, 'div') #{S_DATA('txtOnclick')}
-			+e('line-small', {}, 'div')
+			+e('line-small', {m: 'none'}, 'div')
 			+e('footer', {b: 'cg-35'}, 'div')
 				+e('qr', {}, 'img')(src=`${pathFile}${S_DATA('qr')}`)
 				for item in S_ELEM_ARR('ContactInformationFooter')

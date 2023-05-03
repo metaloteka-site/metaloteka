@@ -1,0 +1,37 @@
+//- инстанст функции для дробления store на отдельные секции
+- let popups = addSections();
+
+//- секция SECTION-BREADCRUMBS
+include popups-section-breadcrumbs
+- popups.section = 'sectionBreadcrumbs';
+
+//- секция SECTION-POPUP-LIST
+include popups-section-popup-list
+- popups.section = 'sectionPopupList';
+
+//- блок POPUP-PAYMENT
+include popups-popup-payment
+- popups.section = 'popupPayment';
+
+//- блок POPUP-PAYMENT-ENTITY
+include popups-popup-payment-entity
+- popups.section = 'popupPaymentEntity';
+
+//- блок POPUP-PAYMENT-INDIVIDUAL
+include popups-popup-payment-individual
+- popups.section = 'popupPaymentIndividual';
+
+//- блок POPUP-PAY-METHOD
+include popups-popup-pay-method
+- popups.section = 'popupPayMethod';
+
+//- блок POPUP-PAY-CHECK
+include popups-popup-pay-check
+- popups.section = 'popupPayCheck';
+
+include popups-popup-thanks
+- popups.section = 'popupThanks';
+
+//- секция SECTION-CATALOG
+include popups-section-catalog
+- popups.section = 'sectionCatalog';
