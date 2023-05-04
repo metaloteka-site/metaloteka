@@ -1,0 +1,28 @@
+.index {
+	display: grid;
+
+	section:not(.section-catalog, .section-category-types) {
+		order: 6;
+	}
+
+	.section-category-types {
+		order: 1;
+	}
+
+	.section-catalog {
+		order: 2;
+
+		margin-bottom: 42px;
+	}
+
+	@include media(xs) {
+		display: block;
+
+		.section-catalog {
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+

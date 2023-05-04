@@ -32,13 +32,25 @@ class SectionCatalogControl {
 	}
 
 	isCatalogPage() {
-		if (document.querySelector('.main').classList.contains('catalog')) {
+		const mediaQuery = window.matchMedia('(max-width: 578px)');
+		let media = false;
+		function handleTabletChange(e) {
+			media = e.matches;
+		}
+
+		mediaQuery.addListener(handleTabletChange);
+		handleTabletChange(mediaQuery);
+
+		if (
+			document.querySelector('.main').classList.contains('catalog') ||
+			(document.querySelector('.main').classList.contains('index') && media)
+		) {
 			this.button.classList.add('notEvents');
 			const copySectionGeneral = this.generalSection.cloneNode(true);
 			copySectionGeneral.classList.add('static');
 			const copySectionDetails = this.detailsSection.cloneNode(true);
-			document.querySelector('.main').appendChild(copySectionGeneral);
-			document.querySelector('.main').appendChild(copySectionDetails);
+			document.querySelector('.main').prepend(copySectionGeneral);
+			document.querySelector('.main').prepend(copySectionDetails);
 			this.generalSection.remove();
 			this.detailsSection.remove();
 			const accordionLinks = document.querySelectorAll('.accordion-list__link');
