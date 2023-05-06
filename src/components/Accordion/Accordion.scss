@@ -70,6 +70,8 @@
 
 	@include media('xs'){
 		&__title {
+			padding-bottom: 23px;
+
 			font-size: $fs-28;
 		}
 	}
