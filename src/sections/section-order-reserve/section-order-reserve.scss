@@ -409,6 +409,10 @@
 
 	&__info-way {
 		margin-bottom: 41px;
+
+		color: $wet-asphalt;
+
+		font-weight: normal;
 	}
 
 	&__text-data-registration {
@@ -909,7 +913,7 @@
 		}
 
 		&__reserve-condition-text {
-			margin-bottom: 12px;
+			margin-bottom: 30px;
 		}
 
 		&__footer {
@@ -1195,4 +1199,8 @@
 			margin-bottom: 47px;
 		}
 	}
+}
+
+.section-order-reserve .accordion .tabs .tabs__content {
+	padding-bottom: 0;
 }
