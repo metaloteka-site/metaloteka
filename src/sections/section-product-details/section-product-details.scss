@@ -637,4 +637,10 @@
 			}
 		}
 	}
+
+	@include media('lg', 'within') {
+		& .block-layout__right {
+			display: none;
+		}
+	}
 }

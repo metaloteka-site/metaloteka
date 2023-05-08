@@ -1248,6 +1248,12 @@
 			}
 		}
 	}
+
+	@include media('lg', 'within') {
+		& .block-layout__right {
+			display: none;
+		}
+	}
 }
 
 .section-order-reserve .accordion .tabs .tabs__content {

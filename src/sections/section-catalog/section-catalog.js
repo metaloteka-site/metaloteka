@@ -41,16 +41,23 @@ class SectionCatalogControl {
 		mediaQuery.addListener(handleTabletChange);
 		handleTabletChange(mediaQuery);
 
+		const copySectionGeneral = this.generalSection.cloneNode(true);
+		const copySectionDetails = this.detailsSection.cloneNode(true);
+
+		if (document.querySelector('.main').classList.contains('catalog')) {
+			document.querySelector('.main').append(copySectionGeneral);
+			document.querySelector('.main').append(copySectionDetails);
+		} else if (document.querySelector('.main').classList.contains('index') && media) {
+			document.querySelector('.main').prepend(copySectionGeneral);
+			document.querySelector('.main').prepend(copySectionDetails);
+		}
+
 		if (
 			document.querySelector('.main').classList.contains('catalog') ||
 			(document.querySelector('.main').classList.contains('index') && media)
 		) {
 			this.button.classList.add('notEvents');
-			const copySectionGeneral = this.generalSection.cloneNode(true);
 			copySectionGeneral.classList.add('static');
-			const copySectionDetails = this.detailsSection.cloneNode(true);
-			document.querySelector('.main').prepend(copySectionGeneral);
-			document.querySelector('.main').prepend(copySectionDetails);
 			this.generalSection.remove();
 			this.detailsSection.remove();
 			const accordionLinks = document.querySelectorAll('.accordion-list__link');
