@@ -13,6 +13,8 @@ mixin Tabs(props)
 
 				+e('button', {p: 'tabs', b: `${index === 0 ? 'js-active' : ''}`}, 'button')(data-tab-button=`${I_DATA('dataTabButton')}`) #{I_DATA('tabButton')}
 
+		if OPT('textCheckout')
+			+e('text-checkout', {}, 'p') #{DATA('text')}
 		+e('body', {p: 'tabs'}, 'div')
 			if OPT('htmlContent')
 				block

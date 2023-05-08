@@ -28,7 +28,7 @@ mixin section-order-reserve(section)
 								+e('item-text', {}, 'div') #{I_DATA('text')}
 								+e('item-sum', {}, 'div') #{I_DATA('sum')}
 								+e('item-add', {m: I_BEM('isActive')}, 'button') #{I_DATA('add')}
-					+e('item-btn', {}, 'button') #{S_DATA('itemBtn')}
+					+e('item-btn', {m: 'none'}, 'button') #{S_DATA('itemBtn')}
 					+e('warning', {}, 'div')
 						for item in S_ELEM_ARR('TextWarnings')
 							+e('warning', {}, 'div')

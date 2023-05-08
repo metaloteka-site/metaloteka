@@ -205,15 +205,11 @@
 
 			#{$self}__button {
 				width: 170px;
-				margin-bottom: 72px;
+				margin-bottom: 22px;
 				padding: 21px 20px 23px;
 
 				color: #464646;
 			}
-		}
-
-		&__buttons {
-			column-gap: 10px;
 		}
 	}
 }
