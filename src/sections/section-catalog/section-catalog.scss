@@ -39,7 +39,7 @@
 		#{$self}__banner {
 			display: flex;
 			flex-direction: column;
-			padding-block: 53px 42px;
+			padding-block: 53px 36px;
 			padding-inline: 42px;
 
 			#{$self}__title {
@@ -127,7 +127,8 @@
 						padding-inline: 41px;
 
 						&:not(:last-child) {
-							border-bottom: solid 1px var(--smoke-white-second);
+							//border-bottom: solid 1px var(--smoke-white-second);
+							padding-bottom: 36px;
 						}
 					}
 
@@ -374,7 +375,7 @@
 				&__range, &__range-filters{
 					width: 330px;
 					height: 5px;
-					margin: 8px 0 47px;
+					margin: 8px 0 40px;
 
 					border-width: 5px;
 					border-style: solid;

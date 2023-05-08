@@ -7,7 +7,7 @@
 
 	&__buttons {
 		display: flex;
-		overflow: hidden;
+		overflow: scroll;
 		column-gap: 24px;
 
 		margin-bottom: 25px;
@@ -25,6 +25,8 @@
 		transition: all 0.3s;
 
 		white-space: nowrap;
+
+		color: $wet-asphalt;
 
 		border: 0;
 		background: none;
@@ -57,12 +59,28 @@
 	}
 
 	&__body {
+		position: relative;
+
 		display: flex;
+
+		&::after {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			left: 0;
+
+			height: 40px;
+
+			content: "";
+			text-align: right;
+
+			background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(255 255 255 / 85%) 100%);
+		}
 	}
 
 	&__content {
 		display: -webkit-box;
-		overflow: hidden;
+		overflow: auto;
 
 		width: 0;
 		height: 0;
@@ -126,10 +144,9 @@
 		.js-active {
 			display: block;
 
-			// border-radius: 14px;
-
 			&#{$self}__button {
-				outline: solid 4px #ce7f65;
+				//outline: solid 4px #ce7f65;
+				box-shadow: 0 0 0 4px #ce7f65;
 			}
 		}
 
@@ -163,7 +180,8 @@
 			border-radius: 14px;
 
 			&#{$self}__button {
-				outline: solid 4px #ce7f65;
+				//outline: solid 4px #ce7f65;
+				box-shadow: 0 0 0 4px #ce7f65;
 			}
 		}
 
@@ -205,15 +223,11 @@
 
 			#{$self}__button {
 				width: 170px;
-				margin-bottom: 72px;
+				margin-bottom: 22px;
 				padding: 21px 20px 23px;
 
 				color: #464646;
 			}
-		}
-
-		&__buttons {
-			column-gap: 10px;
 		}
 	}
 }

@@ -25,9 +25,9 @@ class TabsControl {
 
 	// Инициализация класса Tabs
 	init() {
-			if(!this.tabsWrapButtons){
-					return false;
-			}
+		if (!this.tabsWrapButtons) {
+			return false;
+		}
 		this.tabsWrapButtons.addEventListener('click', (e) => {
 			const dataTabButton = e.target.dataset.tabButton;
 

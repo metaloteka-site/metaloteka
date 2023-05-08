@@ -320,6 +320,8 @@
 				}
 
 				&__content {
+					overflow: auto;
+
 					opacity: 0.7;
 					color: $wet-asphalt;
 
@@ -633,6 +635,12 @@
 				border-radius: 30px;
 				background: $white;
 			}
+		}
+	}
+
+	@include media('lg', 'within') {
+		& .block-layout__right {
+			display: none;
 		}
 	}
 }
