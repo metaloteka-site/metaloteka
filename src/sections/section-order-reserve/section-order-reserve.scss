@@ -119,7 +119,7 @@
 	&__call {
 		row-gap: 0;
 
-		margin-bottom: 40px;
+		margin-bottom: 50px;
 	}
 
 	&__summ {
@@ -408,7 +408,7 @@
 	}
 
 	&__info-way {
-		margin-bottom: 41px;
+		margin-bottom: 20px;
 
 		color: $wet-asphalt;
 
@@ -457,7 +457,7 @@
 
 		color: $wet-asphalt;
 
-		font-size: 18px;
+		font-size: 22px;
 		font-weight: 700;
 		line-height: 1.22;
 	}
@@ -485,7 +485,7 @@
 
 	&__item-btn {
 		width: 100%;
-		margin-top: 12px;
+		margin-top: 32px;
 		margin-bottom: 42px;
 		padding: 19px 15px 19px 15px;
 
@@ -500,6 +500,10 @@
 		font-size: 22px;
 		font-weight: 400;
 		line-height: 1;
+
+		&_none {
+			display: none;
+		}
 	}
 
 	&__text-room {
@@ -515,6 +519,7 @@
 
 	&__сompletion-reserve {
 		display: flex;
+		flex-direction: column;
 		justify-content: space-between;
 
 		margin-bottom: 18px;
@@ -528,15 +533,15 @@
 	}
 
 	&__сompletion-reserve-name {
-		display: none;
-	}
-
-	&__сompletion-reserve-room {
-		color: $wet-asphalt;
+		margin-bottom: 15px;
 
 		font-size: 20px;
 		font-weight: 300;
 		line-height: 1.2;
+	}
+
+	&__сompletion-reserve-room {
+		margin-bottom: 10px;
 	}
 
 	&__order-list {
@@ -550,7 +555,7 @@
 
 		color: $wet-asphalt;
 
-		font-size: 18px;
+		font-size: 20px;
 		font-weight: 300;
 		line-height: 1.22;
 	}
@@ -570,6 +575,8 @@
 
 		text-align: left;
 		text-decoration: underline;
+		text-decoration-thickness: 1.5px;
+		text-underline-offset: 2px;
 
 		color: $wet-asphalt;
 
@@ -583,13 +590,16 @@
 
 		margin-bottom: 41px;
 
-		text-align: right;
+		text-decoration: underline;
 
 		color: $wet-asphalt;
 
 		font-size: 32px;
 		font-weight: 800;
 		line-height: 0.88;
+		text-decoration-thickness: 4px;
+		text-underline-offset: 9px;
+		text-decoration-color: #586e8b;
 	}
 
 	&__line-order-list {
@@ -614,6 +624,17 @@
 
 	&__reserve-condition-text {
 		margin-bottom: 42px;
+	}
+
+	&__text-checkout {
+		display: none;
+	}
+
+	&__line-сompletion {
+		height: 2px;
+		margin-bottom: 20px;
+
+		background-color: #efefef;
 	}
 
 	@include media('xs') {
@@ -647,6 +668,9 @@
 
 		&__order-list-name {
 			margin-bottom: 0;
+
+			font-size: 18px;
+			line-height: 1.1;
 		}
 
 		&__order-list-thickness {
@@ -690,6 +714,7 @@
 			margin-bottom: 0;
 
 			text-align: center;
+			text-decoration: none;
 
 			font-size: 18px;
 			font-weight: 700;
@@ -819,6 +844,7 @@
 
 			margin-bottom: 0;
 
+			font-size: 18px;
 			font-weight: 300;
 
 			&:active {
@@ -839,6 +865,14 @@
 			background: none;
 
 			font-size: 16px;
+		}
+
+		&__item-btn {
+			margin-top: 0;
+
+			&_none {
+				display: block;
+			}
 		}
 
 		&__warning {
@@ -908,10 +942,6 @@
 			line-height: 1.25;
 		}
 
-		&__reserve-condition-title {
-			margin-top: 42px;
-		}
-
 		&__reserve-condition-text {
 			margin-bottom: 30px;
 		}
@@ -929,11 +959,19 @@
 			height: 123px;
 		}
 
+		&__сompletion-reserve {
+			flex-direction: row;
+		}
+
 		&__сompletion-reserve-name {
 			display: block;
+
+			margin-bottom: 0;
 		}
 
 		&__сompletion-reserve-room {
+			margin-bottom: 0;
+
 			font-size: 28px;
 			font-weight: 800;
 			line-height: 0.86;
@@ -1197,10 +1235,23 @@
 			display: block;
 
 			margin-bottom: 47px;
+
+			color: #464646;
+
+			font-weight: normal;
+			line-height: 1.14;
+		}
+
+		&__btn-cart {
+			&_reserve-completion {
+				margin-bottom: 44px;
+			}
 		}
 	}
 }
 
 .section-order-reserve .accordion .tabs .tabs__content {
 	padding-bottom: 0;
+
+	border-radius: 0;
 }
