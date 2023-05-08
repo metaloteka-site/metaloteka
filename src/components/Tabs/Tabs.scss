@@ -132,7 +132,7 @@
 
 			color: $wet-asphalt;
 			border-radius: 14px;
-			outline: solid 1px #46464662;
+			box-shadow: 0 0 0 1px #46464662;
 
 			font-family: 'BlissPro', sans-serif;
 
@@ -145,7 +145,6 @@
 			display: block;
 
 			&#{$self}__button {
-				//outline: solid 4px #ce7f65;
 				box-shadow: 0 0 0 4px #ce7f65;
 			}
 		}
@@ -165,7 +164,7 @@
 
 			color: $wet-asphalt;
 			border-radius: 14px;
-			outline: solid 1px #46464662;
+			box-shadow: 0 0 0 1px #46464662;
 
 			font-family: 'BlissPro', sans-serif;
 
@@ -180,7 +179,6 @@
 			border-radius: 14px;
 
 			&#{$self}__button {
-				//outline: solid 4px #ce7f65;
 				box-shadow: 0 0 0 4px #ce7f65;
 			}
 		}
