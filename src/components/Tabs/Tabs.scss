@@ -144,10 +144,9 @@
 		.js-active {
 			display: block;
 
-			// border-radius: 14px;
-
 			&#{$self}__button {
-				outline: solid 4px #ce7f65;
+				//outline: solid 4px #ce7f65;
+				box-shadow: 0 0 0 4px #ce7f65;
 			}
 		}
 
@@ -181,7 +180,8 @@
 			border-radius: 14px;
 
 			&#{$self}__button {
-				outline: solid 4px #ce7f65;
+				//outline: solid 4px #ce7f65;
+				box-shadow: 0 0 0 4px #ce7f65;
 			}
 		}
 
