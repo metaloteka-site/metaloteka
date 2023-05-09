@@ -55,6 +55,13 @@ mixin section-categories(section)
 									+e('wrapper-description', {}, 'div')
 										+e('description', {}, 'span') #{S_ELEM('ProductInformationDetails').data.description}
 										+e('search-count', {}, 'span') #{S_ELEM('ProductInformationDetails').data.searchCount}
+									+b('filter-group', {b: 'mb-25'}, 'div')
+										+e('title', {}, 'span') #{S_ELEM('FilterTitle').data.title}
+										+e('filters-wrapper')
+											+e('diameters', {}, 'div')
+												each item, index in S_DATA_ARR('diameters')
+													include ../../shared/helpers/pug/shortcut-check-store
+													+e('diameter-value', {b: I_BEM('jsClass')}, 'div')(data-filter-diameters=I_DATA('title')) #{ I_DATA('title') }
 									+b('filter-group', {}, 'div')
 										+e('title', {}, 'span') #{S_ELEM('FilterTitle').data.title}
 										+e('filters-wrapper')
