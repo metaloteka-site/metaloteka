@@ -1,16 +1,11 @@
 -
-	const popupRegistration = {
+	const popupAuthentication = {
 		data: {
-			title: 'Регистрация\n' +
-							'кабинета',
-			placeholderInn: 'ИНН*',
-			placeholderCompanyName: 'Название компании',
-			placeholderName: 'Имя*',
-			placeholderSurname: 'Фамилия*',
-			placeholderTel: 'Моб. телефон*',
-			placeholderEmail: 'E-mail',
-			placeholderContactPerson: 'Контактное лицо',
-			buttonRegistration: 'Зарегестрироваться',
+			title: 'Войти в кабинет',
+			placeholderPasswork: 'Пароль*',
+			placeholderLogin: 'Логин / e-mail*',
+			buttonEnter: 'Войти',
+			ForgotPasswork: 'fcdskvjd'
 		},
 		bem: {
 			fieldItemS: 'field-s',
@@ -22,48 +17,11 @@
 		elem: {
 			Popup: {
 				data: {
-					dataPopupName: 'popup-registration'
+					dataPopupName: 'popup-authentication'
 				},
 				bem: {
-					parent: 'popup-registration'
+					parent: 'popup-authentication'
 				},
-			},
-			Tabs: {
-				bem: {
-					modifierTabs: 'button-dev',
-				},
-				opt: {
-					htmlContent: true,
-				},
-				dataArr: {
-					tabButtons: [
-						{
-							data: {
-								tabButton: 'Юр. лицо',
-								dataTabButton: '1'
-							}
-						},
-						{
-							data: {
-								tabButton: 'Физ. лицо',
-								dataTabButton: '2'
-							}
-						}
-					],
-				}
-			},
-			TabsContent1: {
-				data: {
-					dataTabContent: '1'
-				},
-				opt: {
-					active: true
-				}
-			},
-			TabsContent2: {
-				data: {
-					dataTabContent: '2'
-				}
 			},
 			TextReservePersonalData: {
 				data: {
@@ -91,6 +49,38 @@
 					fw: 'fw-300',
 					lh: 'lh-1-14',
 					elementClassIndividual: 'reserve-condition-text'
+				},
+				opt: {
+					p: true,
+					isElementClass: true
+				}
+			},
+			TextForgotPasswork: {
+				data: {
+					text: 'Забыли пароль?'
+				},
+				bem: {
+					color: 'wet-asphalt',
+					size: 'fs-12',
+					fw: 'fw-bold',
+					lh: 'lh-1-33',
+					elementClassIndividual: 'reserve-condition-forgot-passwork'
+				},
+				opt: {
+					p: true,
+					isElementClass: true
+				}
+			},
+			TextValidation: {
+				data: {
+					text: 'Заполните обязательное поле'
+				},
+				bem: {
+					color: 'light-red',
+					size: 'fs-12',
+					fw: 'fw-bold',
+					lh: 'lh-1-33',
+					elementClassIndividual: 'reserve-condition-validation'
 				},
 				opt: {
 					p: true,
