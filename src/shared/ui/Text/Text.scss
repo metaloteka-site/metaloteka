@@ -1,5 +1,9 @@
 .text {
 	// модификаторы цвета
+	&_dark-white {
+		color: $dark-white;
+	}
+
 	&_wet-asphalt {
 		color: $wet-asphalt;
 	}
@@ -125,6 +129,10 @@
 	}
 
 	// модификатор line-heidht
+	&_lh-0-94 {
+		line-height: 0.94;
+	}
+
 	&_lh-1 {
 		line-height: 1;
 	}
