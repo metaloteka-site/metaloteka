@@ -1,5 +1,9 @@
 .text {
 	// модификаторы цвета
+	&_dark-white {
+		color: $dark-white;
+	}
+
 	&_wet-asphalt {
 		color: $wet-asphalt;
 	}
@@ -13,9 +17,13 @@
 		--wet-asphalt: #464646cc;
 		color: $wet-asphalt;
 	}
-	
+
 	&_light-slate-gray {
 		color: $light-slate-gray;
+	}
+
+	&_light-red {
+		color: $light-red;
 	}
 
 	// вес начертания
@@ -54,6 +62,10 @@
 
 	&_fs-10 {
 		font-size: $fs-10;
+	}
+
+	&_fs-12 {
+		font-size: $fs-12;
 	}
 
 	&_fs-18 {
@@ -117,6 +129,10 @@
 	}
 
 	// модификатор line-heidht
+	&_lh-0-94 {
+		line-height: 0.94;
+	}
+
 	&_lh-1 {
 		line-height: 1;
 	}
@@ -136,9 +152,13 @@
 	&_lh-1-22 {
 		line-height: 1.22;
 	}
-	
+
 	&_lh-1-29 {
 		line-height: 1.29
+	}
+
+	&_lh-1-33 {
+		line-height: 1.33
 	}
 
 	&_lh-1-4 {

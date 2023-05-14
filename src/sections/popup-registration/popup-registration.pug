@@ -1,0 +1,42 @@
+mixin popup-registration(section)
+	//- проверка данных получаемых из section
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- верстка секции
+	+Popup(S_ELEM('Popup'))
+		+e('title', {}, 'div') #{S_DATA('title')}
+		+e('line', {}, 'div')
+		+Tabs(S_ELEM('Tabs'))
+			+TabsContent(S_ELEM('TabsContent1'))
+				+Text(S_ELEM('TextDataRegistration1'))
+				+e('form', {}, 'form')
+					+e('field-item', {m: S_BEM('fieldItemM')}, 'label')
+						+e('item-inn', {}, 'input')(required)
+						+e('', {}, 'span') #{S_DATA('placeholderInn')}
+					+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+						+e('', {}, 'input')(required)
+						+e('', {}, 'span') #{S_DATA('placeholderName')}
+					+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+						+e('', {}, 'input')(required)
+						+e('', {}, 'span') #{S_DATA('placeholderSurname')}
+					+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+						+e('', {}, 'input')(required)
+						+e('', {}, 'span') #{S_DATA('placeholderTel')}
+					+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+						+e('', {}, 'input')(required)
+						+e('', {}, 'span') #{S_DATA('placeholderEmail')}
+			+TabsContent(S_ELEM('TabsContent2'))
+				+Text(S_ELEM('TextDataRegistration2'))
+				+e('form', {}, 'form')
+					+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+						+e('', {}, 'input')(required)
+						+e('', {}, 'span') #{S_DATA('placeholderName')}
+					+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+						+e('', {}, 'input')(required)
+						+e('', {}, 'span') #{S_DATA('placeholderTel')}
+					+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+						+e('', {}, 'input')(required)
+						+e('', {}, 'span') #{S_DATA('placeholderEmail')}
+		+e('button-password', {}, 'button') #{S_DATA('buttonRegistration')}
+		+Text(S_ELEM('TextReservePersonalData'))
+		+Text(S_ELEM('TextReservePersonalText'))

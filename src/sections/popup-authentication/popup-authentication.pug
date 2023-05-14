@@ -1,0 +1,20 @@
+mixin popup-authentication(section)
+	//- проверка данных получаемых из section
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- верстка секции
+	+Popup(S_ELEM('Popup'))
+		+e('title', {}, 'div') #{S_DATA('title')}
+		+e('line', {}, 'div')
+		+e('form', {}, 'form')
+			+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+				+e('', {}, 'input')(required type='email')
+				+e('', {}, 'span') #{S_DATA('placeholderLogin')}
+			+e('field-item', {m: S_BEM('fieldItemM')}, 'label')
+				+e('item-inn', {}, 'input')(required type='password')
+				+e('', {}, 'span') #{S_DATA('placeholderPasswork')}
+		+Text(S_ELEM('TextForgotPasswork'))
+		+Text(S_ELEM('TextValidation'))
+		+e('button-password', {}, 'button') #{S_DATA('buttonEnter')}
+		+Text(S_ELEM('TextReservePersonalData'))
+		+Text(S_ELEM('TextReservePersonalText'))

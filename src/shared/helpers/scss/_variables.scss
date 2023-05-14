@@ -31,6 +31,7 @@
 	--liverny-dark: #4d484d;
 	--transparent: transparent;
 	--light-slate-gray: #638490;
+	--light-red: #bb6862;
 
 	// +++ color gradient +++ //
 	--blue-gradient: linear-gradient(225deg, #678c92, #586e8b);
@@ -52,6 +53,8 @@
 	--fs-title2: 5.4rem;
 	--fs-title1: 7.2rem;
 	--fs-10: 1rem;
+	--fs-12: 1.2rem;
+	--fs-14: 1.4rem;
 	--fs-18: 1.8rem;
 	--fs-20: 2rem;
 	--fs-22: 2.2rem;
@@ -60,6 +63,7 @@
 	--fs-28: 2.8rem;
 	--fs-32: 3.2rem;
 	--fs-36: 3.6rem;
+	--fs-38: 3.8rem;
 	--fs-40: 4rem;
 	--fs-50: 5rem;
 
@@ -72,6 +76,7 @@ $column-gap: var(--column-gap, 0);
 
 // +++ color standard +++ //
 $white: var(--white);
+$dark-white: var(--dark-white);
 $wet-asphalt: var(--wet-asphalt);
 $chestnut: var(--chestnut);
 $gainsborough: var(--gainsborough);
@@ -80,6 +85,7 @@ $liverny-dark: var(--liverny-dark);
 $transparent: var(--transparent);
 $light-slate-gray: var(--light-slate-gray);
 $light-gray: var(--light-gray);
+$light-red: var(--light-red);
 
 // +++ color gradient +++ //
 $blue-gradient: var(--blue-gradient);
@@ -101,6 +107,8 @@ $fs-title3: var(--fs-title3);
 $fs-title2: var(--fs-title2);
 $fs-title1: var(--fs-title1);
 $fs-10: var(--fs-10);
+$fs-12: var(--fs-12);
+$fs-14: var(--fs-14);
 $fs-18: var(--fs-18);
 $fs-20: var(--fs-20);
 $fs-22: var(--fs-22);
@@ -109,6 +117,7 @@ $fs-26: var(--fs-26);
 $fs-28: var(--fs-28);
 $fs-32: var(--fs-32);
 $fs-36: var(--fs-36);
+$fs-38: var(--fs-38);
 $fs-40: var(--fs-40);
 $fs-46: var(--fs-46);
 $fs-50: var(--fs-50);
