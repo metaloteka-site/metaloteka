@@ -29,7 +29,7 @@ mixin section-order-reserve(section)
 								+e('item-sum', {}, 'div') #{I_DATA('sum')}
 								+e('item-add', {m: I_BEM('isActive')}, 'button') #{I_DATA('add')}
 					+e('item-btn', {m: 'none'}, 'button') #{S_DATA('itemBtn')}
-					+e('warning', {}, 'div')
+					+e('warning', {b: 'mb-40'}, 'div')
 						for item in S_ELEM_ARR('TextWarnings')
 							+e('warning', {}, 'div')
 								+e('warning-img', {}, 'img')(src=`../../layout/assets/images/${S_DATA('iconWarning')}` alt=S_DATA('iconAltWarning'))
