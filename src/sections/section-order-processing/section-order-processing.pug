@@ -18,7 +18,7 @@ mixin section-order-processing(section)
 				+e('', {}, 'div')
 					+Tabs(S_ELEM('TabsDeliveryMethod'))
 						+TabsContent(S_ELEM('TabsContentDeliveryMethod2'))
-							+e('form-processing', {}, 'form')
+							+e('form-processing', {b: 'mb-20'}, 'form')
 								+e('field-item', {m: S_BEM('fieldItemAcc')}, 'label')
 									+e('', {}, 'input')(required)
 									+e('', {}, 'span') #{S_DATA('placeholderDeliveryAddress')}
@@ -26,8 +26,22 @@ mixin section-order-processing(section)
 								+e('field-item', {m: S_BEM('fieldItemM')}, 'label')
 									+e('', {}, 'input')(required)
 									+e('', {}, 'span') #{S_DATA('placeholderContactPerson')}
+							+e('items', {b: 'mb-35'}, 'div')
+								for item in S_DATA_ARR('delivery')
+									include ../../shared/helpers/pug/shortcut-check-store
+									+e('item', {}, 'div')
+										+e('item-title', {}, 'div') #{I_DATA('title')}
+										+e('item-text', {}, 'div') #{I_DATA('text')}
+										+e('item-sum', {}, 'div') #{I_DATA('sum')}
+										+e('item-add', {m: I_BEM('isActive')}, 'button') #{I_DATA('add')}
+							+e('item-btn', {}, 'div') #{S_DATA('itemBtnAdd')}
+							+e('warning', {b: 'mb-40'}, 'div')
+								for item in S_ELEM_ARR('TextWarnings')
+									+e('warning', {}, 'div')
+										+e('warning-img', {}, 'img')(src=`../../layout/assets/images/${S_DATA('iconWarning')}` alt=S_DATA('iconAltWarning'))
+										+Text(item)
 						+TabsContent(S_ELEM('TabsContentDeliveryMethod1'))
-							+e('form-processing', {}, 'form')
+							+e('form-processing', {b: 'mb-40'}, 'form')
 								+e('field-item', {m: S_BEM('fieldItemAcc')}, 'label')
 									+e('', {}, 'input')(required)
 									+e('', {}, 'span') #{S_DATA('placeholderDeliveryStock')}
@@ -39,62 +53,59 @@ mixin section-order-processing(section)
 				+Text(S_ELEM('TextFillingData'))
 				+Tabs(S_ELEM('Tabs'))
 					+TabsContent(S_ELEM('TabsContent1'))
-						+e('ffff', {}, 'div')
-							+Text(S_ELEM('TextDataRegistration1'))
-							+e('form', {}, 'form')
-								+e('field-item', {m: S_BEM('fieldItemM')}, 'label')
-									+e('item-inn', {}, 'input')(required)
-									+e('', {}, 'span') #{S_DATA('placeholderInn')}
-								+e('field-item', {m: S_BEM('fieldItemM')}, 'label')
-									+e('', {}, 'input')(required)
-									+e('', {}, 'span') #{S_DATA('placeholderCompanyName')}
-								+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
-									+e('', {}, 'input')(required)
-									+e('', {}, 'span') #{S_DATA('placeholderName')}
-								+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
-									+e('', {}, 'input')(required)
-									+e('', {}, 'span') #{S_DATA('placeholderSurname')}
-								+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
-									+e('', {}, 'input')(required)
-									+e('', {}, 'span') #{S_DATA('placeholderTel')}
-								+e('field-item', {m: S_BEM('fieldItemX')}, 'label')
-									+e('', {}, 'input')(required)
-									+e('', {}, 'span') #{S_DATA('placeholderDeliveryAddress')}
-								+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
-									+e('', {}, 'input')(required)
-									+e('', {}, 'span') #{S_DATA('placeholderEmail')}
-								+e('field-item', {m: S_BEM('fieldItemT')}, 'label')
-									+e('', {}, 'textarea')(required)
-									+e('', {}, 'span') Комментарий к заказу
-							+e('item-btn', {}, 'div') #{S_DATA('itemBtn')}
-							+Text(S_ELEM('TextConfidentialTitle'))
-							+Text(S_ELEM('TextConfidentialText'))
+						+Text(S_ELEM('TextDataRegistration1'))
+						+e('form', {}, 'form')
+							+e('field-item', {m: S_BEM('fieldItemM')}, 'label')
+								+e('item-inn', {}, 'input')(required)
+								+e('', {}, 'span') #{S_DATA('placeholderInn')}
+							+e('field-item', {m: S_BEM('fieldItemM')}, 'label')
+								+e('', {}, 'input')(required)
+								+e('', {}, 'span') #{S_DATA('placeholderCompanyName')}
+							+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+								+e('', {}, 'input')(required)
+								+e('', {}, 'span') #{S_DATA('placeholderName')}
+							+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+								+e('', {}, 'input')(required)
+								+e('', {}, 'span') #{S_DATA('placeholderSurname')}
+							+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+								+e('', {}, 'input')(required)
+								+e('', {}, 'span') #{S_DATA('placeholderTel')}
+							+e('field-item', {m: S_BEM('fieldItemX')}, 'label')
+								+e('', {}, 'input')(required)
+								+e('', {}, 'span') #{S_DATA('placeholderDeliveryAddress')}
+							+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+								+e('', {}, 'input')(required)
+								+e('', {}, 'span') #{S_DATA('placeholderEmail')}
+							+e('field-item', {m: S_BEM('fieldItemT')}, 'label')
+								+e('', {}, 'textarea')(required)
+								+e('', {}, 'span') Комментарий к заказу
+						+e('item-btn', {}, 'div') #{S_DATA('itemBtn')}
+						+Text(S_ELEM('TextConfidentialTitle'))
+						+Text(S_ELEM('TextConfidentialText'))
 					+TabsContent(S_ELEM('TabsContent2'))
-						+e('ffff', {}, 'div')
-							+Text(S_ELEM('TextDataRegistration2'))
-							+e('form', {}, 'form')
-								+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
-									+e('', {}, 'input')(required)
-									+e('', {}, 'span') #{S_DATA('placeholderName')}
-								+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
-									+e('', {}, 'input')(required)
-									+e('', {}, 'span') #{S_DATA('placeholderSurname')}
-								+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
-									+e('', {}, 'input')(required)
-									+e('', {}, 'span') #{S_DATA('placeholderTel')}
-								+e('field-item', {m: S_BEM('fieldItemX')}, 'label')
-									+e('', {}, 'input')(required)
-									+e('', {}, 'span') #{S_DATA('placeholderDeliveryAddress')}
-								+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
-									+e('', {}, 'input')(required)
-									+e('', {}, 'span') #{S_DATA('placeholderEmail')}
-								+e('field-item', {m: S_BEM('fieldItemT')}, 'label')
-									+e('', {}, 'textarea')(required)
-									+e('', {}, 'span') Комментарий к заказу
-							+e('item-btn', {}, 'div') #{S_DATA('itemBtn')}
-							+Text(S_ELEM('TextConfidentialTitle'))
-							+Text(S_ELEM('TextConfidentialText'))
-				+e('ffff', {}, 'div')
+						+Text(S_ELEM('TextDataRegistration2'))
+						+e('form', {}, 'form')
+							+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+								+e('', {}, 'input')(required)
+								+e('', {}, 'span') #{S_DATA('placeholderName')}
+							+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+								+e('', {}, 'input')(required)
+								+e('', {}, 'span') #{S_DATA('placeholderSurname')}
+							+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+								+e('', {}, 'input')(required)
+								+e('', {}, 'span') #{S_DATA('placeholderTel')}
+							+e('field-item', {m: S_BEM('fieldItemX')}, 'label')
+								+e('', {}, 'input')(required)
+								+e('', {}, 'span') #{S_DATA('placeholderDeliveryAddress')}
+							+e('field-item', {m: S_BEM('fieldItemS')}, 'label')
+								+e('', {}, 'input')(required)
+								+e('', {}, 'span') #{S_DATA('placeholderEmail')}
+							+e('field-item', {m: S_BEM('fieldItemT')}, 'label')
+								+e('', {}, 'textarea')(required)
+								+e('', {}, 'span') Комментарий к заказу
+						+e('item-btn', {}, 'div') #{S_DATA('itemBtn')}
+						+Text(S_ELEM('TextConfidentialTitle'))
+						+Text(S_ELEM('TextConfidentialText'))
 			+e('line-small', {}, 'div')
 			+Accordion(S_ELEM('AccordionCompletionRegistration'))
 				+e('info-way', {}, 'div') #{S_DATA('infoDetails')}
