@@ -1,0 +1,14 @@
+//- инстанст функции для дробления store на отдельные секции
+- let privacyPolicy = addSections();
+
+//- секция SECTION-BREADCRUMBS
+include privacy-policy-section-breadcrumbs
+- privacyPolicy.section = 'sectionBreadcrumbs';
+
+//- секция SECTION-PRODUCT-DETAILS
+include privacy-policy-section-product-details
+- privacyPolicy.section = 'sectionProductDetails';
+
+//- секция SECTION-CATALOG
+include privacy-policy-section-catalog
+- privacyPolicy.section = 'sectionCatalog';
