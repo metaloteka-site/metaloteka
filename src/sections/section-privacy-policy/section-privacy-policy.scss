@@ -2,6 +2,14 @@
 	$self: &;
 	color: $wet-asphalt;
 
+	&__line-big {
+		height: 9px;
+		margin-bottom: 11px;
+
+		border: none;
+		background: var(--blue-gradient);
+	}
+
 	.block-layout__left {
 		#{$self}__header {
 			display: none;
