@@ -1,0 +1,13 @@
+mixin section-privacy-policy(section)
+	//- проверка данных получаемых из section
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- верстка секции
+	+BlockLayout({bem: {classSection: 'section-privacy-policy'}})
+		+BlockLayoutLeft
+			+Tabs(S_ELEM('Tabs'))
+			+e('line', {}, 'hr')
+			+e('footer', {}, 'div')
+				+e('qr', {}, 'img')(src=`${pathFile}${S_DATA('qr')}`)
+				for item in S_ELEM_ARR('ContactInformationFooter')
+					+ContactInformationFooter(item)
