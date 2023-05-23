@@ -1,0 +1,7 @@
+mixin MobileCallback(props)
+	//- проверка данных получаемых из props
+	include ../../shared/helpers/pug/shortcut-check-store
+
+	//- верстка компонента
+	+b('mobile-callback', {}, 'div')
+		+e('pic', {}, 'img')(src='../../layout/assets/images/icon-phone.png')

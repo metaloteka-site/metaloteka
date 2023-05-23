@@ -1,0 +1,12 @@
+.mobile-callback {
+	position: fixed;
+	z-index: 10;
+	right: 10%;
+	bottom: 15%;
+
+	display: block;
+
+	@include media('xs') {
+		display: none;
+	}
+}
