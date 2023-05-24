@@ -14,7 +14,7 @@ include ../components/components
 block variables
 	//- переменная начала пути к картинкам
 	- const pathFile = '../../layout/assets/images';
-	+includeComponents(['ContactHeader', 'ContactHeaderWarning', 'ContactFooter', 'Popup'])
+	+includeComponents(['ContactHeader', 'ContactHeaderWarning', 'ContactFooter', 'Popup', 'MobileCallback'])
 
 block store
 
@@ -45,6 +45,10 @@ block layout
 				block footer
 					include ../sections/footer/footer
 					+footer(main.footer)
+
+			//- подключение и вызов секции для статичных элементов
+			block static
+				+MobileCallback()
 
 			block popup
 				//- подключение и вызов попапа POPUP-AUTHORIZATION

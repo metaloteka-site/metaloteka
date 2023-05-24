@@ -4,6 +4,8 @@ mixin MobileCallback(props)
 
 	//- верстка компонента
 	+b('mobile-callback', {}, 'div')
-		+e('phone-icon', {}, 'img')(src='../../layout/assets/images/icon-phone.png')
-		+e('basket-icon', {}, 'div')
-			include ../../layout/assets/images/basket.svg
+		+e('wrap-link', {}, 'a')(href='tel:+74955456420')
+			+e('phone-icon', {}, 'img')(src='../../layout/assets/images/icon-phone.png')
+		+e('wrap-link', {}, 'a')(href='#!')
+			+e('basket-icon', {}, 'div')
+				include ../../layout/assets/images/basket.svg
