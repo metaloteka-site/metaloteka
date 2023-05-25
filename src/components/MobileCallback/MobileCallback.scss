@@ -1,0 +1,37 @@
+.mobile-callback {
+	position: fixed;
+	z-index: 10;
+	right: 36px;
+	bottom: 47px;
+
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+
+	&__phone-icon {
+		margin-bottom: 13px;
+	}
+
+	&__basket-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		width: 79px;
+		height: 79px;
+
+		border-radius: 50%;
+		background: $white;
+
+		& svg {
+			width: 40px;
+			height: 40px;
+
+			color: #5c768d;
+		}
+	}
+
+	@include media('xs') {
+		display: none;
+	}
+}

@@ -4,7 +4,7 @@ mixin Text(props)
 
 	//- логика компонента
 	- const isElementClass = OPT('isElementClass') ? '&' : '';
-	- const tag = OPT('p') ? 'p' : 'span';
+	- const tag = OPT('p') ? 'p' : BEM('title') ? BEM('title') : 'span';
 
 	//- верстка компонента
 	if OPT('arrayData')
