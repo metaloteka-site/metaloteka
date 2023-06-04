@@ -29,6 +29,36 @@
 		width: min-content;
 	}
 
+	&__group-links {
+		display: flex;
+		gap: 25px;
+
+		margin-bottom: 23px;
+	}
+
+	&__link {
+		text-decoration: none;
+
+		color:$wet-asphalt;
+
+		font-family: "BlissPro", sans-serif;
+		font-size: $fs-18;
+		font-weight: 800;
+		line-height: 1.1;
+
+		&_active {
+			text-decoration: underline;
+			text-decoration-color: #586e8b;
+			text-decoration-thickness: 4px;
+			text-underline-offset: 6px;
+		}
+
+		&:hover {
+			cursor: pointer;
+
+			color: $wet-asphalt;
+		}
+	}
 
 	.block-layout__left {
 		#{$self}__header {
