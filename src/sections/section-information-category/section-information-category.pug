@@ -24,5 +24,5 @@ mixin section-information-category(section)
 								include ../../shared/helpers/pug/shortcut-check-store
 								+e('', {}, 'a')(href='#') !{I_DATA('text')}
 					+e('information-right-img', {}, 'picture')
-						+e('', {}, 'source')(media='(max-width:414px)' srcset=`../../layout/assets/images/${I_DATA('minImg')}`)
+						+e('', {}, 'source')(media='(max-width:576px)' srcset=`../../layout/assets/images/${I_DATA('minImg')}`)
 						+e('information-img', {}, 'img')(src=`../../layout/assets/images/${I_DATA('img')}` alt='background')
